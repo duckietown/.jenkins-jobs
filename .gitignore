@@ -3,6 +3,10 @@
 
 # But not these files...
 !.gitignore
+!README.md
+!repositories.json
+!generator
+!generator/*
 !jobs
 !jobs/*
 !jobs/*/config.xml

@@ -1,0 +1,85 @@
+[
+  {
+    "name": "rpi-health",
+    "origin": "duckietown/rpi-health"
+  },
+
+
+  {
+    "name": "dt-commons",
+    "origin": "duckietown/dt-commons"
+  },
+  {
+    "name": "dt-device-loader",
+    "origin": "duckietown/dt-device-loader",
+    "base": "dt-commons"
+  },
+  {
+    "name": "dt-device-online",
+    "origin": "duckietown/dt-device-online",
+    "base": "dt-commons"
+  },
+  {
+    "name": "dt-duckiebot-dashboard",
+    "origin": "duckietown/dt-duckiebot-dashboard"
+  },
+  {
+    "name": "dt-ros-commons",
+    "origin": "duckietown/dt-ros-commons",
+    "base": "dt-commons"
+  },
+  {
+    "name": "dt-ros-kinetic-base",
+    "origin": "duckietown/dt-ros-kinetic-base"
+  },
+  {
+    "name": "dt-rosbridge-websocket",
+    "origin": "duckietown/dt-rosbridge-websocket",
+    "base": "dt-ros-commons"
+  },
+  {
+    "name": "dt-duckiebot-interface",
+    "origin": "duckietown/dt-duckiebot-interface",
+    "base": "dt-ros-commons"
+  },
+  {
+    "name": "dt-car-interface",
+    "origin": "duckietown/dt-car-interface",
+    "base": "dt-ros-commons"
+  },
+  {
+    "name": "dt-core",
+    "origin": "duckietown/dt-core",
+    "base": "dt-ros-commons"
+  },
+
+
+  {
+    "name": "dt-device-health",
+    "origin": "duckietown/dt-device-health",
+    "base": "dt-commons"
+  },
+  {
+    "name": "dt-device-proxy",
+    "origin": "duckietown/dt-device-proxy"
+  },
+  {
+    "name": "dt-system-monitor",
+    "origin": "duckietown/dt-system-monitor",
+    "base": "dt-commons"
+  },
+  {
+    "name": "dt-architecture-api",
+    "origin": "duckietown/dt-architecture-api",
+    "base": "dt-commons"
+  },
+  {
+    "name": "dt-files-api",
+    "origin": "duckietown/dt-files-api",
+    "base": "dt-commons"
+  },
+  {
+    "name": "dt-ros-base",
+    "origin": "duckietown/dt-ros-base"
+  }
+]

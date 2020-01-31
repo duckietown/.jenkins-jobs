@@ -1,0 +1,60 @@
+<mxfile host="www.draw.io" modified="2020-01-31T17:44:44.669Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="rl1d3EwdtXpleIbsSp0-" version="12.6.2" type="github">
+  <diagram name="Page-1" id="822b0af5-4adb-64df-f703-e8dfc1f81529">
+    <mxGraphModel dx="1995" dy="1117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="7d933b09d9755ecc-9" value="&amp;nbsp; Duckietown Proxy&lt;br style=&quot;font-size: 16px&quot;&gt;&amp;nbsp; Docker Server&lt;br&gt;&lt;b&gt;&amp;nbsp; (arm32/64)&lt;/b&gt;" style="verticalLabelPosition=middle;aspect=fixed;html=1;verticalAlign=middle;strokeColor=none;shape=mxgraph.citrix.tower_server;rounded=0;shadow=0;comic=0;fontFamily=Verdana;fontSize=16;labelPosition=right;align=left;" parent="1" vertex="1">
+          <mxGeometry x="720" y="350" width="65" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-2" value="Duckietown Proxy&amp;nbsp;&amp;nbsp;&lt;br style=&quot;font-size: 16px&quot;&gt;Docker Server&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;b&gt;(amd64)&amp;nbsp;&amp;nbsp;&lt;/b&gt;" style="verticalLabelPosition=middle;aspect=fixed;html=1;verticalAlign=middle;strokeColor=none;shape=mxgraph.citrix.tower_server;rounded=0;shadow=0;comic=0;fontFamily=Verdana;fontSize=16;labelPosition=left;align=right;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="200" y="350" width="65" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;fontColor=#000000;" parent="1" source="RGXo1uscGhcn6T7MxgKj-7" target="7d933b09d9755ecc-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="380"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;fontColor=#000000;" parent="1" source="RGXo1uscGhcn6T7MxgKj-7" target="RGXo1uscGhcn6T7MxgKj-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="230" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="480" y="380"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-7" value="Duckietown Jenkins&lt;br&gt;&lt;b&gt;(master node)&lt;/b&gt;&lt;br&gt;" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.tower_server;rounded=0;shadow=0;comic=0;fontFamily=Verdana;fontSize=16;labelBackgroundColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="460" y="120" width="65" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;fontColor=#000000;" parent="1" source="RGXo1uscGhcn6T7MxgKj-8" target="7d933b09d9755ecc-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="420"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.092;entryY=0.824;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=16;fontColor=#000000;" parent="1" source="RGXo1uscGhcn6T7MxgKj-8" target="RGXo1uscGhcn6T7MxgKj-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="479" y="420"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-8" value="Duckietown User" style="fontColor=#000000;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#000000;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.laptop;fontSize=16;fontFamily=Verdana;" parent="1" vertex="1">
+          <mxGeometry x="439.25" y="539" width="100" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-11" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#666666;shape=mxgraph.azure.user;labelBackgroundColor=#696969;fontSize=16;labelBorderColor=#FFFFFF;strokeWidth=9;" parent="1" vertex="1">
+          <mxGeometry x="513.25" y="549" width="47.5" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-21" value="Shell" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fillColor=#666666;fontSize=16;image=https://www.duckietown.org/wp-content/uploads/2018/05/duckie2-300x270.png;fontColor=#000000;imageBackground=none;imageBorder=none;strokeWidth=5;" parent="1" vertex="1">
+          <mxGeometry x="458.7" y="260" width="61.11" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="RGXo1uscGhcn6T7MxgKj-23" value="Shell" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;labelBackgroundColor=#ffffff;fillColor=#666666;fontSize=16;image=https://www.duckietown.org/wp-content/uploads/2018/05/duckie2-300x270.png;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="458.7" y="451" width="61.11" height="55" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

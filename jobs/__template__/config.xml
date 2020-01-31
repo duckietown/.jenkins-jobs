@@ -56,11 +56,15 @@
   <axes>
     <hudson.matrix.TextAxis>
       <name>DUCKIETOWN_CI_ARCH</name>
-      <values/>
+      <values>
+        {REPO_ARCH}
+      </values>
     </hudson.matrix.TextAxis>
     <hudson.matrix.TextAxis>
       <name>DUCKIETOWN_CI_MAJOR</name>
-      <values/>
+      <values>
+        {REPO_MAJOR}
+      </values>
     </hudson.matrix.TextAxis>
   </axes>
   <builders>

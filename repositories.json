@@ -26,7 +26,7 @@
   {
     "name": "dt-ros-commons",
     "origin": "duckietown/dt-ros-commons",
-    "base": "dt-commons"
+    "base": "dt-commons,dt-ros-kinetic-base,dt-ros-base"
   },
   {
     "name": "dt-ros-kinetic-base",

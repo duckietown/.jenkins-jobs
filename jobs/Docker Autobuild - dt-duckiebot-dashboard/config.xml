@@ -109,7 +109,12 @@ rm -rf ./ws
       <disableDeferredWipeout>false</disableDeferredWipeout>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.19">
-      <strategy class="hudson.plugins.build_timeout.impl.LikelyStuckTimeOutStrategy"/>
+      <strategy class="hudson.plugins.build_timeout.impl.ElasticTimeOutStrategy">
+        <timeoutPercentage>200</timeoutPercentage>
+        <numberOfBuilds>3</numberOfBuilds>
+        <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
+        <timeoutMinutesElasticDefault>30</timeoutMinutesElasticDefault>
+      </strategy>
       <operationList>
         <hudson.plugins.build__timeout.operations.AbortOperation/>
       </operationList>

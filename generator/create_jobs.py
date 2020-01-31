@@ -104,7 +104,8 @@ def main():
                 'DUCKIETOWN_CI_MAJOR': '{DUCKIETOWN_CI_MAJOR}',
                 'GIT_URL': '{GIT_URL}',
                 'DUCKIETOWN_CI_DT_SHELL_VERSION': '{DUCKIETOWN_CI_DT_SHELL_VERSION}',
-                'BASE_JOB': job_name(repo['base']) if 'base' in repo else ''
+                'BASE_JOB': ', '.join([job_name(b.strip()) for b in repo['base'].split(',')])
+                            if 'base' in repo else ''
             }))
 
 

@@ -1,11 +1,5 @@
 [
   {
-    "name": "rpi-health",
-    "origin": "duckietown/rpi-health"
-  },
-
-
-  {
     "name": "dt-commons",
     "origin": "duckietown/dt-commons"
   },

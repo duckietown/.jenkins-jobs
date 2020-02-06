@@ -3,12 +3,9 @@
 import os
 import sys
 import json
-import glob
 import argparse
 import logging
-import itertools
 import requests
-import subprocess
 from collections import defaultdict
 
 logging.basicConfig()
@@ -50,10 +47,17 @@ def main():
     except:
         pass
     # load template job
-    template_config_file = os.path.join(parsed.jobsdir, TEMPLATE_JOB, 'config.xml')
+    template_config_file = os.path.join(parsed.jobsdir, TEMPLATE_JOB, 'config.xml.template')
     with open(template_config_file, 'rt') as fin:
         template_config = fin.read()
     # check which configurations are valid
+    stats = {
+        'cache': {
+            'hits': 0,
+            'misses': 0
+        },
+        'num_jobs': 0
+    }
     logger.info('Found {:d} repositories.'.format(len(repos)))
     for repo in repos:
         logger.info('Analyzing [{:s}]'.format(repo['name']))
@@ -74,14 +78,16 @@ def main():
         # update cache
         if response.status_code == 200:
             logger.info('< Fetched from GitHub.')
+            stats['cache']['misses'] += 1
             # noinspection PyTypeChecker
             cache[repo_url] = {
                 'ETag': response.headers['ETag'],
                 'Content': response.json()
             }
             with open(cache_file, 'w') as fout:
-                json.dump(cache, fout)
+                json.dump(cache, fout, indent=4, sort_keys=True)
         if response.status_code == 304:
+            stats['cache']['hits'] += 1
             logger.info('< Using cached data.')
         # get json response
         repo_branches = [b['name'] for b in cache[repo_url]['Content']]
@@ -107,6 +113,12 @@ def main():
                 'BASE_JOB': ', '.join([job_name(b.strip()) for b in repo['base'].split(',')])
                             if 'base' in repo else ''
             }))
+        stats['num_jobs'] += 1
+    # print out stats
+    logger.info('Statistics: Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}'.format(
+        stats['num_jobs'], stats['cache']['hits'], stats['cache']['misses']
+    ))
+    logger.info('Done!')
 
 
 def job_name(repo_name):

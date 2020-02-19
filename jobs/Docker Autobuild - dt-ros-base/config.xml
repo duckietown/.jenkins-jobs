@@ -79,7 +79,7 @@ dts \
 	--set-version ${DUCKIETOWN_CI_DT_SHELL_VERSION} \
     devel build \
     	--workdir ./ws \
-    	--ci
+    	--ci 
 # clean
 rm -rf ./ws
       </command>

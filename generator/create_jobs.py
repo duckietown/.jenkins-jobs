@@ -77,6 +77,10 @@ def main():
         if response.status_code == 401 and response.headers['X-RateLimit-Remaining'] == 0:
             logger.error('GitHub API quota exhausted! Exiting.')
             sys.exit(1)
+        # check output
+        if response.status_code == 404:
+            logger.error('< Repository "{origin}" not found'.format(**repo))
+            sys.exit(2)
         # update cache
         if response.status_code == 200:
             logger.info('< Fetched from GitHub.')

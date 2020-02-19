@@ -13,6 +13,8 @@ logger = logging.getLogger('jobs-generator')
 logger.setLevel(logging.INFO)
 
 TEMPLATE_JOB = '__template__'
+DTS_ARGS_INDENT = ' \\ \n' + ' ' * 8
+
 
 def main():
     # configure arguments
@@ -111,7 +113,11 @@ def main():
                 'GIT_URL': '{GIT_URL}',
                 'DUCKIETOWN_CI_DT_SHELL_VERSION': '{DUCKIETOWN_CI_DT_SHELL_VERSION}',
                 'BASE_JOB': ', '.join([job_name(b.strip()) for b in repo['base'].split(',')])
-                            if 'base' in repo else ''
+                            if 'base' in repo else '',
+                'DTS_ARGS': DTS_ARGS_INDENT + DTS_ARGS_INDENT.join([
+                    '{:s}={:s}'.format(k, v)
+                    for k, v in repo['dts_args'].items()
+                ]) if 'dts_args' in repo else ''
             }))
         stats['num_jobs'] += 1
     # print out stats

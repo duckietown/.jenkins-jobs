@@ -1,4 +1,144 @@
 {
+    "duckietown/aido-protocols": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "80ea979c66dd7ce8b1fec8e6177dc09fcef68936",
+                    "url": "https://api.github.com/repos/duckietown/aido-protocols/commits/80ea979c66dd7ce8b1fec8e6177dc09fcef68936"
+                },
+                "name": "daffy",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "d6c70a5fd2bcbf02770da0e90b02536d5072447d",
+                    "url": "https://api.github.com/repos/duckietown/aido-protocols/commits/d6c70a5fd2bcbf02770da0e90b02536d5072447d"
+                },
+                "name": "v4",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "d60db2dc6e58d1a21b6323b67492842d8382948a",
+                    "url": "https://api.github.com/repos/duckietown/aido-protocols/commits/d60db2dc6e58d1a21b6323b67492842d8382948a"
+                },
+                "name": "z2",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "2f89cd129cdf6c448e6349b3e40be1d679cd23ac",
+                    "url": "https://api.github.com/repos/duckietown/aido-protocols/commits/2f89cd129cdf6c448e6349b3e40be1d679cd23ac"
+                },
+                "name": "z5",
+                "protected": false
+            }
+        ],
+        "ETag": "W/\"c5850bfebebef6557dcb96c162fdce51\""
+    },
+    "duckietown/challenge-aido_LF-baseline-duckietown": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "dfbb1c099404332763949c769531a3173671d2b4",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/dfbb1c099404332763949c769531a3173671d2b4"
+                },
+                "name": "aido2",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "325ed20b4fc2518250d21b4e072b7546b1c9e22f",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/325ed20b4fc2518250d21b4e072b7546b1c9e22f"
+                },
+                "name": "daffy-refactor",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "e9421b12977158ec11c04c60ba41013583227a70",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/e9421b12977158ec11c04c60ba41013583227a70"
+                },
+                "name": "daffy",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "d9f24270c76e06dbd3cb9271d56a152b98260a55",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/d9f24270c76e06dbd3cb9271d56a152b98260a55"
+                },
+                "name": "local-software-repo",
+                "protected": false
+            }
+        ],
+        "ETag": "W/\"49c291add189858ded19338e842107cc\""
+    },
+    "duckietown/challenge-aido_LF-template-random": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "2ec570e3d0df3e90960e69581bab04117bdec804",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/2ec570e3d0df3e90960e69581bab04117bdec804"
+                },
+                "name": "aido1_remote3-v3",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "65db8d2fa012759ec6c86c44c57b11fb11c677a5",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/65db8d2fa012759ec6c86c44c57b11fb11c677a5"
+                },
+                "name": "aido2-duckiebot",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "100cf05167645e99e6dc36fdf8017c25dc84057f",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/100cf05167645e99e6dc36fdf8017c25dc84057f"
+                },
+                "name": "aido2-liam",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "aaf3c9f8038b71ffc58be4c8769debe1efdf8107",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/aaf3c9f8038b71ffc58be4c8769debe1efdf8107"
+                },
+                "name": "aido2",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "c76c8462342ebd288f12cc9990cb052248234afa",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/c76c8462342ebd288f12cc9990cb052248234afa"
+                },
+                "name": "daffy",
+                "protected": false
+            }
+        ],
+        "ETag": "W/\"3f3e8b6be4352c89d4ce54f38746356d\""
+    },
+    "duckietown/challenge-aido_LF-template-ros": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "39ea243dd78ef570e69054739fd43819b6d7f647",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/39ea243dd78ef570e69054739fd43819b6d7f647"
+                },
+                "name": "aido2",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "553d66e8374a96e7b50cfc2b958a5156b1271b76",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/553d66e8374a96e7b50cfc2b958a5156b1271b76"
+                },
+                "name": "daffy",
+                "protected": false
+            }
+        ],
+        "ETag": "W/\"1cacf137e5411da6a60bb0c9505102cc\""
+    },
     "duckietown/dt-architecture-api": {
         "Content": [
             {

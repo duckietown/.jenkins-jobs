@@ -74,13 +74,16 @@
 git clone -b ${DUCKIETOWN_CI_MAJOR} ${GIT_URL} ./ws
 # install/update duckietown-shell
 pip3 install -U duckietown-shell
+# enter the workspace
+cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts \
 	--set-version ${DUCKIETOWN_CI_DT_SHELL_VERSION} \
     devel build \
-    	--workdir ./ws \
     	--ci {DTS_ARGS}
-# clean
+# leave the workspace
+cd ../
+# clean workspace
 rm -rf ./ws
       </command>
     </hudson.tasks.Shell>

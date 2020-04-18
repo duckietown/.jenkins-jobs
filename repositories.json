@@ -46,6 +46,11 @@
     "origin": "duckietown/dt-core",
     "base": "dt-ros-commons"
   },
+  {
+    "name": "dt-gui-tools",
+    "origin": "duckietown/dt-gui-tools",
+    "base": "dt-ros-commons"
+  },
 
 
   {

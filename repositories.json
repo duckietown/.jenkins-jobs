@@ -18,6 +18,10 @@
     "origin": "duckietown/dt-duckiebot-dashboard"
   },
   {
+    "name": "dt-device-dashboard",
+    "origin": "duckietown/dt-device-dashboard"
+  },
+  {
     "name": "dt-ros-commons",
     "origin": "duckietown/dt-ros-commons",
     "base": "dt-commons,dt-ros-kinetic-base,dt-ros-base"

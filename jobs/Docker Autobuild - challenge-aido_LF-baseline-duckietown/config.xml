@@ -77,7 +77,7 @@ pip3 install -U duckietown-shell
 # enter the workspace
 cd ./ws
 # pull, build(cloud), transfer, push, clean
-dts \
+dts --debug \
 	--set-version ${DUCKIETOWN_CI_DT_SHELL_VERSION} \
     devel build \
     	--ci  \ 

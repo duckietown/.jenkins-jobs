@@ -212,14 +212,14 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "89e47fa4419dca24b19cce5a9835ef1fa3627aac",
-                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/89e47fa4419dca24b19cce5a9835ef1fa3627aac"
+                    "sha": "d74bfa4ad70cab4604d0734b69ec71c830464e8e",
+                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/d74bfa4ad70cab4604d0734b69ec71c830464e8e"
                 },
                 "name": "daffy",
                 "protected": false
             }
         ],
-        "ETag": "W/\"0106a05738dcfc2ef485391ce29a5db9\""
+        "ETag": "W/\"514b2469f051bf3d2bbbfadaecbc7836\""
     },
     "duckietown/dt-car-interface": {
         "Content": [
@@ -310,8 +310,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "f8e63ca2cb2dec48952d3990e3cb3af0ee80106a",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/f8e63ca2cb2dec48952d3990e3cb3af0ee80106a"
+                    "sha": "8a76d1ac3af49fa11259f799d55f282e2c42d897",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/8a76d1ac3af49fa11259f799d55f282e2c42d897"
                 },
                 "name": "daffy-new-deal",
                 "protected": false
@@ -341,7 +341,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"7d12c26cbfe9925e098e3dd197c157e1\""
+        "ETag": "W/\"ca9b371e6031f91585c75e5e11d04243\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -890,8 +890,8 @@
             },
             {
                 "commit": {
-                    "sha": "ea6d4e13bf4d132527b8bc2d940fadf4b02bb2c9",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/ea6d4e13bf4d132527b8bc2d940fadf4b02bb2c9"
+                    "sha": "f88f00dc9bf0ba00d4cc9f6cd1b6e2a5f4d372b2",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/f88f00dc9bf0ba00d4cc9f6cd1b6e2a5f4d372b2"
                 },
                 "name": "daffy-new-deal",
                 "protected": false
@@ -985,7 +985,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"686de815e98a14886adc6bd726668fd4\""
+        "ETag": "W/\"c19b385b36673917592a620040c39063\""
     },
     "duckietown/dt-ros-kinetic-base": {
         "Content": [

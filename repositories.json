@@ -115,7 +115,11 @@
       "origin": "duckietown/gym-duckietown",
       "dts_args": {
           "-C": "docker/AIDO1/server-python3"
-      },
-      "base": "pytorch"
-  } 
+      }
+  }, 
+  {
+      "name": "challenge-aido_LF-simulator-gym",
+      "origin": "duckietown/challenge-aido_LF-simulator-gym",
+      "base": "duckietown/gym-duckietown-server-python3:daffy-aido4"
+  }
 ]

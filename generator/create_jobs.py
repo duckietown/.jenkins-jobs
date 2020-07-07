@@ -25,8 +25,8 @@ def main():
                         help="File containing the list of repositories to build")
     parser.add_argument('-a', '--arch', required=True,
                         help="Comma-separated list of target architectures for the job to build")
-    parser.add_argument('-M', '--major', required=True,
-                        help="Comma-separated list of target majors for the job to build")
+    parser.add_argument('-M', '--distro', required=True,
+                        help="Comma-separated list of target distros for the job to build")
     parsed, _ = parser.parse_known_args()
     # ---
     parsed.jobsdir = os.path.abspath(parsed.jobsdir)
@@ -36,7 +36,7 @@ def main():
         exit(1)
     # get arguments
     arch_list = parsed.arch.split(',')
-    major_list = parsed.major.split(',')
+    distro_list = parsed.distro.split(',')
     # read list of repos
     with open(parsed.repos, 'r') as fin:
         repos = json.load(fin)
@@ -97,9 +97,9 @@ def main():
             logger.info('< Using cached data.')
         # get json response
         repo_branches = [b['name'] for b in cache[repo_url]['Content']]
-        # filter majors
-        repo_majors = [b for b in repo_branches if b in major_list]
-        logger.info('> Found majors: {:s}'.format(str(repo_majors)))
+        # filter distros
+        repo_distros = [b for b in repo_branches if b in distro_list]
+        logger.info('> Found distros: {:s}'.format(str(repo_distros)))
         # create job by updating the template fields
         job_config_path = os.path.join(parsed.jobsdir, job_name(repo['name']), 'config.xml')
         os.makedirs(os.path.dirname(job_config_path))
@@ -110,10 +110,10 @@ def main():
                 'REPO_ARCH': ''.join(map(
                     lambda a: '<string>{:s}</string>'.format(a), arch_list
                 )),
-                'REPO_MAJOR': ''.join(map(
-                    lambda m: '<string>{:s}</string>'.format(m), repo_majors
+                'REPO_DISTRO': ''.join(map(
+                    lambda m: '<string>{:s}</string>'.format(m), repo_distros
                 )),
-                'DUCKIETOWN_CI_MAJOR': '{DUCKIETOWN_CI_MAJOR}',
+                'DUCKIETOWN_CI_DISTRO': '{DUCKIETOWN_CI_DISTRO}',
                 'GIT_URL': '{GIT_URL}',
                 'DUCKIETOWN_CI_DT_SHELL_VERSION': '{DUCKIETOWN_CI_DT_SHELL_VERSION}',
                 'BASE_JOB': ', '.join([job_name(b.strip()) for b in repo['base'].split(',')])

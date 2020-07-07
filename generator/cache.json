@@ -212,14 +212,14 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "d74bfa4ad70cab4604d0734b69ec71c830464e8e",
-                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/d74bfa4ad70cab4604d0734b69ec71c830464e8e"
+                    "sha": "941d41f68724dd8ab294afe552bec5a0d01aa18e",
+                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/941d41f68724dd8ab294afe552bec5a0d01aa18e"
                 },
                 "name": "daffy",
                 "protected": false
             }
         ],
-        "ETag": "W/\"514b2469f051bf3d2bbbfadaecbc7836\""
+        "ETag": "W/\"2c8b35867655020f596caf40e4499df4\""
     },
     "duckietown/dt-car-interface": {
         "Content": [
@@ -326,8 +326,8 @@
             },
             {
                 "commit": {
-                    "sha": "0422789c22174360c08d08e6af862d8657c316f1",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/0422789c22174360c08d08e6af862d8657c316f1"
+                    "sha": "29a3ca6abd80a837d7fcf41e970ad6c5e36867e3",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/29a3ca6abd80a837d7fcf41e970ad6c5e36867e3"
                 },
                 "name": "daffy",
                 "protected": false
@@ -341,7 +341,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"ca9b371e6031f91585c75e5e11d04243\""
+        "ETag": "W/\"9710f75e816a989dce6feed4cd05f5ab\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -565,8 +565,8 @@
             },
             {
                 "commit": {
-                    "sha": "f65171a387eb67ad578f28cbc84a93407c17aea1",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/f65171a387eb67ad578f28cbc84a93407c17aea1"
+                    "sha": "2c397cda276c1f1e8a4a8a391834158d781937da",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/2c397cda276c1f1e8a4a8a391834158d781937da"
                 },
                 "name": "daffy",
                 "protected": false
@@ -580,7 +580,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"506a31a911928fe2db42401b74fb8687\""
+        "ETag": "W/\"e155c12c3abeca36ed19e9ee592bd21e\""
     },
     "duckietown/dt-device-loader": {
         "Content": [
@@ -882,8 +882,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "275e3bf7d70e0d9f5b55b6d058e8db95e71afe10",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/275e3bf7d70e0d9f5b55b6d058e8db95e71afe10"
+                    "sha": "c306b7ffbb72c2a390e711f175d7ee2692c2240b",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/c306b7ffbb72c2a390e711f175d7ee2692c2240b"
                 },
                 "name": "daffy-new-deal-timing",
                 "protected": false
@@ -985,7 +985,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"c19b385b36673917592a620040c39063\""
+        "ETag": "W/\"c64f9089507fb8d292c08407fc630f97\""
     },
     "duckietown/dt-ros-kinetic-base": {
         "Content": [

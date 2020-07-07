@@ -61,9 +61,9 @@
       </values>
     </hudson.matrix.TextAxis>
     <hudson.matrix.TextAxis>
-      <name>DUCKIETOWN_CI_MAJOR</name>
+      <name>DUCKIETOWN_CI_DISTRO</name>
       <values>
-        {REPO_MAJOR}
+        {REPO_DISTRO}
       </values>
     </hudson.matrix.TextAxis>
   </axes>
@@ -71,7 +71,7 @@
     <hudson.tasks.Shell>
       <command>
 # fetch code
-git clone -b ${DUCKIETOWN_CI_MAJOR} ${GIT_URL} ./ws
+git clone -b ${DUCKIETOWN_CI_DISTRO} ${GIT_URL} ./ws
 # install/update duckietown-shell
 pip3 install -U duckietown-shell
 # enter the workspace

@@ -72,6 +72,7 @@
       <command>
 # fetch code
 git clone -b ${DUCKIETOWN_CI_DISTRO} ${GIT_URL} ./ws
+git -C ./ws fetch --tags
 # install/update duckietown-shell
 pip3 install -U duckietown-shell
 # switch to CI commands

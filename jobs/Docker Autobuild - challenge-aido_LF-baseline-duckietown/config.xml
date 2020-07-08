@@ -74,11 +74,14 @@
 git clone -b ${DUCKIETOWN_CI_DISTRO} ${GIT_URL} ./ws
 # install/update duckietown-shell
 pip3 install -U duckietown-shell
+# switch to CI commands
+dts --set-version ${DUCKIETOWN_CI_DT_SHELL_VERSION} exit
+# update commands
+dts update
 # enter the workspace
 cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts --debug \
-	--set-version ${DUCKIETOWN_CI_DT_SHELL_VERSION} \
     devel build \
     	--ci  \ 
         -C=3_submit

@@ -212,14 +212,14 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "941d41f68724dd8ab294afe552bec5a0d01aa18e",
-                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/941d41f68724dd8ab294afe552bec5a0d01aa18e"
+                    "sha": "f2494f59212bad190d1d933bfa8577ede9689406",
+                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/f2494f59212bad190d1d933bfa8577ede9689406"
                 },
                 "name": "daffy",
                 "protected": false
             }
         ],
-        "ETag": "W/\"2c8b35867655020f596caf40e4499df4\""
+        "ETag": "W/\"704d7b172a77ce1145192c1e351afa23\""
     },
     "duckietown/dt-car-interface": {
         "Content": [
@@ -882,8 +882,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "c306b7ffbb72c2a390e711f175d7ee2692c2240b",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/c306b7ffbb72c2a390e711f175d7ee2692c2240b"
+                    "sha": "a26019fa7569c435f74222f13c913a6185bb969b",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/a26019fa7569c435f74222f13c913a6185bb969b"
                 },
                 "name": "daffy-new-deal-timing",
                 "protected": false
@@ -985,7 +985,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"c64f9089507fb8d292c08407fc630f97\""
+        "ETag": "W/\"44928864d9b65f59d73d83404465b99c\""
     },
     "duckietown/dt-ros-kinetic-base": {
         "Content": [

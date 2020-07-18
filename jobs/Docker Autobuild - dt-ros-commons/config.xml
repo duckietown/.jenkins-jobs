@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - dt-commons, Docker Autobuild - dt-ros-kinetic-base</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - dt-commons</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -63,7 +63,7 @@
     <hudson.matrix.TextAxis>
       <name>DUCKIETOWN_CI_DISTRO</name>
       <values>
-        <string>daffy</string>
+        <string>daffy-new-deal</string><string>daffy</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>

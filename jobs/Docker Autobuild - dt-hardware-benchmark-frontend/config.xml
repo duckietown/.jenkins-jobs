@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <matrix-project plugin="matrix-project@1.14">
   <actions/>
-  <description>Autobuild for repository dt-car-interface</description>
+  <description>Autobuild for repository dt-hardware-benchmark-frontend</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.5">
-      <projectUrl>https://github.com/duckietown/dt-car-interface/</projectUrl>
+      <projectUrl>https://github.com/duckietown/dt-hardware-benchmark-frontend/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.31">
@@ -17,7 +17,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/duckietown/dt-car-interface</url>
+        <url>https://github.com/duckietown/dt-hardware-benchmark-frontend</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -63,7 +63,7 @@
     <hudson.matrix.TextAxis>
       <name>DUCKIETOWN_CI_DISTRO</name>
       <values>
-        <string>daffy-new-deal</string><string>daffy</string>
+        <string>daffy</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>

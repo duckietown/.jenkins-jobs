@@ -1,7 +1,12 @@
 [
   {
+    "name": "dt-base-environment",
+    "origin": "duckietown/dt-base-environment"
+  },
+  {
     "name": "dt-commons",
-    "origin": "duckietown/dt-commons"
+    "origin": "duckietown/dt-commons",
+    "base": "dt-base-environment"
   },
   {
     "name": "dt-device-online",
@@ -16,10 +21,6 @@
     "name": "dt-device-dashboard",
     "origin": "duckietown/dt-device-dashboard",
     "base": "dt-commons"
-  },
-  {
-    "name": "dt-base-environment",
-    "origin": "duckietown/dt-base-environment"
   },
   {
     "name": "dt-ros-commons",

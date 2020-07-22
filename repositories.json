@@ -9,28 +9,12 @@
     "base": "dt-base-environment"
   },
   {
-    "name": "dt-device-online",
-    "origin": "duckietown/dt-device-online",
-    "base": "dt-commons"
-  },
-  {
-    "name": "dt-duckiebot-dashboard",
-    "origin": "duckietown/dt-duckiebot-dashboard"
-  },
-  {
-    "name": "dt-device-dashboard",
-    "origin": "duckietown/dt-device-dashboard",
-    "base": "dt-commons"
-  },
-  {
     "name": "dt-ros-commons",
     "origin": "duckietown/dt-ros-commons",
     "base": "dt-commons"
   },
-  {
-    "name": "dt-ros-kinetic-base",
-    "origin": "duckietown/dt-ros-kinetic-base"
-  },
+
+
   {
     "name": "dt-rosbridge-websocket",
     "origin": "duckietown/dt-rosbridge-websocket",
@@ -58,6 +42,18 @@
   },
 
 
+  {
+    "name": "dt-device-dashboard",
+    "origin": "duckietown/dt-device-dashboard",
+    "base": "dt-commons"
+  },
+
+
+  {
+    "name": "dt-device-online",
+    "origin": "duckietown/dt-device-online",
+    "base": "dt-commons"
+  },
   {
     "name": "dt-device-health",
     "origin": "duckietown/dt-device-health",

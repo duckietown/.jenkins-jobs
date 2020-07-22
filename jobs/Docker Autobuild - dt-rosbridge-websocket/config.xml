@@ -63,7 +63,7 @@
     <hudson.matrix.TextAxis>
       <name>DUCKIETOWN_CI_DISTRO</name>
       <values>
-        <string>daffy-new-deal</string><string>daffy</string>
+        <string>daffy</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>

@@ -1,7 +1,7 @@
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 ARCH:="arm32v7,arm64v8,amd64"
-DISTRO:="daffy,daffy-py23"
+DISTRO:="daffy,ente"
 
 generate:
 	rm -rf ${ROOT_DIR}/jobs/Docker*

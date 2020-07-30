@@ -1,6 +1,6 @@
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-ARCH:="arm32v7,amd64"
+ARCH:="arm32v7,arm64v8,amd64"
 DISTRO:="daffy,daffy-py23"
 
 generate:

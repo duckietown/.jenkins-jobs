@@ -100,30 +100,34 @@ def main():
         # filter distros
         repo_distros = [b for b in repo_branches if b in distro_list]
         logger.info('> Found distros: {:s}'.format(str(repo_distros)))
-        # create job by updating the template fields
-        job_config_path = os.path.join(parsed.jobsdir, job_name(repo['name']), 'config.xml')
-        os.makedirs(os.path.dirname(job_config_path))
-        with open(job_config_path, 'wt') as fout:
-            fout.write(template_config.format(**{
-                'REPO_NAME': repo['name'],
-                'REPO_URL': 'https://github.com/{:s}'.format(repo['origin']),
-                'REPO_ARCH': ''.join(map(
-                    lambda a: '<string>{:s}</string>'.format(a), arch_list
-                )),
-                'REPO_DISTRO': ''.join(map(
-                    lambda m: '<string>{:s}</string>'.format(m), repo_distros
-                )),
-                'DUCKIETOWN_CI_DISTRO': '{DUCKIETOWN_CI_DISTRO}',
-                'GIT_URL': '{GIT_URL}',
-                'DUCKIETOWN_CI_DT_SHELL_VERSION': '{DUCKIETOWN_CI_DT_SHELL_VERSION}',
-                'BASE_JOB': ', '.join([job_name(b.strip()) for b in repo['base'].split(',')])
-                            if 'base' in repo else '',
-                'DTS_ARGS': DTS_ARGS_INDENT + DTS_ARGS_INDENT.join([
-                    '{:s}={:s}'.format(k, v)
-                    for k, v in repo['dts_args'].items()
-                ]) if 'dts_args' in repo else ''
-            }))
-        stats['num_jobs'] += 1
+
+        # create one job per distro
+        for repo_distro in repo_distros:
+            # create job by updating the template fields
+            job_config_path = os.path.join(
+                parsed.jobsdir, job_name(repo_distro, repo['name']), 'config.xml'
+            )
+            os.makedirs(os.path.dirname(job_config_path))
+            with open(job_config_path, 'wt') as fout:
+                fout.write(template_config.format(**{
+                    'REPO_NAME': repo['name'],
+                    'REPO_URL': 'https://github.com/{:s}'.format(repo['origin']),
+                    'REPO_ARCH': ''.join(map(
+                        lambda a: '<string>{:s}</string>'.format(a), arch_list
+                    )),
+                    'REPO_DISTRO': '<string>{:s}</string>'.format(repo_distro),
+                    'DUCKIETOWN_CI_DISTRO': '{DUCKIETOWN_CI_DISTRO}',
+                    'GIT_URL': '{GIT_URL}',
+                    'DUCKIETOWN_CI_DT_SHELL_VERSION': '{DUCKIETOWN_CI_DT_SHELL_VERSION}',
+                    'BASE_JOB': ', '.join([
+                        job_name(repo_distro, b.strip()) for b in repo['base'].split(',')
+                    ]) if 'base' in repo else '',
+                    'DTS_ARGS': DTS_ARGS_INDENT + DTS_ARGS_INDENT.join([
+                        '{:s}={:s}'.format(k, v)
+                        for k, v in repo['dts_args'].items()
+                    ]) if 'dts_args' in repo else ''
+                }))
+            stats['num_jobs'] += 1
     # print out stats
     logger.info('Statistics: Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}'.format(
         stats['num_jobs'], stats['cache']['hits'], stats['cache']['misses']
@@ -131,8 +135,8 @@ def main():
     logger.info('Done!')
 
 
-def job_name(repo_name):
-    return 'Docker Autobuild - {:s}'.format(repo_name)
+def job_name(distro, repo_name):
+    return 'Docker Autobuild - {:s} - {:s}'.format(distro, repo_name)
 
 
 if __name__ == '__main__':

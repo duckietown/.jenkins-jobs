@@ -1,127 +1,124 @@
 [
-  {
-    "name": "dt-base-environment",
-    "origin": "duckietown/dt-base-environment"
-  },
-  {
-    "name": "dt-commons",
-    "origin": "duckietown/dt-commons",
-    "base": "dt-base-environment"
-  },
-  {
-    "name": "dt-ros-commons",
-    "origin": "duckietown/dt-ros-commons",
-    "base": "dt-commons"
-  },
-
-
-  {
-    "name": "dt-rosbridge-websocket",
-    "origin": "duckietown/dt-rosbridge-websocket",
-    "base": "dt-ros-commons"
-  },
-  {
-    "name": "dt-duckiebot-interface",
-    "origin": "duckietown/dt-duckiebot-interface",
-    "base": "dt-ros-commons"
-  },
-  {
-    "name": "dt-car-interface",
-    "origin": "duckietown/dt-car-interface",
-    "base": "dt-ros-commons"
-  },
-  {
-    "name": "dt-core",
-    "origin": "duckietown/dt-core",
-    "base": "dt-ros-commons"
-  },
-  {
-    "name": "dt-gui-tools",
-    "origin": "duckietown/dt-gui-tools",
-    "base": "dt-ros-commons"
-  },
-
-
-  {
-    "name": "dt-device-dashboard",
-    "origin": "duckietown/dt-device-dashboard",
-    "base": "dt-commons"
-  },
-
-
-  {
-    "name": "dt-device-online",
-    "origin": "duckietown/dt-device-online",
-    "base": "dt-commons"
-  },
-  {
-    "name": "dt-device-health",
-    "origin": "duckietown/dt-device-health",
-    "base": "dt-commons"
-  },
-  {
-    "name": "dt-device-proxy",
-    "origin": "duckietown/dt-device-proxy",
-    "base": "dt-commons"
-  },
-  {
-    "name": "dt-system-monitor",
-    "origin": "duckietown/dt-system-monitor",
-    "base": "dt-commons"
-  },
-  {
-    "name": "dt-architecture-api",
-    "origin": "duckietown/dt-architecture-api",
-    "base": "dt-commons"
-  },
-  {
-    "name": "dt-files-api",
-    "origin": "duckietown/dt-files-api",
-    "base": "dt-commons"
-  },
-  {
-    "name": "dt-code-api",
-    "origin": "duckietown/dt-code-api",
-    "base": "dt-commons"
-  },
-  {
-    "name": "challenge-aido_LF-template-ros",
-    "origin": "duckietown/challenge-aido_LF-template-ros",
-    "base": "dt-core,dt-car-interface"
-  },
-  {
-      "name": "challenge-aido_LF-template-random",
-      "origin": "duckietown/challenge-aido_LF-template-random",
-      "base": "aido3-base-python3"
-  },
-  {
-      "name": "aido3-base-python3",
-      "origin": "duckietown/aido-protocols",
-      "dts-args": {
-          "-C": "minimal-nodes-stubs/aido3-bas-python3"
-      }
-  },
-  {
-      "name": "challenge-aido_LF-baseline-duckietown",
-      "origin": "duckietown/challenge-aido_LF-baseline-duckietown",
-      "dts_args": {
-          "-C": "3_submit"
-      },
-      "base": "challenge-aido_LF-template-ros"
-  },
-  {
-    "name": "dt-hardware-benchmark-backend",
-    "origin": "duckietown/dt-hardware-benchmark-backend",
-    "base": "dt-ros-commons"
-  },
-  {
-    "name": "dt-hardware-benchmark-frontend",
-    "origin": "duckietown/dt-hardware-benchmark-frontend",
-    "base": "dt-ros-commons"
-  },
-  {
-    "name": "dt-duckiebot-fifos-bridge",
-    "origin": "duckietown/dt-duckiebot-fifos-bridge",
-    "base": "dt-ros-commons"
-  }
+    {
+        "name": "dt-base-environment",
+        "origin": "duckietown/dt-base-environment"
+    },
+    {
+        "name": "dt-commons",
+        "origin": "duckietown/dt-commons",
+        "base": "dt-base-environment"
+    },
+    {
+        "name": "dt-ros-commons",
+        "origin": "duckietown/dt-ros-commons",
+        "base": "dt-commons"
+    },
+    {
+        "name": "dt-rosbridge-websocket",
+        "origin": "duckietown/dt-rosbridge-websocket",
+        "base": "dt-ros-commons"
+    },
+    {
+        "name": "dt-duckiebot-interface",
+        "origin": "duckietown/dt-duckiebot-interface",
+        "base": "dt-ros-commons"
+    },
+    {
+        "name": "dt-car-interface",
+        "origin": "duckietown/dt-car-interface",
+        "base": "dt-ros-commons"
+    },
+    {
+        "name": "dt-core",
+        "origin": "duckietown/dt-core",
+        "base": "dt-ros-commons"
+    },
+    {
+        "name": "dt-gui-tools",
+        "origin": "duckietown/dt-gui-tools",
+        "base": "dt-ros-commons",
+        "dts_args": {
+            "--ci-force-builder-arch": "amd64"
+        }
+    },
+    {
+        "name": "dt-device-dashboard",
+        "origin": "duckietown/dt-device-dashboard",
+        "base": "dt-commons"
+    },
+    {
+        "name": "dt-device-online",
+        "origin": "duckietown/dt-device-online",
+        "base": "dt-commons"
+    },
+    {
+        "name": "dt-device-health",
+        "origin": "duckietown/dt-device-health",
+        "base": "dt-commons"
+    },
+    {
+        "name": "dt-device-proxy",
+        "origin": "duckietown/dt-device-proxy",
+        "base": "dt-commons"
+    },
+    {
+        "name": "dt-system-monitor",
+        "origin": "duckietown/dt-system-monitor",
+        "base": "dt-commons"
+    },
+    {
+        "name": "dt-architecture-api",
+        "origin": "duckietown/dt-architecture-api",
+        "base": "dt-commons"
+    },
+    {
+        "name": "dt-files-api",
+        "origin": "duckietown/dt-files-api",
+        "base": "dt-commons"
+    },
+    {
+        "name": "dt-code-api",
+        "origin": "duckietown/dt-code-api",
+        "base": "dt-commons"
+    },
+    {
+        "name": "challenge-aido_LF-template-ros",
+        "origin": "duckietown/challenge-aido_LF-template-ros",
+        "base": "dt-core,dt-car-interface"
+    },
+    {
+        "name": "challenge-aido_LF-template-random",
+        "origin": "duckietown/challenge-aido_LF-template-random",
+        "base": "aido3-base-python3"
+    },
+    {
+        "name": "aido3-base-python3",
+        "origin": "duckietown/aido-protocols",
+        "dts_args": {
+            "-C": "minimal-nodes-stubs/aido3-bas-python3"
+        }
+    },
+    {
+        "name": "challenge-aido_LF-baseline-duckietown",
+        "origin": "duckietown/challenge-aido_LF-baseline-duckietown",
+        "dts_args": {
+            "-C": "3_submit"
+        },
+        "base": "challenge-aido_LF-template-ros"
+    },
+    {
+        "name": "dt-hardware-benchmark-backend",
+        "origin": "duckietown/dt-hardware-benchmark-backend",
+        "base": "dt-ros-commons"
+    },
+    {
+        "name": "dt-hardware-benchmark-frontend",
+        "origin": "duckietown/dt-hardware-benchmark-frontend",
+        "base": "dt-ros-commons"
+    },
+    {
+        "name": "dt-duckiebot-fifos-bridge",
+        "origin": "duckietown/dt-duckiebot-fifos-bridge",
+        "base": "dt-ros-commons"
+    }
 ]

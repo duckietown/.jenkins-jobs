@@ -84,7 +84,7 @@ cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
-    	--ci  \ 
+    	--ci \ 
         -C=minimal-nodes-stubs/aido3-bas-python3
 # leave the workspace
 cd ../

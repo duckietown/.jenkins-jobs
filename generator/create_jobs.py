@@ -13,7 +13,7 @@ logger = logging.getLogger('jobs-generator')
 logger.setLevel(logging.INFO)
 
 TEMPLATE_JOB = '__template__'
-DTS_ARGS_INDENT = ' \\ \n' + ' ' * 8
+DTS_ARGS_INDENT = ' \\\n' + ' ' * 8
 
 
 def main():

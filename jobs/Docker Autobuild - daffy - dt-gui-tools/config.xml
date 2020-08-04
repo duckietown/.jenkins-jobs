@@ -84,7 +84,7 @@ cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
-    	--ci \ 
+        --ci \
         --ci-force-builder-arch=amd64
 # leave the workspace
 cd ../

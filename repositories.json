@@ -118,5 +118,10 @@
     "name": "dt-hardware-benchmark-frontend",
     "origin": "duckietown/dt-hardware-benchmark-frontend",
     "base": "dt-ros-commons"
+  },
+  {
+    "name": "dt-duckiebot-fifos-bridge",
+    "origin": "duckietown/dt-duckiebot-fifos-bridge",
+    "base": "dt-ros-commons"
   }
 ]

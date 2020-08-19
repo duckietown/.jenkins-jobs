@@ -14,6 +14,7 @@ logger.setLevel(logging.INFO)
 
 TEMPLATE_JOB = '__template__'
 DTS_ARGS_INDENT = ' \\\n' + ' ' * 8
+TIMEOUT_MINUTES = 120
 
 
 def main():
@@ -125,7 +126,8 @@ def main():
                     'DTS_ARGS': DTS_ARGS_INDENT + DTS_ARGS_INDENT.join([
                         '{:s}={:s}'.format(k, v)
                         for k, v in repo['dts_args'].items()
-                    ]) if 'dts_args' in repo else ''
+                    ]) if 'dts_args' in repo else '',
+                    'TIMEOUT_MINUTES': TIMEOUT_MINUTES
                 }))
             stats['num_jobs'] += 1
     # print out stats

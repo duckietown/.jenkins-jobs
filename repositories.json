@@ -36,7 +36,7 @@
     {
         "name": "dt-gui-tools",
         "origin": "duckietown/dt-gui-tools",
-        "base": "dt-ros-commons",
+        "base": "dt-core",
         "dts_args": {
             "--ci-force-builder-arch": "amd64"
         }

@@ -60,18 +60,12 @@
         {REPO_ARCH}
       </values>
     </hudson.matrix.TextAxis>
-    <hudson.matrix.TextAxis>
-      <name>DUCKIETOWN_CI_DISTRO</name>
-      <values>
-        {REPO_DISTRO}
-      </values>
-    </hudson.matrix.TextAxis>
   </axes>
   <builders>
     <hudson.tasks.Shell>
       <command>
 # fetch code
-git clone -b ${DUCKIETOWN_CI_DISTRO} ${GIT_URL} ./ws
+git clone -b {REPO_DISTRO} ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
 pip3 install -U duckietown-shell

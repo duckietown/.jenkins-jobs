@@ -60,18 +60,12 @@
         <string>arm32v7</string><string>arm64v8</string><string>amd64</string>
       </values>
     </hudson.matrix.TextAxis>
-    <hudson.matrix.TextAxis>
-      <name>DUCKIETOWN_CI_DISTRO</name>
-      <values>
-        <string>ente</string>
-      </values>
-    </hudson.matrix.TextAxis>
   </axes>
   <builders>
     <hudson.tasks.Shell>
       <command>
 # fetch code
-git clone -b ${DUCKIETOWN_CI_DISTRO} ${GIT_URL} ./ws
+git clone -b <string>ente</string> ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
 pip3 install -U duckietown-shell

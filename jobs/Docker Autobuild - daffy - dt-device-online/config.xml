@@ -22,14 +22,14 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>**</name>
+        <name><string>daffy</string></name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch>**</localBranch>
+        <localBranch><string>daffy</string></localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
     </extensions>
   </scm>

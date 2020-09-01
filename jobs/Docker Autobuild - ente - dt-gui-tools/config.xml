@@ -22,14 +22,14 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>**</name>
+        <name><string>ente</string></name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch>**</localBranch>
+        <localBranch><string>ente</string></localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
     </extensions>
   </scm>
@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - ente - dt-ros-commons</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - ente - dt-core</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

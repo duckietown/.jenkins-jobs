@@ -22,14 +22,14 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name><string>daffy</string></name>
+        <name>daffy</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch><string>daffy</string></localBranch>
+        <localBranch>daffy</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
     </extensions>
   </scm>
@@ -65,7 +65,7 @@
     <hudson.tasks.Shell>
       <command>
 # fetch code
-git clone -b <string>daffy</string> ${GIT_URL} ./ws
+git clone -b daffy ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
 pip3 install -U duckietown-shell

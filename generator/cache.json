@@ -204,8 +204,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "f02f7040dcd423bc8e1b8ff8158c6fc4b3db4c17",
-                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/f02f7040dcd423bc8e1b8ff8158c6fc4b3db4c17"
+                    "sha": "49e267ad5363958e83b86dfd798e002da6155be3",
+                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/49e267ad5363958e83b86dfd798e002da6155be3"
                 },
                 "name": "daffy",
                 "protected": false
@@ -219,7 +219,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"a01ca5e278dbb2675a452077787e3a17\""
+        "ETag": "W/\"61b491551d4eae3bc9713267c849f7c6\""
     },
     "duckietown/dt-car-interface": {
         "Content": [

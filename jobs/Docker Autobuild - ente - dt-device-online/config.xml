@@ -22,14 +22,14 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name><string>ente</string></name>
+        <name>ente</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch><string>ente</string></localBranch>
+        <localBranch>ente</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
     </extensions>
   </scm>
@@ -65,7 +65,7 @@
     <hudson.tasks.Shell>
       <command>
 # fetch code
-git clone -b <string>ente</string> ${GIT_URL} ./ws
+git clone -b ente ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
 pip3 install -U duckietown-shell

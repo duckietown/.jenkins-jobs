@@ -116,7 +116,7 @@ def main():
                     'REPO_ARCH': ''.join(map(
                         lambda a: '<string>{:s}</string>'.format(a), arch_list
                     )),
-                    'REPO_DISTRO': '<string>{:s}</string>'.format(repo_distro),
+                    'REPO_DISTRO': repo_distro,
                     'GIT_URL': '{GIT_URL}',
                     'DUCKIETOWN_CI_DT_SHELL_VERSION': '{DUCKIETOWN_CI_DT_SHELL_VERSION}',
                     'BASE_JOB': ', '.join([

@@ -120,5 +120,10 @@
         "name": "dt-duckiebot-fifos-bridge",
         "origin": "duckietown/dt-duckiebot-fifos-bridge",
         "base": "dt-ros-commons"
+    },
+    {
+        "name": "acquisition-bridge",
+        "origin": "duckietown/acquisition-bridge",
+        "base": "dt-ros-commons"
     }
 ]

@@ -29,6 +29,11 @@
         "base": "dt-ros-commons"
     },
     {
+        "name": "dt-drone-interface",
+        "origin": "duckietown/dt-drone-interface",
+        "base": "dt-ros-commons"
+    },
+    {
         "name": "dt-core",
         "origin": "duckietown/dt-core",
         "base": "dt-ros-commons"

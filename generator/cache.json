@@ -40,8 +40,8 @@
             },
             {
                 "commit": {
-                    "sha": "6cfce91194136fe70f4584f6d853b05fbac91b41",
-                    "url": "https://api.github.com/repos/duckietown/aido-protocols/commits/6cfce91194136fe70f4584f6d853b05fbac91b41"
+                    "sha": "688a9339d54ff40ca817aa0d8de0793c840d3215",
+                    "url": "https://api.github.com/repos/duckietown/aido-protocols/commits/688a9339d54ff40ca817aa0d8de0793c840d3215"
                 },
                 "name": "daffy",
                 "protected": true
@@ -71,7 +71,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"4a16a70582cd6327ff4df086a0ad92e16454da4b32ec432e8a0ba4fd03b90fd6\""
+        "ETag": "W/\"14a6507250e72198e5193557194bf64d2c988128066549ec6e03d9e4451bc29d\""
     },
     "duckietown/challenge-aido_LF-baseline-duckietown": {
         "Content": [
@@ -109,8 +109,8 @@
             },
             {
                 "commit": {
-                    "sha": "fe934a538695803cd62b4b863757e4504e363b83",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/fe934a538695803cd62b4b863757e4504e363b83"
+                    "sha": "afe584f4de42825eaeb00ee2384feba7a17c9d3d",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/afe584f4de42825eaeb00ee2384feba7a17c9d3d"
                 },
                 "name": "daffy",
                 "protected": false
@@ -132,7 +132,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"0d02b39f416c3baf0fc06eef3bb769ba2b8dc7b76a521d65e116c7832d5c8c9b\""
+        "ETag": "W/\"5c8476ecdc47a1e94042ac106307bce4030923ed440ea2f583313e7a59ce482b\""
     },
     "duckietown/challenge-aido_LF-template-random": {
         "Content": [
@@ -186,14 +186,14 @@
             },
             {
                 "commit": {
-                    "sha": "cd459cc67ccbb14cb9960b09929e2c38422a0345",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/cd459cc67ccbb14cb9960b09929e2c38422a0345"
+                    "sha": "d11e85e019a0cf69d41d79f5ca36a8f600116901",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/d11e85e019a0cf69d41d79f5ca36a8f600116901"
                 },
                 "name": "daffy",
                 "protected": false
             }
         ],
-        "ETag": "W/\"941cc67e5dbc69cba4a85c950135066643044197551b21dc3628d8f023adb145\""
+        "ETag": "W/\"76e2dfaa4c9d59d8b6cd5e0872dcf8f4e106bb131abcceaf91d1d7342cb24528\""
     },
     "duckietown/challenge-aido_LF-template-ros": {
         "Content": [
@@ -239,14 +239,14 @@
             },
             {
                 "commit": {
-                    "sha": "ca5adbf2898c98705638d882a14e37013e5cef84",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/ca5adbf2898c98705638d882a14e37013e5cef84"
+                    "sha": "a50ac43dce16d3ffe56a9ef5e7e36a9eb817fd3f",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/a50ac43dce16d3ffe56a9ef5e7e36a9eb817fd3f"
                 },
                 "name": "daffy",
                 "protected": false
             }
         ],
-        "ETag": "W/\"c8a0c25865d6ce037282bcb2a4e029e618f07131ae00abb360d72439c6cd72f0\""
+        "ETag": "W/\"ddb35091b31ccefe9ec4b9a6bb6dc1a06ff9444a5f5872042a4b8babb3293409\""
     },
     "duckietown/dt-architecture-api": {
         "Content": [
@@ -376,8 +376,16 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "68cc9be42aa7129ebeb0431837e42b942ee39919",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/68cc9be42aa7129ebeb0431837e42b942ee39919"
+                    "sha": "b371f4809c7bc99318435154af733475ceefb6cd",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/b371f4809c7bc99318435154af733475ceefb6cd"
+                },
+                "name": "daffy-comm-group",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "78e761df0672e747c22293b0a889e1d820fced88",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/78e761df0672e747c22293b0a889e1d820fced88"
                 },
                 "name": "daffy",
                 "protected": false
@@ -399,7 +407,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"4364898ac93524e0ee0d6c6e01b3873e1052c72417f94a3adafb65027c7473a1\""
+        "ETag": "W/\"6c4db10597b8797490616168fddb9b24c7f451522e55437d6b4f31d5e3f35245\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -425,6 +433,14 @@
                     "url": "https://api.github.com/repos/duckietown/dt-core/commits/2437d2baef86bf0ad469aaa133e95a75dfe9fa9f"
                 },
                 "name": "daffy-devel-AC-cleanup",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "952ebf205623a2a8317fcb9b922717bd4ea43c98",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/952ebf205623a2a8317fcb9b922717bd4ea43c98"
+                },
+                "name": "daffy-drone",
                 "protected": false
             },
             {
@@ -501,8 +517,8 @@
             },
             {
                 "commit": {
-                    "sha": "c2f09bede3d7473aaa94f06738d31dcceea3de71",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/c2f09bede3d7473aaa94f06738d31dcceea3de71"
+                    "sha": "2b00071db44780e4db1385f4163659c5eaf449cb",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/2b00071db44780e4db1385f4163659c5eaf449cb"
                 },
                 "name": "daffy-rect-atags",
                 "protected": false
@@ -517,8 +533,8 @@
             },
             {
                 "commit": {
-                    "sha": "84b70699741e7e8fbd31433f22bec310e66edb4d",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/84b70699741e7e8fbd31433f22bec310e66edb4d"
+                    "sha": "952ebf205623a2a8317fcb9b922717bd4ea43c98",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/952ebf205623a2a8317fcb9b922717bd4ea43c98"
                 },
                 "name": "daffy",
                 "protected": false
@@ -564,14 +580,14 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"f29168362c87bbd56d3a58f10126daf09078b18690e6f9ba3a5e0bbc2cc2ce97\""
+        "ETag": "W/\"314c8fb889bc5e29364b4cc53f609cf82d06fb7ac91cc25f754c9f38fea4810c\""
     },
     "duckietown/dt-device-dashboard": {
         "Content": [
             {
                 "commit": {
-                    "sha": "794d5d53d620aa88d5a8dcb89274c8f0c828c686",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/794d5d53d620aa88d5a8dcb89274c8f0c828c686"
+                    "sha": "6b7b0fd67f6c9ccb05ee0d5b1129e16dac837bf9",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/6b7b0fd67f6c9ccb05ee0d5b1129e16dac837bf9"
                 },
                 "name": "daffy",
                 "protected": false
@@ -585,7 +601,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"76c8b9258ac2a608da82808d6766089bd6cf5c9b522a94aa156902a6131e2b05\""
+        "ETag": "W/\"011e4aebe23ee8a0d051f9cc42c4fbf555ee2b5f17789198fef445f350a7bcd4\""
     },
     "duckietown/dt-device-health": {
         "Content": [
@@ -671,6 +687,19 @@
         ],
         "ETag": "W/\"b2dc82a9fd92d57fff3fb0fadec13335108e835972f4686ade1505f57c9bf366\""
     },
+    "duckietown/dt-drone-interface": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "f37b25d2b0a37daa2c1877d89752739c6e8974cd",
+                    "url": "https://api.github.com/repos/duckietown/dt-drone-interface/commits/f37b25d2b0a37daa2c1877d89752739c6e8974cd"
+                },
+                "name": "daffy",
+                "protected": false
+            }
+        ],
+        "ETag": "W/\"1caaa1d888abb48833dc335b2fdba05fe6829f7f4f779445868d8c0bab52a676\""
+    },
     "duckietown/dt-duckiebot-dashboard": {
         "Content": [
             {
@@ -712,8 +741,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "23af94c365b96f7c1ac6e9f420a2214fb9bf4323",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/23af94c365b96f7c1ac6e9f420a2214fb9bf4323"
+                    "sha": "4160c7d45a6e0da15138a067c0ee683ae81a5249",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/4160c7d45a6e0da15138a067c0ee683ae81a5249"
                 },
                 "name": "daffy",
                 "protected": false
@@ -735,7 +764,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"184c6e97ed2faf627b3eaed244861a0f3b082bc5541cc083ffbaf917242fbc33\""
+        "ETag": "W/\"21a6454d368d579f2149fd98b4687de0197e1ef9a07323631e1cc1afb88fc207\""
     },
     "duckietown/dt-duckiebot-interface": {
         "Content": [
@@ -745,6 +774,22 @@
                     "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/9eb984c54911aec9e3809bdb51e177a7fe085787"
                 },
                 "name": "cam_info",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "e6cf3cf9fca1a1fbf12308fd32b5799e819a03a4",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/e6cf3cf9fca1a1fbf12308fd32b5799e819a03a4"
+                },
+                "name": "daffy-devel-david-encoder_stamp",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "b90fade0c17969cc3bd36b3c2f7b9d14d9c20b4f",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/b90fade0c17969cc3bd36b3c2f7b9d14d9c20b4f"
+                },
+                "name": "daffy-drone",
                 "protected": false
             },
             {
@@ -781,8 +826,8 @@
             },
             {
                 "commit": {
-                    "sha": "0d1dbc5e725e5e433f52b4e4fe14cfb51b9e7fe0",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/0d1dbc5e725e5e433f52b4e4fe14cfb51b9e7fe0"
+                    "sha": "b90fade0c17969cc3bd36b3c2f7b9d14d9c20b4f",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/b90fade0c17969cc3bd36b3c2f7b9d14d9c20b4f"
                 },
                 "name": "daffy",
                 "protected": false
@@ -828,7 +873,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"8baa75056d40060e5d7d76f32dd043a0b61287aa108600ab5f2c2e71c7b9274c\""
+        "ETag": "W/\"27e1e955bbbbf4a351b999d10b95b05946a1d843de21eb905b3f58cef2a7ac5a\""
     },
     "duckietown/dt-files-api": {
         "Content": [
@@ -879,6 +924,14 @@
             },
             {
                 "commit": {
+                    "sha": "d5e97c5bec6d548643c329329497f7793291c252",
+                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/d5e97c5bec6d548643c329329497f7793291c252"
+                },
+                "name": "daffy-qt-joystick",
+                "protected": false
+            },
+            {
+                "commit": {
                     "sha": "d853ce6e42334912b6ce0f1ad75acf0cf9a7bc69",
                     "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/d853ce6e42334912b6ce0f1ad75acf0cf9a7bc69"
                 },
@@ -918,7 +971,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"641f062cba18c93edcdce0525367105a828bf69d7f620d7643ddea3268966e90\""
+        "ETag": "W/\"f98a038632add31bc9e94ba6cd6b941fc1cc388552540996b7bf1eb567ea362d\""
     },
     "duckietown/dt-hardware-benchmark-backend": {
         "Content": [
@@ -974,14 +1027,14 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "9bfbef62069d5eefa64fd08811f2fed144d6a11f",
-                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-environment/commits/9bfbef62069d5eefa64fd08811f2fed144d6a11f"
+                    "sha": "4dfcece6340df9113038ea10d23b2f7f5598a510",
+                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-environment/commits/4dfcece6340df9113038ea10d23b2f7f5598a510"
                 },
                 "name": "daffy",
                 "protected": false
             }
         ],
-        "ETag": "W/\"d71ccf177eaddb2e2a05c10d58f24e5edfa32ce23eb967f3ccb7983882ec4b5f\""
+        "ETag": "W/\"b173db49643fbda6811837fde8e1203c7a86f7ec95ba0538ceb0d805d32dc521\""
     },
     "duckietown/dt-ros-base": {
         "Content": [
@@ -1016,8 +1069,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "87875d68e6c1b8e850a34b726af778fc2ef60b89",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/87875d68e6c1b8e850a34b726af778fc2ef60b89"
+                    "sha": "44e432fb9c3e5e5d0d2b405c2293d8222ea3da8b",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/44e432fb9c3e5e5d0d2b405c2293d8222ea3da8b"
                 },
                 "name": "daffy-devel-AC-misc",
                 "protected": false
@@ -1064,8 +1117,8 @@
             },
             {
                 "commit": {
-                    "sha": "ec9e4d40a60b01cf15c04517f6feb6d5788d72f5",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/ec9e4d40a60b01cf15c04517f6feb6d5788d72f5"
+                    "sha": "99f06618c9593b27eb37065eb5f06940d874933c",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/99f06618c9593b27eb37065eb5f06940d874933c"
                 },
                 "name": "daffy",
                 "protected": false
@@ -1119,7 +1172,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"4309ac5f24122981d30e1b42af1a0dfc16fe037864fc5dc3d274d7c93912845e\""
+        "ETag": "W/\"b5c35be04172289953ec1e35067cb3d632dbd572c7c8ff6a026f3269150a3373\""
     },
     "duckietown/dt-ros-kinetic-base": {
         "Content": [

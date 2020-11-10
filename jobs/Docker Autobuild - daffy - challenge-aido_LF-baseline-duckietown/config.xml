@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - daffy - challenge-aido_LF-template-ros</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - daffy - challenge-aido_LF-template-ros, Docker Autobuild - daffy - dt-core, Docker Autobuild - daffy - dt-car-interface</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -78,8 +78,7 @@ cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
-        --ci \
-        -C=3_submit
+        --ci
 # leave the workspace
 cd ../
 # clean workspace

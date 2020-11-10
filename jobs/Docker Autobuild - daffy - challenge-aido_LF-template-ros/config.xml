@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - daffy - dt-core, Docker Autobuild - daffy - dt-car-interface</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - daffy - dt-ros-commons</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

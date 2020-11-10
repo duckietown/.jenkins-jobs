@@ -95,7 +95,7 @@
     {
         "name": "challenge-aido_LF-template-ros",
         "origin": "duckietown/challenge-aido_LF-template-ros",
-        "base": "dt-core,dt-car-interface"
+        "base": "aido3-base-python3"
     },
     {
         "name": "challenge-aido_LF-template-random",
@@ -112,10 +112,7 @@
     {
         "name": "challenge-aido_LF-baseline-duckietown",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown",
-        "dts_args": {
-            "-C": "3_submit"
-        },
-        "base": "challenge-aido_LF-template-ros"
+        "base": "challenge-aido_LF-template-ros, dt-core, dt-car-interface"
     },
     {
         "name": "dt-hardware-benchmark-backend",

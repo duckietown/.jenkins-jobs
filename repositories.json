@@ -95,7 +95,7 @@
     {
         "name": "challenge-aido_LF-template-ros",
         "origin": "duckietown/challenge-aido_LF-template-ros",
-        "base": "aido3-base-python3"
+        "base": "dt-ros-commons"
     },
     {
         "name": "challenge-aido_LF-template-random",

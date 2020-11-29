@@ -125,8 +125,8 @@
             },
             {
                 "commit": {
-                    "sha": "5bfecca215cdddeb3732ab9ea7eda677ce0df5f3",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/5bfecca215cdddeb3732ab9ea7eda677ce0df5f3"
+                    "sha": "e53c713f286176f6e2fec057372e2838396e76dd",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/e53c713f286176f6e2fec057372e2838396e76dd"
                 },
                 "name": "daffy",
                 "protected": false
@@ -148,7 +148,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"6b0965098a25433450daff2d7797ec9f6a2e16c563a0bc8996718c610bf967e2\""
+        "ETag": "W/\"155611f512038991d2c9e5e08c67f0ce3ba76d43c039f3df728975141c2502d3\""
     },
     "duckietown/challenge-aido_LF-baseline-duckietown": {
         "Content": [

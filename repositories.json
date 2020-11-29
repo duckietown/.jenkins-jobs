@@ -115,6 +115,11 @@
         "base": "challenge-aido_LF-template-ros, dt-core, dt-car-interface"
     },
     {
+        "name": "challenge-aido_LF-baseline-RPL-ros",
+        "origin": "duckietown/challenge-aido_LF-baseline-RPL-ros",
+        "base": "dt-core, dt-car-interface"
+    },
+    {
         "name": "dt-hardware-benchmark-backend",
         "origin": "duckietown/dt-hardware-benchmark-backend",
         "base": "dt-ros-commons"

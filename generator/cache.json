@@ -81,6 +81,75 @@
         ],
         "ETag": "W/\"df142e1410eb4b31c29ee93379c85f4c5279ddfe74c25d244395f8802ce34c1d\""
     },
+    "duckietown/challenge-aido_LF-baseline-RPL-ros": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "39ea243dd78ef570e69054739fd43819b6d7f647",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/39ea243dd78ef570e69054739fd43819b6d7f647"
+                },
+                "name": "aido2",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "bc9baa445d7182b5455c09c30c117035f8aef726",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/bc9baa445d7182b5455c09c30c117035f8aef726"
+                },
+                "name": "daffy-ente-cleanup",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "14c110928f2bd5d9b45551f8badeb64b72dd6655",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/14c110928f2bd5d9b45551f8badeb64b72dd6655"
+                },
+                "name": "daffy-ente-mooc",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "b3d7147402a5c421f24c406c1fae842831c56800",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/b3d7147402a5c421f24c406c1fae842831c56800"
+                },
+                "name": "daffy-ente",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "798257d8c9e723a0128618346dcc31da2fba99b7",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/798257d8c9e723a0128618346dcc31da2fba99b7"
+                },
+                "name": "daffy-staging",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "5bfecca215cdddeb3732ab9ea7eda677ce0df5f3",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/5bfecca215cdddeb3732ab9ea7eda677ce0df5f3"
+                },
+                "name": "daffy",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "034711c2422bf422a2265607965186e84d426394",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/034711c2422bf422a2265607965186e84d426394"
+                },
+                "name": "merge_back",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "26f09fac12da8fc26ef3de18ae581d010e1bee26",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/26f09fac12da8fc26ef3de18ae581d010e1bee26"
+                },
+                "name": "merge_to_duckietown",
+                "protected": false
+            }
+        ],
+        "ETag": "W/\"6b0965098a25433450daff2d7797ec9f6a2e16c563a0bc8996718c610bf967e2\""
+    },
     "duckietown/challenge-aido_LF-baseline-duckietown": {
         "Content": [
             {

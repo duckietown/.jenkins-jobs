@@ -138,6 +138,9 @@
     {
         "name": "dt-autolab-localization",
         "origin": "duckietown/dt-autolab-localization",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "dts_args": {
+            "--ncpus": "2"
+        }
     }
 ]

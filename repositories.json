@@ -133,5 +133,11 @@
         "name": "acquisition-bridge",
         "origin": "duckietown/acquisition-bridge",
         "base": "dt-ros-commons"
+    },
+    
+    {
+        "name": "dt-autolab-localization",
+        "origin": "duckietown/dt-autolab-localization",
+        "base": "dt-ros-commons"
     }
 ]

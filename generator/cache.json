@@ -305,14 +305,14 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "5f4e6a0095b2d0b4f77146576288f7dda5425438",
-                    "url": "https://api.github.com/repos/duckietown/dt-autolab-commons/commits/5f4e6a0095b2d0b4f77146576288f7dda5425438"
+                    "sha": "5dac701c6b9b0c880869e3257c90b93d7710dc03",
+                    "url": "https://api.github.com/repos/duckietown/dt-autolab-commons/commits/5dac701c6b9b0c880869e3257c90b93d7710dc03"
                 },
                 "name": "daffy",
                 "protected": false
             }
         ],
-        "ETag": "W/\"2e5cd381cb3ebc7ce4e1a18effb78b55e884c9b3afbed754b7e41471cfd195cc\""
+        "ETag": "W/\"80cba2548a78030645a1dd059422e71dc047b16626f40c98d2a17ea88f80383f\""
     },
     "duckietown/dt-autolab-localization": {
         "Content": [

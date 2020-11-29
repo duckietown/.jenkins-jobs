@@ -140,7 +140,7 @@
         "origin": "duckietown/dt-autolab-commons",
         "base": "dt-ros-commons",
         "dts_args": {
-            "--ncpus": "2"
+            "--ncpus": "1"
         }
     },
     {

@@ -79,7 +79,7 @@ cd ./ws
 dts --debug \
     devel build \
         --ci \
-        --ncpus=1
+        --ncpus=3
 # leave the workspace
 cd ../
 # clean workspace
@@ -115,7 +115,7 @@ rm -rf ./ws
         <timeoutPercentage>200</timeoutPercentage>
         <numberOfBuilds>3</numberOfBuilds>
         <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
-        <timeoutMinutesElasticDefault>240</timeoutMinutesElasticDefault>
+        <timeoutMinutesElasticDefault>120</timeoutMinutesElasticDefault>
       </strategy>
       <operationList>
         <hudson.plugins.build__timeout.operations.AbortOperation/>

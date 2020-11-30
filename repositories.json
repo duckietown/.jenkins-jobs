@@ -145,9 +145,8 @@
         "origin": "duckietown/dt-autolab-commons",
         "base": "dt-ros-commons",
         "dts_args": {
-            "--ncpus": "1"
-        },
-        "timeout_min": 240
+            "--ncpus": "3"
+        }
     },
     {
         "name": "dt-autolab-localization",

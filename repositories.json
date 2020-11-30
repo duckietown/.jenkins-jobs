@@ -72,11 +72,6 @@
         "base": "dt-commons"
     },
     {
-        "name": "dt-architecture-api",
-        "origin": "duckietown/dt-architecture-api",
-        "base": "dt-commons"
-    },
-    {
         "name": "dt-files-api",
         "origin": "duckietown/dt-files-api",
         "base": "dt-commons"
@@ -132,11 +127,6 @@
     {
         "name": "dt-duckiebot-fifos-bridge",
         "origin": "duckietown/dt-duckiebot-fifos-bridge",
-        "base": "dt-ros-commons"
-    },
-    {
-        "name": "acquisition-bridge",
-        "origin": "duckietown/acquisition-bridge",
         "base": "dt-ros-commons"
     },
     

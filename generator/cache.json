@@ -503,8 +503,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "93bfb674a66272a5cf4a1f236dc963d29094a8ba",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/93bfb674a66272a5cf4a1f236dc963d29094a8ba"
+                    "sha": "eca06051e46c706550f4a99473cd8f456bbf2f1c",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/eca06051e46c706550f4a99473cd8f456bbf2f1c"
                 },
                 "name": "daffy",
                 "protected": false
@@ -526,7 +526,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"acd99e63dc6292849e3f586e4f90932d7568bafb1b84209324ebe36e89f5e63a\""
+        "ETag": "W/\"fbe86cffda8ea5d702cf805418ed464c4169c8b99dcde7734382a1934aa07f7f\""
     },
     "duckietown/dt-core": {
         "Content": [

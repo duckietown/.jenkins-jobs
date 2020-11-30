@@ -115,7 +115,7 @@ rm -rf ./ws
         <timeoutPercentage>200</timeoutPercentage>
         <numberOfBuilds>3</numberOfBuilds>
         <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
-        <timeoutMinutesElasticDefault>120</timeoutMinutesElasticDefault>
+        <timeoutMinutesElasticDefault>240</timeoutMinutesElasticDefault>
       </strategy>
       <operationList>
         <hudson.plugins.build__timeout.operations.AbortOperation/>

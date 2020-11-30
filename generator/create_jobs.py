@@ -14,7 +14,7 @@ logger.setLevel(logging.INFO)
 
 TEMPLATE_JOB = '__template__'
 DTS_ARGS_INDENT = ' \\\n' + ' ' * 8
-TIMEOUT_MINUTES = 120
+DEFAULT_TIMEOUT_MINUTES = 120
 
 
 def main():
@@ -66,6 +66,7 @@ def main():
         logger.info('Analyzing [{:s}]'.format(repo['name']))
         repo_url = repo['origin']
         cached_repo = cache[repo_url]
+        repo_build_timeout = repo.get('timeout_min', DEFAULT_TIMEOUT_MINUTES)
         branches_url = 'https://api.github.com/repos/{origin}/branches'.format(**repo)
         # call API
         logger.info('> Fetching list of branches')
@@ -126,7 +127,7 @@ def main():
                         '{:s}={:s}'.format(k, v)
                         for k, v in repo['dts_args'].items()
                     ]) if 'dts_args' in repo else '',
-                    'TIMEOUT_MINUTES': TIMEOUT_MINUTES
+                    'TIMEOUT_MINUTES': repo_build_timeout
                 }))
             stats['num_jobs'] += 1
     # print out stats

@@ -139,6 +139,16 @@
         }
     },
     {
+        "name": "dt-autolab-device-interface",
+        "origin": "duckietown/dt-autolab-device-interface",
+        "base": "dt-autolab-commons"
+    },
+    {
+        "name": "dt-autolab-proxy",
+        "origin": "duckietown/dt-autolab-proxy",
+        "base": "dt-commons"
+    },
+    {
         "name": "dt-autolab-localization",
         "origin": "duckietown/dt-autolab-localization",
         "base": "dt-autolab-commons"

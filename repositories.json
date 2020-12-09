@@ -152,5 +152,10 @@
         "name": "dt-autolab-localization",
         "origin": "duckietown/dt-autolab-localization",
         "base": "dt-autolab-commons"
+    },
+    {
+        "name": "dt-aido-autolab-evaluator",
+        "origin": "duckietown/dt-aido-autolab-evaluator",
+        "base": "dt-commons"
     }
 ]

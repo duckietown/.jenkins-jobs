@@ -82,6 +82,11 @@
         "base": "dt-commons"
     },
     {
+        "name": "dt-firmware-upgrade",
+        "origin": "duckietown/dt-firmware-upgrade",
+        "base": "dt-commons"
+    },
+    {
         "name": "dt-machine-learning-base-environment",
         "origin": "duckietown/dt-machine-learning-base-environment",
         "base": "dt-commons"

@@ -68,7 +68,7 @@
 git clone -b ente ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
-pip3 install -U duckietown-shell
+pip3 install -U --no-cache-dir duckietown-shell
 # switch to CI commands
 dts --set-version ${DUCKIETOWN_CI_DT_SHELL_VERSION} exit
 # update commands

@@ -162,7 +162,8 @@
         "name": "dt-aido-autolab-evaluator",
         "origin": "duckietown/dt-aido-autolab-evaluator",
         "base": "dt-commons"
-    }
+    },
+
     {
         "name": "challenge-aido_LF-baseline-duckietown-ml",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown-ml",

@@ -89,7 +89,7 @@
     {
         "name": "dt-machine-learning-base-environment",
         "origin": "duckietown/dt-machine-learning-base-environment",
-        "base": "dt-commons"
+        "base": "dt-ros-commons"
     },
     
     {
@@ -162,5 +162,10 @@
         "name": "dt-aido-autolab-evaluator",
         "origin": "duckietown/dt-aido-autolab-evaluator",
         "base": "dt-commons"
+    }
+    {
+        "name": "challenge-aido_LF-baseline-duckietown-ml",
+        "origin": "duckietown/challenge-aido_LF-baseline-duckietown-ml",
+        "base": "challenge-aido_LF-baseline-duckietown, dt-machine-learning-base-environment"
     }
 ]

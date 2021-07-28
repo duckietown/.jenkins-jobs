@@ -111,7 +111,7 @@ def main():
             # removed blacklisted configurations
             repo_arch_list = [
                 arch for arch in arch_list
-                if (repo_distro, parsed.arch) not in BLACKLIST_COMBINATIONS
+                if (repo_distro, arch) not in BLACKLIST_COMBINATIONS
             ]
             # create job by updating the template fields
             job_config_path = os.path.join(

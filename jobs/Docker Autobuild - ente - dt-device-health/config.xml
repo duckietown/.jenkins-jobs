@@ -57,7 +57,7 @@
     <hudson.matrix.TextAxis>
       <name>DUCKIETOWN_CI_ARCH</name>
       <values>
-        <string>arm32v7</string><string>arm64v8</string><string>amd64</string>
+        <string>arm64v8</string><string>amd64</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>

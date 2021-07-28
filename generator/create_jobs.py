@@ -15,6 +15,9 @@ logger.setLevel(logging.INFO)
 TEMPLATE_JOB = '__template__'
 DTS_ARGS_INDENT = ' \\\n' + ' ' * 8
 DEFAULT_TIMEOUT_MINUTES = 120
+BLACKLIST_COMBINATIONS = [
+    ("ente", "arm32v7")
+]
 
 
 def main():
@@ -105,6 +108,11 @@ def main():
 
         # create one job per distro
         for repo_distro in repo_distros:
+            # removed blacklisted configurations
+            repo_arch_list = [
+                arch for arch in arch_list
+                if (repo_distro, parsed.arch) not in BLACKLIST_COMBINATIONS
+            ]
             # create job by updating the template fields
             job_config_path = os.path.join(
                 parsed.jobsdir, job_name(repo_distro, repo['name']), 'config.xml'
@@ -115,7 +123,7 @@ def main():
                     'REPO_NAME': repo['name'],
                     'REPO_URL': 'https://github.com/{:s}'.format(repo['origin']),
                     'REPO_ARCH': ''.join(map(
-                        lambda a: '<string>{:s}</string>'.format(a), arch_list
+                        lambda a: '<string>{:s}</string>'.format(a), repo_arch_list
                     )),
                     'REPO_DISTRO': repo_distro,
                     'GIT_URL': '{GIT_URL}',

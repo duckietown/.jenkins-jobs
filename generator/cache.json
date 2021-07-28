@@ -227,6 +227,27 @@
         ],
         "ETag": "W/\"7faf41a5dab6443381b508cdf515c7efde52eda1e4240ea6d1bafde9cb68617b\""
     },
+    "duckietown/challenge-aido_LF-baseline-duckietown-ml": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "04919d4447850420700b53db0e0396a6d62a1220",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/04919d4447850420700b53db0e0396a6d62a1220"
+                },
+                "name": "daffy-staging",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "9e90dd674632d37eed48792b1ece7b54c272002f",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/9e90dd674632d37eed48792b1ece7b54c272002f"
+                },
+                "name": "daffy",
+                "protected": false
+            }
+        ],
+        "ETag": "W/\"05b3bc45b7df4150c66ba04695344c822374129dc5223df3c45902d5c5bb8f36\""
+    },
     "duckietown/challenge-aido_LF-template-random": {
         "Content": [
             {

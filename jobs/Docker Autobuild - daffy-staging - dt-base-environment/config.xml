@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <matrix-project plugin="matrix-project@1.14">
   <actions/>
-  <description>Autobuild for repository dt-drone-interface</description>
+  <description>Autobuild for repository dt-base-environment</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.5">
-      <projectUrl>https://github.com/duckietown/dt-drone-interface/</projectUrl>
+      <projectUrl>https://github.com/duckietown/dt-base-environment/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.31">
@@ -17,19 +17,19 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/duckietown/dt-drone-interface</url>
+        <url>https://github.com/duckietown/dt-base-environment</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>daffy</name>
+        <name>daffy-staging</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch>daffy</localBranch>
+        <localBranch>daffy-staging</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
     </extensions>
   </scm>
@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - daffy - dt-ros-commons</upstreamProjects>
+      <upstreamProjects></upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -65,7 +65,7 @@
     <hudson.tasks.Shell>
       <command>
 # fetch code
-git clone -b daffy ${GIT_URL} ./ws
+git clone -b daffy-staging ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
 pip3 install -U duckietown-shell

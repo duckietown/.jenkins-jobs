@@ -79,7 +79,8 @@ cd ./ws
 dts --debug \
     devel build \
         --ci \
-        --ci-force-builder-arch=amd64
+        --ci-force-builder-arch=amd64 \
+        --stage
 # leave the workspace
 cd ../
 # clean workspace

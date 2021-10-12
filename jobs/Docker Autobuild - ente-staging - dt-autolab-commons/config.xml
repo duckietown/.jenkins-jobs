@@ -79,7 +79,8 @@ cd ./ws
 dts --debug \
     devel build \
         --ci \
-        --ncpus=3
+        --ncpus=3 \
+        --stage
 # leave the workspace
 cd ../
 # clean workspace

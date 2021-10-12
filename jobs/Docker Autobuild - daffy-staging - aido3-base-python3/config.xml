@@ -79,7 +79,8 @@ cd ./ws
 dts --debug \
     devel build \
         --ci \
-        -C=minimal-nodes-stubs/aido3-bas-python3
+        -C=minimal-nodes-stubs/aido3-bas-python3 \
+        --stage
 # leave the workspace
 cd ../
 # clean workspace

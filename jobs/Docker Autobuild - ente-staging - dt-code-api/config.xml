@@ -78,7 +78,8 @@ cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
-        --ci
+        --ci \
+        --stage
 # leave the workspace
 cd ../
 # clean workspace

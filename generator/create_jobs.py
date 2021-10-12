@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import copy
 import os
 import sys
 import json
@@ -118,6 +118,12 @@ def main():
             job_config_path = os.path.join(
                 parsed.jobsdir, job_name(repo_distro, repo['name']), 'config.xml'
             )
+            # dts arguments
+            dts_args = copy.deepcopy(repo['dts_args']) if 'dts_args' in repo else {}
+            # staging?
+            if repo_distro.endswith("-staging"):
+                dts_args["--stage"] = True
+            # ---
             os.makedirs(os.path.dirname(job_config_path))
             with open(job_config_path, 'wt') as fout:
                 fout.write(template_config.format(**{
@@ -133,9 +139,9 @@ def main():
                         job_name(repo_distro, b.strip()) for b in repo['base'].split(',')
                     ]) if 'base' in repo else '',
                     'DTS_ARGS': DTS_ARGS_INDENT + DTS_ARGS_INDENT.join([
-                        '{:s}={:s}'.format(k, v)
-                        for k, v in repo['dts_args'].items()
-                    ]) if 'dts_args' in repo else '',
+                        ('{:s}={:s}'.format(k, v)) if v is not True else k
+                        for k, v in dts_args.items()
+                    ]) if dts_args else '',
                     'TIMEOUT_MINUTES': repo_build_timeout
                 }))
             stats['num_jobs'] += 1

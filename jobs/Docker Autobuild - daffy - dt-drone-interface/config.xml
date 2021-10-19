@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <matrix-project plugin="matrix-project@1.14">
   <actions/>
-  <description>Autobuild for repository dt-car-interface</description>
+  <description>Autobuild for repository dt-drone-interface</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.5">
-      <projectUrl>https://github.com/duckietown/dt-car-interface/</projectUrl>
+      <projectUrl>https://github.com/duckietown/dt-drone-interface/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.31">
@@ -17,19 +17,19 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/duckietown/dt-car-interface</url>
+        <url>https://github.com/duckietown/dt-drone-interface</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>daffy-staging</name>
+        <name>daffy</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch>daffy-staging</localBranch>
+        <localBranch>daffy</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
     </extensions>
   </scm>
@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - daffy-staging - dt-ros-commons</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - daffy - dt-ros-commons</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -65,15 +65,15 @@
     <hudson.tasks.Shell>
       <command>
 # fetch code
-git clone -b daffy-staging ${GIT_URL} ./ws
+git clone -b daffy ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
-export PIP_INDEX_URL="https://staging.duckietown.org/root/devel/"
-export DTSERVER="https://challenges.duckietown.org/v4"
-export DOCKER_REGISTRY="docker.io"
+export PIP_INDEX_URL="https://pypi.org/simple"
+export DTSERVER="https://challenges-stage.duckietown.org"
+export DOCKER_REGISTRY="registry-stage2.duckietown.org"
 python3 -m pip install -U pip duckietown-shell
 # switch to CI commands
-dts --set-version daffy-staging exit
+dts --set-version daffy exit
 # update commands
 dts update
 # enter the workspace
@@ -81,8 +81,7 @@ cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
-        --ci \
-        --stage
+        --ci
 # leave the workspace
 cd ../
 # clean workspace

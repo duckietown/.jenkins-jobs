@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
+import argparse
 import copy
+import json
+import logging
 import os
 import sys
-import json
-import argparse
-import logging
-import requests
 from collections import defaultdict
+
+import requests
 
 logging.basicConfig()
 logger = logging.getLogger("jobs-generator")
@@ -108,40 +109,58 @@ def main():
             # dts arguments
             dts_args = copy.deepcopy(repo["dts_args"]) if "dts_args" in repo else {}
             # staging?
-            if repo_distro.endswith("-staging"):
+            is_staging = "-staging" in repo_distro
+
+            if is_staging:
                 dts_args["--stage"] = True
+                PIP_INDEX_URL = "https://staging.duckietown.org/root/devel/"
+                DTSERVER = "https://challenges.duckietown.org/v4"
+                DOCKER_REGISTRY = "docker.io"
+            else:
+                PIP_INDEX_URL = "https://pypi.org/simple"
+                DTSERVER = "https://challenges-stage.duckietown.org"
+                DOCKER_REGISTRY = "registry-stage2.duckietown.org"
+
             # ---
+            if dts_args:
+                DTS_ARGS = (DTS_ARGS_INDENT
+                            + DTS_ARGS_INDENT.join(
+                        [
+                            ("{:s}={:s}".format(k, v)) if v is not True else k
+                            for k, v in dts_args.items()
+                        ]
+                    ))
+            else:
+                DTS_ARGS = ""
+
+            if "base" in repo:
+                BASE_JOB = ", ".join(
+                    [job_name(repo_distro, b.strip()) for b in repo["base"].split(",")]
+                )
+            else:
+                BASE_JOB = ""
+
+            REPO_ARCH = "".join(
+                map(lambda a: "<string>{:s}</string>".format(a), repo_arch_list)
+            )
+            params = {
+                "REPO_NAME": repo["name"],
+                "REPO_URL": "https://github.com/{:s}".format(repo["origin"]),
+                "REPO_ARCH": REPO_ARCH,
+                "REPO_DISTRO": repo_distro,
+                "PIP_INDEX_URL": PIP_INDEX_URL,
+                "DTSERVER": DTSERVER,
+                "DOCKER_REGISTRY": DOCKER_REGISTRY,
+                "GIT_URL": "{GIT_URL}",
+                "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
+                "BASE_JOB": BASE_JOB,
+                "DTS_ARGS": DTS_ARGS,
+                "TIMEOUT_MINUTES": repo_build_timeout,
+            }
+            config = template_config.format(**params)
             os.makedirs(os.path.dirname(job_config_path))
             with open(job_config_path, "wt") as fout:
-                fout.write(
-                    template_config.format(
-                        **{
-                            "REPO_NAME": repo["name"],
-                            "REPO_URL": "https://github.com/{:s}".format(repo["origin"]),
-                            "REPO_ARCH": "".join(
-                                map(lambda a: "<string>{:s}</string>".format(a), repo_arch_list)
-                            ),
-                            "REPO_DISTRO": repo_distro,
-                            "GIT_URL": "{GIT_URL}",
-                            "DUCKIETOWN_CI_DT_SHELL_VERSION": "{DUCKIETOWN_CI_DT_SHELL_VERSION}",
-                            "BASE_JOB": ", ".join(
-                                [job_name(repo_distro, b.strip()) for b in repo["base"].split(",")]
-                            )
-                            if "base" in repo
-                            else "",
-                            "DTS_ARGS": DTS_ARGS_INDENT
-                            + DTS_ARGS_INDENT.join(
-                                [
-                                    ("{:s}={:s}".format(k, v)) if v is not True else k
-                                    for k, v in dts_args.items()
-                                ]
-                            )
-                            if dts_args
-                            else "",
-                            "TIMEOUT_MINUTES": repo_build_timeout,
-                        }
-                    )
-                )
+                fout.write(config)
             stats["num_jobs"] += 1
     # print out stats
     logger.info(

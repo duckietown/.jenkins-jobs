@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
+import argparse
 import copy
+import json
+import logging
 import os
 import sys
-import json
-import argparse
-import logging
-import requests
 from collections import defaultdict
+
+import requests
 
 logging.basicConfig()
 logger = logging.getLogger("jobs-generator")
@@ -121,6 +122,20 @@ def main():
                 DOCKER_REGISTRY = "registry-stage2.duckietown.org"
 
             # ---
+            DTS_ARGS = (DTS_ARGS_INDENT
+                        + DTS_ARGS_INDENT.join(
+                [
+                    ("{:s}={:s}".format(k, v)) if v is not True else k
+                    for k, v in dts_args.items()
+                ]
+            )
+                        if dts_args
+                        else "")
+            BASE_JOB = (", ".join(
+                [job_name(repo_distro, b.strip()) for b in repo["base"].split(",")]
+            )
+                        if "base" in repo
+                        else "")
             os.makedirs(os.path.dirname(job_config_path))
             with open(job_config_path, "wt") as fout:
                 fout.write(
@@ -137,20 +152,8 @@ def main():
                             "DOCKER_REGISTRY": DOCKER_REGISTRY,
                             "GIT_URL": "{GIT_URL}",
                             "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
-                            "BASE_JOB": ", ".join(
-                                [job_name(repo_distro, b.strip()) for b in repo["base"].split(",")]
-                            )
-                            if "base" in repo
-                            else "",
-                            "DTS_ARGS": DTS_ARGS_INDENT
-                            + DTS_ARGS_INDENT.join(
-                                [
-                                    ("{:s}={:s}".format(k, v)) if v is not True else k
-                                    for k, v in dts_args.items()
-                                ]
-                            )
-                            if dts_args
-                            else "",
+                            "BASE_JOB": BASE_JOB,
+                            "DTS_ARGS": DTS_ARGS,
                             "TIMEOUT_MINUTES": repo_build_timeout,
                         }
                     )

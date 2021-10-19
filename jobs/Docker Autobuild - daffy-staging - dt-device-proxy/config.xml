@@ -69,7 +69,7 @@ git clone -b daffy-staging ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
 export PIP_INDEX_URL="https://staging.duckietown.org/root/devel/"
-export DTSERVER="https://challenges.duckietown.org/v4"
+export DTSERVER="https://challenges-stage.duckietown.org"
 export DOCKER_REGISTRY="docker.io"
 python3 -m pip install -U pip duckietown-shell
 # switch to CI commands

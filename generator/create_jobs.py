@@ -114,11 +114,11 @@ def main():
             if is_staging:
                 dts_args["--stage"] = True
                 PIP_INDEX_URL = "https://staging.duckietown.org/root/devel/"
-                DTSERVER = "https://challenges.duckietown.org/v4"
+                DTSERVER = "https://challenges-stage.duckietown.org"
                 DOCKER_REGISTRY = "docker.io"
             else:
                 PIP_INDEX_URL = "https://pypi.org/simple"
-                DTSERVER = "https://challenges-stage.duckietown.org"
+                DTSERVER = "https://challenges.duckietown.org/v4"
                 DOCKER_REGISTRY = "registry-stage2.duckietown.org"
 
             # ---

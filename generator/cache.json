@@ -377,14 +377,14 @@
             },
             {
                 "commit": {
-                    "sha": "167e3f4aefb0d8d23e0b08226b37bdc76aaff114",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/167e3f4aefb0d8d23e0b08226b37bdc76aaff114"
+                    "sha": "a65e43fa6eb99fb5a921a6b6f2fe6ce0005424f1",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/a65e43fa6eb99fb5a921a6b6f2fe6ce0005424f1"
                 },
                 "name": "daffy",
                 "protected": false
             }
         ],
-        "ETag": "W/\"8ca3b3e8b93fad9d3abdadd513c5e56c78d8d215ebe8c89014f066035b0488ff\""
+        "ETag": "W/\"027ddb35b81a0b2e2d0f7539891b2bcc1bda4d77fd8c2aee09553379454bf76b\""
     },
     "duckietown/dt-aido-autolab-evaluator": {
         "Content": [

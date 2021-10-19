@@ -68,9 +68,12 @@
 git clone -b ente-staging ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
-pip3 install -U duckietown-shell
+export PIP_INDEX_URL="https://staging.duckietown.org/root/devel/"
+export DTSERVER="https://challenges-stage.duckietown.org"
+export DOCKER_REGISTRY="registry-stage2.duckietown.org"
+python3 -m pip install -U pip duckietown-shell
 # switch to CI commands
-dts --set-version ${DUCKIETOWN_CI_DT_SHELL_VERSION} exit
+dts --set-version ente-staging exit
 # update commands
 dts update
 # enter the workspace

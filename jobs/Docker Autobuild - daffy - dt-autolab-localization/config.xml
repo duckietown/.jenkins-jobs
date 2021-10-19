@@ -68,9 +68,12 @@
 git clone -b daffy ${GIT_URL} ./ws
 git -C ./ws fetch --tags
 # install/update duckietown-shell
-pip3 install -U duckietown-shell
+export PIP_INDEX_URL="https://pypi.org/simple"
+export DTSERVER="https://challenges.duckietown.org/v4"
+export DOCKER_REGISTRY="docker.io"
+python3 -m pip install -U pip duckietown-shell
 # switch to CI commands
-dts --set-version ${DUCKIETOWN_CI_DT_SHELL_VERSION} exit
+dts --set-version daffy exit
 # update commands
 dts update
 # enter the workspace

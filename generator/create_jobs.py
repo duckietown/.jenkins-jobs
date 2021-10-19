@@ -121,8 +121,19 @@ def main():
             # dts arguments
             dts_args = copy.deepcopy(repo['dts_args']) if 'dts_args' in repo else {}
             # staging?
-            if repo_distro.endswith("-staging"):
+            is_staging = "-staging" in repo_distro
+
+
+            if is_staging:
                 dts_args["--stage"] = True
+                PIP_INDEX_URL = "https://staging.duckietown.org/root/devel/"
+                DTSERVER = "https://challenges.duckietown.org/v4"
+                DOCKER_REGISTRY = "docker.io"
+            else:
+                PIP_INDEX_URL = "https://pypi.org/simple"
+                DTSERVER = "https://challenges-stage.duckietown.org"
+                DOCKER_REGISTRY = "registry-stage2.duckietown.org"
+
             # ---
             os.makedirs(os.path.dirname(job_config_path))
             with open(job_config_path, 'wt') as fout:
@@ -133,8 +144,11 @@ def main():
                         lambda a: '<string>{:s}</string>'.format(a), repo_arch_list
                     )),
                     'REPO_DISTRO': repo_distro,
+                    'PIP_INDEX_URL': PIP_INDEX_URL,
+                    "DTSERVER": DTSERVER,
+                    "DOCKER_REGISTRY": DOCKER_REGISTRY,
                     'GIT_URL': '{GIT_URL}',
-                    'DUCKIETOWN_CI_DT_SHELL_VERSION': '{DUCKIETOWN_CI_DT_SHELL_VERSION}',
+                    'DUCKIETOWN_CI_DT_SHELL_VERSION': repo_distro,
                     'BASE_JOB': ', '.join([
                         job_name(repo_distro, b.strip()) for b in repo['base'].split(',')
                     ]) if 'base' in repo else '',

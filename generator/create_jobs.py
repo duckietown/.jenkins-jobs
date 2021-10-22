@@ -112,8 +112,8 @@ def main():
             is_staging = "-staging" in repo_distro
 
             DOCKER_USERNAME = "duckietowndaemon"
+            TAG = repo_distro.split("-")[0]
             if is_staging:
-                dts_args["--stage"] = True
                 PIP_INDEX_URL = "https://staging.duckietown.org/root/devel/"
                 DTSERVER = "https://challenges-stage.duckietown.org"
                 DOCKER_REGISTRY = "registry-stage2.duckietown.org"
@@ -151,6 +151,7 @@ def main():
                     "REPO_NAME": repo["name"],
                     "REPO_URL": "https://github.com/{:s}".format(repo["origin"]),
                     "REPO_ARCH": arch,
+                    "TAG": TAG,
                     "REPO_DISTRO": repo_distro,
                     "PIP_INDEX_URL": PIP_INDEX_URL,
                     "DTSERVER": DTSERVER,

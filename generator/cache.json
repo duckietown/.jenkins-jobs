@@ -835,8 +835,8 @@
             },
             {
                 "commit": {
-                    "sha": "c64cb355d7f3f12c2b7117cd8f9c7b22024f060a",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/c64cb355d7f3f12c2b7117cd8f9c7b22024f060a"
+                    "sha": "d3a9b5b394d9c13c2d9ceda20fca9add7ae64f4f",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/d3a9b5b394d9c13c2d9ceda20fca9add7ae64f4f"
                 },
                 "name": "daffy-staging",
                 "protected": false
@@ -882,7 +882,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"f155b6168adc27440f8a0ecf8160b4a22fef659605711860038618fb156f5a70\""
+        "ETag": "W/\"6d70960b63fea2314f7fd2b43a6336be55abc1b8c5e4531026518c23d37295ce\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -1580,134 +1580,6 @@
             },
             {
                 "commit": {
-                    "sha": "6cf68a44384a5e19d0fee161ecfb42fab626f865",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/6cf68a44384a5e19d0fee161ecfb42fab626f865"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/axios-0.21.1",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "d7b72f8a85d65df97f37166cd75fa1f22fee5e06",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/d7b72f8a85d65df97f37166cd75fa1f22fee5e06"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/dns-packet-1.3.4",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "9e2a1927e8b3f36e41508099d92478a4f6138c8e",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/9e2a1927e8b3f36e41508099d92478a4f6138c8e"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/dot-prop-4.2.1",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "7223a4ad82af4e064a7ea2fc350d065b7c34fcfb",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/7223a4ad82af4e064a7ea2fc350d065b7c34fcfb"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/elliptic-6.5.4",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "f188e1c0d6bd2a83f0f7e85b31c2ab2731a12d45",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/f188e1c0d6bd2a83f0f7e85b31c2ab2731a12d45"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/hosted-git-info-2.8.9",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "4ad3fae06cefaa290b98f7ce5501d06d2e5d74e7",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/4ad3fae06cefaa290b98f7ce5501d06d2e5d74e7"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/http-proxy-1.18.1",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "8369f725e8faad6bc3ffed237f76f2792e78fb0c",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/8369f725e8faad6bc3ffed237f76f2792e78fb0c"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/ini-1.3.8",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "a28c44d90e89e8dedc03af523f1b6f2a7950b66a",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/a28c44d90e89e8dedc03af523f1b6f2a7950b66a"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/lodash-4.17.21",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "09c0b49bffea1d5a40b20d0db0c776d2eb8cde4d",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/09c0b49bffea1d5a40b20d0db0c776d2eb8cde4d"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/node-notifier-8.0.1",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "9c3327e141593e4ba8a546b8cefcf8e82b6d4457",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/9c3327e141593e4ba8a546b8cefcf8e82b6d4457"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/path-parse-1.0.7",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "87de51dfa241e27117a9af4eb411c00dd6670cbf",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/87de51dfa241e27117a9af4eb411c00dd6670cbf"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/tar-4.4.19",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "539808ac3779176748a0c878d22bca3f664aa146",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/539808ac3779176748a0c878d22bca3f664aa146"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/url-parse-1.5.3",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "f560995203e5284749678522283326f9be44dfcf",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/f560995203e5284749678522283326f9be44dfcf"
-                },
-                "name": "dependabot/npm_and_yarn/assets/vnc/web/y18n-3.2.2",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "26c04e925869296e62f2b3c532fac5e1d7bd9562",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/26c04e925869296e62f2b3c532fac5e1d7bd9562"
-                },
-                "name": "dependabot/pip/assets/vnc/image/usr/local/lib/web/backend/jinja2-2.11.3",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "9e54fd7f1ae6d72323549a8b5957c8e489444d2d",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/9e54fd7f1ae6d72323549a8b5957c8e489444d2d"
-                },
-                "name": "dependabot/pip/assets/vnc/image/usr/local/lib/web/backend/urllib3-1.26.5",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "8026691264c7500cd91baea78301ab75d7de35e9",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/8026691264c7500cd91baea78301ab75d7de35e9"
-                },
-                "name": "dependabot/pip/packages/map_editor/pyyaml-5.4",
-                "protected": false
-            },
-            {
-                "commit": {
                     "sha": "2a2ac799aab8f2ff6b03ed2586f814c1810df02c",
                     "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/2a2ac799aab8f2ff6b03ed2586f814c1810df02c"
                 },
@@ -1731,7 +1603,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"04c4e56825482068685fca9b8f3d8739edd600b5a412a49e608af1847fa3c969\""
+        "ETag": "W/\"7590a873611f0d96453484e37a404a670d6a9310964f92ace9b513d0f7df545e\""
     },
     "duckietown/dt-hardware-benchmark-backend": {
         "Content": [

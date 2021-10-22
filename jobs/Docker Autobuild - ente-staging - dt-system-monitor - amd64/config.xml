@@ -75,8 +75,8 @@ cd ./ws
 dts --debug \
     devel build \
         --arch amd64 \
-        --ci \
-        --stage
+        --tag ente \
+        --ci
 # leave the workspace
 cd ../
 # clean workspace
@@ -113,6 +113,10 @@ rm -rf ./ws
         <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
           <credentialsId>STAGING_DOCKER_PASSWORD</credentialsId>
           <variable>DOCKER_PASSWORD</variable>
+        </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+        <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+          <credentialsId>DUCKIETOWN_CI_DT_TOKEN</credentialsId>
+          <variable>DUCKIETOWN_CI_DT_TOKEN</variable>
         </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
       </bindings>
     </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>

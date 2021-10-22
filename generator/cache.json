@@ -337,22 +337,6 @@
             },
             {
                 "commit": {
-                    "sha": "1cd98330f0e3ce022b3b025fdfd2d625e8c85233",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/1cd98330f0e3ce022b3b025fdfd2d625e8c85233"
-                },
-                "name": "daffy-devel-episodestart",
-                "protected": false
-            },
-            {
-                "commit": {
-                    "sha": "bc9baa445d7182b5455c09c30c117035f8aef726",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/bc9baa445d7182b5455c09c30c117035f8aef726"
-                },
-                "name": "daffy-ente-cleanup",
-                "protected": false
-            },
-            {
-                "commit": {
                     "sha": "14c110928f2bd5d9b45551f8badeb64b72dd6655",
                     "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/14c110928f2bd5d9b45551f8badeb64b72dd6655"
                 },
@@ -365,6 +349,14 @@
                     "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/b3d7147402a5c421f24c406c1fae842831c56800"
                 },
                 "name": "daffy-ente",
+                "protected": false
+            },
+            {
+                "commit": {
+                    "sha": "7dcbad87d2eccf0a9924e00efda610f3882ef919",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/7dcbad87d2eccf0a9924e00efda610f3882ef919"
+                },
+                "name": "daffy-staging-template-fix",
                 "protected": false
             },
             {
@@ -384,7 +376,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"ca09bee70724794470baf056bc17913117ed84d9e432a59a9123e42afa8d96b7\""
+        "ETag": "W/\"10141998ab2d722b5c1a986e7f69a2cb46302edda166fba4ebf166491af27470\""
     },
     "duckietown/dt-aido-autolab-evaluator": {
         "Content": [
@@ -1572,8 +1564,8 @@
             },
             {
                 "commit": {
-                    "sha": "c49a90e668599517c1cecfb2349e455d4b754e82",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/c49a90e668599517c1cecfb2349e455d4b754e82"
+                    "sha": "e04c90ee900603de4e8a625284689fd759ed6011",
+                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/e04c90ee900603de4e8a625284689fd759ed6011"
                 },
                 "name": "daffy-staging",
                 "protected": false
@@ -1739,7 +1731,7 @@
                 "protected": false
             }
         ],
-        "ETag": "W/\"8f6c04da71cd10d336db17959e0a3e63b212577e5d93abad85729620e9a8504a\""
+        "ETag": "W/\"04c4e56825482068685fca9b8f3d8739edd600b5a412a49e608af1847fa3c969\""
     },
     "duckietown/dt-hardware-benchmark-backend": {
         "Content": [

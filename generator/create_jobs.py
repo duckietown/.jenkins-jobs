@@ -20,6 +20,7 @@ BLACKLIST_COMBINATIONS = [
     ("ente", "arm32v7"),
     ("ente-staging", "arm32v7"),
 ]
+BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
 
 
 def main():
@@ -103,26 +104,25 @@ def main():
         # create one job per distro
         for repo_distro in repo_distros:
             # removed blacklisted configurations
-            repo_arch_list = [arch for arch in arch_list if (repo_distro, arch) not in BLACKLIST_COMBINATIONS]
+            repo_arch_list = [arch for arch in arch_list
+                              if (repo_distro, arch) not in BLACKLIST_COMBINATIONS]
             # dts arguments
             dts_args = copy.deepcopy(repo["dts_args"]) if "dts_args" in repo else {}
             # staging?
             is_staging = "-staging" in repo_distro
 
+            DOCKER_USERNAME = "duckietowndaemon"
             if is_staging:
                 dts_args["--stage"] = True
                 PIP_INDEX_URL = "https://staging.duckietown.org/root/devel/"
                 DTSERVER = "https://challenges-stage.duckietown.org"
                 DOCKER_REGISTRY = "registry-stage2.duckietown.org"
-                DOCKER_USERNAME = "ci"
-                DOCKER_PASSWORD = "Fxkx359gAMdN7sfPzyUj"
+                DOCKER_PASSWORD_KEY = "STAGING_DOCKER_PASSWORD"
             else:
                 PIP_INDEX_URL = "https://pypi.org/simple"
                 DTSERVER = "https://challenges.duckietown.org/v4"
                 DOCKER_REGISTRY = "docker.io"
-                DOCKER_USERNAME = "duckietowndaemon"
-                DOCKER_PASSWORD = "18aa9598-be23-42f8-8656-2594e6aa76b6"
-
+                DOCKER_PASSWORD_KEY = "PRODUCTION_DOCKER_PASSWORD"
 
             # ---
             if dts_args:
@@ -156,12 +156,13 @@ def main():
                     "DTSERVER": DTSERVER,
                     "DOCKER_REGISTRY": DOCKER_REGISTRY,
                     "DOCKER_USERNAME": DOCKER_USERNAME,
-                    "DOCKER_PASSWORD": DOCKER_PASSWORD,
+                    "DOCKER_PASSWORD_KEY": DOCKER_PASSWORD_KEY,
                     "GIT_URL": "{GIT_URL}",
                     "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
                     "BASE_JOB": BASE_JOB,
                     "DTS_ARGS": DTS_ARGS,
                     "TIMEOUT_MINUTES": repo_build_timeout,
+                    "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN
                 }
                 config = template_config.format(**params)
                 os.makedirs(os.path.dirname(job_config_path))

@@ -76,6 +76,7 @@ dts --debug \
     devel build \
         --arch amd64 \
         --tag ente \
+        --base-tag ente \
         --ci
 # leave the workspace
 cd ../

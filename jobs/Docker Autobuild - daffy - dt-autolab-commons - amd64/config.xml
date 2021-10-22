@@ -76,6 +76,7 @@ dts --debug \
     devel build \
         --arch amd64 \
         --tag daffy \
+        --base-tag daffy \
         --ci \
         --ncpus=3
 # leave the workspace

@@ -76,6 +76,7 @@ dts --debug \
     devel build \
         --arch amd64 \
         --tag ente \
+        --base-tag ente \
         --ci \
         --ncpus=3
 # leave the workspace

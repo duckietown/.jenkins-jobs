@@ -76,6 +76,7 @@ dts --debug \
     devel build \
         --arch {REPO_ARCH} \
         --tag {TAG} \
+        --base-tag {BASE_TAG} \
         --ci{DTS_ARGS}
 # leave the workspace
 cd ../

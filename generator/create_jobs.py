@@ -152,6 +152,7 @@ def main():
                     "REPO_URL": "https://github.com/{:s}".format(repo["origin"]),
                     "REPO_ARCH": arch,
                     "TAG": TAG,
+                    "BASE_TAG": TAG,
                     "REPO_DISTRO": repo_distro,
                     "PIP_INDEX_URL": PIP_INDEX_URL,
                     "DTSERVER": DTSERVER,

@@ -76,6 +76,7 @@ dts --debug \
     devel build \
         --arch amd64 \
         --tag daffy \
+        --base-tag daffy \
         --ci \
         -C=minimal-nodes-stubs/aido3-bas-python3
 # leave the workspace

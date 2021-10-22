@@ -76,6 +76,7 @@ dts --debug \
     devel build \
         --arch arm32v7 \
         --tag daffy \
+        --base-tag daffy \
         --ci \
         --ci-force-builder-arch=amd64
 # leave the workspace

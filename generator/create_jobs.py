@@ -114,10 +114,14 @@ def main():
                 PIP_INDEX_URL = "https://staging.duckietown.org/root/devel/"
                 DTSERVER = "https://challenges-stage.duckietown.org"
                 DOCKER_REGISTRY = "registry-stage2.duckietown.org"
+                DOCKER_USERNAME = "ci"
+                DOCKER_PASSWORD = "Fxkx359gAMdN7sfPzyUj"
             else:
                 PIP_INDEX_URL = "https://pypi.org/simple"
                 DTSERVER = "https://challenges.duckietown.org/v4"
                 DOCKER_REGISTRY = "docker.io"
+                DOCKER_USERNAME = "duckietowndaemon"
+                DOCKER_PASSWORD = "18aa9598-be23-42f8-8656-2594e6aa76b6"
 
 
             # ---
@@ -151,6 +155,8 @@ def main():
                     "PIP_INDEX_URL": PIP_INDEX_URL,
                     "DTSERVER": DTSERVER,
                     "DOCKER_REGISTRY": DOCKER_REGISTRY,
+                    "DOCKER_USERNAME": DOCKER_USERNAME,
+                    "DOCKER_PASSWORD": DOCKER_PASSWORD,
                     "GIT_URL": "{GIT_URL}",
                     "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
                     "BASE_JOB": BASE_JOB,

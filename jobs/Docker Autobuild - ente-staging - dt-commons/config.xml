@@ -71,6 +71,8 @@ git -C ./ws fetch --tags
 export PIP_INDEX_URL="https://staging.duckietown.org/root/devel/"
 export DTSERVER="https://challenges-stage.duckietown.org"
 export DOCKER_REGISTRY="registry-stage2.duckietown.org"
+export DOCKER_USERNAME="duckietowndaemon"
+export DOCKER_PASSWORD="18aa9598-be23-42f8-8656-2594e6aa76b6"
 python3 -m pip install -U pip duckietown-shell
 # switch to CI commands
 dts --set-version ente-staging exit

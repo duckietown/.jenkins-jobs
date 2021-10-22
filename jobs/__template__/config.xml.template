@@ -57,7 +57,7 @@
     <hudson.matrix.TextAxis>
       <name>DUCKIETOWN_CI_ARCH</name>
       <values>
-        {REPO_ARCH}
+        <string>{REPO_ARCH}</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>

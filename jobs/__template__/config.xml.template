@@ -81,6 +81,7 @@ cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
+        --arch {REPO_ARCH} \
         --ci{DTS_ARGS}
 # leave the workspace
 cd ../

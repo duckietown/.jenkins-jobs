@@ -36,7 +36,8 @@
     {
         "name": "dt-core",
         "origin": "duckietown/dt-core",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "timeout_min": 360
     },
     {
         "name": "dt-gui-tools",

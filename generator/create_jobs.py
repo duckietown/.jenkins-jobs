@@ -104,8 +104,6 @@ def main():
         for repo_distro in repo_distros:
             # removed blacklisted configurations
             repo_arch_list = [arch for arch in arch_list if (repo_distro, arch) not in BLACKLIST_COMBINATIONS]
-            # create job by updating the template fields
-            job_config_path = os.path.join(parsed.jobsdir, job_name(repo_distro, repo["name"]), "config.xml")
             # dts arguments
             dts_args = copy.deepcopy(repo["dts_args"]) if "dts_args" in repo else {}
             # staging?
@@ -134,35 +132,37 @@ def main():
             else:
                 DTS_ARGS = ""
 
-            if "base" in repo:
-                BASE_JOB = ", ".join(
-                    [job_name(repo_distro, b.strip()) for b in repo["base"].split(",")]
-                )
-            else:
-                BASE_JOB = ""
+            for arch in repo_arch_list:
+                if "base" in repo:
+                    BASE_JOB = ", ".join(
+                        [job_name(repo_distro, b.strip(), arch) for b in repo["base"].split(",")]
+                    )
+                else:
+                    BASE_JOB = ""
 
-            REPO_ARCH = "".join(
-                map(lambda a: "<string>{:s}</string>".format(a), repo_arch_list)
-            )
-            params = {
-                "REPO_NAME": repo["name"],
-                "REPO_URL": "https://github.com/{:s}".format(repo["origin"]),
-                "REPO_ARCH": REPO_ARCH,
-                "REPO_DISTRO": repo_distro,
-                "PIP_INDEX_URL": PIP_INDEX_URL,
-                "DTSERVER": DTSERVER,
-                "DOCKER_REGISTRY": DOCKER_REGISTRY,
-                "GIT_URL": "{GIT_URL}",
-                "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
-                "BASE_JOB": BASE_JOB,
-                "DTS_ARGS": DTS_ARGS,
-                "TIMEOUT_MINUTES": repo_build_timeout,
-            }
-            config = template_config.format(**params)
-            os.makedirs(os.path.dirname(job_config_path))
-            with open(job_config_path, "wt") as fout:
-                fout.write(config)
-            stats["num_jobs"] += 1
+                jname = job_name(repo_distro, repo["name"], arch)
+                # create job by updating the template fields
+                job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
+                params = {
+                    "REPO_NAME": repo["name"],
+                    "REPO_URL": "https://github.com/{:s}".format(repo["origin"]),
+                    "REPO_ARCH": arch,
+                    "REPO_DISTRO": repo_distro,
+                    "PIP_INDEX_URL": PIP_INDEX_URL,
+                    "DTSERVER": DTSERVER,
+                    "DOCKER_REGISTRY": DOCKER_REGISTRY,
+                    "GIT_URL": "{GIT_URL}",
+                    "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
+                    "BASE_JOB": BASE_JOB,
+                    "DTS_ARGS": DTS_ARGS,
+                    "TIMEOUT_MINUTES": repo_build_timeout,
+                }
+                config = template_config.format(**params)
+                os.makedirs(os.path.dirname(job_config_path))
+                with open(job_config_path, "wt") as fout:
+                    fout.write(config)
+                stats["num_jobs"] += 1
+
     # print out stats
     logger.info(
         "Statistics: Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}".format(
@@ -172,8 +172,8 @@ def main():
     logger.info("Done!")
 
 
-def job_name(distro, repo_name):
-    return "Docker Autobuild - {:s} - {:s}".format(distro, repo_name)
+def job_name(distro, repo_name, arch):
+    return "Docker Autobuild - {:s} - {:s} - {:s}".format(distro, repo_name, arch)
 
 
 if __name__ == "__main__":

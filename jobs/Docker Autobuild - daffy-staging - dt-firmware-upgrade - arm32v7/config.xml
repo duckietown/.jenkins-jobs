@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - daffy-staging - dt-commons - arm32v7</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - daffy-staging - dt-commons - arm32v7, Docker Autobuild - daffy-staging - dt-device-health - arm32v7</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

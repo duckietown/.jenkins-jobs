@@ -56,8 +56,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "bab2b72e9d1f8bb4f3ee29db03c4b2624b225a14",
-                    "url": "https://api.github.com/repos/duckietown/aido-submission-ci-test/commits/bab2b72e9d1f8bb4f3ee29db03c4b2624b225a14"
+                    "sha": "8033e4a17e59e9e0e1353eb472be7df4a85c6cf0",
+                    "url": "https://api.github.com/repos/duckietown/aido-submission-ci-test/commits/8033e4a17e59e9e0e1353eb472be7df4a85c6cf0"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -87,7 +87,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/aido-submission-ci-test/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"e4ea8d5f1ab1b1e4c0356547187f357210c4250916b3d5675bb67176194e1312\""
+        "ETag": "W/\"fc8f649962f5c637bdc537baef68a8938439ee3f655dfd234f3056a39996cfa7\""
     },
     "duckietown/challenge-aido_LF-baseline-RPL-ros": {
         "Content": [
@@ -157,8 +157,8 @@
             },
             {
                 "commit": {
-                    "sha": "b598c24d4fc9d8ecd28babc1acc0d61304ad6be3",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/b598c24d4fc9d8ecd28babc1acc0d61304ad6be3"
+                    "sha": "de9f429bb4ee43121db80abd587348868cdbb3c2",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/de9f429bb4ee43121db80abd587348868cdbb3c2"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -220,7 +220,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/branches/merge_to_duckietown/protection"
             }
         ],
-        "ETag": "W/\"b9d1ad9673a42fee70349b7bfbda132c440efd68045b25dc61423cc6df7c7618\""
+        "ETag": "W/\"835406853a291e5cb422ee4297b5cbc230bcaa2939aa0a67166ed2c06c180004\""
     },
     "duckietown/challenge-aido_LF-baseline-duckietown": {
         "Content": [
@@ -306,8 +306,8 @@
             },
             {
                 "commit": {
-                    "sha": "7c57cc60661ca711e8d2c6b69162617252c5b465",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/7c57cc60661ca711e8d2c6b69162617252c5b465"
+                    "sha": "e4ab1f0675879d9fdce55eda3e2b51601dab1aec",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/e4ab1f0675879d9fdce55eda3e2b51601dab1aec"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -369,7 +369,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/branches/local-software-repo/protection"
             }
         ],
-        "ETag": "W/\"73e4050fba0714b4c9ecac00ab57288e674ba1283a5a12418b4a60b5d306ee80\""
+        "ETag": "W/\"4e4e4c904957400bd51ebcc3b1bbfe03832a48f19bb01a0353827440848bfb5d\""
     },
     "duckietown/challenge-aido_LF-baseline-duckietown-ml": {
         "Content": [
@@ -481,8 +481,8 @@
             },
             {
                 "commit": {
-                    "sha": "e8616cf049d4bc538eae6dbde98f865fcc57fee1",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent/commits/e8616cf049d4bc538eae6dbde98f865fcc57fee1"
+                    "sha": "26513cd38c8417d45f321cea234b6602fdded2be",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent/commits/26513cd38c8417d45f321cea234b6602fdded2be"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -512,7 +512,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"0e056efa7594de504639c74ef6cf512a87230a4a85e3ae600a7c12419a966bda\""
+        "ETag": "W/\"bcc97373b80c48156075bcc0f9af46a19491362824565542d40ee17914f79c15\""
     },
     "duckietown/challenge-aido_LF-minimal-agent-full": {
         "Content": [
@@ -534,8 +534,8 @@
             },
             {
                 "commit": {
-                    "sha": "7c464821eb67cd63aadee53ca702c1b7cb5b1fec",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent-full/commits/7c464821eb67cd63aadee53ca702c1b7cb5b1fec"
+                    "sha": "7c31d5ef0cf4fb012a45666a8ed15eff6f090f2a",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent-full/commits/7c31d5ef0cf4fb012a45666a8ed15eff6f090f2a"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -565,14 +565,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent-full/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"e416664536891c9798fa878a7ff3b7473b6bde7ac9bfde6c4675268fe426f069\""
+        "ETag": "W/\"5fa3092c672a62e219e713045311802bce693a4a105418e14b4a6725a4a891e4\""
     },
     "duckietown/challenge-aido_LF-minimal-agent-state": {
         "Content": [
             {
                 "commit": {
-                    "sha": "4cf01304f1905e59f51bcc475005fe39f2811976",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent-state/commits/4cf01304f1905e59f51bcc475005fe39f2811976"
+                    "sha": "5f3d62869957149922a7a90af3ebc2d44c4ad9a3",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent-state/commits/5f3d62869957149922a7a90af3ebc2d44c4ad9a3"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -602,7 +602,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent-state/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"c1d62753d8b41416800ca2c6cb614b98d08fc4fa8eae985e9b01bcf3120111e4\""
+        "ETag": "W/\"b6e5552a744d25c8a1f96757bd6c211837e62f4df41813d941263c8088b17bad\""
     },
     "duckietown/challenge-aido_LF-scenario_maker": {
         "Content": [
@@ -624,8 +624,8 @@
             },
             {
                 "commit": {
-                    "sha": "cee719815296eb016ccc34405fb4bdcb262f0bd7",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-scenario_maker/commits/cee719815296eb016ccc34405fb4bdcb262f0bd7"
+                    "sha": "c5f46e9bc212b78abfb217a95c0c324153dd0692",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-scenario_maker/commits/c5f46e9bc212b78abfb217a95c0c324153dd0692"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -655,7 +655,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-scenario_maker/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"75db0892affddbbe959fc2807054bc0e6f01f8e9189b23842d8995279b7b35aa\""
+        "ETag": "W/\"5a0b7e1ca07e33e2eb4241bfe7c4b35ef1cc75be95320e0d820a052333ea48f7\""
     },
     "duckietown/challenge-aido_LF-simulator-gym": {
         "Content": [
@@ -858,8 +858,8 @@
             },
             {
                 "commit": {
-                    "sha": "a7740a9556a3c509d2c44347d0df6f242f7b9947",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/a7740a9556a3c509d2c44347d0df6f242f7b9947"
+                    "sha": "8913da8fd68e60003151ee33a3569e72cd711900",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/8913da8fd68e60003151ee33a3569e72cd711900"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -889,7 +889,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"5f9ac503ed4cea16c4e51b1a33355f254219eb8862eb318dc13ab6fc3f1ff78f\""
+        "ETag": "W/\"4d3c6bfc4529d6362ac4a9d9c37d34fc79ee56253bcf6fc16f82d9a9a1d05733\""
     },
     "duckietown/challenge-aido_LF-template-ros": {
         "Content": [
@@ -975,8 +975,8 @@
             },
             {
                 "commit": {
-                    "sha": "bcad23e8e1ee927798c8736f9cae92160ccbe023",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/bcad23e8e1ee927798c8736f9cae92160ccbe023"
+                    "sha": "1767a20784deed090797726ec8af2c2b51436857",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/1767a20784deed090797726ec8af2c2b51436857"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -1006,7 +1006,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"09bab1e6199f8a3afa990f4d47d4ba10535a30326ca74d83afa17fd66748a133\""
+        "ETag": "W/\"45343e278cfc2648d3e726b70f7e2c1a1166722301f87a5ac71cc54575573959\""
     },
     "duckietown/dt-aido-autolab-evaluator": {
         "Content": [
@@ -1634,8 +1634,8 @@
             },
             {
                 "commit": {
-                    "sha": "382ce2d19ab728ca8ff5184d922cb52b4d23d3c5",
-                    "url": "https://api.github.com/repos/duckietown/dt-car-interface/commits/382ce2d19ab728ca8ff5184d922cb52b4d23d3c5"
+                    "sha": "7ed3a2ba1ab48e5291f5c03ffd691e05caa64285",
+                    "url": "https://api.github.com/repos/duckietown/dt-car-interface/commits/7ed3a2ba1ab48e5291f5c03ffd691e05caa64285"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -1713,7 +1713,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-car-interface/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"8afad5ba8327775eb90a78c59f9333b1af162dfe3ae11f36b2d48a64d50399c2\""
+        "ETag": "W/\"14790382d2947209bcc05ecd7f11385b0669ada78c5e5856a84656c0a6151dd5\""
     },
     "duckietown/dt-code-api": {
         "Content": [
@@ -1836,8 +1836,8 @@
             },
             {
                 "commit": {
-                    "sha": "d3a9b5b394d9c13c2d9ceda20fca9add7ae64f4f",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/d3a9b5b394d9c13c2d9ceda20fca9add7ae64f4f"
+                    "sha": "960ea2a38374f186ae13d08f9edc74cb3a54c29e",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/960ea2a38374f186ae13d08f9edc74cb3a54c29e"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -1931,7 +1931,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-commons/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"6dd727dc863c84d1c15d48b1899ef5e9050f13fe7fc282cf62042574b15e20c7\""
+        "ETag": "W/\"adff20026d7828a8b809c1c8c4fc079957e514657b9ceec13a8c25e98f30061c\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -2033,8 +2033,8 @@
             },
             {
                 "commit": {
-                    "sha": "3e33a95c74604a310b7b11b7e133272b1a0b67cd",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/3e33a95c74604a310b7b11b7e133272b1a0b67cd"
+                    "sha": "73ddaed7dd961dac248877e29f6f3c2304980233",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/73ddaed7dd961dac248877e29f6f3c2304980233"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -2144,7 +2144,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-core/branches/rectification-clusters/protection"
             }
         ],
-        "ETag": "W/\"4c26df86bd3a7180aed5f28a6036107cc6aa6abdcf91bf26ce66dfc5017a0da8\""
+        "ETag": "W/\"6f97cccfea1caa75cdd0196a585d477e601a060ca80510d21a5ac6df4f245435\""
     },
     "duckietown/dt-device-dashboard": {
         "Content": [
@@ -2740,8 +2740,8 @@
             },
             {
                 "commit": {
-                    "sha": "900245063b4359aa99f217179e5d51c3e37b76b7",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/900245063b4359aa99f217179e5d51c3e37b76b7"
+                    "sha": "b2a5daa0941459ed888dcd86dcb0256febc57c0c",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/b2a5daa0941459ed888dcd86dcb0256febc57c0c"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -2915,7 +2915,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/shutdown_behaviors/protection"
             }
         ],
-        "ETag": "W/\"806d1a19768656ba2b36d9b77047cd4c8c46f6ad9f4f50d0febe1493cbd2e389\""
+        "ETag": "W/\"08c80be2a3c06a716690cc1120cb058e87a74b647d9d38cb1791f70e2c4b5409\""
     },
     "duckietown/dt-files-api": {
         "Content": [
@@ -3511,8 +3511,8 @@
             },
             {
                 "commit": {
-                    "sha": "1afc765dc18219bc397640d79c8da8804b7b0e30",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/1afc765dc18219bc397640d79c8da8804b7b0e30"
+                    "sha": "fcba63e26cd9f7d35f54c8b6103a33ab3a4d8314",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/fcba63e26cd9f7d35f54c8b6103a33ab3a4d8314"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -3686,7 +3686,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-ros-commons/branches/sth/protection"
             }
         ],
-        "ETag": "W/\"8b94797da8d177c5086627e807180f33976b6f6dcaf524084be86bc4cedcfa4a\""
+        "ETag": "W/\"ae4ce53032c49e34bc9a0bae5b3214ac4b5670b83bf411bc7d23c5488a457675\""
     },
     "duckietown/dt-rosbridge-websocket": {
         "Content": [
@@ -3894,8 +3894,8 @@
             },
             {
                 "commit": {
-                    "sha": "d4f0850d91418041623ed6fe5496ba9e480bec3c",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-build-utils/commits/d4f0850d91418041623ed6fe5496ba9e480bec3c"
+                    "sha": "00ba728ee6ad49a5de4473e3fcda25fcf68cf3f5",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-build-utils/commits/00ba728ee6ad49a5de4473e3fcda25fcf68cf3f5"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -3925,7 +3925,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/duckietown-build-utils/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"a079b6417ca3bf532564ee848e5aa80e77c001cbbe886a54f54b6d5cc1519965\""
+        "ETag": "W/\"3c00beb6ef403139b67b70d6b501d2d08da6cb660886c91982b47c804c94f4c9\""
     },
     "duckietown/duckietown-challenges-cli": {
         "Content": [

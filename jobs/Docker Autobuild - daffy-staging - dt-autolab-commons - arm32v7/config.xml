@@ -75,9 +75,10 @@ cd ./ws
 dts --debug \
     devel build \
         --arch arm32v7 \
+        --tag daffy \
+        --base-tag daffy \
         --ci \
-        --ncpus=3 \
-        --stage
+        --ncpus=3
 # leave the workspace
 cd ../
 # clean workspace
@@ -114,6 +115,10 @@ rm -rf ./ws
         <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
           <credentialsId>STAGING_DOCKER_PASSWORD</credentialsId>
           <variable>DOCKER_PASSWORD</variable>
+        </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+        <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+          <credentialsId>DUCKIETOWN_CI_DT_TOKEN</credentialsId>
+          <variable>DUCKIETOWN_CI_DT_TOKEN</variable>
         </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
       </bindings>
     </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>

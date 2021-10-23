@@ -27,8 +27,14 @@ BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
 def main():
     # configure arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--jobsdir", required=True, help="Directory containing the final jobs")
-    parser.add_argument("--repos", required=True, help="File containing the list of repositories to build")
+    parser.add_argument(
+        "--jobsdir", required=True, help="Directory containing the final jobs"
+    )
+    parser.add_argument(
+        "--repos",
+        required=True,
+        help="File containing the list of repositories to build",
+    )
     parser.add_argument(
         "-a",
         "--arch",
@@ -36,7 +42,10 @@ def main():
         help="Comma-separated list of target architectures for the job to build",
     )
     parser.add_argument(
-        "-M", "--distro", required=True, help="Comma-separated list of target distros for the job to build"
+        "-M",
+        "--distro",
+        required=True,
+        help="Comma-separated list of target distros for the job to build",
     )
     parsed, _ = parser.parse_known_args()
     # ---
@@ -60,7 +69,9 @@ def main():
     except:
         pass
     # load template job
-    template_config_file = os.path.join(parsed.jobsdir, TEMPLATE_JOB, "config.xml.template")
+    template_config_file = os.path.join(
+        parsed.jobsdir, TEMPLATE_JOB, "config.xml.template"
+    )
     with open(template_config_file, "rt") as fin:
         template_config = fin.read()
     # check which configurations are valid
@@ -76,16 +87,19 @@ def main():
         logger.info("> Fetching list of branches")
         headers = {}
         if cached_repo:
-            headers["If-None-Match"] =  cached_repo["ETag"]
-        if 'GITHUB_TOKEN' not in os.environ:
-            msg = 'Please set environment variable GITHUB_TOKEN '
+            headers["If-None-Match"] = cached_repo["ETag"]
+        if "GITHUB_TOKEN" not in os.environ:
+            msg = "Please set environment variable GITHUB_TOKEN "
             logger.error(msg)
             sys.exit(6)
-        github_token = os.environ.get('GITHUB_TOKEN')
-        headers['Authorization'] = f"token {github_token}"
-        response = requests.get(branches_url, headers=headers, timeout=10 )
+        github_token = os.environ.get("GITHUB_TOKEN")
+        headers["Authorization"] = f"token {github_token}"
+        response = requests.get(branches_url, headers=headers, timeout=10)
         # check quota
-        if response.status_code == 401 and response.headers["X-RateLimit-Remaining"] == 0:
+        if (
+            response.status_code == 401
+            and response.headers["X-RateLimit-Remaining"] == 0
+        ):
             logger.error("GitHub API quota exhausted! Exiting.")
             sys.exit(1)
         # check output
@@ -97,17 +111,22 @@ def main():
             logger.info("< Fetched from GitHub.")
             stats["cache"]["misses"] += 1
             # noinspection PyTypeChecker
-            cache[repo_url] = {"ETag": response.headers["ETag"], "Content": response.json()}
+            cache[repo_url] = {
+                "ETag": response.headers["ETag"],
+                "Content": response.json(),
+            }
             with open(cache_file, "w") as fout:
                 json.dump(cache, fout, indent=4, sort_keys=True)
         elif response.status_code == 304:
             stats["cache"]["hits"] += 1
             logger.info("< Using cached data.")
         elif response.status_code == 403:
-            logger.error(f'< Not authorized to read. Using \nurl = {branches_url}\nheaders = {headers}')
+            logger.error(
+                f"< Not authorized to read. Using \nurl = {branches_url}\nheaders = {headers}"
+            )
             sys.exit(4)
         else:
-            logger.error(f'< Unexpected response {response.status_code}')
+            logger.error(f"< Unexpected response {response.status_code}")
             sys.exit(4)
         # update cache
         # get json response
@@ -119,8 +138,11 @@ def main():
         # create one job per distro
         for repo_distro in repo_distros:
             # removed blacklisted configurations
-            repo_arch_list = [arch for arch in arch_list
-                              if (repo_distro, arch) not in BLACKLIST_COMBINATIONS]
+            repo_arch_list = [
+                arch
+                for arch in arch_list
+                if (repo_distro, arch) not in BLACKLIST_COMBINATIONS
+            ]
             # dts arguments
             dts_args = copy.deepcopy(repo["dts_args"]) if "dts_args" in repo else {}
             # staging?
@@ -141,20 +163,22 @@ def main():
 
             # ---
             if dts_args:
-                DTS_ARGS = (DTS_ARGS_INDENT
-                            + DTS_ARGS_INDENT.join(
-                        [
-                            ("{:s}={:s}".format(k, v)) if v is not True else k
-                            for k, v in dts_args.items()
-                        ]
-                    ))
+                DTS_ARGS = DTS_ARGS_INDENT + DTS_ARGS_INDENT.join(
+                    [
+                        ("{:s}={:s}".format(k, v)) if v is not True else k
+                        for k, v in dts_args.items()
+                    ]
+                )
             else:
                 DTS_ARGS = ""
 
             for arch in repo_arch_list:
                 if "base" in repo:
                     BASE_JOB = ", ".join(
-                        [job_name(repo_distro, b.strip(), arch) for b in repo["base"].split(",")]
+                        [
+                            job_name(repo_distro, b.strip(), arch)
+                            for b in repo["base"].split(",")
+                        ]
                     )
                 else:
                     BASE_JOB = ""
@@ -179,7 +203,7 @@ def main():
                     "BASE_JOB": BASE_JOB,
                     "DTS_ARGS": DTS_ARGS,
                     "TIMEOUT_MINUTES": repo_build_timeout,
-                    "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN
+                    "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
                 }
                 config = template_config.format(**params)
                 os.makedirs(os.path.dirname(job_config_path))

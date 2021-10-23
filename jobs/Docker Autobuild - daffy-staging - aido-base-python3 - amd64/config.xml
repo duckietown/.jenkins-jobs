@@ -1,10 +1,10 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
-  <description>Autobuild for repository aido3-base-python3</description>
+  <description>Autobuild for repository aido-base-python3</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.1">
-      <projectUrl>https://github.com/duckietown/aido-protocols</projectUrl>
+      <projectUrl>https://github.com/duckietown/aido-base-python3</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.32">
@@ -16,7 +16,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/duckietown/aido-protocols</url>
+        <url>https://github.com/duckietown/aido-base-python3</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -74,9 +74,8 @@ cd ./ws
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
-        --arch arm32v7 \
+        --arch amd64 \
         --ci \
-        -C=minimal-nodes-stubs/aido3-bas-python3 \
         --stage
 # leave the workspace
 cd ../

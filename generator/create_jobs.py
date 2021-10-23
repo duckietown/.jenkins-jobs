@@ -6,6 +6,7 @@ import logging
 import os
 import sys
 from collections import defaultdict
+from typing import Optional
 
 import requests
 
@@ -68,33 +69,47 @@ def main():
     for repo in repos:
         logger.info("Analyzing [{:s}]".format(repo["name"]))
         repo_url = repo["origin"]
-        cached_repo = cache[repo_url]
+        cached_repo: Optional[dict] = cache[repo_url]
         repo_build_timeout = repo.get("timeout_min", DEFAULT_TIMEOUT_MINUTES)
         branches_url = "https://api.github.com/repos/{origin}/branches".format(**repo)
         # call API
         logger.info("> Fetching list of branches")
-        response = requests.get(
-            branches_url, headers={"If-None-Match": cached_repo["ETag"]} if cached_repo else {}, timeout=10
-        )
+        headers = {}
+        if cached_repo:
+            headers["If-None-Match"] =  cached_repo["ETag"]
+        if 'GITHUB_TOKEN' not in os.environ:
+            msg = 'Please set environment variable GITHUB_TOKEN '
+            logger.error(msg)
+            sys.exit(6)
+        github_token = os.environ.get('GITHUB_TOKEN')
+        headers['Authorization'] = f"token {github_token}"
+        response = requests.get(branches_url, headers=headers, timeout=10 )
         # check quota
         if response.status_code == 401 and response.headers["X-RateLimit-Remaining"] == 0:
             logger.error("GitHub API quota exhausted! Exiting.")
             sys.exit(1)
         # check output
-        if response.status_code == 404:
+        elif response.status_code == 404:
             logger.error('< Repository "{origin}" not found'.format(**repo))
             sys.exit(2)
         # update cache
-        if response.status_code == 200:
+        elif response.status_code == 200:
             logger.info("< Fetched from GitHub.")
             stats["cache"]["misses"] += 1
             # noinspection PyTypeChecker
             cache[repo_url] = {"ETag": response.headers["ETag"], "Content": response.json()}
             with open(cache_file, "w") as fout:
                 json.dump(cache, fout, indent=4, sort_keys=True)
-        if response.status_code == 304:
+        elif response.status_code == 304:
             stats["cache"]["hits"] += 1
             logger.info("< Using cached data.")
+        elif response.status_code == 403:
+            logger.error(f'< Not authorized to read. Using \nurl = {branches_url}\nheaders = {headers}')
+            sys.exit(4)
+        else:
+            logger.error(f'< Unexpected response {response.status_code}')
+            sys.exit(4)
+        # update cache
         # get json response
         repo_branches = [b["name"] for b in cache[repo_url]["Content"]]
         # filter distros

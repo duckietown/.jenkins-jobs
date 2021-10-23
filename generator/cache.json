@@ -19,8 +19,8 @@
             },
             {
                 "commit": {
-                    "sha": "6ea875f3aa769282acb29f6cc46c5435ce418210",
-                    "url": "https://api.github.com/repos/duckietown/aido-base-python3/commits/6ea875f3aa769282acb29f6cc46c5435ce418210"
+                    "sha": "240dbfb51933c0001198f4008f8c7c2c1ce3f210",
+                    "url": "https://api.github.com/repos/duckietown/aido-base-python3/commits/240dbfb51933c0001198f4008f8c7c2c1ce3f210"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -50,7 +50,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/aido-base-python3/branches/daffy/protection"
             }
         ],
-        "ETag": "W/\"e386e2c834129a7c7ee325a98a43d639147b960ccaa438ea0b455dbd8337d786\""
+        "ETag": "W/\"58129aab338aee1e357b5fd7524a3c936b38656cee54a6a9791b927b5832d21a\""
     },
     "duckietown/aido-submission-ci-test": {
         "Content": [

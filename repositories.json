@@ -104,7 +104,8 @@
     },
     {
         "name": "aido-base-python3",
-        "origin": "duckietown/aido-base-python3"
+        "origin": "duckietown/aido-base-python3",
+        "base": "dt-base-environment"
     },
     {
         "name": "challenge-aido_LF-baseline-duckietown",

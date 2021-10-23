@@ -163,5 +163,52 @@
         "name": "challenge-aido_LF-baseline-duckietown-ml",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown-ml",
         "base": "challenge-aido_LF-baseline-duckietown, dt-machine-learning-base-environment"
+    },
+    {
+        "name": "challenge-aido_LF-experiment_manager",
+        "origin": "duckietown/challenge-aido_LF-experiment_manager",
+        "base": "aido-base-python3"
+    },
+    {
+        "name": "challenge-aido_LF-minimal-agent",
+        "origin": "duckietown/challenge-aido_LF-minimal-agent",
+        "base": "aido-base-python3"
+    },
+    {
+        "name": "challenge-aido_LF-minimal-agent-full",
+        "origin": "duckietown/challenge-aido_LF-minimal-agent-full",
+        "base": "aido-base-python3"
+    },
+    {
+        "name": "challenge-aido_LF-minimal-agent-state",
+        "origin": "duckietown/challenge-aido_LF-minimal-agent-state",
+        "base": "aido-base-python3"
+    },
+    {
+        "name": "challenge-aido_LF-scenario_maker",
+        "origin": "duckietown/challenge-aido_LF-scenario_maker",
+        "base": "aido-base-python3"
+    },
+    {
+        "name": "challenge-aido_LF-simulator-gym",
+        "origin": "duckietown/challenge-aido_LF-simulator-gym",
+        "base": "gym-duckietown"
+    },
+    {
+        "name": "gym-duckietown",
+        "origin": "duckietown/gym-duckietown"
+    },
+    {
+        "name": "duckietown-challenges-cli",
+        "origin": "duckietown/duckietown-challenges-cli"
+    },
+    {
+        "name": "duckietown-build-utils",
+        "origin": "duckietown/duckietown-build-utils"
+    },
+    {
+        "name": "aido-submission-ci-test",
+        "origin": "duckietown/aido-submission-ci-test",
+        "base": "aido-base-python3"
     }
 ]

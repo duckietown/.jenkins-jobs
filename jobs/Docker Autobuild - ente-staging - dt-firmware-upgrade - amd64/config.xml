@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - ente-staging - dt-commons - amd64</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - ente-staging - dt-commons - amd64, Docker Autobuild - ente-staging - dt-device-health - amd64</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

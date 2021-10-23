@@ -85,7 +85,7 @@
     {
         "name": "dt-firmware-upgrade",
         "origin": "duckietown/dt-firmware-upgrade",
-        "base": "dt-commons"
+        "base": "dt-commons, dt-device-health"
     },
     {
         "name": "dt-machine-learning-base-environment",
@@ -163,7 +163,7 @@
     {
         "name": "challenge-aido_LF-baseline-duckietown-ml",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown-ml",
-        "base": "challenge-aido_LF-baseline-duckietown, dt-machine-learning-base-environment"
+        "base": "challenge-aido_LF-baseline-duckietown, dt-core, dt-machine-learning-base-environment"
     },
     {
         "name": "challenge-aido_LF-experiment_manager",

@@ -21,6 +21,7 @@ BLACKLIST_COMBINATIONS = [
     ("ente", "arm32v7"),
     ("ente-staging", "arm32v7"),
 ]
+DOCKER_USERNAME = "duckietowndaemon"
 BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
 
 
@@ -77,23 +78,28 @@ def main():
     # check which configurations are valid
     stats = {"cache": {"hits": 0, "misses": 0}, "num_jobs": 0}
     logger.info("Found {:d} repositories.".format(len(repos)))
+    # generate headers for github
+    headers = {}
+    # github token
+    github_token = os.environ.get("GITHUB_TOKEN", None)
+    if github_token is None:
+        msg = "Please set environment variable GITHUB_TOKEN "
+        logger.error(msg)
+        sys.exit(6)
+    headers["Authorization"] = f"token {github_token}"
+    # ---
     for repo in repos:
         logger.info("Analyzing [{:s}]".format(repo["name"]))
-        repo_url = repo["origin"]
-        cached_repo: Optional[dict] = cache[repo_url]
+        # repo info
+        repo_origin = repo["origin"]
+        REPO_URL = "git@github.com:{:s}".format(repo_origin)
+        cached_repo: Optional[dict] = cache[repo_origin]
         repo_build_timeout = repo.get("timeout_min", DEFAULT_TIMEOUT_MINUTES)
         branches_url = "https://api.github.com/repos/{origin}/branches".format(**repo)
         # call API
         logger.info("> Fetching list of branches")
-        headers = {}
         if cached_repo:
             headers["If-None-Match"] = cached_repo["ETag"]
-        if "GITHUB_TOKEN" not in os.environ:
-            msg = "Please set environment variable GITHUB_TOKEN "
-            logger.error(msg)
-            sys.exit(6)
-        github_token = os.environ.get("GITHUB_TOKEN")
-        headers["Authorization"] = f"token {github_token}"
         response = requests.get(branches_url, headers=headers, timeout=10)
         # check quota
         if (
@@ -111,7 +117,7 @@ def main():
             logger.info("< Fetched from GitHub.")
             stats["cache"]["misses"] += 1
             # noinspection PyTypeChecker
-            cache[repo_url] = {
+            cache[repo_origin] = {
                 "ETag": response.headers["ETag"],
                 "Content": response.json(),
             }
@@ -130,7 +136,7 @@ def main():
             sys.exit(4)
         # update cache
         # get json response
-        repo_branches = [b["name"] for b in cache[repo_url]["Content"]]
+        repo_branches = [b["name"] for b in cache[repo_origin]["Content"]]
         # filter distros
         repo_distros = [b for b in repo_branches if b in distro_list]
         logger.info("> Found distros: {:s}".format(str(repo_distros)))
@@ -148,7 +154,6 @@ def main():
             # staging?
             is_staging = "-staging" in repo_distro
 
-            DOCKER_USERNAME = "duckietowndaemon"
             TAG = repo_distro.split("-")[0]
             if is_staging:
                 PIP_INDEX_URL = "https://staging.duckietown.org/root/devel/"
@@ -188,7 +193,7 @@ def main():
                 job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
                 params = {
                     "REPO_NAME": repo["name"],
-                    "REPO_URL": "https://github.com/{:s}".format(repo["origin"]),
+                    "REPO_URL": REPO_URL,
                     "REPO_ARCH": arch,
                     "TAG": TAG,
                     "BASE_TAG": TAG,

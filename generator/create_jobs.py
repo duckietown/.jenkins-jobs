@@ -96,7 +96,8 @@ def main():
         # repo info
         repo_name = repo["name"]
         repo_origin = repo["origin"]
-        REPO_URL = "git@github.com:{:s}".format(repo_origin)
+        REPO_URL = "https://github.com/{:s}".format(repo_origin)
+        GIT_URL = "git@github.com:{:s}".format(repo_origin)
         cached_repo: Optional[dict] = cache[repo_origin]
         repo_build_timeout = repo.get("timeout_min", DEFAULT_TIMEOUT_MINUTES)
         branches_url = "https://api.github.com/repos/{origin}/branches".format(**repo)
@@ -212,7 +213,7 @@ def main():
                     "DOCKER_REGISTRY": DOCKER_REGISTRY,
                     "DOCKER_USERNAME": DOCKER_USERNAME,
                     "DOCKER_PASSWORD_KEY": DOCKER_PASSWORD_KEY,
-                    "GIT_URL": "{GIT_URL}",
+                    "GIT_URL": GIT_URL,
                     "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
                     "BASE_JOB": BASE_JOB,
                     "DTS_ARGS": DTS_ARGS,

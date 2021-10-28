@@ -4,7 +4,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.1">
-      <projectUrl>git@github.com:duckietown/dt-gui-tools</projectUrl>
+      <projectUrl>https://github.com/duckietown/dt-gui-tools</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.32">
@@ -16,7 +16,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git@github.com:duckietown/dt-gui-tools</url>
+        <url>https://github.com/duckietown/dt-gui-tools</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -61,7 +61,7 @@ git clone -b daffy https://github.com/duckietown/duckietown-shell-commands ./com
 export DTSHELL_COMMANDS=$(pwd)/commands
 
 # fetch code
-git clone -b daffy ${GIT_URL} ./ws
+git clone -b daffy git@github.com:duckietown/dt-gui-tools ./ws
 git -C ./ws fetch --tags
 
 # install/update duckietown-shell

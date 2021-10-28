@@ -61,7 +61,7 @@ git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-comman
 export DTSHELL_COMMANDS=$(pwd)/commands
 
 # fetch code
-git clone -b {REPO_DISTRO} ${GIT_URL} ./ws
+git clone -b {REPO_DISTRO} {GIT_URL} ./ws
 git -C ./ws fetch --tags
 
 # install/update duckietown-shell

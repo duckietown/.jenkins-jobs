@@ -16,7 +16,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/duckietown/challenge-aido_LF-baseline-duckietown-ml</url>
+        <url>git@github.com:duckietown/challenge-aido_LF-baseline-duckietown-ml</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>

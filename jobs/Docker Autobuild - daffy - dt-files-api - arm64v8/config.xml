@@ -58,7 +58,7 @@
       <command>
 # fetch commands
 git clone -b daffy https://github.com/duckietown/duckietown-shell-commands ./commands
-export DTSHELL_COMMANDS=$(pwd)/commands
+export DTSHELL_COMMANDS="$(pwd)/commands"
 
 # fetch code
 git clone -b daffy git@github.com:duckietown/dt-files-api ./ws

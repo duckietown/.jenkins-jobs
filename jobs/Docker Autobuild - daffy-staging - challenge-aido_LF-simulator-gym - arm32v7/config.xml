@@ -58,7 +58,7 @@
       <command>
 # fetch commands
 git clone -b daffy-staging https://github.com/duckietown/duckietown-shell-commands ./commands
-export DTSHELL_COMMANDS=$(pwd)/commands
+export DTSHELL_COMMANDS="$(pwd)/commands"
 
 # fetch code
 git clone -b daffy-staging git@github.com:duckietown/challenge-aido_LF-simulator-gym ./ws

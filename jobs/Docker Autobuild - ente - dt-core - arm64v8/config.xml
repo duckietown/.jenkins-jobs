@@ -58,7 +58,7 @@
       <command>
 # fetch commands
 git clone -b ente https://github.com/duckietown/duckietown-shell-commands ./commands
-export DTSHELL_COMMANDS=$(pwd)/commands
+export DTSHELL_COMMANDS="$(pwd)/commands"
 
 # fetch code
 git clone -b ente git@github.com:duckietown/dt-core ./ws

@@ -56,21 +56,26 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
+# fetch commands
+git clone -b ente https://github.com/duckietown/duckietown-shell-commands ./commands
+export DTSHELL_COMMANDS=$(pwd)/commands
+
 # fetch code
 git clone -b ente ${GIT_URL} ./ws
 git -C ./ws fetch --tags
+
 # install/update duckietown-shell
 export PIP_INDEX_URL="https://pypi.org/simple"
 export DTSERVER="https://challenges.duckietown.org/v4"
 export DOCKER_REGISTRY="docker.io"
 export DOCKER_USERNAME="duckietowndaemon"
-python3 -m pip install -U pip duckietown-shell
+
 # switch to CI commands
 dts --set-version ente exit
-# update commands
-dts update
+
 # enter the workspace
 cd ./ws
+
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
@@ -79,9 +84,12 @@ dts --debug \
         --base-tag ente \
         --ci \
         --ci-force-builder-arch=amd64
+
 # leave the workspace
 cd ../
+
 # clean workspace
+rm -rf ./commands
 rm -rf ./ws
       </command>
       <configuredLocalRules/>

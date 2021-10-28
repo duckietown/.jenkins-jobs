@@ -17,9 +17,12 @@ logger.setLevel(logging.INFO)
 TEMPLATE_JOB = "__template__"
 DTS_ARGS_INDENT = " \\\n" + " " * 8
 DEFAULT_TIMEOUT_MINUTES = 120
-BLACKLIST_COMBINATIONS = [
+DISTRO_ARCH_BLACKLIST = [
     ("ente", "arm32v7"),
     ("ente-staging", "arm32v7"),
+]
+REPO_ARCH_BLACKLIST = [
+    ("dt-gui-tools", "arm32v7"),
 ]
 DOCKER_USERNAME = "duckietowndaemon"
 BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
@@ -91,6 +94,7 @@ def main():
     for repo in repos:
         logger.info("Analyzing [{:s}]".format(repo["name"]))
         # repo info
+        repo_name = repo["name"]
         repo_origin = repo["origin"]
         REPO_URL = "git@github.com:{:s}".format(repo_origin)
         cached_repo: Optional[dict] = cache[repo_origin]
@@ -147,7 +151,12 @@ def main():
             repo_arch_list = [
                 arch
                 for arch in arch_list
-                if (repo_distro, arch) not in BLACKLIST_COMBINATIONS
+                if (repo_distro, arch) not in DISTRO_ARCH_BLACKLIST
+            ]
+            repo_arch_list = [
+                arch
+                for arch in repo_arch_list
+                if (repo_name, arch) not in REPO_ARCH_BLACKLIST
             ]
             # dts arguments
             dts_args = copy.deepcopy(repo["dts_args"]) if "dts_args" in repo else {}
@@ -188,11 +197,11 @@ def main():
                 else:
                     BASE_JOB = ""
 
-                jname = job_name(repo_distro, repo["name"], arch)
+                jname = job_name(repo_distro, repo_name, arch)
                 # create job by updating the template fields
                 job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
                 params = {
-                    "REPO_NAME": repo["name"],
+                    "REPO_NAME": repo_name,
                     "REPO_URL": REPO_URL,
                     "REPO_ARCH": arch,
                     "TAG": TAG,

@@ -56,21 +56,26 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
+# fetch commands
+git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-commands ./commands
+export DTSHELL_COMMANDS=$(pwd)/commands
+
 # fetch code
 git clone -b {REPO_DISTRO} ${GIT_URL} ./ws
 git -C ./ws fetch --tags
+
 # install/update duckietown-shell
 export PIP_INDEX_URL="{PIP_INDEX_URL}"
 export DTSERVER="{DTSERVER}"
 export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
 export DOCKER_USERNAME="{DOCKER_USERNAME}"
-python3 -m pip install -U pip duckietown-shell
+
 # switch to CI commands
 dts --set-version {DUCKIETOWN_CI_DT_SHELL_VERSION} exit
-# update commands
-dts update
+
 # enter the workspace
 cd ./ws
+
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
@@ -78,9 +83,12 @@ dts --debug \
         --tag {TAG} \
         --base-tag {BASE_TAG} \
         --ci{DTS_ARGS}
+
 # leave the workspace
 cd ../
+
 # clean workspace
+rm -rf ./commands
 rm -rf ./ws
       </command>
       <configuredLocalRules/>

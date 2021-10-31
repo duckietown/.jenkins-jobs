@@ -76,8 +76,11 @@ dts --set-version ente-staging exit
 # enter the workspace
 cd ./ws
 
+python3 -m pip install  pur
+
 if test -f "requirements.txt"; then
-    dts build_utils update-reqs -r requirements.txt -o requirements.resolved
+    pur -r requirements.txt -o requirements.resolved
+    # dts build_utils update-reqs -r requirements.txt -o requirements.resolved
 fi
 
 # pull, build(cloud), transfer, push, clean

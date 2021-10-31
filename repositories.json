@@ -203,10 +203,7 @@
         "name": "duckietown-challenges-cli",
         "origin": "duckietown/duckietown-challenges-cli"
     },
-    {
-        "name": "duckietown-build-utils",
-        "origin": "duckietown/duckietown-build-utils"
-    },
+    
     {
         "name": "aido-submission-ci-test",
         "origin": "duckietown/aido-submission-ci-test",

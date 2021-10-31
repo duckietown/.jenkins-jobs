@@ -3789,6 +3789,59 @@
         ],
         "ETag": "W/\"be1e7181ee21833390ebd70a5f36554dc77ce34c57f00f71a227514bd5d37df2\""
     },
+    "duckietown/dt-statistics-server": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "3efbec99fad19be6aa30d72798543afb3758f309",
+                    "url": "https://api.github.com/repos/duckietown/dt-statistics-server/commits/3efbec99fad19be6aa30d72798543afb3758f309"
+                },
+                "name": "daffy",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-statistics-server/branches/daffy/protection"
+            },
+            {
+                "commit": {
+                    "sha": "0f87b96540c82d4952e32d843ef5cc2ba0a32286",
+                    "url": "https://api.github.com/repos/duckietown/dt-statistics-server/commits/0f87b96540c82d4952e32d843ef5cc2ba0a32286"
+                },
+                "name": "daffy-stage",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-statistics-server/branches/daffy-stage/protection"
+            },
+            {
+                "commit": {
+                    "sha": "dc88ab60fb853bfbe31eac0da97584e44cd3a7b2",
+                    "url": "https://api.github.com/repos/duckietown/dt-statistics-server/commits/dc88ab60fb853bfbe31eac0da97584e44cd3a7b2"
+                },
+                "name": "daffy-staging",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-statistics-server/branches/daffy-staging/protection"
+            }
+        ],
+        "ETag": "W/\"7611c9a9f691bae8c3e8f5f91d66a78ce825364467343bb67613e5d45f18dc3a\""
+    },
     "duckietown/dt-system-monitor": {
         "Content": [
             {

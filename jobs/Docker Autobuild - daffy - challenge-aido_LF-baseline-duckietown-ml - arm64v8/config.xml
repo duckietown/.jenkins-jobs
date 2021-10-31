@@ -76,6 +76,10 @@ dts --set-version daffy exit
 # enter the workspace
 cd ./ws
 
+if test -f "requirements.txt"; then
+    dts build_utils update-reqs -r requirements.txt -o requirements.resolved
+fi
+
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \

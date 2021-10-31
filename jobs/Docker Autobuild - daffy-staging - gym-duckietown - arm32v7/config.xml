@@ -16,7 +16,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/duckietown/gym-duckietown</url>
+        <url>git@github.com:duckietown/gym-duckietown</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -56,21 +56,26 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
+# fetch commands
+git clone -b daffy-staging https://github.com/duckietown/duckietown-shell-commands ./commands
+export DTSHELL_COMMANDS="$(pwd)/commands"
+
 # fetch code
-git clone -b daffy-staging ${GIT_URL} ./ws
+git clone -b daffy-staging git@github.com:duckietown/gym-duckietown ./ws
 git -C ./ws fetch --tags
+
 # install/update duckietown-shell
 export PIP_INDEX_URL="https://staging.duckietown.org/root/devel/"
 export DTSERVER="https://challenges-stage.duckietown.org"
 export DOCKER_REGISTRY="registry-stage2.duckietown.org"
 export DOCKER_USERNAME="duckietowndaemon"
-python3 -m pip install -U pip duckietown-shell
+
 # switch to CI commands
 dts --set-version daffy-staging exit
-# update commands
-dts update
+
 # enter the workspace
 cd ./ws
+
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
@@ -78,9 +83,12 @@ dts --debug \
         --tag daffy \
         --base-tag daffy \
         --ci
+
 # leave the workspace
 cd ../
+
 # clean workspace
+rm -rf ./commands
 rm -rf ./ws
       </command>
       <configuredLocalRules/>

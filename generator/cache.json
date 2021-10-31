@@ -3874,59 +3874,6 @@
         ],
         "ETag": "W/\"335d0b167bce208b83e4bf7513e8cb4f03b0633d4bad08e932563f4e0d753fda\""
     },
-    "duckietown/duckietown-build-utils": {
-        "Content": [
-            {
-                "commit": {
-                    "sha": "11cf28280a32d10ae4d644a6da245f53abb2bc76",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-build-utils/commits/11cf28280a32d10ae4d644a6da245f53abb2bc76"
-                },
-                "name": "daffy-aido4",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/duckietown-build-utils/branches/daffy-aido4/protection"
-            },
-            {
-                "commit": {
-                    "sha": "00ba728ee6ad49a5de4473e3fcda25fcf68cf3f5",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-build-utils/commits/00ba728ee6ad49a5de4473e3fcda25fcf68cf3f5"
-                },
-                "name": "daffy-staging",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/duckietown-build-utils/branches/daffy-staging/protection"
-            },
-            {
-                "commit": {
-                    "sha": "c9dcb999c3d230a93e2a76b81bd4bcb18489974e",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-build-utils/commits/c9dcb999c3d230a93e2a76b81bd4bcb18489974e"
-                },
-                "name": "daffy",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/duckietown-build-utils/branches/daffy/protection"
-            }
-        ],
-        "ETag": "W/\"3c00beb6ef403139b67b70d6b501d2d08da6cb660886c91982b47c804c94f4c9\""
-    },
     "duckietown/duckietown-challenges-cli": {
         "Content": [
             {

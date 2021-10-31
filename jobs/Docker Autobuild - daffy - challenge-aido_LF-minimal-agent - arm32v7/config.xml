@@ -16,7 +16,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/duckietown/challenge-aido_LF-minimal-agent</url>
+        <url>git@github.com:duckietown/challenge-aido_LF-minimal-agent</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -56,21 +56,26 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
+# fetch commands
+git clone -b daffy https://github.com/duckietown/duckietown-shell-commands ./commands
+export DTSHELL_COMMANDS="$(pwd)/commands"
+
 # fetch code
-git clone -b daffy ${GIT_URL} ./ws
+git clone -b daffy git@github.com:duckietown/challenge-aido_LF-minimal-agent ./ws
 git -C ./ws fetch --tags
+
 # install/update duckietown-shell
 export PIP_INDEX_URL="https://pypi.org/simple"
 export DTSERVER="https://challenges.duckietown.org/v4"
 export DOCKER_REGISTRY="docker.io"
 export DOCKER_USERNAME="duckietowndaemon"
-python3 -m pip install -U pip duckietown-shell
+
 # switch to CI commands
 dts --set-version daffy exit
-# update commands
-dts update
+
 # enter the workspace
 cd ./ws
+
 # pull, build(cloud), transfer, push, clean
 dts --debug \
     devel build \
@@ -78,9 +83,12 @@ dts --debug \
         --tag daffy \
         --base-tag daffy \
         --ci
+
 # leave the workspace
 cd ../
+
 # clean workspace
+rm -rf ./commands
 rm -rf ./ws
       </command>
       <configuredLocalRules/>

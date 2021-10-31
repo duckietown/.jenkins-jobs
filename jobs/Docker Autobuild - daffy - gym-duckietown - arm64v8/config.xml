@@ -80,8 +80,16 @@ python3 -m pip install  pur
 
 if test -f "requirements.txt"; then
     pur -r requirements.txt -o requirements.resolved
-    # dts build_utils update-reqs -r requirements.txt -o requirements.resolved
 fi
+
+if test -f "dependencies-py.txt"; then
+    pur -r dependencies-py.txt -o dependencies-py.resolved
+fi
+
+if test -f "dependencies-py3.txt"; then
+    pur -r dependencies-py3.txt -o dependencies-py3.resolved
+fi
+
 
 # pull, build(cloud), transfer, push, clean
 dts --debug \

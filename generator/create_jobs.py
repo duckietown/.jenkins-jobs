@@ -24,7 +24,10 @@ DISTRO_ARCH_BLACKLIST = [
 REPO_ARCH_BLACKLIST = [
     ("dt-gui-tools", "arm32v7"),
 ]
-DOCKER_USERNAME = "duckietowndaemon"
+DOCKER_USERNAMES = {
+    "docker.io": "afdaniele",
+    "registry-stage2.duckietown.org": "duckietowndaemon"
+}
 BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
 
 
@@ -175,6 +178,8 @@ def main():
                 DTSERVER = "https://challenges.duckietown.org/v4"
                 DOCKER_REGISTRY = "docker.io"
                 DOCKER_PASSWORD_KEY = "PRODUCTION_DOCKER_PASSWORD"
+
+            DOCKER_USERNAME = DOCKER_USERNAMES[DOCKER_REGISTRY]
 
             # ---
             if dts_args:

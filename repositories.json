@@ -103,6 +103,16 @@
         "base": "aido-base-python3"
     },
     {
+        "name": "challenge-aido_LF-template-pytorch",
+        "origin": "duckietown/challenge-aido_LF-template-pytorch",
+        "base": "dt-machine-learning-base-environment"
+    },
+    {
+        "name": "challenge-aido_LF-template-tensorflow",
+        "origin": "duckietown/challenge-aido_LF-template-tensorflow",
+        "base": "dt-machine-learning-base-environment"
+    },
+    {
         "name": "aido-base-python3",
         "origin": "duckietown/aido-base-python3",
         "base": "dt-base-environment"

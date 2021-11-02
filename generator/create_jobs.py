@@ -23,13 +23,14 @@ DISTRO_ARCH_BLACKLIST = [
 ]
 REPO_ARCH_BLACKLIST = [
     ("dt-gui-tools", "arm32v7"),
+    ("gym-duckietown", "arm32v7"),
+    ("gym-duckietown", "arm64v8"),
 ]
 DOCKER_USERNAMES = {
     "docker.io": "afdaniele",
     "registry-stage2.duckietown.org": "duckietowndaemon"
 }
 BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
-
 
 def main():
     # configure arguments
@@ -93,12 +94,16 @@ def main():
         logger.error(msg)
         sys.exit(6)
     headers["Authorization"] = f"token {github_token}"
+    # store things to write
+    jobs_to_write = {}
+    repo_by_name = {}
     # ---
     for repo in repos:
         logger.info("Analyzing [{:s}]".format(repo["name"]))
         # repo info
         repo_name = repo["name"]
         repo_origin = repo["origin"]
+        repo_by_name[repo_name] = repo
         REPO_URL = "https://github.com/{:s}".format(repo_origin)
         GIT_URL = "git@github.com:{:s}".format(repo_origin)
         cached_repo: Optional[dict] = cache[repo_origin]
@@ -192,24 +197,24 @@ def main():
             else:
                 DTS_ARGS = ""
 
-            for arch in repo_arch_list:
+            for repo_arch in repo_arch_list:
                 if "base" in repo:
                     BASE_JOB = ", ".join(
                         [
-                            job_name(repo_distro, b.strip(), arch)
+                            job_name(repo_distro, b.strip(), repo_arch)
                             for b in repo["base"].split(",")
                         ]
                     )
                 else:
                     BASE_JOB = ""
 
-                jname = job_name(repo_distro, repo_name, arch)
+                jname = job_name(repo_distro, repo_name, repo_arch)
                 # create job by updating the template fields
                 job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
                 params = {
                     "REPO_NAME": repo_name,
                     "REPO_URL": REPO_URL,
-                    "REPO_ARCH": arch,
+                    "REPO_ARCH": repo_arch,
                     "TAG": TAG,
                     "BASE_TAG": TAG,
                     "REPO_DISTRO": repo_distro,
@@ -226,10 +231,38 @@ def main():
                     "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
                 }
                 config = template_config.format(**params)
-                os.makedirs(os.path.dirname(job_config_path))
-                with open(job_config_path, "wt") as fout:
-                    fout.write(config)
-                stats["num_jobs"] += 1
+
+                jobs_to_write[(repo_distro, repo_name, repo_arch)] = {
+                    "config_path": job_config_path,
+                    "config": config
+                }
+
+    # populate blacklists
+    found = 1
+    while found > 0:
+        found = 0
+        for (_, repo_name, repo_arch), job in jobs_to_write.items():
+            repo = repo_by_name[repo_name]
+            repo_base = repo.get("base", None)
+            # don't write if the base is blacklisted
+            if (repo_base, repo_arch) in REPO_ARCH_BLACKLIST and (repo_name, repo_arch) not in REPO_ARCH_BLACKLIST:
+                REPO_ARCH_BLACKLIST.append((repo_name, repo_arch))
+                logger.info(f"Blacklisting {(repo_name, repo_arch)} because base job "
+                            f"{(repo_base, repo_arch)} is blacklisted.")
+                found += 1
+
+    # write jobs to file
+    for (_, repo_name, repo_arch), job in jobs_to_write.items():
+        # don't write if blacklisted
+        if (repo_name, repo_arch) in REPO_ARCH_BLACKLIST:
+            continue
+        job_config_path = job["config_path"]
+        config = job["config"]
+        # write
+        os.makedirs(os.path.dirname(job_config_path))
+        with open(job_config_path, "wt") as fout:
+            fout.write(config)
+        stats["num_jobs"] += 1
 
     # print out stats
     logger.info(

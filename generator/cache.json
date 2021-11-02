@@ -375,8 +375,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "05c195f7402fba97b1c184905f40d852991513f4",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/05c195f7402fba97b1c184905f40d852991513f4"
+                    "sha": "06efb8c124e9b6e03eca17a75fa57199d956ed97",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/06efb8c124e9b6e03eca17a75fa57199d956ed97"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -406,7 +406,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"7953c5e91f237fadda52f54abfed9fd75317c1c049a3654734e1a5a4e70919fe\""
+        "ETag": "W/\"bb0f8ce8f4f1626cbf114c0a0efcfa7d905ed69f36c124022d1d27e4f7ac40aa\""
     },
     "duckietown/challenge-aido_LF-experiment_manager": {
         "Content": [
@@ -778,8 +778,8 @@
             },
             {
                 "commit": {
-                    "sha": "2cdf1ab16e379438b73e1e9995af544e1c20f192",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-pytorch/commits/2cdf1ab16e379438b73e1e9995af544e1c20f192"
+                    "sha": "bc692490acbff19e3dcb581b0cdc6ef53963f802",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-pytorch/commits/bc692490acbff19e3dcb581b0cdc6ef53963f802"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -825,7 +825,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-pytorch/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"5f88329dc249bc7f40b88b725cf10b85b208b137d0f35eec575450611198bd21\""
+        "ETag": "W/\"789c432c63da994e05bb559112eee8d9778ca2983ce6ebd73ceae4c86e7c2217\""
     },
     "duckietown/challenge-aido_LF-template-random": {
         "Content": [
@@ -1113,8 +1113,8 @@
             },
             {
                 "commit": {
-                    "sha": "af1fc014c2aee6db343f310c27ecb68c7f4321ed",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/af1fc014c2aee6db343f310c27ecb68c7f4321ed"
+                    "sha": "38486fc8c2bf41d1f9b206035ae484c5873c8a4b",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/38486fc8c2bf41d1f9b206035ae484c5873c8a4b"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -1176,7 +1176,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/branches/v3/protection"
             }
         ],
-        "ETag": "W/\"0cb82969ac740a38c45bf982956dc73f6b21d96d3f93b17987390c658e110643\""
+        "ETag": "W/\"fd0437f15f31b9aa00d1cca96d074586a120dbefe2680e78f018aa2097fdc819\""
     },
     "duckietown/dt-aido-autolab-evaluator": {
         "Content": [

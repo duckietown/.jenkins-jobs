@@ -45,7 +45,8 @@
         "base": "dt-core",
         "dts_args": {
             "--ci-force-builder-arch": "amd64"
-        }
+        },
+        "blacklist": ["arm32v7"]
     },
     {
         "name": "dt-device-dashboard",
@@ -85,7 +86,7 @@
     {
         "name": "dt-firmware-upgrade",
         "origin": "duckietown/dt-firmware-upgrade",
-        "base": "dt-commons, dt-device-health"
+        "base": ["dt-commons", "dt-device-health"]
     },
     {
         "name": "dt-machine-learning-base-environment",
@@ -120,7 +121,7 @@
     {
         "name": "challenge-aido_LF-baseline-duckietown",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown",
-        "base": "challenge-aido_LF-template-ros, dt-core, dt-car-interface"
+        "base": ["challenge-aido_LF-template-ros", "dt-core", "dt-car-interface"]
     },
     {
         "name": "challenge-aido_LF-baseline-RPL-ros",
@@ -173,7 +174,7 @@
     {
         "name": "challenge-aido_LF-baseline-duckietown-ml",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown-ml",
-        "base": "challenge-aido_LF-baseline-duckietown, dt-core, dt-machine-learning-base-environment"
+        "base": ["challenge-aido_LF-baseline-duckietown", "dt-core", "dt-machine-learning-base-environment"]
     },
     {
         "name": "challenge-aido_LF-experiment_manager",
@@ -201,13 +202,14 @@
         "base": "aido-base-python3"
     },
     {
+        "name": "gym-duckietown",
+        "origin": "duckietown/gym-duckietown",
+        "blacklist": ["arm32v7", "arm64v8"]
+    },
+    {
         "name": "challenge-aido_LF-simulator-gym",
         "origin": "duckietown/challenge-aido_LF-simulator-gym",
         "base": "gym-duckietown"
-    },
-    {
-        "name": "gym-duckietown",
-        "origin": "duckietown/gym-duckietown"
     },
     {
         "name": "duckietown-challenges-cli",
@@ -222,6 +224,7 @@
     {
         "name": "dt-statistics-server",
         "origin": "duckietown/dt-statistics-server",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "blacklist": ["arm32v7", "arm64v8"]
     }
 ]

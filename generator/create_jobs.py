@@ -21,16 +21,13 @@ DISTRO_ARCH_BLACKLIST = [
     ("ente", "arm32v7"),
     ("ente-staging", "arm32v7"),
 ]
-REPO_ARCH_BLACKLIST = [
-    ("dt-gui-tools", "arm32v7"),
-    ("gym-duckietown", "arm32v7"),
-    ("gym-duckietown", "arm64v8"),
-]
+BLACKLIST = []
 DOCKER_USERNAMES = {
     "docker.io": "afdaniele",
     "registry-stage2.duckietown.org": "duckietowndaemon"
 }
 BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
+
 
 def main():
     # configure arguments
@@ -162,11 +159,12 @@ def main():
                 for arch in arch_list
                 if (repo_distro, arch) not in DISTRO_ARCH_BLACKLIST
             ]
-            repo_arch_list = [
-                arch
-                for arch in repo_arch_list
-                if (repo_name, arch) not in REPO_ARCH_BLACKLIST
-            ]
+            repo_arch_list = list(filter(
+                lambda a: a not in repo.get("blacklist", []),
+                repo_arch_list
+            ))
+            for a in repo.get("blacklist", []):
+                BLACKLIST.append((repo_name, a))
             # dts arguments
             dts_args = copy.deepcopy(repo["dts_args"]) if "dts_args" in repo else {}
             # staging?
@@ -199,12 +197,10 @@ def main():
 
             for repo_arch in repo_arch_list:
                 if "base" in repo:
-                    BASE_JOB = ", ".join(
-                        [
-                            job_name(repo_distro, b.strip(), repo_arch)
-                            for b in repo["base"].split(",")
-                        ]
-                    )
+                    repo_base = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
+                    BASE_JOB = ", ".join([
+                        job_name(repo_distro, b.strip(), repo_arch) for b in repo_base
+                    ])
                 else:
                     BASE_JOB = ""
 
@@ -245,8 +241,8 @@ def main():
             repo = repo_by_name[repo_name]
             repo_base = repo.get("base", None)
             # don't write if the base is blacklisted
-            if (repo_base, repo_arch) in REPO_ARCH_BLACKLIST and (repo_name, repo_arch) not in REPO_ARCH_BLACKLIST:
-                REPO_ARCH_BLACKLIST.append((repo_name, repo_arch))
+            if (repo_base, repo_arch) in BLACKLIST and (repo_name, repo_arch) not in BLACKLIST:
+                BLACKLIST.append((repo_name, repo_arch))
                 logger.info(f"Blacklisting {(repo_name, repo_arch)} because base job "
                             f"{(repo_base, repo_arch)} is blacklisted.")
                 found += 1
@@ -254,7 +250,7 @@ def main():
     # write jobs to file
     for (_, repo_name, repo_arch), job in jobs_to_write.items():
         # don't write if blacklisted
-        if (repo_name, repo_arch) in REPO_ARCH_BLACKLIST:
+        if (repo_name, repo_arch) in BLACKLIST:
             continue
         job_config_path = job["config_path"]
         config = job["config"]

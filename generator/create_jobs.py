@@ -239,13 +239,15 @@ def main():
         found = 0
         for (_, repo_name, repo_arch), job in jobs_to_write.items():
             repo = repo_by_name[repo_name]
-            repo_base = repo.get("base", None)
-            # don't write if the base is blacklisted
-            if (repo_base, repo_arch) in BLACKLIST and (repo_name, repo_arch) not in BLACKLIST:
-                BLACKLIST.append((repo_name, repo_arch))
-                logger.info(f"Blacklisting {(repo_name, repo_arch)} because base job "
-                            f"{(repo_base, repo_arch)} is blacklisted.")
-                found += 1
+            repo_bases = repo.get("base", [])
+            repo_bases = repo_bases if isinstance(repo_bases, list) else [repo_bases]
+            for repo_base in repo_bases:
+                # don't write if the base is blacklisted
+                if (repo_base, repo_arch) in BLACKLIST and (repo_name, repo_arch) not in BLACKLIST:
+                    BLACKLIST.append((repo_name, repo_arch))
+                    logger.info(f"Blacklisting {(repo_name, repo_arch)} because base job "
+                                f"{(repo_base, repo_arch)} is blacklisted.")
+                    found += 1
 
     # write jobs to file
     for (_, repo_name, repo_arch), job in jobs_to_write.items():

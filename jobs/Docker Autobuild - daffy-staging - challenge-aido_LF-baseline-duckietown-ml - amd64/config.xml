@@ -40,7 +40,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - daffy-staging - challenge-aido_LF-baseline-duckietown - amd64, Docker Autobuild - daffy-staging - dt-core - amd64, Docker Autobuild - daffy-staging - dt-machine-learning-base-environment - amd64</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - daffy-staging - challenge-aido_LF-baseline-duckietown - amd64, Docker Autobuild - daffy-staging - challenge-aido_LF-template-pytorch - amd64</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

@@ -11,6 +11,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -27,6 +28,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -43,6 +45,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -50,7 +53,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/aido-base-python3/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"41e9beaa2e8aaf86323c18ae5c6f92fcf95c2e6d0f5a8dbbfb58957f4022b4c9\""
+        "ETag": "W/\"cc77ddd6ca1410d6904cbc07341558ee582c0f249bfd767469557ac4321993cd\""
     },
     "duckietown/aido-submission-ci-test": {
         "Content": [
@@ -64,6 +67,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -80,6 +84,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -87,7 +92,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/aido-submission-ci-test/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"5961666dc95ff534070832370f13eabd6ca0364000d031d1e57f327f2e4643d6\""
+        "ETag": "W/\"814133d174de2a5ddaf2f3c880e66ab20fb969d0b69768d9907cbc23a8997d46\""
     },
     "duckietown/challenge-aido_LF-baseline-RPL-ros": {
         "Content": [
@@ -101,6 +106,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -109,14 +115,15 @@
             },
             {
                 "commit": {
-                    "sha": "4df2beb8acf090d0ad86e04a779da934b0681c86",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/4df2beb8acf090d0ad86e04a779da934b0681c86"
+                    "sha": "61ce4781fdb88fb08748da51bde492a74499e71d",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/61ce4781fdb88fb08748da51bde492a74499e71d"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -133,6 +140,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -149,6 +157,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -165,6 +174,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -173,14 +183,15 @@
             },
             {
                 "commit": {
-                    "sha": "4df2beb8acf090d0ad86e04a779da934b0681c86",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/4df2beb8acf090d0ad86e04a779da934b0681c86"
+                    "sha": "61ce4781fdb88fb08748da51bde492a74499e71d",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/61ce4781fdb88fb08748da51bde492a74499e71d"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -197,6 +208,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -213,6 +225,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -220,7 +233,80 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/branches/merge_to_duckietown/protection"
             }
         ],
-        "ETag": "W/\"44ea157b9f4dddf3cb119dd24b016997102a7394e6671d21ab34add7e90b2592\""
+        "ETag": "W/\"ed56e67949fa74e22e379503e0fa42322dabf461bb991fa7454b431168657a50\""
+    },
+    "duckietown/challenge-aido_LF-baseline-dagger-pytorch": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "13e258180139d50e4a343df33c6e445d65545a5d",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-dagger-pytorch/commits/13e258180139d50e4a343df33c6e445d65545a5d"
+                },
+                "name": "daffy",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-dagger-pytorch/branches/daffy/protection"
+            },
+            {
+                "commit": {
+                    "sha": "13e258180139d50e4a343df33c6e445d65545a5d",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-dagger-pytorch/commits/13e258180139d50e4a343df33c6e445d65545a5d"
+                },
+                "name": "daffy-staging",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-dagger-pytorch/branches/daffy-staging/protection"
+            },
+            {
+                "commit": {
+                    "sha": "e10cce64c2b4369efba579bc2ab88bc40d76d07c",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-dagger-pytorch/commits/e10cce64c2b4369efba579bc2ab88bc40d76d07c"
+                },
+                "name": "daffy-staging-ac",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-dagger-pytorch/branches/daffy-staging-ac/protection"
+            },
+            {
+                "commit": {
+                    "sha": "2c89d1abd7b96ab616ec7f96565caaa7a291e272",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-dagger-pytorch/commits/2c89d1abd7b96ab616ec7f96565caaa7a291e272"
+                },
+                "name": "main",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-dagger-pytorch/branches/main/protection"
+            }
+        ],
+        "ETag": "W/\"572c2582a9964a42eecc4b5306bf8f095b164a1e4528b88276af3b9e65a8bd88\""
     },
     "duckietown/challenge-aido_LF-baseline-duckietown": {
         "Content": [
@@ -234,6 +320,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -250,6 +337,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -266,6 +354,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -282,6 +371,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -298,6 +388,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -314,6 +405,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -322,14 +414,15 @@
             },
             {
                 "commit": {
-                    "sha": "d0c3b9f200e160334a96bdb0f91745327be57194",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/d0c3b9f200e160334a96bdb0f91745327be57194"
+                    "sha": "06423b9f834b346c04889a28f919db3673a8d2c1",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/commits/06423b9f834b346c04889a28f919db3673a8d2c1"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -346,6 +439,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -362,6 +456,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -369,20 +464,21 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown/branches/local-software-repo/protection"
             }
         ],
-        "ETag": "W/\"897907d5c905556562b346be61ee6af4262517352a31d43d3fa0c06d7376724e\""
+        "ETag": "W/\"ee5762ee861842d2a00b09a8da2db7205b640597195a3cae319924559b061523\""
     },
     "duckietown/challenge-aido_LF-baseline-duckietown-ml": {
         "Content": [
             {
                 "commit": {
-                    "sha": "06efb8c124e9b6e03eca17a75fa57199d956ed97",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/06efb8c124e9b6e03eca17a75fa57199d956ed97"
+                    "sha": "85c218a3c06deb10b7df30b5382787cb58b9695c",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/85c218a3c06deb10b7df30b5382787cb58b9695c"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -391,14 +487,15 @@
             },
             {
                 "commit": {
-                    "sha": "06efb8c124e9b6e03eca17a75fa57199d956ed97",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/06efb8c124e9b6e03eca17a75fa57199d956ed97"
+                    "sha": "06934ef3a6aa1535294af05fde793a152c94752c",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/06934ef3a6aa1535294af05fde793a152c94752c"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -406,7 +503,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"fc5102b659817af7e411442cec2ebfd79e30c664fb7a681a8e933787ad414241\""
+        "ETag": "W/\"c03dbbc24554d826bca21e6157b827167751b1c4a77eb923c54e159b674e9a9c\""
     },
     "duckietown/challenge-aido_LF-experiment_manager": {
         "Content": [
@@ -420,6 +517,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -436,6 +534,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -452,6 +551,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -459,7 +559,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-experiment_manager/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"0706a4dca08f25065bd788884da24861edd18fe656e7908861f7cead702d8f49\""
+        "ETag": "W/\"0a6322d13e08fa17faf418e6af8e97eac635fdb03a476963b09e6ba2ab42b12c\""
     },
     "duckietown/challenge-aido_LF-minimal-agent": {
         "Content": [
@@ -473,6 +573,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -489,6 +590,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -505,6 +607,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -512,7 +615,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"c3ef6242279112ba7239cd61da46eb0def036f89b476729c79536a24cf0cf930\""
+        "ETag": "W/\"d893e9e1d6bc63b4ec3b3574bd0dab2ec9a50e728d324e0139f4fa3ac22f7536\""
     },
     "duckietown/challenge-aido_LF-minimal-agent-full": {
         "Content": [
@@ -526,6 +629,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -542,6 +646,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -558,6 +663,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -565,7 +671,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent-full/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"178ca6829f101673acce59fb2812925b4ee4d2f4a2744ed36e67e20c5a531555\""
+        "ETag": "W/\"5e1fa1b4951db95c636725581825bc1312de9ac6a451da369ff0993c1447715f\""
     },
     "duckietown/challenge-aido_LF-minimal-agent-state": {
         "Content": [
@@ -579,6 +685,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -595,6 +702,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -602,7 +710,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-minimal-agent-state/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"3a70e68b3119c96b6e7506614a02c906a2e5374bf7c00755461f1fa1a8caf0d0\""
+        "ETag": "W/\"567ca207a59a0e67a92d4c318f3a40a1432df69d374e3aeed44933e9f06c97a1\""
     },
     "duckietown/challenge-aido_LF-scenario_maker": {
         "Content": [
@@ -616,6 +724,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -632,6 +741,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -648,6 +758,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -655,7 +766,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-scenario_maker/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"eb603e12e382f2fa3ff91b0d76e9febf8ce4660512d2bafda8096b764c41595c\""
+        "ETag": "W/\"d653cc9c4a581e59804d866f001cf078b2e86a065553293b855357ba4640a035\""
     },
     "duckietown/challenge-aido_LF-simulator-gym": {
         "Content": [
@@ -669,6 +780,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -685,6 +797,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -701,6 +814,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -717,6 +831,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -733,6 +848,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -749,6 +865,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -756,7 +873,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-simulator-gym/branches/updated-mooc/protection"
             }
         ],
-        "ETag": "W/\"4ccaa5699c7096bdaebb1cc2cfbf9da02cd293139a8df0536161e9bafd6c8b73\""
+        "ETag": "W/\"7019a9b317f35e62fc8f3268c6f2807d9964744e5ff2f2a949fd58e44950296e\""
     },
     "duckietown/challenge-aido_LF-template-pytorch": {
         "Content": [
@@ -770,6 +887,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -778,14 +896,15 @@
             },
             {
                 "commit": {
-                    "sha": "bc692490acbff19e3dcb581b0cdc6ef53963f802",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-pytorch/commits/bc692490acbff19e3dcb581b0cdc6ef53963f802"
+                    "sha": "0c7f47987b4675b26902025da29aae7bb75771fd",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-pytorch/commits/0c7f47987b4675b26902025da29aae7bb75771fd"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -802,6 +921,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -810,14 +930,15 @@
             },
             {
                 "commit": {
-                    "sha": "bc692490acbff19e3dcb581b0cdc6ef53963f802",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-pytorch/commits/bc692490acbff19e3dcb581b0cdc6ef53963f802"
+                    "sha": "3ee0deff6949110710f97b6d814764f4be1d4551",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-pytorch/commits/3ee0deff6949110710f97b6d814764f4be1d4551"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -825,7 +946,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-pytorch/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"19e139390d247e0404fc973af59c5705726c0b128832fbf0e7ef905461430a89\""
+        "ETag": "W/\"bba253149acd95a5f2cd4518be5627869a65779ab30c4ba29ddd4fabfb8adec2\""
     },
     "duckietown/challenge-aido_LF-template-random": {
         "Content": [
@@ -839,6 +960,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -855,6 +977,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -871,6 +994,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -887,6 +1011,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -903,6 +1028,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -919,6 +1045,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -935,6 +1062,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -951,6 +1079,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -958,7 +1087,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"6de194000261166e09440d37df604d52b1c3d568646b346a7cfee7cadbe9c764\""
+        "ETag": "W/\"fa058c104b5498fbdb36eb21c58ea89ccdd67e0f3052e4d46d9c4adf89a8e7fa\""
     },
     "duckietown/challenge-aido_LF-template-ros": {
         "Content": [
@@ -972,6 +1101,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -980,14 +1110,15 @@
             },
             {
                 "commit": {
-                    "sha": "e107400fd98b91bb7c02b7b24d7be5f5d7623035",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/e107400fd98b91bb7c02b7b24d7be5f5d7623035"
+                    "sha": "1ab518ca255a288e4e1050109a483747c8af95a7",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/1ab518ca255a288e4e1050109a483747c8af95a7"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1004,6 +1135,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1020,6 +1152,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1036,6 +1169,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1044,14 +1178,15 @@
             },
             {
                 "commit": {
-                    "sha": "e107400fd98b91bb7c02b7b24d7be5f5d7623035",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/e107400fd98b91bb7c02b7b24d7be5f5d7623035"
+                    "sha": "3d125842a05be049b6ee6fe0059908c18c57ebb2",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/commits/3d125842a05be049b6ee6fe0059908c18c57ebb2"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1068,6 +1203,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1075,7 +1211,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-ros/branches/daffy-staging-template-fix/protection"
             }
         ],
-        "ETag": "W/\"da27823d52b2816f93b2b23fb410de28ea1e13394b731832d09a79a78d5077b1\""
+        "ETag": "W/\"a0429b3bace0b34cb4d85d5817308d30c05c68a17419f0ff45b16823c4339c0f\""
     },
     "duckietown/challenge-aido_LF-template-tensorflow": {
         "Content": [
@@ -1089,6 +1225,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1105,6 +1242,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1113,14 +1251,15 @@
             },
             {
                 "commit": {
-                    "sha": "38486fc8c2bf41d1f9b206035ae484c5873c8a4b",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/38486fc8c2bf41d1f9b206035ae484c5873c8a4b"
+                    "sha": "a761c22a5a316c0bc976f0082c61ad55b3233c6d",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/a761c22a5a316c0bc976f0082c61ad55b3233c6d"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1137,6 +1276,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1145,19 +1285,37 @@
             },
             {
                 "commit": {
-                    "sha": "38486fc8c2bf41d1f9b206035ae484c5873c8a4b",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/38486fc8c2bf41d1f9b206035ae484c5873c8a4b"
+                    "sha": "4f78c63aa6d3b56db61748d0875daf8a08ba14a1",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/4f78c63aa6d3b56db61748d0875daf8a08ba14a1"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/branches/daffy-staging/protection"
+            },
+            {
+                "commit": {
+                    "sha": "5aa3d30643a80205f80a8c758e1dfb036ec3cef9",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/5aa3d30643a80205f80a8c758e1dfb036ec3cef9"
+                },
+                "name": "dependabot/pip/tensorflow-2.5.3",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/branches/dependabot/pip/tensorflow-2.5.3/protection"
             },
             {
                 "commit": {
@@ -1169,6 +1327,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1176,20 +1335,21 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/branches/v3/protection"
             }
         ],
-        "ETag": "W/\"ecd30ad13f17f07c6457a4a4de57071768ac004b247e39f6e3ee214f47e590f1\""
+        "ETag": "W/\"235450a8bdbbc8fb1c6e702ce4d3e9daceaf362bcd65bd2ce2779ee4eb74a608\""
     },
     "duckietown/dt-aido-autolab-evaluator": {
         "Content": [
             {
                 "commit": {
-                    "sha": "2a218733e8494c668fa5daa800f1859c188cf56a",
-                    "url": "https://api.github.com/repos/duckietown/dt-aido-autolab-evaluator/commits/2a218733e8494c668fa5daa800f1859c188cf56a"
+                    "sha": "ff567685e5a907a97a8634233d8480eeeb39be69",
+                    "url": "https://api.github.com/repos/duckietown/dt-aido-autolab-evaluator/commits/ff567685e5a907a97a8634233d8480eeeb39be69"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1206,6 +1366,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1222,6 +1383,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1238,6 +1400,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1254,6 +1417,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1270,6 +1434,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1286,6 +1451,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1293,7 +1459,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-aido-autolab-evaluator/branches/jason/protection"
             }
         ],
-        "ETag": "W/\"89449d83167b786f2bb5cf960d9b2d16b5eac866277ba970f8f059a06373fffe\""
+        "ETag": "W/\"91ee0d4c22feefc82de7a43295d3ec05c8105fe60b2597652baec30e3f82f633\""
     },
     "duckietown/dt-autolab-commons": {
         "Content": [
@@ -1307,6 +1473,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1323,6 +1490,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1339,6 +1507,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1355,6 +1524,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1362,7 +1532,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-autolab-commons/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"96b8fe58be4965316b765bbc66995922ed122e5cde9c697dd5556acbe404fcca\""
+        "ETag": "W/\"5971847e1fd1000eecd9860613418204761530befb1ca07e353eeb3d67379718\""
     },
     "duckietown/dt-autolab-device-interface": {
         "Content": [
@@ -1376,6 +1546,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1392,6 +1563,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1408,6 +1580,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1424,6 +1597,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1440,6 +1614,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1447,20 +1622,21 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-autolab-device-interface/branches/jason/protection"
             }
         ],
-        "ETag": "W/\"3177ee3583107704af08c74398266c704fcc0dcce1d891bf36287922aa60db6d\""
+        "ETag": "W/\"28478b0b48f6c9163fe483fda5710f903500bd9b142eb128fc2aba1cbbdd3355\""
     },
     "duckietown/dt-autolab-localization": {
         "Content": [
             {
                 "commit": {
-                    "sha": "7ea613bc0a922abbfeaffdab8b74a202dde9df53",
-                    "url": "https://api.github.com/repos/duckietown/dt-autolab-localization/commits/7ea613bc0a922abbfeaffdab8b74a202dde9df53"
+                    "sha": "c103e9cca8ecd78354313a2f574a7de070c31a84",
+                    "url": "https://api.github.com/repos/duckietown/dt-autolab-localization/commits/c103e9cca8ecd78354313a2f574a7de070c31a84"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1477,6 +1653,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1493,6 +1670,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1509,6 +1687,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1525,6 +1704,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1541,6 +1721,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1557,6 +1738,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1565,14 +1747,15 @@
             },
             {
                 "commit": {
-                    "sha": "b71254d9e52d55121152e3dad809ec4602a17554",
-                    "url": "https://api.github.com/repos/duckietown/dt-autolab-localization/commits/b71254d9e52d55121152e3dad809ec4602a17554"
+                    "sha": "5524937798c2f7d04fc390e9669efcc97a4786c4",
+                    "url": "https://api.github.com/repos/duckietown/dt-autolab-localization/commits/5524937798c2f7d04fc390e9669efcc97a4786c4"
                 },
                 "name": "ente",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1589,6 +1772,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1596,7 +1780,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-autolab-localization/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"67b827a5fa14e5be74edb93623a0f147a0e0a520df9a2402f674170798bb9741\""
+        "ETag": "W/\"c58e0bb645a5d7b454856597c9596a61bde2ece1a1101bf61872bd1374f39c25\""
     },
     "duckietown/dt-autolab-proxy": {
         "Content": [
@@ -1610,6 +1794,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1626,6 +1811,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1642,6 +1828,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1658,6 +1845,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1665,7 +1853,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-autolab-proxy/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"394b766c052452bb946d2ff6c355b6f33eb84ecd20dbead0d0128498a3c91015\""
+        "ETag": "W/\"1816111286e01db66fbd77e84220de28ac470ac238b0d7e10296975b181c00e5\""
     },
     "duckietown/dt-base-environment": {
         "Content": [
@@ -1679,6 +1867,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1695,6 +1884,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1711,6 +1901,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1727,6 +1918,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1734,7 +1926,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-base-environment/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"02f806c9312b4df37159ef9f90d1dfa8caed287bedb9a504690474553dc8b58e\""
+        "ETag": "W/\"482588f80f9e367e51b25a0b6741c44d2a483e7b3a2deb3d281953522ea20aab\""
     },
     "duckietown/dt-car-interface": {
         "Content": [
@@ -1748,6 +1940,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1764,6 +1957,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1780,6 +1974,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1796,6 +1991,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1812,6 +2008,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1828,6 +2025,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1844,6 +2042,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1860,6 +2059,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1876,6 +2076,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1883,7 +2084,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-car-interface/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"abe0aa6a83115471d2ed0cf6fdb58bd72fda7d08f019f5bbfbee6779b50e3677\""
+        "ETag": "W/\"6749ccb081fe63bd3c09e70542f62a7bbb34b36931912a2288235c47db68fd57\""
     },
     "duckietown/dt-code-api": {
         "Content": [
@@ -1897,6 +2098,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1913,6 +2115,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1929,6 +2132,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1945,6 +2149,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1952,20 +2157,21 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-code-api/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"f66ed0e3e89ad8634b1551a718c26558b6a284ec987427bd2adfaf1beefbb3b4\""
+        "ETag": "W/\"acd9fd832aeee5889405d1ae124707bb9ef350ab40861865b7ee91b8f2ecbb5d\""
     },
     "duckietown/dt-commons": {
         "Content": [
             {
                 "commit": {
-                    "sha": "a385f2d22f19a06d3079f7b91d8cb5eafb2a64e5",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/a385f2d22f19a06d3079f7b91d8cb5eafb2a64e5"
+                    "sha": "fab05c46533a09c8bfb98d860a613597f884435e",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/fab05c46533a09c8bfb98d860a613597f884435e"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1982,6 +2188,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -1998,6 +2205,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2014,6 +2222,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2022,14 +2231,15 @@
             },
             {
                 "commit": {
-                    "sha": "a385f2d22f19a06d3079f7b91d8cb5eafb2a64e5",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/a385f2d22f19a06d3079f7b91d8cb5eafb2a64e5"
+                    "sha": "bd138aa2e6151c3b48a8a2c9ee4b9e9078f69e77",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/bd138aa2e6151c3b48a8a2c9ee4b9e9078f69e77"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2046,6 +2256,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2054,14 +2265,15 @@
             },
             {
                 "commit": {
-                    "sha": "3590e676ffb00078836da76998d5882826571d4b",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/3590e676ffb00078836da76998d5882826571d4b"
+                    "sha": "536616e5718a3f584aaefd8f83d0b99059b0f306",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/536616e5718a3f584aaefd8f83d0b99059b0f306"
                 },
                 "name": "ente",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2078,6 +2290,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2094,6 +2307,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2101,7 +2315,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-commons/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"3fe083ece8020ae9bb01306e6fd444746be69db682b3c9eb4c4bfb213aff455b\""
+        "ETag": "W/\"2195784c33c4a9b1bba603346350b31040aafdc90ae48b56b28cfa007d6f6a2b\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -2115,6 +2329,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2131,6 +2346,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2147,6 +2363,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2163,6 +2380,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2179,6 +2397,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2195,6 +2414,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2211,6 +2431,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2227,6 +2448,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2235,14 +2457,15 @@
             },
             {
                 "commit": {
-                    "sha": "dbfbb9136ba5e7291508fff0fb3888130899ad21",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/dbfbb9136ba5e7291508fff0fb3888130899ad21"
+                    "sha": "eeae0cd14827fbedef245760ac7ce0ee9068b7a2",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/eeae0cd14827fbedef245760ac7ce0ee9068b7a2"
                 },
                 "name": "ente",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2259,6 +2482,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2275,6 +2499,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2291,6 +2516,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2307,6 +2533,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2314,7 +2541,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-core/branches/rectification-clusters/protection"
             }
         ],
-        "ETag": "W/\"6e6c85433563ab2d33fd468dbf070c9cc6d0bf23bfe516b1d6e40a7df75248ae\""
+        "ETag": "W/\"364788d74cbb49f84920565ad12eb7b290c550c1ea268e178bf412637b6ab88e\""
     },
     "duckietown/dt-device-dashboard": {
         "Content": [
@@ -2328,6 +2555,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2344,6 +2572,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2360,6 +2589,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2376,6 +2606,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2383,7 +2614,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-dashboard/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"20ac455d1e5342f31be5d49f909f2c0795362f342656fd119a92b228ef8708ac\""
+        "ETag": "W/\"0849f226a76454117a2ab8b4d362bfdf07650795c2a1a450016798c4e8e64c38\""
     },
     "duckietown/dt-device-health": {
         "Content": [
@@ -2397,6 +2628,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2413,6 +2645,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2429,6 +2662,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2445,6 +2679,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2452,7 +2687,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-health/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"6f84000fc67594baba7f4255a834517e76084e3ff09994e527bb59c2d782bee8\""
+        "ETag": "W/\"77734b3d9e8ef5219eeb7f3f60224fcf5d0efc5adf6967024c3d2c7fe1b182e9\""
     },
     "duckietown/dt-device-online": {
         "Content": [
@@ -2466,6 +2701,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2482,6 +2718,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2498,6 +2735,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2514,6 +2752,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2530,6 +2769,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2537,7 +2777,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-online/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"64a0c54d5b4fd930d805fbd6be21a104943e93def21244741afdd343e8bcf253\""
+        "ETag": "W/\"a8e7d198bbb0a68bfbbb850e2f5802fd91b3f4ef0105b025c1aabb9230ab6d54\""
     },
     "duckietown/dt-device-proxy": {
         "Content": [
@@ -2551,6 +2791,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2567,6 +2808,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2583,6 +2825,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2599,6 +2842,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2606,7 +2850,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-proxy/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"567be89851f0cb8153227377b3ff85a32c3546241e4f54d7420ce8bd4d7ae5e3\""
+        "ETag": "W/\"da198b6b612ef5c67a40872a371587d4aec60ea878093b8b89e758475f0ab4e6\""
     },
     "duckietown/dt-drone-interface": {
         "Content": [
@@ -2620,6 +2864,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2636,6 +2881,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2652,6 +2898,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2668,6 +2915,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2675,7 +2923,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-drone-interface/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"8a40356ab5ff3febfd60727d7179d01211eabf09b859b74f9f0ee5f6da986c11\""
+        "ETag": "W/\"9fac99c6c44a7e40194a104f3594e48a26a624e41d07380973157ed311fe6287\""
     },
     "duckietown/dt-duckiebot-fifos-bridge": {
         "Content": [
@@ -2689,6 +2937,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2697,14 +2946,15 @@
             },
             {
                 "commit": {
-                    "sha": "0cc972e58a491155b8a07f9f86f3e5e40ef2e3ec",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/0cc972e58a491155b8a07f9f86f3e5e40ef2e3ec"
+                    "sha": "5e227b0e4ba1f5b7ac7179237db79b2a438d06d9",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/5e227b0e4ba1f5b7ac7179237db79b2a438d06d9"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2721,6 +2971,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2729,14 +2980,15 @@
             },
             {
                 "commit": {
-                    "sha": "0cc972e58a491155b8a07f9f86f3e5e40ef2e3ec",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/0cc972e58a491155b8a07f9f86f3e5e40ef2e3ec"
+                    "sha": "1bdc2875f37384e897b14e7285c311f45c1d2a59",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/1bdc2875f37384e897b14e7285c311f45c1d2a59"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2753,6 +3005,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2769,6 +3022,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2785,6 +3039,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2792,7 +3047,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/branches/v2/protection"
             }
         ],
-        "ETag": "W/\"5addf16a6cb1aa2fbe4d7e3d35e37cf569397990e282465ad3cc009c960a8b7a\""
+        "ETag": "W/\"e3f5f8e8525088935fd0abf918a90dda192a0cc7ee0ab058600611c3ff754ce8\""
     },
     "duckietown/dt-duckiebot-interface": {
         "Content": [
@@ -2806,6 +3061,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2814,14 +3070,15 @@
             },
             {
                 "commit": {
-                    "sha": "6ad7e0d880a310c77f8455569616cbb53b127c21",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/6ad7e0d880a310c77f8455569616cbb53b127c21"
+                    "sha": "49f8fb937f17f4c3a9b134bdfdc0d927b5666bbc",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/49f8fb937f17f4c3a9b134bdfdc0d927b5666bbc"
                 },
                 "name": "daffy",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2838,6 +3095,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2854,6 +3112,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2870,6 +3129,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2886,6 +3146,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2902,6 +3163,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2918,6 +3180,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2934,6 +3197,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2950,6 +3214,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2966,6 +3231,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2974,14 +3240,15 @@
             },
             {
                 "commit": {
-                    "sha": "b7a3a9dae349dd2b8ef12f780f2833a479eab7ca",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/b7a3a9dae349dd2b8ef12f780f2833a479eab7ca"
+                    "sha": "983c80063971fdd6f1c7666e43d0bb34bdac232b",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/983c80063971fdd6f1c7666e43d0bb34bdac232b"
                 },
                 "name": "ente",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -2998,6 +3265,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3014,6 +3282,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3030,6 +3299,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3046,6 +3316,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3062,6 +3333,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3078,6 +3350,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3085,7 +3358,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/shutdown_behaviors/protection"
             }
         ],
-        "ETag": "W/\"59972c2d5f01a237f7952c784dddbf28559215f19ca151ef6360737718a416bf\""
+        "ETag": "W/\"15e0743fdbc158c490696e6d9230dc7656888c60511dc51e362cab1213bf6256\""
     },
     "duckietown/dt-files-api": {
         "Content": [
@@ -3099,6 +3372,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3115,6 +3389,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3131,6 +3406,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3147,6 +3423,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3154,7 +3431,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-files-api/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"af47413e7fe4cb0d6a93041cc634d58b504a9853297ce240105ceab0b45b15d3\""
+        "ETag": "W/\"2c77798df84154e6c3f323c84418d87a24885800ca34ea6a55115967e42f764d\""
     },
     "duckietown/dt-firmware-upgrade": {
         "Content": [
@@ -3168,6 +3445,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3184,6 +3462,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3200,6 +3479,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3216,6 +3496,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3223,7 +3504,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-firmware-upgrade/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"b022cdf5630a134055e5cee7f741759dae17efbf3d045a496cfa9879e121bd4b\""
+        "ETag": "W/\"b584be7392526fc78ebaa241c5d69cbb46106aa79ba63a7373f0c2fceb0d3871\""
     },
     "duckietown/dt-gui-tools": {
         "Content": [
@@ -3237,6 +3518,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3253,6 +3535,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3269,6 +3552,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3285,6 +3569,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3301,6 +3586,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3317,6 +3603,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3333,6 +3620,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3341,14 +3629,32 @@
             },
             {
                 "commit": {
-                    "sha": "504ab065c010d11d56a0ff5446983b9f36d21bba",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/504ab065c010d11d56a0ff5446983b9f36d21bba"
+                    "sha": "866f1609b0eb13d7ac02176b6ce4c65fa9ebcbcc",
+                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/866f1609b0eb13d7ac02176b6ce4c65fa9ebcbcc"
+                },
+                "name": "dependabot/npm_and_yarn/assets/vnc/web/shelljs-0.8.5",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-gui-tools/branches/dependabot/npm_and_yarn/assets/vnc/web/shelljs-0.8.5/protection"
+            },
+            {
+                "commit": {
+                    "sha": "bedeef49921485d3ec75d0deeace12f487fa7649",
+                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/bedeef49921485d3ec75d0deeace12f487fa7649"
                 },
                 "name": "ente",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3365,6 +3671,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3381,6 +3688,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3388,7 +3696,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-gui-tools/branches/py3-fix/protection"
             }
         ],
-        "ETag": "W/\"4c3f47895400488160f8cc47b9c14211791182516c015be26d52daba1de064fd\""
+        "ETag": "W/\"ae30abf20b1c8c9b7165d8a410349f1fa9182e357a63b8190c4fad0ebc98274d\""
     },
     "duckietown/dt-hardware-benchmark-backend": {
         "Content": [
@@ -3402,6 +3710,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3418,6 +3727,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3434,6 +3744,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3450,6 +3761,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3457,7 +3769,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-backend/branches/master/protection"
             }
         ],
-        "ETag": "W/\"539b7a1fc07d8420fa2d7f7cb2f788288d2958ee5b79585c90190c6c61e99203\""
+        "ETag": "W/\"84788187b450bbcc145a963deb5cb93e0be94074d1579042f3e59c24305aa2db\""
     },
     "duckietown/dt-hardware-benchmark-frontend": {
         "Content": [
@@ -3471,6 +3783,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3487,11 +3800,29 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/axios-0.21.1/protection"
+            },
+            {
+                "commit": {
+                    "sha": "34d7c06889bf1e11fed27b448dd0085e34156df9",
+                    "url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/commits/34d7c06889bf1e11fed27b448dd0085e34156df9"
+                },
+                "name": "dependabot/npm_and_yarn/node-sass-7.0.0",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/node-sass-7.0.0/protection"
             },
             {
                 "commit": {
@@ -3503,6 +3834,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3519,6 +3851,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3526,7 +3859,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/to_dt_project/protection"
             }
         ],
-        "ETag": "W/\"5ced4778628ded3c4ee34b7b973ccc48dfc56e09894d4b2d85f2c8e7875b1978\""
+        "ETag": "W/\"a3c24d49f4a6d6fc63582c094108f2088a918be0273c9744827ce8c7f586ebd9\""
     },
     "duckietown/dt-machine-learning-base-environment": {
         "Content": [
@@ -3540,6 +3873,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3556,6 +3890,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3572,6 +3907,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3588,6 +3924,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3604,6 +3941,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3611,7 +3949,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-environment/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"3cf6e6738a25be9dadc39724fc794121403729b0f47b81d39e9855b9288569ba\""
+        "ETag": "W/\"769c1a331b3e19dc23fd6bc024c0191d8366deb75ee4882ec417e8af7bba7e78\""
     },
     "duckietown/dt-ros-commons": {
         "Content": [
@@ -3625,6 +3963,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3641,6 +3980,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3657,6 +3997,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3673,6 +4014,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3689,6 +4031,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3705,6 +4048,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3721,6 +4065,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3737,6 +4082,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3753,6 +4099,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3761,14 +4108,15 @@
             },
             {
                 "commit": {
-                    "sha": "ebfacaa29c85b62aefe1e4adab3624052e40f571",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/ebfacaa29c85b62aefe1e4adab3624052e40f571"
+                    "sha": "dcb901c89ee8cb371991d22a103d713f26d84bb5",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/dcb901c89ee8cb371991d22a103d713f26d84bb5"
                 },
                 "name": "ente",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3785,6 +4133,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3801,6 +4150,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3817,6 +4167,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3833,6 +4184,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3849,6 +4201,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3865,6 +4218,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3872,7 +4226,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-ros-commons/branches/sth/protection"
             }
         ],
-        "ETag": "W/\"64c97154796d5c58391bee150eae810ca1fab361f9818a96e2c806ec7a44eed6\""
+        "ETag": "W/\"58aff88a68a2ecca2107605c8319ee8a995a253d1c2b3eb96c2681fcad6f95c7\""
     },
     "duckietown/dt-rosbridge-websocket": {
         "Content": [
@@ -3886,6 +4240,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3902,6 +4257,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3918,6 +4274,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3934,6 +4291,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3950,6 +4308,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3966,6 +4325,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -3973,7 +4333,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-rosbridge-websocket/branches/master19/protection"
             }
         ],
-        "ETag": "W/\"c6edfa3964f7dfe98c4ab8d25187b772ed0099c1dd6fee6c7206a96ba79183ab\""
+        "ETag": "W/\"f98256f29593c424703299c954d466a33b660f5e81bd3ad635ecb43549182c92\""
     },
     "duckietown/dt-statistics-server": {
         "Content": [
@@ -3987,6 +4347,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4003,6 +4364,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4019,6 +4381,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4026,7 +4389,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-statistics-server/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"56e53d29269819961dada519e2e917e8c0b05c9b1a6b6046dd5c21f335db3721\""
+        "ETag": "W/\"1b89162277e7da17103b13795dd03e7546d4a03e05a9f026a597193dd18bd957\""
     },
     "duckietown/dt-system-monitor": {
         "Content": [
@@ -4040,6 +4403,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4056,6 +4420,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4072,6 +4437,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4088,6 +4454,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4104,6 +4471,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4111,7 +4479,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-system-monitor/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"7a18ccca2c16fec4f04b89d47ee8411abea21748f340d9e9db5e1a0eacbcdb82\""
+        "ETag": "W/\"5aefa9296930b0fe42b4d96a45a4f2716746490b6a5ebf8721d582b5f65bce4f\""
     },
     "duckietown/duckietown-challenges-cli": {
         "Content": [
@@ -4125,6 +4493,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4141,6 +4510,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4148,7 +4518,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/duckietown-challenges-cli/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"8eaf04cbf0c39987cd78b9aedffdc84d4e5e42b356b93cb354cee2ea6fea3e8c\""
+        "ETag": "W/\"9a94a7939a1c1bbdfe1c42a88c59928ecfde59ba1d68f3fe2971e5a7fe60b5d4\""
     },
     "duckietown/gym-duckietown": {
         "Content": [
@@ -4162,6 +4532,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4178,6 +4549,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4194,6 +4566,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4210,6 +4583,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4218,14 +4592,15 @@
             },
             {
                 "commit": {
-                    "sha": "cfd8e913384d37cf8c393a67b3f5144ca6e9dc4f",
-                    "url": "https://api.github.com/repos/duckietown/gym-duckietown/commits/cfd8e913384d37cf8c393a67b3f5144ca6e9dc4f"
+                    "sha": "7c06d1ef9671ebfefc019e9607753345f2d13407",
+                    "url": "https://api.github.com/repos/duckietown/gym-duckietown/commits/7c06d1ef9671ebfefc019e9607753345f2d13407"
                 },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4242,6 +4617,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4258,6 +4634,12 @@
                 "protection": {
                     "enabled": true,
                     "required_status_checks": {
+                        "checks": [
+                            {
+                                "app_id": null,
+                                "context": "ci/circleci: test"
+                            }
+                        ],
                         "contexts": [
                             "ci/circleci: test"
                         ],
@@ -4276,6 +4658,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4292,6 +4675,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4308,6 +4692,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4324,6 +4709,7 @@
                 "protection": {
                     "enabled": false,
                     "required_status_checks": {
+                        "checks": [],
                         "contexts": [],
                         "enforcement_level": "off"
                     }
@@ -4331,6 +4717,6 @@
                 "protection_url": "https://api.github.com/repos/duckietown/gym-duckietown/branches/texture-multisample/protection"
             }
         ],
-        "ETag": "W/\"bd7e80b6003f7a1e8e5307e058aa61015b0f1f501629d276ff6d5cd1f214aa7a\""
+        "ETag": "W/\"604ab57e8f0dea3511465aa66cc1e47bc4886c38489c7a56b58f102e3ba0abed\""
     }
 }

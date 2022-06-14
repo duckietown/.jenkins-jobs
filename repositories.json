@@ -94,6 +94,11 @@
         "base": "dt-ros-commons"
     },
     {
+        "name": "dt-machine-learning-base-pytorch",
+        "origin": "duckietown/dt-machine-learning-base-pytorch",
+        "base": "dt-machine-learning-base-environment"
+    },
+    {
         "name": "challenge-aido_LF-template-ros",
         "origin": "duckietown/challenge-aido_LF-template-ros",
         "base": "dt-ros-commons"

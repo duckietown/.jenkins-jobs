@@ -84,6 +84,11 @@
         "base": "dt-commons"
     },
     {
+        "name": "dt-wifi-access-point",
+        "origin": "duckietown/dt-wifi-access-point",
+        "base": "dt-commons"
+    },
+    {
         "name": "dt-firmware-upgrade",
         "origin": "duckietown/dt-firmware-upgrade",
         "base": ["dt-commons", "dt-device-health"]

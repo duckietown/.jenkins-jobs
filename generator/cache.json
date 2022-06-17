@@ -2265,8 +2265,8 @@
             },
             {
                 "commit": {
-                    "sha": "d9a90dd3b8213537d80e26b236ec26771a6cb39b",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/d9a90dd3b8213537d80e26b236ec26771a6cb39b"
+                    "sha": "c465f00409257ab41c2259791c1607e0aa41c05e",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/c465f00409257ab41c2259791c1607e0aa41c05e"
                 },
                 "name": "ente",
                 "protected": false,
@@ -2315,7 +2315,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-commons/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"1d0e3207188043173107008484bbc4dc61d656de0f4d4b6425c68ced63e04318\""
+        "ETag": "W/\"aacb50c324ee6c53244b206b67bcd00904e89a2f8a83f4eb2df495aed0f6684f\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -2907,6 +2907,23 @@
             },
             {
                 "commit": {
+                    "sha": "bdd9572b2247a74fb25353de90c025db10e80654",
+                    "url": "https://api.github.com/repos/duckietown/dt-drone-interface/commits/bdd9572b2247a74fb25353de90c025db10e80654"
+                },
+                "name": "ente-drone-dev",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-drone-interface/branches/ente-drone-dev/protection"
+            },
+            {
+                "commit": {
                     "sha": "c04216ada36ab068abfd92c6ae3f0a383aef9a07",
                     "url": "https://api.github.com/repos/duckietown/dt-drone-interface/commits/c04216ada36ab068abfd92c6ae3f0a383aef9a07"
                 },
@@ -2923,7 +2940,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-drone-interface/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"ef2ba8558214a1fea92388b6039430cf48abb94fa3933450bdee5963ca6fb52e\""
+        "ETag": "W/\"3c9f4b026736a70fc86eab24b4db1c992f0e4cf0c1287c014717d201f58e40cd\""
     },
     "duckietown/dt-duckiebot-fifos-bridge": {
         "Content": [
@@ -3257,8 +3274,8 @@
             },
             {
                 "commit": {
-                    "sha": "f0db25e22512d010024c88bdeaaa3541f53f824c",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/f0db25e22512d010024c88bdeaaa3541f53f824c"
+                    "sha": "63045abb45ee3bce785f8546df8bdae60bf63096",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/63045abb45ee3bce785f8546df8bdae60bf63096"
                 },
                 "name": "ente",
                 "protected": false,
@@ -3274,8 +3291,25 @@
             },
             {
                 "commit": {
-                    "sha": "2cd1605aa338dc1ef7015e6eb30f56d5f8005f4a",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/2cd1605aa338dc1ef7015e6eb30f56d5f8005f4a"
+                    "sha": "531c67a7d8ef11a55e89be498ef5256d90d3ad69",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/531c67a7d8ef11a55e89be498ef5256d90d3ad69"
+                },
+                "name": "ente-drone-dev",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/ente-drone-dev/protection"
+            },
+            {
+                "commit": {
+                    "sha": "b194d61f15bb3f84f762bc165b9b7b5a3998b9dd",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/b194d61f15bb3f84f762bc165b9b7b5a3998b9dd"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -3375,7 +3409,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/shutdown_behaviors/protection"
             }
         ],
-        "ETag": "W/\"f9173ce42a8cd0761ddd5aa8c000dd97a6950b426840e1b6d891bb6aba9eb852\""
+        "ETag": "W/\"fa2947effa987f2a6909df4b51a544e3ab38411ef2bbc087ce73ee15dcb73c2a\""
     },
     "duckietown/dt-files-api": {
         "Content": [
@@ -3984,8 +4018,8 @@
             },
             {
                 "commit": {
-                    "sha": "9f817443d82280180c94f0d25fb12ca4b605d435",
-                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-environment/commits/9f817443d82280180c94f0d25fb12ca4b605d435"
+                    "sha": "3ac5f08ca8ac8150cb48ebafbd220b398b2a9764",
+                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-environment/commits/3ac5f08ca8ac8150cb48ebafbd220b398b2a9764"
                 },
                 "name": "ente",
                 "protected": false,
@@ -4017,7 +4051,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-environment/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"1e6671278de4a39b069108f366cd0bb2872cffe6a5d4be78c4c7ad2e1f1b085f\""
+        "ETag": "W/\"e95c20477d4b6eb4e6dec9b8c2a12ce1d8afef11cadcc7bdc2de3a83fa21e333\""
     },
     "duckietown/dt-machine-learning-base-pytorch": {
         "Content": [
@@ -4604,6 +4638,45 @@
             }
         ],
         "ETag": "W/\"e064f3d13237bcb46dcb24765da186e721360895ee88722fc4c1cedc78f65ab6\""
+    },
+    "duckietown/dt-wifi-access-point": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "179c7c052e6ce54b63316320a25f350d58db0358",
+                    "url": "https://api.github.com/repos/duckietown/dt-wifi-access-point/commits/179c7c052e6ce54b63316320a25f350d58db0358"
+                },
+                "name": "ente",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-wifi-access-point/branches/ente/protection"
+            },
+            {
+                "commit": {
+                    "sha": "7a66fb8d6c6520c496a73e075ba9122625e0ede4",
+                    "url": "https://api.github.com/repos/duckietown/dt-wifi-access-point/commits/7a66fb8d6c6520c496a73e075ba9122625e0ede4"
+                },
+                "name": "ente-staging",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-wifi-access-point/branches/ente-staging/protection"
+            }
+        ],
+        "ETag": "W/\"538766f9bb5a8043d52cb7448125a4d2bc1369b20e19bb5f9bfbdc2283dabfbb\""
     },
     "duckietown/duckietown-challenges-cli": {
         "Content": [

@@ -84,6 +84,11 @@
         "base": "dt-commons"
     },
     {
+        "name": "dt-vscode",
+        "origin": "duckietown/dt-vscode",
+        "base": "dt-commons"
+    },
+    {
         "name": "dt-wifi-access-point",
         "origin": "duckietown/dt-wifi-access-point",
         "base": "dt-commons"

@@ -18,7 +18,6 @@ TEMPLATE_JOB = "__template__"
 DTS_ARGS_INDENT = " \\\n" + " " * 8
 DEFAULT_TIMEOUT_MINUTES = 120
 DISTRO_ARCH_BLACKLIST = [
-    ("ente", "arm32v7"),
     ("ente-staging", "arm32v7"),
 ]
 BLACKLIST = []

@@ -1893,8 +1893,8 @@
             },
             {
                 "commit": {
-                    "sha": "63042824c49fa3c8e266ac8b8b7fbead3d2d4642",
-                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/63042824c49fa3c8e266ac8b8b7fbead3d2d4642"
+                    "sha": "e4bc01adf287885b5f0b2ad6ae8f38bd804794fc",
+                    "url": "https://api.github.com/repos/duckietown/dt-base-environment/commits/e4bc01adf287885b5f0b2ad6ae8f38bd804794fc"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -1943,7 +1943,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-base-environment/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"b78da383ccd1da524aa43ac0fea5a6f5f940665dac7c7b02d17587f0260046bf\""
+        "ETag": "W/\"10ec9985a7c507ee68a07e3e5a4ad2c83548d9a97e7c4f494b23fbe3e586277e\""
     },
     "duckietown/dt-car-interface": {
         "Content": [
@@ -2248,8 +2248,8 @@
             },
             {
                 "commit": {
-                    "sha": "45ef5816e00a0b775138d3ba2740da8ffc9b8b51",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/45ef5816e00a0b775138d3ba2740da8ffc9b8b51"
+                    "sha": "5749964d2d82b7c0661593a84746c6561e2e4dfd",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/5749964d2d82b7c0661593a84746c6561e2e4dfd"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -2332,7 +2332,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-commons/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"5428a068626d04e6c1586dc95e3a319064b744620a4e002fbbfc1d92a9306018\""
+        "ETag": "W/\"f4c9e7c6981cb858c7e8487d19116995d1d47e7d34041dd18f3dc18d38746aea\""
     },
     "duckietown/dt-core": {
         "Content": [

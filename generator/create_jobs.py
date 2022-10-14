@@ -27,6 +27,9 @@ DOCKER_USERNAMES = {
     "registry-stage2.duckietown.org": "duckietowndaemon"
 }
 BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
+DTS_DEVEL_BUILD_BACKEND = {
+    "daffy-staging": "buildx"
+}
 
 
 def main():
@@ -225,6 +228,7 @@ def main():
                     "DTS_ARGS": DTS_ARGS,
                     "TIMEOUT_MINUTES": repo_build_timeout,
                     "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
+                    "DTS_DEVEL_BUILD_BACKEND": DTS_DEVEL_BUILD_BACKEND.get(repo_distro, "build")
                 }
                 config = template_config.format(**params)
 

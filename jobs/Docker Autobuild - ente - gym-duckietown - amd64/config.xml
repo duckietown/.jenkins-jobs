@@ -76,7 +76,8 @@ dts --set-version ente exit
 # enter the workspace
 cd ./ws
 
-python3 -m pip install  pur
+# install pur
+python3 -m pip install pur
 
 if test -f "requirements.txt"; then
     pur -r requirements.txt -o requirements.resolved
@@ -90,8 +91,7 @@ if test -f "dependencies-py3.txt"; then
     pur -r dependencies-py3.txt -o dependencies-py3.resolved
 fi
 
-
-# pull, build(cloud), transfer, push, clean
+# pull, build(cloud), push, clean
 dts --debug \
     devel build \
         --arch amd64 \

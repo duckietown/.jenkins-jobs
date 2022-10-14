@@ -77,7 +77,7 @@ dts --set-version daffy-staging exit
 cd ./ws
 
 # install pur
-python3 -m pip install  pur
+python3 -m pip install pur
 
 if test -f "requirements.txt"; then
     pur -r requirements.txt -o requirements.resolved

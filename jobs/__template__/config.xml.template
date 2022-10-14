@@ -77,7 +77,7 @@ dts --set-version {DUCKIETOWN_CI_DT_SHELL_VERSION} exit
 cd ./ws
 
 # install pur
-python3 -m pip install  pur
+python3 -m pip install pur
 
 if test -f "requirements.txt"; then
     pur -r requirements.txt -o requirements.resolved
@@ -93,7 +93,7 @@ fi
 
 # pull, build(cloud), push, clean
 dts --debug \
-    devel buildx \
+    devel {DTS_DEVEL_BUILD_BACKEND} \
         --arch {REPO_ARCH} \
         --tag {TAG} \
         --base-tag {BASE_TAG} \

@@ -28,12 +28,13 @@
       <hudson.plugins.git.extensions.impl.LocalBranch>
         <localBranch>daffy-staging</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
+      <hudson.plugins.git.extensions.impl.GitLFSPull/>
     </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <authToken>d249580a-b182-41fb-8f3d-ec5d24530e71</authToken>
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>

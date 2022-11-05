@@ -28,12 +28,13 @@
       <hudson.plugins.git.extensions.impl.LocalBranch>
         <localBranch>{REPO_DISTRO}</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
+      <hudson.plugins.git.extensions.impl.GitLFSPull/>
     </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <authToken>{BUILD_FROM_SCRIPT_TOKEN}</authToken>
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>

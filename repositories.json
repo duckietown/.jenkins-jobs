@@ -243,10 +243,5 @@
         "origin": "duckietown/dt-statistics-server",
         "base": "dt-commons",
         "blacklist": ["arm32v7", "arm64v8"]
-    },
-    {
-	"name": "challenge-aido_LF-baseline-dagger-pytorch",
-	"origin": "duckietown/challenge-aido_LF-baseline-dagger-pytorch",
-	"base": "challenge-aido_LF-template-pytorch"
     }
 ]

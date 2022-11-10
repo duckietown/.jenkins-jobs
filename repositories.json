@@ -101,7 +101,8 @@
     {
         "name": "dt-machine-learning-base-environment",
         "origin": "duckietown/dt-machine-learning-base-environment",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "blacklist": ["arm32v7"]
     },
     {
         "name": "dt-machine-learning-base-pytorch",

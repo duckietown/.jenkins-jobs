@@ -3,8 +3,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "dfcbf5aab935b24c9c96f2cac015fa9872b23f04",
-                    "url": "https://api.github.com/repos/duckietown/aido-base-python3/commits/dfcbf5aab935b24c9c96f2cac015fa9872b23f04"
+                    "sha": "32afb509f1c45696415b25b6cfceb0f5f524b4f8",
+                    "url": "https://api.github.com/repos/duckietown/aido-base-python3/commits/32afb509f1c45696415b25b6cfceb0f5f524b4f8"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -51,9 +51,26 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/aido-base-python3/branches/daffy-staging/protection"
+            },
+            {
+                "commit": {
+                    "sha": "a41f638f96d4d642f8a5b4e7b6bc41c1af641267",
+                    "url": "https://api.github.com/repos/duckietown/aido-base-python3/commits/a41f638f96d4d642f8a5b4e7b6bc41c1af641267"
+                },
+                "name": "dependabot/pip/numpy-1.22.0",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/aido-base-python3/branches/dependabot/pip/numpy-1.22.0/protection"
             }
         ],
-        "ETag": "W/\"dc71af17e97c532053ab9d9a1e3d8f3da915998f50ee8ba3a8aa0cbc586b93e9\""
+        "ETag": "W/\"baac264f08dad4853e1b65e904524347b61d821225b30c253dc09da7c0f0e40f\""
     },
     "duckietown/aido-submission-ci-test": {
         "Content": [
@@ -543,8 +560,8 @@
             },
             {
                 "commit": {
-                    "sha": "e6dcd65fd31945579ce1c2be4de21495a9f16d40",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-experiment_manager/commits/e6dcd65fd31945579ce1c2be4de21495a9f16d40"
+                    "sha": "1d091565e1cfa3c93890f4669fc4fd7f4a6d3708",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-experiment_manager/commits/1d091565e1cfa3c93890f4669fc4fd7f4a6d3708"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -559,7 +576,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-experiment_manager/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"bde6a18494c0973920535cb04764c7de91cec44bc5c7dc6b7750ae7daf8e4779\""
+        "ETag": "W/\"89a863737038842d86120e9551e73b933c6479742fc67c9f82c149d0a16f60eb\""
     },
     "duckietown/challenge-aido_LF-minimal-agent": {
         "Content": [
@@ -1020,8 +1037,8 @@
             },
             {
                 "commit": {
-                    "sha": "06fdd4e0f64a6938ed9e415ca18f10d259d52e41",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/06fdd4e0f64a6938ed9e415ca18f10d259d52e41"
+                    "sha": "39359d7c5166e029103f2af0120ac91b682aa8b1",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/39359d7c5166e029103f2af0120ac91b682aa8b1"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -1085,9 +1102,26 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/branches/daffy-staging/protection"
+            },
+            {
+                "commit": {
+                    "sha": "c3c5e703acad2f0e5fe33e3cdc77a93018271e8c",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/c3c5e703acad2f0e5fe33e3cdc77a93018271e8c"
+                },
+                "name": "dependabot/pip/numpy-1.22.0",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/branches/dependabot/pip/numpy-1.22.0/protection"
             }
         ],
-        "ETag": "W/\"f2bd340d22262e6c451eb774ede2e889e767c6d5a629fb2f7f04cc8bc09f849e\""
+        "ETag": "W/\"167e2c5f13d223f8e362fbba394e15f10482d3fc8d961431647e80e06235ae27\""
     },
     "duckietown/challenge-aido_LF-template-ros": {
         "Content": [

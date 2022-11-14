@@ -198,7 +198,7 @@
         "name": "challenge-aido_LF-experiment_manager",
         "origin": "duckietown/challenge-aido_LF-experiment_manager",
         "base": "aido-base-python3",
-        "blacklist": ["arm32v7", "arm64v8"]
+        "blacklist": ["arm32v7"]
     },
     {
         "name": "challenge-aido_LF-minimal-agent",
@@ -223,7 +223,7 @@
     {
         "name": "gym-duckietown",
         "origin": "duckietown/gym-duckietown",
-        "blacklist": ["arm32v7", "arm64v8"]
+        "blacklist": ["arm32v7"]
     },
     {
         "name": "challenge-aido_LF-simulator-gym",

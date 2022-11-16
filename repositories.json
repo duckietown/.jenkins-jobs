@@ -233,6 +233,7 @@
     {
         "name": "duckietown-challenges-cli",
         "origin": "duckietown/duckietown-challenges-cli",
+        "base": "dt-base-environment",
         "blacklist": ["arm32v7"]
     },
 

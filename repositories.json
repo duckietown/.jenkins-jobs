@@ -134,7 +134,8 @@
     {
         "name": "aido-base-python3",
         "origin": "duckietown/aido-base-python3",
-        "base": "dt-base-environment"
+        "base": "dt-base-environment",
+        "blacklist": ["arm32v7"]
     },
     {
         "name": "challenge-aido_LF-baseline-duckietown",

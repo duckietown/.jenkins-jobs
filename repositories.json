@@ -123,18 +123,21 @@
         "name": "challenge-aido_LF-template-pytorch",
         "origin": "duckietown/challenge-aido_LF-template-pytorch",
         "base": "dt-machine-learning-base-environment",
+
         "blacklist": ["arm32v7"]
     },
     {
         "name": "challenge-aido_LF-template-tensorflow",
         "origin": "duckietown/challenge-aido_LF-template-tensorflow",
         "base": "dt-machine-learning-base-environment",
+
         "blacklist": ["arm32v7"]
     },
     {
         "name": "aido-base-python3",
         "origin": "duckietown/aido-base-python3",
         "base": "dt-base-environment",
+
         "blacklist": ["arm32v7"]
     },
     {
@@ -199,6 +202,7 @@
         "name": "challenge-aido_LF-experiment_manager",
         "origin": "duckietown/challenge-aido_LF-experiment_manager",
         "base": "aido-base-python3",
+
         "blacklist": ["arm32v7"]
     },
     {
@@ -224,6 +228,8 @@
     {
         "name": "gym-duckietown",
         "origin": "duckietown/gym-duckietown",
+        "base": "dt-commons",
+
         "blacklist": ["arm32v7"]
     },
     {
@@ -235,6 +241,7 @@
         "name": "duckietown-challenges-cli",
         "origin": "duckietown/duckietown-challenges-cli",
         "base": "dt-base-environment",
+
         "blacklist": ["arm32v7"]
     },
 

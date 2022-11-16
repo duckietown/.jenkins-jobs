@@ -39,7 +39,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects></upstreamProjects>
+      <upstreamProjects>Docker Autobuild - daffy-staging - dt-base-environment - arm64v8</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

@@ -87,7 +87,7 @@ if test -f "dependencies-py.txt"; then
 fi
 
 if test -f "dependencies-py3.txt"; then
-    pur -r dependencies-py3.txt -o dependencies-py3.resolved
+    dt-pip-resolve -i ./dependencies-py3.txt -o ./dependencies-py3.resolved
 fi
 
 # pull, build(cloud), push, clean

@@ -504,8 +504,8 @@
             },
             {
                 "commit": {
-                    "sha": "c0501b6c802be52ef61f5d710c0c810685c26434",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/c0501b6c802be52ef61f5d710c0c810685c26434"
+                    "sha": "1dfefc0837b5ca227d2de2827ef3a1a5780e4886",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/commits/1dfefc0837b5ca227d2de2827ef3a1a5780e4886"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -520,7 +520,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-duckietown-ml/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"b25b393c3d9d6ece461ede1892097565f1468a2ddbc319942ad276fdb024e8ed\""
+        "ETag": "W/\"f8f12f8a02a9cffb7f839861540c6e1e60e0adea50c0fc128418d6e6a3a63863\""
     },
     "duckietown/challenge-aido_LF-experiment_manager": {
         "Content": [
@@ -1088,8 +1088,8 @@
             },
             {
                 "commit": {
-                    "sha": "6255239af104f68166133c41b1b2df3c8c40848b",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/6255239af104f68166133c41b1b2df3c8c40848b"
+                    "sha": "ea08ef9d43aefc98527d915ddca3706691101584",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/commits/ea08ef9d43aefc98527d915ddca3706691101584"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -1121,7 +1121,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-random/branches/dependabot/pip/numpy-1.22.0/protection"
             }
         ],
-        "ETag": "W/\"2a38d9de39570f6b2f529f2730ccb43a44c576f0ff2ade240cb88d61c053a444\""
+        "ETag": "W/\"7d4e496da95edf66d6d66a754e4d4c454ea4cf3e3bd5d59c50ffecaf1702a5d5\""
     },
     "duckietown/challenge-aido_LF-template-ros": {
         "Content": [

@@ -79,11 +79,11 @@ dts --set-version ente-staging exit
 cd ./ws
 
 if test -f "requirements.txt"; then
-    pur -r requirements.txt -o requirements.resolved
+    dt-pip-resolve -i requirements.txt -o requirements.resolved
 fi
 
 if test -f "dependencies-py.txt"; then
-    pur -r dependencies-py.txt -o dependencies-py.resolved
+    dt-pip-resolve -i dependencies-py.txt -o dependencies-py.resolved
 fi
 
 if test -f "dependencies-py3.txt"; then

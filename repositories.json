@@ -101,7 +101,8 @@
     {
         "name": "dt-machine-learning-base-environment",
         "origin": "duckietown/dt-machine-learning-base-environment",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "blacklist": ["arm32v7"]
     },
     {
         "name": "dt-machine-learning-base-pytorch",
@@ -133,7 +134,8 @@
     {
         "name": "aido-base-python3",
         "origin": "duckietown/aido-base-python3",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "blacklist": ["arm32v7"]
     },
     {
         "name": "challenge-aido_LF-baseline-duckietown",
@@ -221,7 +223,8 @@
     {
         "name": "gym-duckietown",
         "origin": "duckietown/gym-duckietown",
-        "blacklist": ["arm32v7", "arm64v8"]
+        "base": "dt-commons",
+        "blacklist": ["arm32v7"]
     },
     {
         "name": "challenge-aido_LF-simulator-gym",
@@ -230,7 +233,9 @@
     },
     {
         "name": "duckietown-challenges-cli",
-        "origin": "duckietown/duckietown-challenges-cli"
+        "origin": "duckietown/duckietown-challenges-cli",
+        "base": "dt-base-environment",
+        "blacklist": ["arm32v7"]
     },
 
     {
@@ -243,10 +248,5 @@
         "origin": "duckietown/dt-statistics-server",
         "base": "dt-commons",
         "blacklist": ["arm32v7", "arm64v8"]
-    },
-    {
-	"name": "challenge-aido_LF-baseline-dagger-pytorch",
-	"origin": "duckietown/challenge-aido_LF-baseline-dagger-pytorch",
-	"base": "challenge-aido_LF-template-pytorch"
     }
 ]

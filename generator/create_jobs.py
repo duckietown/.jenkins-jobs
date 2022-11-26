@@ -28,7 +28,8 @@ DOCKER_USERNAMES = {
 }
 BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
 DTS_DEVEL_BUILD_BACKEND = {
-    "daffy-staging": "buildx"
+    "daffy": "buildx",
+    "daffy-staging": "buildx",
 }
 
 

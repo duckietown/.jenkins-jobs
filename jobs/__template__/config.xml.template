@@ -1,22 +1,20 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description>Autobuild for repository {REPO_NAME}</description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.5">
       <projectUrl>{REPO_URL}</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.32">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.8.2">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.11.5">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>{GIT_URL}</url>
+        <credentialsId>GITHUB_SSH_KEY</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -30,12 +28,13 @@
       <hudson.plugins.git.extensions.impl.LocalBranch>
         <localBranch>{REPO_DISTRO}</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
+      <hudson.plugins.git.extensions.impl.GitLFSPull/>
     </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <authToken>{BUILD_FROM_SCRIPT_TOKEN}</authToken>
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
@@ -48,7 +47,7 @@
         <completeBuild>true</completeBuild>
       </threshold>
     </jenkins.triggers.ReverseBuildTrigger>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.34.1">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.34.5">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
@@ -56,6 +55,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
+# configure git to use SSH key
+export GIT_SSH_COMMAND='ssh -i "${{GIT_SSH_KEY_FILEPATH}}" -o IdentitiesOnly=yes'
+
 # fetch commands
 git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-commands ./commands
 export DTSHELL_COMMANDS="$(pwd)/commands"
@@ -76,19 +78,16 @@ dts --set-version {DUCKIETOWN_CI_DT_SHELL_VERSION} exit
 # enter the workspace
 cd ./ws
 
-# install pur
-python3 -m pip install pur
-
 if test -f "requirements.txt"; then
-    pur -r requirements.txt -o requirements.resolved
+    dt-pip-resolve -i requirements.txt -o requirements.resolved
 fi
 
 if test -f "dependencies-py.txt"; then
-    pur -r dependencies-py.txt -o dependencies-py.resolved
+    dt-pip-resolve -i dependencies-py.txt -o dependencies-py.resolved
 fi
 
 if test -f "dependencies-py3.txt"; then
-    pur -r dependencies-py3.txt -o dependencies-py3.resolved
+    dt-pip-resolve -i ./dependencies-py3.txt -o ./dependencies-py3.resolved
 fi
 
 # pull, build(cloud), push, clean
@@ -110,7 +109,7 @@ rm -rf ./ws
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.39">
+    <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.43">
       <patterns class="empty-list"/>
       <deleteDirs>false</deleteDirs>
       <skipWhenFailed>false</skipWhenFailed>
@@ -126,13 +125,13 @@ rm -rf ./ws
     </hudson.plugins.ws__cleanup.WsCleanup>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.39">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.43">
       <deleteDirs>false</deleteDirs>
       <cleanupParameter></cleanupParameter>
       <externalDelete></externalDelete>
       <disableDeferredWipeout>false</disableDeferredWipeout>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@1.27">
+    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@523.vd859a_4b_122e6">
       <bindings>
         <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
           <credentialsId>{DOCKER_PASSWORD_KEY}</credentialsId>
@@ -142,9 +141,13 @@ rm -rf ./ws
           <credentialsId>DUCKIETOWN_CI_DT_TOKEN</credentialsId>
           <variable>DUCKIETOWN_CI_DT_TOKEN</variable>
         </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+        <org.jenkinsci.plugins.credentialsbinding.impl.SSHUserPrivateKeyBinding>
+          <credentialsId>GITHUB_SSH_KEY</credentialsId>
+          <keyFileVariable>GIT_SSH_KEY_FILEPATH</keyFileVariable>
+        </org.jenkinsci.plugins.credentialsbinding.impl.SSHUserPrivateKeyBinding>
       </bindings>
     </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.20">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.24">
       <strategy class="hudson.plugins.build_timeout.impl.ElasticTimeOutStrategy">
         <timeoutPercentage>200</timeoutPercentage>
         <numberOfBuilds>3</numberOfBuilds>

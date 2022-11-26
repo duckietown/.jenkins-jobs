@@ -11,7 +11,7 @@ Once done, regenerate the index using the command,
 make generate
 ```
 
-Then commit the new changes, do ont worry if you see changes to Jobs you did not update, it is fine.
+Then commit the new changes. Don't worry if you see changes to Jobs you did not update, it is fine.
 Commit everything and push. 
 
 Jenkins will automatically pull the new changes, but you will need to tell him to reload the jobs from Disk via "Manage Jenkins" > "Reload Configuration from Disk".

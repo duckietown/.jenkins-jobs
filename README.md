@@ -7,8 +7,14 @@ This repository contains the CI Jobs for Duckietown run by Jenkins.
 You can add a new Job by listing the new repository in the file `repositories.json`.
 Once done, regenerate the index using the command,
 
+```shell
+make generate-production
 ```
-make generate
+
+or 
+
+```shell
+make generate-staging
 ```
 
 Then commit the new changes. Don't worry if you see changes to Jobs you did not update, it is fine.

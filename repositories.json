@@ -196,6 +196,11 @@
         "base": ["challenge-aido_LF-baseline-duckietown", "challenge-aido_LF-template-pytorch"]
     },
     {
+        "name": "challenge-aido_LF-baseline-simple-yield",
+        "origin": "duckietown/challenge-aido_LF-baseline-simple-yield",
+        "base": "aido-base-python3"
+    },
+    {
         "name": "challenge-aido_LF-experiment_manager",
         "origin": "duckietown/challenge-aido_LF-experiment_manager",
         "base": "aido-base-python3"

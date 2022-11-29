@@ -4889,6 +4889,23 @@
                     "sha": "bdb1b4c03f35b0fcd6c61492d8de8494779c4668",
                     "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/bdb1b4c03f35b0fcd6c61492d8de8494779c4668"
                 },
+                "name": "daffy",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-vscode/branches/daffy/protection"
+            },
+            {
+                "commit": {
+                    "sha": "bdb1b4c03f35b0fcd6c61492d8de8494779c4668",
+                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/bdb1b4c03f35b0fcd6c61492d8de8494779c4668"
+                },
                 "name": "daffy-staging",
                 "protected": false,
                 "protection": {
@@ -5038,7 +5055,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-vscode/branches/vscode-extension/protection"
             }
         ],
-        "ETag": "W/\"ac04651dd29138dd52bc7eecd5159a0a03e523b970ff91b0148a7816cd7d361c\""
+        "ETag": "W/\"53c3d1bc2dea29ecfe43236d4be5136c84624780cbc62bead24f00fde7558464\""
     },
     "duckietown/dt-wifi-access-point": {
         "Content": [

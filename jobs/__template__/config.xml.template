@@ -63,8 +63,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command># fail if the parent job just failed
-[ "${{PARENT_JOB_FAILED}}" = "true" ] && {{ echo "======== Parent Job Failed, propagating failure! ========"; exit 1; }}
+      <command>
+# fail if the parent job just failed
+if [ "${{PARENT_JOB_FAILED}}" = "true" ]; then
+    echo "====== Parent Job Failed, propagating failure"
+    exit 1
+fi
 
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${{GIT_SSH_KEY_FILEPATH}}" -o IdentitiesOnly=yes'

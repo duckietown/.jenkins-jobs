@@ -8,6 +8,15 @@
       <projectUrl>https://github.com/duckietown/dt-base-environment</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PARENT_JOB_FAILED</name>
+          <description>This parameter is set to true if the parent job that triggered this job FAILED to build</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@4.11.5">
     <configVersion>2</configVersion>
@@ -54,7 +63,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>
+      <command># fail if the parent job just failed
+[ "${PARENT_JOB_FAILED}" = "true" ] && { echo "======== Parent Job Failed, propagating failure! ========"; exit 1; }
+
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
@@ -109,6 +120,26 @@ rm -rf ./ws
     </hudson.tasks.Shell>
   </builders>
   <publishers>
+    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.45">
+      <configs>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.BooleanParameters>
+              <configs>
+                <hudson.plugins.parameterizedtrigger.BooleanParameterConfig>
+                  <name>PARENT_JOB_FAILED</name>
+                  <value>true</value>
+                </hudson.plugins.parameterizedtrigger.BooleanParameterConfig>
+              </configs>
+            </hudson.plugins.parameterizedtrigger.BooleanParameters>
+          </configs>
+          <projects>Docker Autobuild - ente-staging - dt-commons - arm64v8, Docker Autobuild - ente-staging - duckietown-challenges-cli - arm64v8</projects>
+          <condition>FAILED</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+          <triggerFromChildProjects>false</triggerFromChildProjects>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+      </configs>
+    </hudson.plugins.parameterizedtrigger.BuildTrigger>
     <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.43">
       <patterns class="empty-list"/>
       <deleteDirs>false</deleteDirs>

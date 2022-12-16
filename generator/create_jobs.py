@@ -6,7 +6,7 @@ import logging
 import os
 import sys
 from collections import defaultdict
-from typing import Optional
+from typing import Optional, List, Dict
 
 import requests
 
@@ -95,6 +95,17 @@ def main():
         logger.error(msg)
         sys.exit(6)
     headers["Authorization"] = f"token {github_token}"
+    # make parent -> children map
+    children: Dict[str, List[str]] = defaultdict(list)
+    for repo in repos:
+        if "base" not in repo:
+            continue
+        repo_bases = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
+        for repo_base in repo_bases:
+            this_job = repo["name"]
+            base_job = repo_base.strip()
+            children[base_job].append(this_job)
+
     # store things to write
     jobs_to_write = {}
     repo_by_name = {}
@@ -208,6 +219,9 @@ def main():
                 else:
                     BASE_JOB = ""
 
+                # get children jobs
+                CHILDREN_JOBS = ", ".join([job_name(repo_distro, c, repo_arch) for c in children[repo_name]])
+
                 jname = job_name(repo_distro, repo_name, repo_arch)
                 # create job by updating the template fields
                 job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
@@ -226,6 +240,7 @@ def main():
                     "GIT_URL": GIT_URL,
                     "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
                     "BASE_JOB": BASE_JOB,
+                    "CHILDREN_JOBS": CHILDREN_JOBS,
                     "DTS_ARGS": DTS_ARGS,
                     "TIMEOUT_MINUTES": repo_build_timeout,
                     "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,

@@ -57,7 +57,7 @@
       <command>
 # fail if the parent job just failed
 if [ "${{PARENT_JOB_FAILED}}" = "true" ]; then
-    echo "====== Parent Job Failed, propagating failure"
+    echo "====== Parent Job Failed, propagating failure ======"
     exit 1
 fi
 

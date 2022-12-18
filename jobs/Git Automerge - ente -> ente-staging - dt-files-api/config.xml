@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Autobuild for repository {REPO_NAME}</description>
+  <description>Automerge for repository dt-files-api</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.5">
-      <projectUrl>{REPO_URL}</projectUrl>
+      <projectUrl>https://github.com/duckietown/dt-files-api</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -13,20 +13,20 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>{GIT_URL}</url>
+        <url>git@github.com:duckietown/dt-files-api</url>
         <credentialsId>GITHUB_SSH_KEY</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>{REPO_DISTRO}</name>
+        <name>ente</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="empty-list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch>{REPO_DISTRO}</localBranch>
+        <localBranch>ente</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
       <hudson.plugins.git.extensions.impl.GitLFSPull/>
     </extensions>
@@ -34,19 +34,8 @@
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <authToken>{BUILD_FROM_SCRIPT_TOKEN}</authToken>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <jenkins.triggers.ReverseBuildTrigger>
-      <spec></spec>
-      <upstreamProjects>{BASE_JOB}</upstreamProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </jenkins.triggers.ReverseBuildTrigger>
     <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.34.5">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
@@ -55,86 +44,25 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-# fail if the parent job just failed
-if [ "${{PARENT_JOB_FAILED}}" = "true" ]; then
-    echo "====== Parent Job Failed, propagating failure ======"
-    exit 1
-fi
-
 # configure git to use SSH key
-export GIT_SSH_COMMAND='ssh -i "${{GIT_SSH_KEY_FILEPATH}}" -o IdentitiesOnly=yes'
+export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
-# fetch commands
-git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-commands ./commands
-export DTSHELL_COMMANDS="$(pwd)/commands"
+# clone repository in destination branch
+git clone -b ente-staging git@github.com:duckietown/dt-files-api ./ws
 
-# fetch code
-git clone -b {REPO_DISTRO} {GIT_URL} ./ws
-git -C ./ws fetch --tags
+# merge source into destination
+git -C ./ws pull --no-rebase git@github.com:duckietown/dt-files-api ente
 
-# install/update duckietown-shell
-export PIP_INDEX_URL="{PIP_INDEX_URL}"
-export DTSERVER="{DTSERVER}"
-export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
-export DOCKER_USERNAME="{DOCKER_USERNAME}"
-
-# switch to CI commands
-dts --set-version {DUCKIETOWN_CI_DT_SHELL_VERSION} exit
-
-# enter the workspace
-cd ./ws
-
-if test -f "requirements.txt"; then
-    dt-pip-resolve -i requirements.txt -o requirements.resolved
-fi
-
-if test -f "dependencies-py.txt"; then
-    dt-pip-resolve -i dependencies-py.txt -o dependencies-py.resolved
-fi
-
-if test -f "dependencies-py3.dt.txt"; then
-    dt-pip-resolve -i ./dependencies-py3.dt.txt -o ./dependencies-py3.dt.resolved
-fi
-
-# pull, build(cloud), push, clean
-dts --debug \
-    devel {DTS_DEVEL_BUILD_BACKEND} \
-        --arch {REPO_ARCH} \
-        --tag {TAG} \
-        --base-tag {BASE_TAG} \
-        --ci{DTS_ARGS}
-
-# leave the workspace
-cd ../
+# push result
+git -C ./ws push
 
 # clean workspace
-rm -rf ./commands
 rm -rf ./ws
       </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.45">
-      <configs>
-        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
-          <configs>
-            <hudson.plugins.parameterizedtrigger.BooleanParameters>
-              <configs>
-                <hudson.plugins.parameterizedtrigger.BooleanParameterConfig>
-                  <name>PARENT_JOB_FAILED</name>
-                  <value>true</value>
-                </hudson.plugins.parameterizedtrigger.BooleanParameterConfig>
-              </configs>
-            </hudson.plugins.parameterizedtrigger.BooleanParameters>
-          </configs>
-          <projects>{CHILDREN_JOBS}</projects>
-          <condition>FAILED</condition>
-          <triggerWithNoParameters>false</triggerWithNoParameters>
-          <triggerFromChildProjects>false</triggerFromChildProjects>
-        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
-      </configs>
-    </hudson.plugins.parameterizedtrigger.BuildTrigger>
     <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.43">
       <patterns class="empty-list"/>
       <deleteDirs>false</deleteDirs>
@@ -159,14 +87,6 @@ rm -rf ./ws
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
     <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@523.vd859a_4b_122e6">
       <bindings>
-        <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
-          <credentialsId>{DOCKER_PASSWORD_KEY}</credentialsId>
-          <variable>DOCKER_PASSWORD</variable>
-        </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
-        <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
-          <credentialsId>DUCKIETOWN_CI_DT_TOKEN</credentialsId>
-          <variable>DUCKIETOWN_CI_DT_TOKEN</variable>
-        </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
         <org.jenkinsci.plugins.credentialsbinding.impl.SSHUserPrivateKeyBinding>
           <credentialsId>GITHUB_SSH_KEY</credentialsId>
           <keyFileVariable>GIT_SSH_KEY_FILEPATH</keyFileVariable>
@@ -178,7 +98,7 @@ rm -rf ./ws
         <timeoutPercentage>200</timeoutPercentage>
         <numberOfBuilds>3</numberOfBuilds>
         <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
-        <timeoutMinutesElasticDefault>{TIMEOUT_MINUTES}</timeoutMinutesElasticDefault>
+        <timeoutMinutesElasticDefault>10</timeoutMinutesElasticDefault>
       </strategy>
       <operationList>
         <hudson.plugins.build__timeout.operations.AbortOperation/>

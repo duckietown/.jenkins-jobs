@@ -2304,8 +2304,8 @@
             },
             {
                 "commit": {
-                    "sha": "57a443a295c47f6cb0baf7c920763be77e165c59",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/57a443a295c47f6cb0baf7c920763be77e165c59"
+                    "sha": "57be63ab16229aab08bf9f8c8dbc77e0c767ec3c",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/57be63ab16229aab08bf9f8c8dbc77e0c767ec3c"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -2388,7 +2388,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-commons/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"0fd8904fccfd4d1c7ac38da762fa42cff9f383188e91feea552ec32a79e4fc8b\""
+        "ETag": "W/\"f7fe0b615d1cb39f27705299be4d28bddc66dd9f1cf03dfdaa07dabd6e1e9113\""
     },
     "duckietown/dt-core": {
         "Content": [

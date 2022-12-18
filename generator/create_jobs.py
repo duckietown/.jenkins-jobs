@@ -14,7 +14,8 @@ logging.basicConfig()
 logger = logging.getLogger("jobs-generator")
 logger.setLevel(logging.INFO)
 
-TEMPLATE_JOB = "__template__"
+AUTOBUILD_TEMPLATE_JOB = "__autobuild_template__"
+AUTOMERGE_TEMPLATE_JOB = "__automerge_template__"
 DTS_ARGS_INDENT = " \\\n" + " " * 8
 DEFAULT_TIMEOUT_MINUTES = 120
 DISTRO_ARCH_BLACKLIST = [
@@ -37,7 +38,9 @@ def main():
     # configure arguments
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--jobsdir", required=True, help="Directory containing the final jobs"
+        "--jobsdir",
+        required=True,
+        help="Directory containing the final jobs"
     )
     parser.add_argument(
         "--repos",
@@ -77,14 +80,21 @@ def main():
             cache.update(json.load(fin))
     except:
         pass
-    # load template job
-    template_config_file = os.path.join(
-        parsed.jobsdir, TEMPLATE_JOB, "config.xml.template"
+    # load template jobs
+    # - Docker Autobuild job template
+    autobuild_template_config_file = os.path.join(
+        parsed.jobsdir, AUTOBUILD_TEMPLATE_JOB, "config.xml.template"
     )
-    with open(template_config_file, "rt") as fin:
-        template_config = fin.read()
+    with open(autobuild_template_config_file, "rt") as fin:
+        autobuild_template_config = fin.read()
+    # Git Autmerge job template
+    automerge_template_config_file = os.path.join(
+        parsed.jobsdir, AUTOMERGE_TEMPLATE_JOB, "config.xml.template"
+    )
+    with open(automerge_template_config_file, "rt") as fin:
+        automerge_template_config = fin.read()
     # check which configurations are valid
-    stats = {"cache": {"hits": 0, "misses": 0}, "num_jobs": 0}
+    stats = {"cache": {"hits": 0, "misses": 0}, "num_jobs": 0, "num_repos": len(repos)}
     logger.info("Found {:d} repositories.".format(len(repos)))
     # generate headers for github
     headers = {}
@@ -108,6 +118,7 @@ def main():
 
     # store things to write
     jobs_to_write = {}
+    repo_branches = {}
     repo_by_name = {}
     # ---
     for repo in repos:
@@ -161,9 +172,10 @@ def main():
             sys.exit(4)
         # update cache
         # get json response
-        repo_branches = [b["name"] for b in cache[repo_origin]["Content"]]
+        # noinspection PyUnresolvedReferences
+        repo_branches[repo_name] = [b["name"] for b in cache[repo_origin]["Content"]]
         # filter distros
-        repo_distros = [b for b in repo_branches if b in distro_list]
+        repo_distros = [b for b in repo_branches[repo_name] if b in distro_list]
         logger.info("> Found distros: {:s}".format(str(repo_distros)))
 
         # create one job per distro
@@ -175,7 +187,7 @@ def main():
                 if (repo_distro, arch) not in DISTRO_ARCH_BLACKLIST
             ]
             repo_arch_list = list(filter(
-                lambda a: a not in repo.get("blacklist", []),
+                lambda arch: arch not in repo.get("blacklist", []),
                 repo_arch_list
             ))
             for a in repo.get("blacklist", []):
@@ -214,15 +226,17 @@ def main():
                 if "base" in repo:
                     repo_base = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
                     BASE_JOB = ", ".join([
-                        job_name(repo_distro, b.strip(), repo_arch) for b in repo_base
+                        autobuild_job_name(repo_distro, b.strip(), repo_arch) for b in repo_base
                     ])
                 else:
                     BASE_JOB = ""
 
                 # get children jobs
-                CHILDREN_JOBS = ", ".join([job_name(repo_distro, c, repo_arch) for c in children[repo_name]])
+                CHILDREN_JOBS = ", ".join([
+                    autobuild_job_name(repo_distro, c, repo_arch) for c in children[repo_name]
+                ])
 
-                jname = job_name(repo_distro, repo_name, repo_arch)
+                jname = autobuild_job_name(repo_distro, repo_name, repo_arch)
                 # create job by updating the template fields
                 job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
                 params = {
@@ -246,7 +260,7 @@ def main():
                     "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
                     "DTS_DEVEL_BUILD_BACKEND": DTS_DEVEL_BUILD_BACKEND.get(repo_distro, "build")
                 }
-                config = template_config.format(**params)
+                config = autobuild_template_config.format(**params)
 
                 jobs_to_write[(repo_distro, repo_name, repo_arch)] = {
                     "config_path": job_config_path,
@@ -282,17 +296,62 @@ def main():
             fout.write(config)
         stats["num_jobs"] += 1
 
+    # ---
+    # create auto-merging jobs
+    for repo in repos:
+        repo_name = repo["name"]
+        repo_origin = repo["origin"]
+        REPO_URL = "https://github.com/{:s}".format(repo_origin)
+        GIT_URL = "git@github.com:{:s}".format(repo_origin)
+        # one job per pair (distro, distro-staging)
+        for repo_branch in repo_branches[repo_name]:
+            if not repo_branch.endswith("-staging"):
+                continue
+            if repo_branch not in distro_list:
+                continue
+            repo_branch_prod = repo_branch[:-len("-staging")]
+            if repo_branch_prod not in repo_branches[repo_name]:
+                logger.warning(f"Found branch '{repo_branch}' but not '{repo_branch_prod}' "
+                               f"in repository '{repo_name}'. This is weird. "
+                               f"Available branches are: {str(repo_branches[repo_name])}")
+
+            jname = automerge_job_name(
+                from_branch=repo_branch_prod,
+                into_branch=repo_branch,
+                repo_name=repo_name
+            )
+            # create job by updating the template fields
+            job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
+            params = {
+                "REPO_NAME": repo_name,
+                "REPO_URL": REPO_URL,
+                "FROM_BRANCH": repo_branch_prod,
+                "INTO_BRANCH": repo_branch,
+                "GIT_URL": GIT_URL,
+                "TIMEOUT_MINUTES": 10
+            }
+            config = automerge_template_config.format(**params)
+            # write job to disk
+            os.makedirs(os.path.dirname(job_config_path))
+            with open(job_config_path, "wt") as fout:
+                fout.write(config)
+            stats["num_jobs"] += 1
+
     # print out stats
     logger.info(
-        "Statistics: Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}".format(
-            stats["num_jobs"], stats["cache"]["hits"], stats["cache"]["misses"]
+        "Statistics: Total repos: {:d}; Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}".format(
+            stats["num_repos"], stats["num_jobs"], stats["cache"]["hits"], stats["cache"]["misses"]
         )
     )
     logger.info("Done!")
 
 
-def job_name(distro, repo_name, arch):
+def autobuild_job_name(distro, repo_name, arch):
     return "Docker Autobuild - {:s} - {:s} - {:s}".format(distro, repo_name, arch)
+
+
+def automerge_job_name(from_branch, into_branch, repo_name):
+    return "Git Automerge - {:s} -> {:s} - {:s}".format(from_branch, into_branch, repo_name)
 
 
 if __name__ == "__main__":

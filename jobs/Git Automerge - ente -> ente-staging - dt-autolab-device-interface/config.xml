@@ -51,7 +51,7 @@ export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 git clone -b ente-staging git@github.com:duckietown/dt-autolab-device-interface ./ws
 
 # merge source into destination
-git -C ./ws pull --no-rebase git@github.com:duckietown/dt-autolab-device-interface ente
+git -C ./ws -c user.name=Jenkins -c user.email=jenkins@duckietown.com pull --no-rebase git@github.com:duckietown/dt-autolab-device-interface ente
 
 # push result
 git -C ./ws push

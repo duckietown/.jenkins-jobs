@@ -51,7 +51,7 @@ export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 git clone -b daffy-staging git@github.com:duckietown/dt-firmware-upgrade ./ws
 
 # merge source into destination
-git -C ./ws pull --no-rebase git@github.com:duckietown/dt-firmware-upgrade daffy
+git -C ./ws -c user.name=Jenkins -c user.email=jenkins@duckietown.com pull --no-rebase git@github.com:duckietown/dt-firmware-upgrade daffy
 
 # push result
 git -C ./ws push

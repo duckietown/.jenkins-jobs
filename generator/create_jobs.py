@@ -350,7 +350,6 @@ def main():
         repo_name = repo["name"]
         repo_origin = repo["origin"]
         REPO_URL = "https://github.com/{:s}".format(repo_origin)
-        GIT_URL = "git@github.com:{:s}".format(repo_origin)
         # one job per pair (distro, distro-staging)
         for repo_branch in repo_branches[repo_name]:
             if not repo_branch.endswith("-staging"):
@@ -385,8 +384,7 @@ def main():
                 "REPO_NAME": repo_name,
                 "REPO_URL": REPO_URL,
                 "FROM_BRANCH": repo_branch_prod,
-                "INTO_BRANCH": repo_branch,
-                "GIT_URL": GIT_URL,
+                "TO_BRANCH": repo_branch,
                 "BASE_JOB": BASE_JOB,
                 "TIMEOUT_MINUTES": 1
             }

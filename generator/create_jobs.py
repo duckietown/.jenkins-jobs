@@ -16,6 +16,7 @@ logger.setLevel(logging.INFO)
 
 AUTOBUILD_TEMPLATE_JOB = "__autobuild_template__"
 AUTOMERGE_TEMPLATE_JOB = "__automerge_template__"
+STAGESYNC_TEMPLATE_JOB = "__stagesync_template__"
 DTS_ARGS_INDENT = " \\\n" + " " * 8
 DEFAULT_TIMEOUT_MINUTES = 120
 DISTRO_ARCH_BLACKLIST = [
@@ -87,12 +88,18 @@ def main():
     )
     with open(autobuild_template_config_file, "rt") as fin:
         autobuild_template_config = fin.read()
-    # Git Autmerge job template
+    # - Git Autmerge job template
     automerge_template_config_file = os.path.join(
         parsed.jobsdir, AUTOMERGE_TEMPLATE_JOB, "config.xml.template"
     )
     with open(automerge_template_config_file, "rt") as fin:
         automerge_template_config = fin.read()
+    # - Stage Sync job template
+    stagesync_template_config_file = os.path.join(
+        parsed.jobsdir, STAGESYNC_TEMPLATE_JOB, "config.xml.template"
+    )
+    with open(stagesync_template_config_file, "rt") as fin:
+        stagesync_template_config = fin.read()
     # check which configurations are valid
     stats = {"cache": {"hits": 0, "misses": 0}, "num_jobs": 0, "num_repos": len(repos)}
     logger.info("Found {:d} repositories.".format(len(repos)))
@@ -337,6 +344,59 @@ def main():
                 fout.write(config)
             stats["num_jobs"] += 1
 
+    # ---
+    # create stage-sync jobs
+    for repo in repos:
+        repo_name = repo["name"]
+        repo_origin = repo["origin"]
+        REPO_URL = "https://github.com/{:s}".format(repo_origin)
+        GIT_URL = "git@github.com:{:s}".format(repo_origin)
+        # one job per pair (distro, distro-staging)
+        for repo_branch in repo_branches[repo_name]:
+            if not repo_branch.endswith("-staging"):
+                continue
+            if repo_branch not in distro_list:
+                continue
+            repo_branch_prod = repo_branch[:-len("-staging")]
+            if repo_branch_prod not in repo_branches[repo_name]:
+                logger.warning(f"Found branch '{repo_branch}' but not '{repo_branch_prod}' "
+                               f"in repository '{repo_name}'. This is weird. "
+                               f"Available branches are: {str(repo_branches[repo_name])}")
+
+            jname = stagesync_job_name(
+                from_branch=repo_branch_prod,
+                to_branch=repo_branch,
+                repo_name=repo_name
+            )
+
+            # find base jobs
+            if "base" in repo:
+                repo_base = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
+                BASE_JOB = ", ".join([
+                    stagesync_job_name(repo_branch_prod, repo_branch, b) for b in repo_base
+                ])
+            else:
+                BASE_JOB = ""
+
+            # create job by updating the template fields
+            job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
+            params = {
+                "REPO_OWNER": "duckietown",
+                "REPO_NAME": repo_name,
+                "REPO_URL": REPO_URL,
+                "FROM_BRANCH": repo_branch_prod,
+                "INTO_BRANCH": repo_branch,
+                "GIT_URL": GIT_URL,
+                "BASE_JOB": BASE_JOB,
+                "TIMEOUT_MINUTES": 1
+            }
+            config = stagesync_template_config.format(**params)
+            # write job to disk
+            os.makedirs(os.path.dirname(job_config_path))
+            with open(job_config_path, "wt") as fout:
+                fout.write(config)
+            stats["num_jobs"] += 1
+
     # print out stats
     logger.info(
         "Statistics: Total repos: {:d}; Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}".format(
@@ -352,6 +412,10 @@ def autobuild_job_name(distro, repo_name, arch):
 
 def automerge_job_name(from_branch, into_branch, repo_name):
     return "Git Automerge - {:s} -> {:s} - {:s}".format(from_branch, into_branch, repo_name)
+
+
+def stagesync_job_name(from_branch, to_branch, repo_name):
+    return "Stage Sync - {:s} >= {:s} - {:s}".format(from_branch, to_branch, repo_name)
 
 
 if __name__ == "__main__":

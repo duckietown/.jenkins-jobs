@@ -2829,8 +2829,8 @@
             },
             {
                 "commit": {
-                    "sha": "fb0bc62422c191ded856e26f8ecdbfaf2542d792",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/fb0bc62422c191ded856e26f8ecdbfaf2542d792"
+                    "sha": "06ceef1249f57e8d31f4605226fc572f4c71377f",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/06ceef1249f57e8d31f4605226fc572f4c71377f"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -2863,8 +2863,8 @@
             },
             {
                 "commit": {
-                    "sha": "897ec5387b38e95dd126cb5735bfc84439ec9d60",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/897ec5387b38e95dd126cb5735bfc84439ec9d60"
+                    "sha": "c264dd517fee00cb21d9341f70ff716bdab585fd",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/c264dd517fee00cb21d9341f70ff716bdab585fd"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -2879,7 +2879,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-health/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"e85d4971d12630d07aeda59542cfe52b3a8248fc3d3e028be87b07466c03daba\""
+        "ETag": "W/\"84e1f7580af9f96c15502e59da7b684623f3c0c46b9840cbdcf635a3b620c7a1\""
     },
     "duckietown/dt-device-online": {
         "Content": [
@@ -5039,8 +5039,8 @@
             },
             {
                 "commit": {
-                    "sha": "bdb1b4c03f35b0fcd6c61492d8de8494779c4668",
-                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/bdb1b4c03f35b0fcd6c61492d8de8494779c4668"
+                    "sha": "53bbecd7468616c428dc181c5625f9e28b619a11",
+                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/53bbecd7468616c428dc181c5625f9e28b619a11"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -5056,8 +5056,8 @@
             },
             {
                 "commit": {
-                    "sha": "bdb1b4c03f35b0fcd6c61492d8de8494779c4668",
-                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/bdb1b4c03f35b0fcd6c61492d8de8494779c4668"
+                    "sha": "df6238fd2b9e5d512f1b739f4519a79716ed6ea5",
+                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/df6238fd2b9e5d512f1b739f4519a79716ed6ea5"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -5208,7 +5208,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-vscode/branches/vscode-extension/protection"
             }
         ],
-        "ETag": "W/\"53c3d1bc2dea29ecfe43236d4be5136c84624780cbc62bead24f00fde7558464\""
+        "ETag": "W/\"4b47c15d6651da62d4525efb5c099aa5610af17c1579edc9707c3daaaced8e13\""
     },
     "duckietown/dt-wifi-access-point": {
         "Content": [

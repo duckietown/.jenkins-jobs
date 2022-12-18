@@ -11,5 +11,5 @@
 !jobs
 !jobs/*
 !jobs/*/config.xml
-!jobs/__template__/config.xml.template
+!jobs/__*template__/config.xml.template
 .DS_Store

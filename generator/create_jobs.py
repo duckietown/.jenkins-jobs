@@ -130,6 +130,9 @@ def main():
     # ---
     for repo in repos:
         logger.info("Analyzing [{:s}]".format(repo["name"]))
+        # must have a dtproject label
+        if "dtproject" not in repo["labels"]:
+            continue
         # repo info
         repo_name = repo["name"]
         repo_origin = repo["origin"]
@@ -306,14 +309,20 @@ def main():
     # ---
     # create auto-merging jobs
     for repo in repos:
+        # must have a dtproject label
+        if "dtproject" not in repo["labels"]:
+            continue
+        # repo info
         repo_name = repo["name"]
         repo_origin = repo["origin"]
         REPO_URL = "https://github.com/{:s}".format(repo_origin)
         GIT_URL = "git@github.com:{:s}".format(repo_origin)
         # one job per pair (distro, distro-staging)
         for repo_branch in repo_branches[repo_name]:
+            # auto-merge can only happen on X-staging branches
             if not repo_branch.endswith("-staging"):
                 continue
+            # we only add this job if this branch is one of those we care about
             if repo_branch not in distro_list:
                 continue
             repo_branch_prod = repo_branch[:-len("-staging")]
@@ -347,13 +356,20 @@ def main():
     # ---
     # create stage-sync jobs
     for repo in repos:
+        # must have a dtproject label
+        if "dtproject" not in repo["labels"]:
+            continue
+        # repo info
         repo_name = repo["name"]
         repo_origin = repo["origin"]
         REPO_URL = "https://github.com/{:s}".format(repo_origin)
+        GIT_URL = "git@github.com:{:s}".format(repo_origin)
         # one job per pair (distro, distro-staging)
         for repo_branch in repo_branches[repo_name]:
+            # stage-sync can only happen on X-staging branches
             if not repo_branch.endswith("-staging"):
                 continue
+            # we only add this job if this branch is one of those we care about
             if repo_branch not in distro_list:
                 continue
             repo_branch_prod = repo_branch[:-len("-staging")]
@@ -383,6 +399,7 @@ def main():
                 "REPO_OWNER": "duckietown",
                 "REPO_NAME": repo_name,
                 "REPO_URL": REPO_URL,
+                "GIT_URL": GIT_URL,
                 "FROM_BRANCH": repo_branch_prod,
                 "TO_BRANCH": repo_branch,
                 "BASE_JOB": BASE_JOB,

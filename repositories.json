@@ -1,168 +1,200 @@
 [
     {
         "name": "dt-base-environment",
-        "origin": "duckietown/dt-base-environment"
+        "origin": "duckietown/dt-base-environment",
+        "labels":["dtproject"]
     },
     {
         "name": "dt-commons",
         "origin": "duckietown/dt-commons",
-        "base": "dt-base-environment"
+        "base": "dt-base-environment",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-ros-commons",
         "origin": "duckietown/dt-ros-commons",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-rosbridge-websocket",
         "origin": "duckietown/dt-rosbridge-websocket",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-duckiebot-interface",
         "origin": "duckietown/dt-duckiebot-interface",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-car-interface",
         "origin": "duckietown/dt-car-interface",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-drone-interface",
         "origin": "duckietown/dt-drone-interface",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-core",
         "origin": "duckietown/dt-core",
         "base": "dt-ros-commons",
-        "timeout_min": 360
+        "timeout_min": 360,
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-gui-tools",
         "origin": "duckietown/dt-gui-tools",
         "base": "dt-core",
         "dts_args": {
-            "--ci-force-builder-arch": "amd64"
+            "--ci-force-builder-arch": "amd64",
+            "labels": ["dtproject"]
         },
-        "blacklist": ["arm32v7"]
+        "blacklist": ["arm32v7"],
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-device-dashboard",
         "origin": "duckietown/dt-device-dashboard",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-device-online",
         "origin": "duckietown/dt-device-online",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-device-health",
         "origin": "duckietown/dt-device-health",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-device-proxy",
         "origin": "duckietown/dt-device-proxy",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-system-monitor",
         "origin": "duckietown/dt-system-monitor",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-files-api",
         "origin": "duckietown/dt-files-api",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-code-api",
         "origin": "duckietown/dt-code-api",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-vscode",
         "origin": "duckietown/dt-vscode",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-wifi-access-point",
         "origin": "duckietown/dt-wifi-access-point",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-firmware-upgrade",
         "origin": "duckietown/dt-firmware-upgrade",
-        "base": ["dt-commons", "dt-device-health"]
+        "base": ["dt-commons", "dt-device-health"],
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-machine-learning-base-environment",
         "origin": "duckietown/dt-machine-learning-base-environment",
         "base": "dt-ros-commons",
-        "blacklist": ["arm32v7"]
+        "blacklist": ["arm32v7"],
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-machine-learning-base-pytorch",
         "origin": "duckietown/dt-machine-learning-base-pytorch",
-        "base": "dt-machine-learning-base-environment"
+        "base": "dt-machine-learning-base-environment",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-template-ros",
         "origin": "duckietown/challenge-aido_LF-template-ros",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-template-random",
         "origin": "duckietown/challenge-aido_LF-template-random",
-        "base": "aido-base-python3"
+        "base": "aido-base-python3",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-template-pytorch",
         "origin": "duckietown/challenge-aido_LF-template-pytorch",
         "base": "dt-machine-learning-base-environment",
-        "blacklist": ["arm32v7"]
+        "blacklist": ["arm32v7"],
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-template-tensorflow",
         "origin": "duckietown/challenge-aido_LF-template-tensorflow",
         "base": "dt-machine-learning-base-environment",
-        "blacklist": ["arm32v7"]
+        "blacklist": ["arm32v7"],
+        "labels": ["dtproject"]
     },
     {
         "name": "aido-base-python3",
         "origin": "duckietown/aido-base-python3",
         "base": "dt-commons",
-        "blacklist": ["arm32v7"]
+        "blacklist": ["arm32v7"],
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-baseline-duckietown",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown",
-        "base": ["dt-car-interface", "dt-core", "challenge-aido_LF-template-ros"]
+        "base": ["dt-car-interface", "dt-core", "challenge-aido_LF-template-ros"],
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-baseline-RPL-ros",
         "origin": "duckietown/challenge-aido_LF-baseline-RPL-ros",
-        "base": "challenge-aido_lf-baseline-duckietown"
+        "base": "challenge-aido_lf-baseline-duckietown",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-hardware-benchmark-backend",
         "origin": "duckietown/dt-hardware-benchmark-backend",
         "base": "dt-ros-commons",
-        "blacklist":["arm32v7", "arm64v8", "amd64"]
+        "blacklist":["arm32v7", "arm64v8", "amd64"],
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-hardware-benchmark-frontend",
         "origin": "duckietown/dt-hardware-benchmark-frontend",
         "base": "dt-ros-commons",
-        "blacklist": ["arm32v7", "arm64v8", "amd64"]
+        "blacklist": ["arm32v7", "arm64v8", "amd64"],
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-duckiebot-fifos-bridge",
         "origin": "duckietown/dt-duckiebot-fifos-bridge",
-        "base": "dt-ros-commons"
+        "base": "dt-ros-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-autolab-commons",
@@ -170,90 +202,107 @@
         "base": "dt-ros-commons",
         "dts_args": {
             "--ncpus": "3"
-        }
+        },
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-autolab-device-interface",
         "origin": "duckietown/dt-autolab-device-interface",
-        "base": "dt-autolab-commons"
+        "base": "dt-autolab-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-autolab-proxy",
         "origin": "duckietown/dt-autolab-proxy",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-autolab-localization",
         "origin": "duckietown/dt-autolab-localization",
-        "base": "dt-autolab-commons"
+        "base": "dt-autolab-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-aido-autolab-evaluator",
         "origin": "duckietown/dt-aido-autolab-evaluator",
-        "base": "dt-commons"
+        "base": "dt-commons",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-baseline-duckietown-ml",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown-ml",
-        "base": ["challenge-aido_LF-baseline-duckietown", "challenge-aido_LF-template-pytorch"]
+        "base": ["challenge-aido_LF-baseline-duckietown", "challenge-aido_LF-template-pytorch"],
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-baseline-simple-yield",
         "origin": "duckietown/challenge-aido_LF-baseline-simple-yield",
-        "base": "aido-base-python3"
+        "base": "aido-base-python3",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-experiment_manager",
         "origin": "duckietown/challenge-aido_LF-experiment_manager",
-        "base": "aido-base-python3"
+        "base": "aido-base-python3",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-minimal-agent",
         "origin": "duckietown/challenge-aido_LF-minimal-agent",
-        "base": "aido-base-python3"
+        "base": "aido-base-python3",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-minimal-agent-full",
         "origin": "duckietown/challenge-aido_LF-minimal-agent-full",
-        "base": "aido-base-python3"
+        "base": "aido-base-python3",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-minimal-agent-state",
         "origin": "duckietown/challenge-aido_LF-minimal-agent-state",
-        "base": "aido-base-python3"
+        "base": "aido-base-python3",
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-scenario_maker",
         "origin": "duckietown/challenge-aido_LF-scenario_maker",
-        "base": "aido-base-python3"
+        "base": "aido-base-python3",
+        "labels": ["dtproject"]
     },
     {
         "name": "gym-duckietown",
         "origin": "duckietown/gym-duckietown",
         "base": "dt-commons",
-        "blacklist": ["arm32v7"]
+        "blacklist": ["arm32v7"],
+        "labels": ["dtproject"]
     },
     {
         "name": "challenge-aido_LF-simulator-gym",
         "origin": "duckietown/challenge-aido_LF-simulator-gym",
-        "base": "gym-duckietown"
+        "base": "gym-duckietown",
+        "labels": ["dtproject"]
     },
     {
         "name": "duckietown-challenges-cli",
         "origin": "duckietown/duckietown-challenges-cli",
         "base": "dt-base-environment",
-        "blacklist": ["arm32v7"]
+        "blacklist": ["arm32v7"],
+        "labels": ["dtproject"]
     },
 
     {
         "name": "aido-submission-ci-test",
         "origin": "duckietown/aido-submission-ci-test",
-        "base": "aido-base-python3"
+        "base": "aido-base-python3",
+        "labels": ["dtproject"]
     },
     {
         "name": "dt-statistics-server",
         "origin": "duckietown/dt-statistics-server",
         "base": "dt-commons",
-        "blacklist": ["arm32v7", "arm64v8"]
+        "blacklist": ["arm32v7", "arm64v8"],
+        "labels": ["dtproject"]
     }
 ]

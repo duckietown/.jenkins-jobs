@@ -52,8 +52,7 @@
         "origin": "duckietown/dt-gui-tools",
         "base": "dt-core",
         "dts_args": {
-            "--ci-force-builder-arch": "amd64",
-            "labels": ["dtproject"]
+            "--ci-force-builder-arch": "amd64"
         },
         "blacklist": ["arm32v7"],
         "labels": ["dtproject"]

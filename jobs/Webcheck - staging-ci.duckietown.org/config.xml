@@ -12,7 +12,7 @@
     <hudson.tasks.Shell>
       <command>
 # (try to) reach website
-curl --silent --show-error --fail https://staging-ci.duckietown.org
+curl --silent --show-error --fail --user-agent "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0" https://staging-ci.duckietown.org/login
       </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
@@ -34,14 +34,6 @@ curl --silent --show-error --fail https://staging-ci.duckietown.org
     </hudson.plugins.ws__cleanup.WsCleanup>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.43">
-      <deleteDirs>false</deleteDirs>
-      <cleanupParameter></cleanupParameter>
-      <externalDelete></externalDelete>
-      <disableDeferredWipeout>false</disableDeferredWipeout>
-    </hudson.plugins.ws__cleanup.PreBuildCleanup>
-    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@523.vd859a_4b_122e6">
-    </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.24">
       <strategy class="hudson.plugins.build_timeout.impl.ElasticTimeOutStrategy">
         <timeoutPercentage>100</timeoutPercentage>

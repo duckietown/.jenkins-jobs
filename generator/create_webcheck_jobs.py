@@ -10,6 +10,7 @@ logger.setLevel(logging.INFO)
 
 WEBCHECK_TEMPLATE_JOB = "__webcheck_template__"
 DEFAULT_TIMEOUT_MINUTES = 1
+DEFAULT_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"
 
 
 def main():
@@ -73,6 +74,7 @@ def main():
         params = {
             "NAME": website_name,
             "URL": website_url,
+            "USER_AGENT": DEFAULT_USER_AGENT,
             "TIMEOUT_MINUTES": website_timeout,
         }
         config = webcheck_template_config.format(**params)

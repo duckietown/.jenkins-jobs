@@ -2304,8 +2304,8 @@
             },
             {
                 "commit": {
-                    "sha": "3baea77e7b6b25a08a7f46caf25f10e776eb8fe3",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/3baea77e7b6b25a08a7f46caf25f10e776eb8fe3"
+                    "sha": "e38f140e51855aba2ad445c6f0b6d866a8428abb",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/e38f140e51855aba2ad445c6f0b6d866a8428abb"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -2388,14 +2388,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-commons/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"600820ae8c6cc44ec22396e8b37cd66f9586ead1d2c63b666a509b9a7accde32\""
+        "ETag": "W/\"44b6a1d99ac76b2d63066c3f5632498c732d90fc56bf63eda2b99c799161271d\""
     },
     "duckietown/dt-core": {
         "Content": [
             {
                 "commit": {
-                    "sha": "528dd80788e5a1a941a373874f76e7aa1aed64f4",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/528dd80788e5a1a941a373874f76e7aa1aed64f4"
+                    "sha": "6d8e99a5849737f86cab72b04fd2b449528226be",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/6d8e99a5849737f86cab72b04fd2b449528226be"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -2547,8 +2547,8 @@
             },
             {
                 "commit": {
-                    "sha": "202907a4fa4571871988ad4eeaee071664b58ed6",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/202907a4fa4571871988ad4eeaee071664b58ed6"
+                    "sha": "669a55e8c7055967932093ab24c854ed2f613189",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/669a55e8c7055967932093ab24c854ed2f613189"
                 },
                 "name": "daffy-robot-params",
                 "protected": false,
@@ -2564,8 +2564,8 @@
             },
             {
                 "commit": {
-                    "sha": "528dd80788e5a1a941a373874f76e7aa1aed64f4",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/528dd80788e5a1a941a373874f76e7aa1aed64f4"
+                    "sha": "6d8e99a5849737f86cab72b04fd2b449528226be",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/6d8e99a5849737f86cab72b04fd2b449528226be"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -2716,7 +2716,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-core/branches/rectification-clusters/protection"
             }
         ],
-        "ETag": "W/\"cd9cdb3018503cc08b8f41080793df960bc6c67b9adbf5a65e34b793efc99f89\""
+        "ETag": "W/\"4a3b8b24d978488778dcac3d227438c13e61763684e0135397aca1dda8265c4b\""
     },
     "duckietown/dt-device-dashboard": {
         "Content": [
@@ -2846,8 +2846,8 @@
             },
             {
                 "commit": {
-                    "sha": "e871aaf76c9408947a7780bda4ec7ca15866e5e2",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/e871aaf76c9408947a7780bda4ec7ca15866e5e2"
+                    "sha": "1170d40f1c717a666c55423d093e61ab8f0a73a9",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/1170d40f1c717a666c55423d093e61ab8f0a73a9"
                 },
                 "name": "daffy-staging-gpu-usage",
                 "protected": false,
@@ -2896,7 +2896,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-health/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"400497e071a44aed5f4f6401ff62a9613c776eca3947eec22b93ae901bd65888\""
+        "ETag": "W/\"a67936111399225fd3bb5a2906602736a52d486e7737e5b310b2fc7159150c2c\""
     },
     "duckietown/dt-device-online": {
         "Content": [
@@ -4402,8 +4402,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "c529dd1771553a934d8422be11ae4c8407c597e0",
-                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/c529dd1771553a934d8422be11ae4c8407c597e0"
+                    "sha": "4467c11baedf20561e205c8c8b1f9662291bf617",
+                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/4467c11baedf20561e205c8c8b1f9662291bf617"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -4419,8 +4419,8 @@
             },
             {
                 "commit": {
-                    "sha": "c529dd1771553a934d8422be11ae4c8407c597e0",
-                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/c529dd1771553a934d8422be11ae4c8407c597e0"
+                    "sha": "33ceaefd32f7a712aec868a44f28c2c57018d49d",
+                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/33ceaefd32f7a712aec868a44f28c2c57018d49d"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -4436,8 +4436,8 @@
             },
             {
                 "commit": {
-                    "sha": "c529dd1771553a934d8422be11ae4c8407c597e0",
-                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/c529dd1771553a934d8422be11ae4c8407c597e0"
+                    "sha": "34c3f00cd7be86e3108725f0b2be6d306d325540",
+                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/34c3f00cd7be86e3108725f0b2be6d306d325540"
                 },
                 "name": "ente",
                 "protected": false,
@@ -4453,8 +4453,8 @@
             },
             {
                 "commit": {
-                    "sha": "c529dd1771553a934d8422be11ae4c8407c597e0",
-                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/c529dd1771553a934d8422be11ae4c8407c597e0"
+                    "sha": "34c3f00cd7be86e3108725f0b2be6d306d325540",
+                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/34c3f00cd7be86e3108725f0b2be6d306d325540"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -4469,7 +4469,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"69dcac48415a73ff60a42b071a29bf676b3bb7d19dffe2a214c8aff8732a9da1\""
+        "ETag": "W/\"ab0f5cc4a694a1e5b51f3ad6162272ba19fdc5cfc872ebf79e42b107b7361a13\""
     },
     "duckietown/dt-ros-commons": {
         "Content": [
@@ -4594,6 +4594,23 @@
             },
             {
                 "commit": {
+                    "sha": "8da2189b228e7bb47f5a76d8830d11e7e15e599c",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/8da2189b228e7bb47f5a76d8830d11e7e15e599c"
+                },
+                "name": "daffy-package-path-from-node",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-ros-commons/branches/daffy-package-path-from-node/protection"
+            },
+            {
+                "commit": {
                     "sha": "bbd66ec84b12de414093e9abbe961299bbf7be86",
                     "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/bbd66ec84b12de414093e9abbe961299bbf7be86"
                 },
@@ -4611,8 +4628,8 @@
             },
             {
                 "commit": {
-                    "sha": "b66ac8576911bbce9cb4277353f332d45c2b1752",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/b66ac8576911bbce9cb4277353f332d45c2b1752"
+                    "sha": "2524f632cd6712cf23c8525b5fc65b3d136d1e83",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/2524f632cd6712cf23c8525b5fc65b3d136d1e83"
                 },
                 "name": "daffy-robot-params",
                 "protected": false,
@@ -4797,7 +4814,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-ros-commons/branches/sth/protection"
             }
         ],
-        "ETag": "W/\"0cf541465bbf61372a6ff4f16a0c31e6c9ac6e81e80656d05f089b45a0d6dde0\""
+        "ETag": "W/\"8fe548f865c2b3947db71b932411d7c58eb6279d1ef80c360bbae3ccd0f60d78\""
     },
     "duckietown/dt-rosbridge-websocket": {
         "Content": [
@@ -5360,8 +5377,8 @@
             },
             {
                 "commit": {
-                    "sha": "fff88234d37c62336e71d663da5955e84aaf0021",
-                    "url": "https://api.github.com/repos/duckietown/gym-duckietown/commits/fff88234d37c62336e71d663da5955e84aaf0021"
+                    "sha": "47fc720cff8d6b52afb7febe5116f014f2a8565e",
+                    "url": "https://api.github.com/repos/duckietown/gym-duckietown/commits/47fc720cff8d6b52afb7febe5116f014f2a8565e"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -5428,8 +5445,8 @@
             },
             {
                 "commit": {
-                    "sha": "fff88234d37c62336e71d663da5955e84aaf0021",
-                    "url": "https://api.github.com/repos/duckietown/gym-duckietown/commits/fff88234d37c62336e71d663da5955e84aaf0021"
+                    "sha": "47fc720cff8d6b52afb7febe5116f014f2a8565e",
+                    "url": "https://api.github.com/repos/duckietown/gym-duckietown/commits/47fc720cff8d6b52afb7febe5116f014f2a8565e"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -5553,6 +5570,6 @@
                 "protection_url": "https://api.github.com/repos/duckietown/gym-duckietown/branches/texture-multisample/protection"
             }
         ],
-        "ETag": "W/\"1561c89df1db46a9486006ad771745e2235ffe4545927e3a664f0b619792fe1c\""
+        "ETag": "W/\"cdfa3dd0d8f2d1973f056373e494555bc1c190dabd8b74cca9c4a54c28ad6249\""
     }
 }

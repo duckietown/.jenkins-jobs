@@ -1,0 +1,54 @@
+[
+    {
+        "name": "duckietown.org",
+        "url": "https://duckietown.org",
+        "labels":["production"]
+    },
+    {
+        "name": "duckietown.com",
+        "url": "https://duckietown.com",
+        "labels":["production"]
+    },
+    {
+        "name": "data.duckietown.org",
+        "url": "https://data.duckietown.org",
+        "labels":["MUST-BECOME-DOT-COM", "production"]
+    },
+    {
+        "name": "logs.duckietown.org",
+        "url": "https://logs.duckietown.org",
+        "labels":["MUST-BECOME-DOT-COM", "production"]
+    },
+    {
+        "name": "dashboard.duckietown.org",
+        "url": "https://dashboard.duckietown.org",
+        "labels":["MUST-BECOME-DOT-COM", "production"]
+    },
+    {
+        "name": "docs.duckietown.org",
+        "url": "https://docs.duckietown.org",
+        "labels":["MUST-BECOME-DOT-COM", "production"]
+    },
+    {
+        "name": "docs.duckietown.com",
+        "url": "https://docs.duckietown.com",
+        "labels":["production"]
+    },
+    {
+        "name": "staging-docs.duckietown.com",
+        "url": "https://staging-docs.duckietown.com",
+        "labels":["staging"]
+    },
+    
+    
+    {
+        "name": "ci.duckietown.org",
+        "url": "https://ci.duckietown.org/login",
+        "labels":["IT_CANNOT_CHECK_ITSELF", "staging"]
+    },
+    {
+        "name": "staging-ci.duckietown.org",
+        "url": "https://staging-ci.duckietown.org/login",
+        "labels":["IT_CANNOT_CHECK_ITSELF", "production"]
+    }
+]

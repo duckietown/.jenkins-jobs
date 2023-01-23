@@ -5,6 +5,7 @@
 !.gitignore
 !README.md
 !repositories.json
+!websites.json
 !generator
 !generator/*
 !Makefile

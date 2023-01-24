@@ -63,17 +63,17 @@ export DTSHELL_COMMANDS="$(pwd)/_commands"
 export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
 
 # build HTML
-dts docs build \
-  --distro {REPO_DISTRO}
+dts --debug \
+  docs build
 
 # build PDF
-dts docs build \
-  --distro {REPO_DISTRO} \
-  --pdf
+dts --debug \
+  docs build \
+    --pdf
 
 # publish HTML and PDF
-dts docs publish \
-  --distro {REPO_DISTRO}
+dts --debug \
+  docs publish
 
 # clean workspace
 rm -rf ./_commands

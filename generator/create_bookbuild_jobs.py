@@ -142,6 +142,13 @@ def main():
 
         # create one job per distro
         for repo_distro in repo_distros:
+            # staging?
+            is_staging = "-staging" in repo_distro
+            if is_staging:
+                DOCKER_REGISTRY = "registry-stage2.duckietown.org"
+            else:
+                DOCKER_REGISTRY = "docker.io"
+            # job name
             jname = bookbuild_job_name(repo_distro, repo_name)
             # create job by updating the template fields
             job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
@@ -150,6 +157,7 @@ def main():
                 "REPO_URL": REPO_URL,
                 "REPO_DISTRO": repo_distro,
                 "GIT_URL": GIT_URL,
+                "DOCKER_REGISTRY": DOCKER_REGISTRY,
                 "BASE_JOB": "",
                 "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
                 "TIMEOUT_MINUTES": repo_build_timeout,

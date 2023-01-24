@@ -59,6 +59,9 @@
 git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-commands ./_commands
 export DTSHELL_COMMANDS="$(pwd)/_commands"
 
+# configure environment
+export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
+
 # build HTML
 dts docs build
 

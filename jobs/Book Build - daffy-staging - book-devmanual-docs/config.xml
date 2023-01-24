@@ -63,16 +63,17 @@ export DTSHELL_COMMANDS="$(pwd)/_commands"
 export DOCKER_REGISTRY="registry-stage2.duckietown.org"
 
 # build HTML
-dts docs build
+dts docs build \
+  --distro daffy-staging
 
 # build PDF
-dts docs build --pdf
+dts docs build \
+  --distro daffy-staging \
+  --pdf
 
-# publish HTML
-dts docs publish
-
-# publish PDF
-dts docs publish --pdf
+# publish HTML and PDF
+dts docs publish \
+  --distro daffy-staging
 
 # clean workspace
 rm -rf ./_commands

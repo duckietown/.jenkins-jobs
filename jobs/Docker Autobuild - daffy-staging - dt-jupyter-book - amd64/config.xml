@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Autobuild for repository dt-commons</description>
+  <description>Autobuild for repository dt-jupyter-book</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.5">
-      <projectUrl>https://github.com/duckietown/dt-commons</projectUrl>
+      <projectUrl>https://github.com/duckietown/dt-jupyter-book</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -13,7 +13,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git@github.com:duckietown/dt-commons</url>
+        <url>git@github.com:duckietown/dt-jupyter-book</url>
         <credentialsId>GITHUB_SSH_KEY</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -39,7 +39,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Docker Autobuild - daffy-staging - dt-base-environment - amd64</upstreamProjects>
+      <upstreamProjects>Docker Autobuild - daffy-staging - dt-commons - amd64</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -69,7 +69,7 @@ git clone -b daffy-staging https://github.com/duckietown/duckietown-shell-comman
 export DTSHELL_COMMANDS="$(pwd)/commands"
 
 # fetch code
-git clone -b daffy-staging git@github.com:duckietown/dt-commons ./ws
+git clone -b daffy-staging git@github.com:duckietown/dt-jupyter-book ./ws
 git -C ./ws fetch --tags
 
 # install/update duckietown-shell
@@ -128,7 +128,7 @@ rm -rf ./ws
               </configs>
             </hudson.plugins.parameterizedtrigger.BooleanParameters>
           </configs>
-          <projects>Docker Autobuild - daffy-staging - dt-ros-commons - amd64, Docker Autobuild - daffy-staging - dt-device-dashboard - amd64, Docker Autobuild - daffy-staging - dt-device-online - amd64, Docker Autobuild - daffy-staging - dt-device-health - amd64, Docker Autobuild - daffy-staging - dt-device-proxy - amd64, Docker Autobuild - daffy-staging - dt-system-monitor - amd64, Docker Autobuild - daffy-staging - dt-files-api - amd64, Docker Autobuild - daffy-staging - dt-code-api - amd64, Docker Autobuild - daffy-staging - dt-vscode - amd64, Docker Autobuild - daffy-staging - dt-wifi-access-point - amd64, Docker Autobuild - daffy-staging - dt-firmware-upgrade - amd64, Docker Autobuild - daffy-staging - aido-base-python3 - amd64, Docker Autobuild - daffy-staging - dt-autolab-proxy - amd64, Docker Autobuild - daffy-staging - dt-aido-autolab-evaluator - amd64, Docker Autobuild - daffy-staging - gym-duckietown - amd64, Docker Autobuild - daffy-staging - dt-statistics-server - amd64, Docker Autobuild - daffy-staging - dt-jupyter-book - amd64</projects>
+          <projects></projects>
           <condition>FAILED</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

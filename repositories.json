@@ -303,5 +303,12 @@
         "base": "dt-commons",
         "blacklist": ["arm32v7", "arm64v8"],
         "labels": ["dtproject"]
+    },
+    {
+        "name": "dt-jupyter-book",
+        "origin": "duckietown/dt-jupyter-book",
+        "base": "dt-commons",
+        "blacklist": ["arm32v7"],
+        "labels": ["dtproject"]
     }
 ]

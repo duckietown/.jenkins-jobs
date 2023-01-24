@@ -1,0 +1,30 @@
+[
+    {
+        "name": "book-opmanual-duckiebot",
+        "origin": "duckietown/book-opmanual-duckiebot"
+    },
+    {
+        "name": "book-opmanual-duckietown",
+        "origin": "duckietown/book-opmanual-duckietown"
+    },
+    {
+        "name": "book-opmanual-autolab",
+        "origin": "duckietown/book-opmanual-autolab"
+    },
+    {
+        "name": "book-opmanual-duckiedrone",
+        "origin": "duckietown/book-opmanual-duckiedrone"
+    },
+    {
+        "name": "book-devmanual-docs",
+        "origin": "duckietown/book-devmanual-docs"
+    },
+    {
+        "name": "book-devmanual-shell",
+        "origin": "duckietown/book-devmanual-shell"
+    },
+    {
+        "name": "book-devmanual-lx",
+        "origin": "duckietown/book-devmanual-lx"
+    }
+]

@@ -61,19 +61,10 @@ export DTSHELL_COMMANDS="$(pwd)/_commands"
 
 # configure environment
 export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
+dts --set-version daffy-staging exit
 
-# build HTML
-dts --debug \
-  docs build
-
-# build PDF
-dts --debug \
-  docs build \
-    --pdf
-
-# publish HTML and PDF
-dts --debug \
-  docs publish
+# build book and publish
+dts --debug docs build --ci --publish {BOOK_LIBRARY_DNS}
 
 # clean workspace
 rm -rf ./_commands

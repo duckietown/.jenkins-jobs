@@ -6,6 +6,7 @@
 !README.md
 !repositories.json
 !websites.json
+!books.json
 !generator
 !generator/*
 !Makefile

@@ -2,7 +2,7 @@ ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 ARCH:="arm32v7,arm64v8,amd64"
 
-_generate:
+_generate_autobuild:
 	# repository jobs
 	rm -rf ${ROOT_DIR}/jobs/Docker\ Autobuild*
 	rm -rf ${ROOT_DIR}/jobs/Git\ Automerge*
@@ -12,6 +12,8 @@ _generate:
 		--repos ${ROOT_DIR}/repositories.json \
 		--arch ${ARCH} \
 		--distro ${DISTRO}
+
+_generate_webcheck:
 	# webcheck jobs
 	rm -rf ${ROOT_DIR}/jobs/Webcheck*
 	python3 ${ROOT_DIR}/generator/create_webcheck_jobs.py \
@@ -19,10 +21,18 @@ _generate:
 		--websites ${ROOT_DIR}/websites.json \
 		--labels ${LABELS}
 
+_generate_bookbuild:
+	# bookbuild jobs
+	rm -rf ${ROOT_DIR}/jobs/Book\ Build*
+	python3 ${ROOT_DIR}/generator/create_bookbuild_jobs.py \
+		--jobsdir ${ROOT_DIR}/jobs/ \
+		--books ${ROOT_DIR}/books.json \
+		--distro ${DISTRO}
+
 generate-production: DISTRO=daffy,ente
 generate-production: LABELS=production
-generate-production: _generate
+generate-production: _generate_autobuild _generate_webcheck _generate_bookbuild
 
 generate-staging: DISTRO=daffy-staging,ente-staging
 generate-staging: LABELS=staging
-generate-staging: _generate
+generate-staging: _generate_autobuild _generate_webcheck _generate_bookbuild

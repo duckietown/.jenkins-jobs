@@ -3170,8 +3170,8 @@
             },
             {
                 "commit": {
-                    "sha": "1170d40f1c717a666c55423d093e61ab8f0a73a9",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/1170d40f1c717a666c55423d093e61ab8f0a73a9"
+                    "sha": "0cc4cd15ef67d0d000fc6e631ca84e638b340ea1",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/0cc4cd15ef67d0d000fc6e631ca84e638b340ea1"
                 },
                 "name": "daffy-staging-gpu-usage",
                 "protected": false,
@@ -3220,7 +3220,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-health/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"a67936111399225fd3bb5a2906602736a52d486e7737e5b310b2fc7159150c2c\""
+        "ETag": "W/\"c320b46e9c895ad8c73745d5a69b738aa03587ddadd0c35c61f9b5649ef10121\""
     },
     "duckietown/dt-device-online": {
         "Content": [
@@ -4631,6 +4631,45 @@
             }
         ],
         "ETag": "W/\"46b4ce85c511520ca9059a8c949f9ca43f6a5a46af9a69587e760c2171590542\""
+    },
+    "duckietown/dt-jupyter-book": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "372c5577d4c07e07d2864c1e1cb06e3889cadd93",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/372c5577d4c07e07d2864c1e1cb06e3889cadd93"
+                },
+                "name": "daffy",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/daffy/protection"
+            },
+            {
+                "commit": {
+                    "sha": "6cb4d732b66a9c67b5f4eabdea52a6efdf758e72",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/6cb4d732b66a9c67b5f4eabdea52a6efdf758e72"
+                },
+                "name": "daffy-staging",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/daffy-staging/protection"
+            }
+        ],
+        "ETag": "W/\"f4e4bb583b714f8009b0ac5ef528dc8b1a50de19666885016418d4820b0e12eb\""
     },
     "duckietown/dt-machine-learning-base-environment": {
         "Content": [

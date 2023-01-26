@@ -4636,8 +4636,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "53f18ba9dc30f37c71d0023f3e9ff7cbda38d0d5",
-                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/53f18ba9dc30f37c71d0023f3e9ff7cbda38d0d5"
+                    "sha": "b1c436ec2b094159de8f16a8a89fdf6d5eaecb6f",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/b1c436ec2b094159de8f16a8a89fdf6d5eaecb6f"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -4653,8 +4653,8 @@
             },
             {
                 "commit": {
-                    "sha": "53f18ba9dc30f37c71d0023f3e9ff7cbda38d0d5",
-                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/53f18ba9dc30f37c71d0023f3e9ff7cbda38d0d5"
+                    "sha": "b1c436ec2b094159de8f16a8a89fdf6d5eaecb6f",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/b1c436ec2b094159de8f16a8a89fdf6d5eaecb6f"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -4669,7 +4669,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"562e57001c96d3009f5ed0683ff39e0f2b7b1fea9bf445d0d0a08437bf96cac0\""
+        "ETag": "W/\"393ba22cbd4eb2af5fc892a2beec0530a51528e5def56afa2d0e09b0da71dbf1\""
     },
     "duckietown/dt-machine-learning-base-environment": {
         "Content": [

@@ -61,7 +61,7 @@ export DTSHELL_COMMANDS="$(pwd)/_commands"
 
 # configure environment
 export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
-dts --set-version daffy-staging exit
+dts --set-version {REPO_DISTRO} exit
 
 # build book and publish
 dts --debug docs build --ci --publish {BOOK_LIBRARY_DNS}

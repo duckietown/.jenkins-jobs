@@ -61,7 +61,7 @@ export DTSHELL_COMMANDS="$(pwd)/_commands"
 
 # configure environment
 export DOCKER_REGISTRY="docker.io"
-dts --set-version daffy-staging exit
+dts --set-version daffy exit
 
 # build book and publish
 dts --debug docs build --ci --publish docs.duckietown.com

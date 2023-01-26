@@ -188,8 +188,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "e4b13e7f03b99653e687a4e24efc743fde74860f",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-lx/commits/e4b13e7f03b99653e687a4e24efc743fde74860f"
+                    "sha": "d4617eec43c45711e43d8a31861f87bf8e6c807d",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-lx/commits/d4617eec43c45711e43d8a31861f87bf8e6c807d"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -221,14 +221,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-lx/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"e64c92cb7e425cdd821a569f01624b5212a7d95d8dcca7d8e9b19c775972a09c\""
+        "ETag": "W/\"2fb38f838381bcf1e6ac387d1651ac95071f4094d9a5053e34c5e2699a8b386e\""
     },
     "duckietown/book-devmanual-shell": {
         "Content": [
             {
                 "commit": {
-                    "sha": "619382496a6c461e578ee68cb8ed637d42b5a833",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-shell/commits/619382496a6c461e578ee68cb8ed637d42b5a833"
+                    "sha": "647565bdd1e175e4472340c02a2f81b090e7714f",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-shell/commits/647565bdd1e175e4472340c02a2f81b090e7714f"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -260,14 +260,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-shell/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"b837962d0ea6f23a6ac09a3230d4724b199a41979f8047561f37f137c0b1091d\""
+        "ETag": "W/\"8d51c9558952ddcc807368174ef389546d07016e2fc43060d35078b2cce40b1d\""
     },
     "duckietown/book-opmanual-autolab": {
         "Content": [
             {
                 "commit": {
-                    "sha": "28c2a3d0150e842907f739846cbc11145c341bef",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-autolab/commits/28c2a3d0150e842907f739846cbc11145c341bef"
+                    "sha": "99765c5a4554136ff1e24c8dc704e6571e7f7f7f",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-autolab/commits/99765c5a4554136ff1e24c8dc704e6571e7f7f7f"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -299,14 +299,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-autolab/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"ac978ed8888087216908c9707fc1d9a657857142fdf4d9f85a18451de7702ee9\""
+        "ETag": "W/\"97d876643878de91cee8d8fe079f67059077590d338bd23b6b375ddf9f479ce3\""
     },
     "duckietown/book-opmanual-duckiebot": {
         "Content": [
             {
                 "commit": {
-                    "sha": "aa70295a3efce987b9118934085ded9bb88c5f4c",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/aa70295a3efce987b9118934085ded9bb88c5f4c"
+                    "sha": "47703360f525e49251826f2fdff6eb3cd3cc4bd6",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/47703360f525e49251826f2fdff6eb3cd3cc4bd6"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -338,14 +338,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"81f306eb9f8325aafab55c7aaf37131a7f624dd91621237a5e11845a2d07201a\""
+        "ETag": "W/\"0987c5b3866916e929d92aad7f24b0cb8e1295a3ef0af42cd2876fee652ac654\""
     },
     "duckietown/book-opmanual-duckiedrone": {
         "Content": [
             {
                 "commit": {
-                    "sha": "99b4baa2c5420b9ddad693b7b98b67865642b779",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/99b4baa2c5420b9ddad693b7b98b67865642b779"
+                    "sha": "1eabdc79c9a3ce47eb1290e87cae0ed4173f6dea",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/1eabdc79c9a3ce47eb1290e87cae0ed4173f6dea"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -377,14 +377,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"37f143f646e8ca67a3b9098a868d94b68880414570dd4fb832bfdd42d0cd1d27\""
+        "ETag": "W/\"46c97f9440b9eb6d90cd4c6af70b95037e83f5027dc05c4a331a01b42610017f\""
     },
     "duckietown/book-opmanual-duckietown": {
         "Content": [
             {
                 "commit": {
-                    "sha": "eff91f6b9937419d37330a2fab66744a52533779",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/eff91f6b9937419d37330a2fab66744a52533779"
+                    "sha": "595fc05f4fcb53a10fc001be81c4cc05665df379",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/595fc05f4fcb53a10fc001be81c4cc05665df379"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -416,7 +416,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"f3e76407c9cfd2c2fa541420dabd31879a174f74d19e64f28cdeb9ad7450deae\""
+        "ETag": "W/\"6b13fb2dc8981135a9cc6612a7b4bd514169a174d3c4f52bf322cb773793d1a0\""
     },
     "duckietown/challenge-aido_LF-baseline-RPL-ros": {
         "Content": [

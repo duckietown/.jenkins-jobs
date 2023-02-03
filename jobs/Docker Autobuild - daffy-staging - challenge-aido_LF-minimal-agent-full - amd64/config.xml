@@ -62,7 +62,7 @@ if [ "${PARENT_JOB_FAILED}" = "true" ]; then
 fi
 
 # store location of the workspace
-export ROOT_WS=$(pwd)
+export ROOT_WS="$(pwd)"
 
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
@@ -108,7 +108,7 @@ dts --debug \
         --ci
 
 # leave the workspace
-cd ${ROOT_WS}
+cd "${ROOT_WS}"
 
 # clean workspace
 rm -rf ./commands

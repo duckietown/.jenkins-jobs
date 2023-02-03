@@ -3080,8 +3080,8 @@
             },
             {
                 "commit": {
-                    "sha": "9ceea0b86c6ef47c6a6bab8e22af7ca6f6f4f3f4",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/9ceea0b86c6ef47c6a6bab8e22af7ca6f6f4f3f4"
+                    "sha": "ffd99cb88ddd9f5c0e714e88860703c54584c21b",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/ffd99cb88ddd9f5c0e714e88860703c54584c21b"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -3114,8 +3114,8 @@
             },
             {
                 "commit": {
-                    "sha": "0ed7607f6bd76e43b256bce18b9bd4f7550af91c",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/0ed7607f6bd76e43b256bce18b9bd4f7550af91c"
+                    "sha": "0d546a81298309a9b04bd1bd41d4ece622ea4978",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/0d546a81298309a9b04bd1bd41d4ece622ea4978"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -3130,7 +3130,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-dashboard/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"1a4b6d748d3b5e76ef117f949a6528efbfc56686f5e26ff893a03b212358db10\""
+        "ETag": "W/\"de573e7d121e4c4557c56b30d92b0e14962ca85d8f50336e1c4a9575c8eef0d2\""
     },
     "duckietown/dt-device-health": {
         "Content": [

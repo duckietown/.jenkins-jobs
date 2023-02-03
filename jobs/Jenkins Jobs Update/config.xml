@@ -21,7 +21,6 @@
         <name>*</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
-
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions/>

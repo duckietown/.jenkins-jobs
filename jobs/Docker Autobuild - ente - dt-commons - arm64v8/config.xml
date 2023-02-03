@@ -61,6 +61,9 @@ if [ "${PARENT_JOB_FAILED}" = "true" ]; then
     exit 1
 fi
 
+# store location of the workspace
+export ROOT_WS="$(pwd)"
+
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
@@ -82,7 +85,7 @@ export DOCKER_USERNAME="afdaniele"
 dts --set-version ente exit
 
 # enter the workspace
-cd ./ws
+cd ./ws/
 
 if test -f "requirements.txt"; then
     dt-pip-resolve -i requirements.txt -o requirements.resolved
@@ -105,7 +108,7 @@ dts --debug \
         --ci
 
 # leave the workspace
-cd ../
+cd "${ROOT_WS}"
 
 # clean workspace
 rm -rf ./commands
@@ -128,7 +131,7 @@ rm -rf ./ws
               </configs>
             </hudson.plugins.parameterizedtrigger.BooleanParameters>
           </configs>
-          <projects>Docker Autobuild - ente - dt-ros-commons - arm64v8, Docker Autobuild - ente - dt-device-dashboard - arm64v8, Docker Autobuild - ente - dt-device-online - arm64v8, Docker Autobuild - ente - dt-device-health - arm64v8, Docker Autobuild - ente - dt-device-proxy - arm64v8, Docker Autobuild - ente - dt-system-monitor - arm64v8, Docker Autobuild - ente - dt-files-api - arm64v8, Docker Autobuild - ente - dt-code-api - arm64v8, Docker Autobuild - ente - dt-vscode - arm64v8, Docker Autobuild - ente - dt-wifi-access-point - arm64v8, Docker Autobuild - ente - dt-firmware-upgrade - arm64v8, Docker Autobuild - ente - aido-base-python3 - arm64v8, Docker Autobuild - ente - dt-autolab-proxy - arm64v8, Docker Autobuild - ente - dt-aido-autolab-evaluator - arm64v8, Docker Autobuild - ente - gym-duckietown - arm64v8, Docker Autobuild - ente - dt-statistics-server - arm64v8, Docker Autobuild - ente - dt-jupyter-book - arm64v8</projects>
+          <projects>Docker Autobuild - ente - dt-ros-commons - arm64v8, Docker Autobuild - ente - dt-device-dashboard - arm64v8, Docker Autobuild - ente - dt-device-online - arm64v8, Docker Autobuild - ente - dt-device-health - arm64v8, Docker Autobuild - ente - dt-device-proxy - arm64v8, Docker Autobuild - ente - dt-system-monitor - arm64v8, Docker Autobuild - ente - dt-files-api - arm64v8, Docker Autobuild - ente - dt-code-api - arm64v8, Docker Autobuild - ente - dt-vscode - arm64v8, Docker Autobuild - ente - dt-wifi-access-point - arm64v8, Docker Autobuild - ente - dt-firmware-upgrade - arm64v8, Docker Autobuild - ente - aido-base-python3 - arm64v8, Docker Autobuild - ente - dt-autolab-proxy - arm64v8, Docker Autobuild - ente - dt-aido-autolab-evaluator - arm64v8, Docker Autobuild - ente - gym-duckietown - arm64v8, Docker Autobuild - ente - dt-statistics-server - arm64v8, Docker Autobuild - ente - dt-jupyter-book - arm64v8, Docker Autobuild - ente - jsonschema-form - arm64v8</projects>
           <condition>FAILED</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

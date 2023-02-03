@@ -61,6 +61,9 @@ if [ "${PARENT_JOB_FAILED}" = "true" ]; then
     exit 1
 fi
 
+# store location of the workspace
+export ROOT_WS="$(pwd)"
+
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
@@ -82,7 +85,7 @@ export DOCKER_USERNAME="afdaniele"
 dts --set-version daffy exit
 
 # enter the workspace
-cd ./ws
+cd ./ws/
 
 if test -f "requirements.txt"; then
     dt-pip-resolve -i requirements.txt -o requirements.resolved
@@ -105,7 +108,7 @@ dts --debug \
         --ci
 
 # leave the workspace
-cd ../
+cd "${ROOT_WS}"
 
 # clean workspace
 rm -rf ./commands
@@ -128,7 +131,7 @@ rm -rf ./ws
               </configs>
             </hudson.plugins.parameterizedtrigger.BooleanParameters>
           </configs>
-          <projects>Docker Autobuild - daffy - dt-ros-commons - arm64v8, Docker Autobuild - daffy - dt-device-dashboard - arm64v8, Docker Autobuild - daffy - dt-device-online - arm64v8, Docker Autobuild - daffy - dt-device-health - arm64v8, Docker Autobuild - daffy - dt-device-proxy - arm64v8, Docker Autobuild - daffy - dt-system-monitor - arm64v8, Docker Autobuild - daffy - dt-files-api - arm64v8, Docker Autobuild - daffy - dt-code-api - arm64v8, Docker Autobuild - daffy - dt-vscode - arm64v8, Docker Autobuild - daffy - dt-wifi-access-point - arm64v8, Docker Autobuild - daffy - dt-firmware-upgrade - arm64v8, Docker Autobuild - daffy - aido-base-python3 - arm64v8, Docker Autobuild - daffy - dt-autolab-proxy - arm64v8, Docker Autobuild - daffy - dt-aido-autolab-evaluator - arm64v8, Docker Autobuild - daffy - gym-duckietown - arm64v8, Docker Autobuild - daffy - dt-statistics-server - arm64v8, Docker Autobuild - daffy - dt-jupyter-book - arm64v8</projects>
+          <projects>Docker Autobuild - daffy - dt-ros-commons - arm64v8, Docker Autobuild - daffy - dt-device-dashboard - arm64v8, Docker Autobuild - daffy - dt-device-online - arm64v8, Docker Autobuild - daffy - dt-device-health - arm64v8, Docker Autobuild - daffy - dt-device-proxy - arm64v8, Docker Autobuild - daffy - dt-system-monitor - arm64v8, Docker Autobuild - daffy - dt-files-api - arm64v8, Docker Autobuild - daffy - dt-code-api - arm64v8, Docker Autobuild - daffy - dt-vscode - arm64v8, Docker Autobuild - daffy - dt-wifi-access-point - arm64v8, Docker Autobuild - daffy - dt-firmware-upgrade - arm64v8, Docker Autobuild - daffy - aido-base-python3 - arm64v8, Docker Autobuild - daffy - dt-autolab-proxy - arm64v8, Docker Autobuild - daffy - dt-aido-autolab-evaluator - arm64v8, Docker Autobuild - daffy - gym-duckietown - arm64v8, Docker Autobuild - daffy - dt-statistics-server - arm64v8, Docker Autobuild - daffy - dt-jupyter-book - arm64v8, Docker Autobuild - daffy - jsonschema-form - arm64v8</projects>
           <condition>FAILED</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

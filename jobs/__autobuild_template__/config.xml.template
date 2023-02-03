@@ -61,6 +61,9 @@ if [ "${{PARENT_JOB_FAILED}}" = "true" ]; then
     exit 1
 fi
 
+# store location of the workspace
+export ROOT_WS=$(pwd)
+
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${{GIT_SSH_KEY_FILEPATH}}" -o IdentitiesOnly=yes'
 
@@ -82,7 +85,7 @@ export DOCKER_USERNAME="{DOCKER_USERNAME}"
 dts --set-version {DUCKIETOWN_CI_DT_SHELL_VERSION} exit
 
 # enter the workspace
-cd ./ws
+cd ./ws/{LOCATION}
 
 if test -f "requirements.txt"; then
     dt-pip-resolve -i requirements.txt -o requirements.resolved
@@ -105,7 +108,7 @@ dts --debug \
         --ci{DTS_ARGS}
 
 # leave the workspace
-cd ../
+cd ${{ROOT_WS}}
 
 # clean workspace
 rm -rf ./commands

@@ -61,6 +61,9 @@ if [ "${PARENT_JOB_FAILED}" = "true" ]; then
     exit 1
 fi
 
+# store location of the workspace
+export ROOT_WS=$(pwd)
+
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
@@ -82,7 +85,7 @@ export DOCKER_USERNAME="duckietowndaemon"
 dts --set-version ente-staging exit
 
 # enter the workspace
-cd ./ws
+cd ./ws/
 
 if test -f "requirements.txt"; then
     dt-pip-resolve -i requirements.txt -o requirements.resolved
@@ -105,7 +108,7 @@ dts --debug \
         --ci
 
 # leave the workspace
-cd ../
+cd ${ROOT_WS}
 
 # clean workspace
 rm -rf ./commands
@@ -128,7 +131,7 @@ rm -rf ./ws
               </configs>
             </hudson.plugins.parameterizedtrigger.BooleanParameters>
           </configs>
-          <projects>Docker Autobuild - ente-staging - dt-ros-commons - amd64, Docker Autobuild - ente-staging - dt-device-dashboard - amd64, Docker Autobuild - ente-staging - dt-device-online - amd64, Docker Autobuild - ente-staging - dt-device-health - amd64, Docker Autobuild - ente-staging - dt-device-proxy - amd64, Docker Autobuild - ente-staging - dt-system-monitor - amd64, Docker Autobuild - ente-staging - dt-files-api - amd64, Docker Autobuild - ente-staging - dt-code-api - amd64, Docker Autobuild - ente-staging - dt-vscode - amd64, Docker Autobuild - ente-staging - dt-wifi-access-point - amd64, Docker Autobuild - ente-staging - dt-firmware-upgrade - amd64, Docker Autobuild - ente-staging - aido-base-python3 - amd64, Docker Autobuild - ente-staging - dt-autolab-proxy - amd64, Docker Autobuild - ente-staging - dt-aido-autolab-evaluator - amd64, Docker Autobuild - ente-staging - gym-duckietown - amd64, Docker Autobuild - ente-staging - dt-statistics-server - amd64, Docker Autobuild - ente-staging - dt-jupyter-book - amd64</projects>
+          <projects>Docker Autobuild - ente-staging - dt-ros-commons - amd64, Docker Autobuild - ente-staging - dt-device-dashboard - amd64, Docker Autobuild - ente-staging - dt-device-online - amd64, Docker Autobuild - ente-staging - dt-device-health - amd64, Docker Autobuild - ente-staging - dt-device-proxy - amd64, Docker Autobuild - ente-staging - dt-system-monitor - amd64, Docker Autobuild - ente-staging - dt-files-api - amd64, Docker Autobuild - ente-staging - dt-code-api - amd64, Docker Autobuild - ente-staging - dt-vscode - amd64, Docker Autobuild - ente-staging - dt-wifi-access-point - amd64, Docker Autobuild - ente-staging - dt-firmware-upgrade - amd64, Docker Autobuild - ente-staging - aido-base-python3 - amd64, Docker Autobuild - ente-staging - dt-autolab-proxy - amd64, Docker Autobuild - ente-staging - dt-aido-autolab-evaluator - amd64, Docker Autobuild - ente-staging - gym-duckietown - amd64, Docker Autobuild - ente-staging - dt-statistics-server - amd64, Docker Autobuild - ente-staging - dt-jupyter-book - amd64, Docker Autobuild - ente-staging - jsonschema-form - amd64</projects>
           <condition>FAILED</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

@@ -265,6 +265,7 @@ def main():
                     "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
                     "BASE_JOB": BASE_JOB,
                     "CHILDREN_JOBS": CHILDREN_JOBS,
+                    "LOCATION": repo.get("location", ""),
                     "DTS_ARGS": DTS_ARGS,
                     "TIMEOUT_MINUTES": repo_build_timeout,
                     "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,

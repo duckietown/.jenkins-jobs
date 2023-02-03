@@ -61,6 +61,9 @@ if [ "${PARENT_JOB_FAILED}" = "true" ]; then
     exit 1
 fi
 
+# store location of the workspace
+export ROOT_WS=$(pwd)
+
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
@@ -82,7 +85,7 @@ export DOCKER_USERNAME="duckietowndaemon"
 dts --set-version daffy-staging exit
 
 # enter the workspace
-cd ./ws
+cd ./ws/
 
 if test -f "requirements.txt"; then
     dt-pip-resolve -i requirements.txt -o requirements.resolved
@@ -105,7 +108,7 @@ dts --debug \
         --ci
 
 # leave the workspace
-cd ../
+cd ${ROOT_WS}
 
 # clean workspace
 rm -rf ./commands
@@ -128,7 +131,7 @@ rm -rf ./ws
               </configs>
             </hudson.plugins.parameterizedtrigger.BooleanParameters>
           </configs>
-          <projects>Docker Autobuild - daffy-staging - dt-ros-commons - arm32v7, Docker Autobuild - daffy-staging - dt-device-dashboard - arm32v7, Docker Autobuild - daffy-staging - dt-device-online - arm32v7, Docker Autobuild - daffy-staging - dt-device-health - arm32v7, Docker Autobuild - daffy-staging - dt-device-proxy - arm32v7, Docker Autobuild - daffy-staging - dt-system-monitor - arm32v7, Docker Autobuild - daffy-staging - dt-files-api - arm32v7, Docker Autobuild - daffy-staging - dt-code-api - arm32v7, Docker Autobuild - daffy-staging - dt-vscode - arm32v7, Docker Autobuild - daffy-staging - dt-wifi-access-point - arm32v7, Docker Autobuild - daffy-staging - dt-firmware-upgrade - arm32v7, Docker Autobuild - daffy-staging - aido-base-python3 - arm32v7, Docker Autobuild - daffy-staging - dt-autolab-proxy - arm32v7, Docker Autobuild - daffy-staging - dt-aido-autolab-evaluator - arm32v7, Docker Autobuild - daffy-staging - gym-duckietown - arm32v7, Docker Autobuild - daffy-staging - dt-statistics-server - arm32v7, Docker Autobuild - daffy-staging - dt-jupyter-book - arm32v7</projects>
+          <projects>Docker Autobuild - daffy-staging - dt-ros-commons - arm32v7, Docker Autobuild - daffy-staging - dt-device-dashboard - arm32v7, Docker Autobuild - daffy-staging - dt-device-online - arm32v7, Docker Autobuild - daffy-staging - dt-device-health - arm32v7, Docker Autobuild - daffy-staging - dt-device-proxy - arm32v7, Docker Autobuild - daffy-staging - dt-system-monitor - arm32v7, Docker Autobuild - daffy-staging - dt-files-api - arm32v7, Docker Autobuild - daffy-staging - dt-code-api - arm32v7, Docker Autobuild - daffy-staging - dt-vscode - arm32v7, Docker Autobuild - daffy-staging - dt-wifi-access-point - arm32v7, Docker Autobuild - daffy-staging - dt-firmware-upgrade - arm32v7, Docker Autobuild - daffy-staging - aido-base-python3 - arm32v7, Docker Autobuild - daffy-staging - dt-autolab-proxy - arm32v7, Docker Autobuild - daffy-staging - dt-aido-autolab-evaluator - arm32v7, Docker Autobuild - daffy-staging - gym-duckietown - arm32v7, Docker Autobuild - daffy-staging - dt-statistics-server - arm32v7, Docker Autobuild - daffy-staging - dt-jupyter-book - arm32v7, Docker Autobuild - daffy-staging - jsonschema-form - arm32v7</projects>
           <condition>FAILED</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>

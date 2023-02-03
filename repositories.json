@@ -310,5 +310,14 @@
         "base": "dt-commons",
         "blacklist": ["arm32v7"],
         "labels": ["dtproject"]
+    },
+    
+    {
+        "name": "jsonschema-form",
+        "origin": "duckietown/utility-dashboards",
+        "base": "dt-commons",
+        "blacklist": ["arm32v7"],
+        "location": "jsonschema-form",
+        "labels": ["dtproject"]
     }
 ]

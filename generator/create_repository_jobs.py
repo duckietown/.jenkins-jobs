@@ -17,6 +17,7 @@ logger.setLevel(logging.INFO)
 AUTOBUILD_TEMPLATE_JOB = "__autobuild_template__"
 AUTOMERGE_TEMPLATE_JOB = "__automerge_template__"
 STAGESYNC_TEMPLATE_JOB = "__stagesync_template__"
+DISTROSYNC_TEMPLATE_JOB = "__distrosync_template__"
 DTS_ARGS_INDENT = " \\\n" + " " * 8
 DEFAULT_TIMEOUT_MINUTES = 120
 DISTRO_ARCH_BLACKLIST = [
@@ -100,6 +101,12 @@ def main():
     )
     with open(stagesync_template_config_file, "rt") as fin:
         stagesync_template_config = fin.read()
+    # - Distro Sync job template
+    distrosync_template_config_file = os.path.join(
+        parsed.jobsdir, DISTROSYNC_TEMPLATE_JOB, "config.xml.template"
+    )
+    with open(distrosync_template_config_file, "rt") as fin:
+        distrosync_template_config = fin.read()
     # check which configurations are valid
     stats = {"cache": {"hits": 0, "misses": 0}, "num_jobs": 0, "num_repos": len(repos)}
     logger.info("Found {:d} repositories.".format(len(repos)))
@@ -413,6 +420,56 @@ def main():
                 fout.write(config)
             stats["num_jobs"] += 1
 
+    # ---
+    # create distro-sync jobs
+    for repo in repos:
+        # must have a dtproject label
+        if "dtproject" not in repo["labels"]:
+            continue
+        # repo info
+        repo_name = repo["name"]
+        repo_origin = repo["origin"]
+        REPO_URL = "https://github.com/{:s}".format(repo_origin)
+        GIT_URL = "git@github.com:{:s}".format(repo_origin)
+        # one job per pair ( distro1[-staging] , distro2[-staging] )
+        for distro1, distro2 in zip(distro_list, distro_list[1:]):
+            # we only add this job if this repo has both branches
+            if distro1 not in repo_branches[repo_name] or distro2 not in repo_branches[repo_name]:
+                continue
+            # job name
+            jname = distrosync_job_name(
+                from_branch=distro2,
+                to_branch=distro1,
+                repo_name=repo_name
+            )
+            # find base jobs
+            if "base" in repo:
+                repo_base = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
+                BASE_JOB = ", ".join([
+                    distrosync_job_name(distro2, distro1, b) for b in repo_base
+                ])
+            else:
+                BASE_JOB = ""
+
+            # create job by updating the template fields
+            job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
+            params = {
+                "REPO_OWNER": "duckietown",
+                "REPO_NAME": repo_name,
+                "REPO_URL": REPO_URL,
+                "GIT_URL": GIT_URL,
+                "FROM_BRANCH": distro2,
+                "TO_BRANCH": distro1,
+                "BASE_JOB": BASE_JOB,
+                "TIMEOUT_MINUTES": 1
+            }
+            config = distrosync_template_config.format(**params)
+            # write job to disk
+            os.makedirs(os.path.dirname(job_config_path))
+            with open(job_config_path, "wt") as fout:
+                fout.write(config)
+            stats["num_jobs"] += 1
+
     # print out stats
     logger.info(
         "Statistics: Total repos: {:d}; Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}".format(
@@ -432,6 +489,10 @@ def automerge_job_name(from_branch, into_branch, repo_name):
 
 def stagesync_job_name(from_branch, to_branch, repo_name):
     return "Stage Sync - {:s} >= {:s} - {:s}".format(from_branch, to_branch, repo_name)
+
+
+def distrosync_job_name(from_branch, to_branch, repo_name):
+    return "Distro Sync - {:s} >= {:s} - {:s}".format(from_branch, to_branch, repo_name)
 
 
 if __name__ == "__main__":

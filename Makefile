@@ -2,11 +2,12 @@ ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 ARCH:="arm32v7,arm64v8,amd64"
 
-_generate_autobuild:
+_generate_repojobs:
 	# repository jobs
 	rm -rf ${ROOT_DIR}/jobs/Docker\ Autobuild*
 	rm -rf ${ROOT_DIR}/jobs/Git\ Automerge*
 	rm -rf ${ROOT_DIR}/jobs/Stage\ Sync*
+	rm -rf ${ROOT_DIR}/jobs/Distro\ Sync*
 	python3 ${ROOT_DIR}/generator/create_repository_jobs.py \
 		--jobsdir ${ROOT_DIR}/jobs/ \
 		--repos ${ROOT_DIR}/repositories.json \
@@ -31,8 +32,8 @@ _generate_bookbuild:
 
 generate-production: DISTRO=daffy,ente
 generate-production: LABELS=production
-generate-production: _generate_autobuild _generate_webcheck _generate_bookbuild
+generate-production: _generate_repojobs _generate_webcheck _generate_bookbuild
 
 generate-staging: DISTRO=daffy-staging,ente-staging
 generate-staging: LABELS=staging
-generate-staging: _generate_autobuild _generate_webcheck _generate_bookbuild
+generate-staging: _generate_repojobs _generate_webcheck _generate_bookbuild

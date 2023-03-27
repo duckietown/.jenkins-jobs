@@ -200,8 +200,8 @@
             },
             {
                 "commit": {
-                    "sha": "8076bc035af3f473a123c9f46dbf7f20a950b68f",
-                    "url": "https://api.github.com/repos/duckietown/book-course-intro-to-drones/commits/8076bc035af3f473a123c9f46dbf7f20a950b68f"
+                    "sha": "d7cee594cee7254c9af5d2e5d3aa678d99d6495c",
+                    "url": "https://api.github.com/repos/duckietown/book-course-intro-to-drones/commits/d7cee594cee7254c9af5d2e5d3aa678d99d6495c"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -216,7 +216,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-course-intro-to-drones/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"00d4f369039df84832388e340e538fd15a61eaff36433e6ecb76add76ea9bb3b\""
+        "ETag": "W/\"6aea0bb40d51c9038a82990fbed840053ec107c708487dd37d77fa54d397d25c\""
     },
     "duckietown/book-devmanual-docs": {
         "Content": [
@@ -273,8 +273,8 @@
             },
             {
                 "commit": {
-                    "sha": "01b4256c4a2dd77f35c4501ac36bdb9722114693",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/01b4256c4a2dd77f35c4501ac36bdb9722114693"
+                    "sha": "87871f89302cd5fc18e5fb0cc9bcf32c6c5a275e",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/87871f89302cd5fc18e5fb0cc9bcf32c6c5a275e"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -338,12 +338,46 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-docs/branches/tabs-guide/protection"
+            },
+            {
+                "commit": {
+                    "sha": "fa35627bf952b6553e8e21292d13bf1350b7e13b",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/fa35627bf952b6553e8e21292d13bf1350b7e13b"
+                },
+                "name": "videos",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-docs/branches/videos/protection"
             }
         ],
-        "ETag": "W/\"b8305c6839d9a75cbc2f4d88b577f7e062522799df00a9bb7cc5b9f9734a2751\""
+        "ETag": "W/\"d686c7f5961699d4ed2cba11b51c8aed2c476b96c64bf05149246167e4fcacf1\""
     },
     "duckietown/book-devmanual-lx": {
         "Content": [
+            {
+                "commit": {
+                    "sha": "cbe7662f8ac364418d3f4cd61511ce760170bcc0",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-lx/commits/cbe7662f8ac364418d3f4cd61511ce760170bcc0"
+                },
+                "name": "book-todos",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-lx/branches/book-todos/protection"
+            },
             {
                 "commit": {
                     "sha": "d4617eec43c45711e43d8a31861f87bf8e6c807d",
@@ -363,8 +397,8 @@
             },
             {
                 "commit": {
-                    "sha": "97bd7d93767f8f26c929e46ec7f2ac6d25eadd72",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-lx/commits/97bd7d93767f8f26c929e46ec7f2ac6d25eadd72"
+                    "sha": "897839e9a3cdcb83b039534caba46faa2f0cfd75",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-lx/commits/897839e9a3cdcb83b039534caba46faa2f0cfd75"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -379,7 +413,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-lx/branches/daffy-staging/protection"
             }
         ],
-        "ETag": "W/\"e4db9d9bc5e9edefd7d6dc76079f91384e24c7ed3efc788f0b5d9623b453f903\""
+        "ETag": "W/\"959c15d85e9d849d14e8c0d97b32f8b5762033f297e4faebf082b55b7c32744b\""
     },
     "duckietown/book-devmanual-shell": {
         "Content": [
@@ -437,6 +471,45 @@
         ],
         "ETag": "W/\"a8d2681098d6bb21170de4951572dc4ddcd169b42063f2a52e193c0d1fdbeb41\""
     },
+    "duckietown/book-devmanual-software": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "8173882a0356b6859f10b14cd4cb66ff7d1e096f",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-software/commits/8173882a0356b6859f10b14cd4cb66ff7d1e096f"
+                },
+                "name": "daffy",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-software/branches/daffy/protection"
+            },
+            {
+                "commit": {
+                    "sha": "3956b733ad28fe00f14a1f7d83b245a4a3ae381d",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-software/commits/3956b733ad28fe00f14a1f7d83b245a4a3ae381d"
+                },
+                "name": "daffy-staging",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-software/branches/daffy-staging/protection"
+            }
+        ],
+        "ETag": "W/\"872d1fe7e38912337060041284778afcd498f69b255b02e5d101a7f3285e51cc\""
+    },
     "duckietown/book-opmanual-autolab": {
         "Content": [
             {
@@ -483,23 +556,6 @@
                     "sha": "eb05ba4d2678730b29496611fd5316500bdb3fbb",
                     "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/eb05ba4d2678730b29496611fd5316500bdb3fbb"
                 },
-                "name": "DTSW-2807-Port-book-part-Preliminaries-Software",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/DTSW-2807-Port-book-part-Preliminaries-Software/protection"
-            },
-            {
-                "commit": {
-                    "sha": "eb05ba4d2678730b29496611fd5316500bdb3fbb",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/eb05ba4d2678730b29496611fd5316500bdb3fbb"
-                },
                 "name": "DTSW-2820-Port-book-part-Demos-Units-D1-D2",
                 "protected": false,
                 "protection": {
@@ -514,8 +570,8 @@
             },
             {
                 "commit": {
-                    "sha": "47703360f525e49251826f2fdff6eb3cd3cc4bd6",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/47703360f525e49251826f2fdff6eb3cd3cc4bd6"
+                    "sha": "928b5bedac9a937da2823efe96a6f1c98b3e2f9d",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/928b5bedac9a937da2823efe96a6f1c98b3e2f9d"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -531,8 +587,8 @@
             },
             {
                 "commit": {
-                    "sha": "eb05ba4d2678730b29496611fd5316500bdb3fbb",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/eb05ba4d2678730b29496611fd5316500bdb3fbb"
+                    "sha": "02815241d1af308ca7d30f3a106af067a91f2f80",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/02815241d1af308ca7d30f3a106af067a91f2f80"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -548,10 +604,10 @@
             },
             {
                 "commit": {
-                    "sha": "5108831acb6d0922d4bd9ee4dd3b4bdb0724cb3b",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/5108831acb6d0922d4bd9ee4dd3b4bdb0724cb3b"
+                    "sha": "fb75f908ef3509e2edfe29a6d98aa5b7bd4804b8",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/fb75f908ef3509e2edfe29a6d98aa5b7bd4804b8"
                 },
-                "name": "jsn-c12-c13",
+                "name": "daffy-staging-liam",
                 "protected": false,
                 "protection": {
                     "enabled": false,
@@ -561,44 +617,10 @@
                         "enforcement_level": "off"
                     }
                 },
-                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/jsn-c12-c13/protection"
-            },
-            {
-                "commit": {
-                    "sha": "75b32816f6b86364bcb46d25af9c2d207a386cd2",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/75b32816f6b86364bcb46d25af9c2d207a386cd2"
-                },
-                "name": "port-a3-dtsw-2825",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/port-a3-dtsw-2825/protection"
-            },
-            {
-                "commit": {
-                    "sha": "332d4cd9f2f00721e982e9e5e1a58a78d85190a2",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/332d4cd9f2f00721e982e9e5e1a58a78d85190a2"
-                },
-                "name": "port-c7-c11-DTSW-2813",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/port-c7-c11-DTSW-2813/protection"
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/daffy-staging-liam/protection"
             }
         ],
-        "ETag": "W/\"ca038d360ee585ac0dd0f5e107be29ecca5f3061268263eac2d44b52d9d52dd1\""
+        "ETag": "W/\"cbe07bef28fa6841fcd2d952f96cf2f4fb1cd86aba2f02ec1a5380e0a8ade35c\""
     },
     "duckietown/book-opmanual-duckiedrone": {
         "Content": [
@@ -689,6 +711,23 @@
             },
             {
                 "commit": {
+                    "sha": "81cca86b4eb4b36ed1914f4f3391e7cab43f76b7",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/81cca86b4eb4b36ed1914f4f3391e7cab43f76b7"
+                },
+                "name": "DTSW-2970-update-book-with-feedback-for-dd-21-build-instructions",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/branches/DTSW-2970-update-book-with-feedback-for-dd-21-build-instructions/protection"
+            },
+            {
+                "commit": {
                     "sha": "8476a3f3bac9e27a6e016f07b870bdbf48668315",
                     "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/8476a3f3bac9e27a6e016f07b870bdbf48668315"
                 },
@@ -706,8 +745,8 @@
             },
             {
                 "commit": {
-                    "sha": "002fda9cefe1c3299e1a9138bf9b0ca7a0d13e92",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/002fda9cefe1c3299e1a9138bf9b0ca7a0d13e92"
+                    "sha": "75aaca6fc3077e6f5223819c3c2074186859a494",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/75aaca6fc3077e6f5223819c3c2074186859a494"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -720,18 +759,13 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/branches/daffy-staging/protection"
-            }
-        ],
-        "ETag": "W/\"4bd810fa2e0cb315f64bb986e2322d19c2e18854c8550637160b9fcd3ceffc8a\""
-    },
-    "duckietown/book-opmanual-duckietown": {
-        "Content": [
+            },
             {
                 "commit": {
-                    "sha": "595fc05f4fcb53a10fc001be81c4cc05665df379",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/595fc05f4fcb53a10fc001be81c4cc05665df379"
+                    "sha": "30be7124f41aca215c213e8fb3a235173efb01ae",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/30be7124f41aca215c213e8fb3a235173efb01ae"
                 },
-                "name": "DTSW-2827-Port-book-part-Assembly-Unit-B2",
+                "name": "fc-pid-tuning",
                 "protected": false,
                 "protection": {
                     "enabled": false,
@@ -741,8 +775,13 @@
                         "enforcement_level": "off"
                     }
                 },
-                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/branches/DTSW-2827-Port-book-part-Assembly-Unit-B2/protection"
-            },
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/branches/fc-pid-tuning/protection"
+            }
+        ],
+        "ETag": "W/\"99b7b666a1b441615ea73f32ce188fc5a638e7802bbf8d848564880bb957a04c\""
+    },
+    "duckietown/book-opmanual-duckietown": {
+        "Content": [
             {
                 "commit": {
                     "sha": "b5bbf984da5a06c9158e54833fab71190d2820d5",
@@ -762,8 +801,8 @@
             },
             {
                 "commit": {
-                    "sha": "595fc05f4fcb53a10fc001be81c4cc05665df379",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/595fc05f4fcb53a10fc001be81c4cc05665df379"
+                    "sha": "bcf08e37621b04d0ccaf54c9b67184851be3b8d0",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/bcf08e37621b04d0ccaf54c9b67184851be3b8d0"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -776,26 +815,9 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/branches/daffy-staging/protection"
-            },
-            {
-                "commit": {
-                    "sha": "33427903a3c6819108056bdfcee4418ec1b2488e",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/33427903a3c6819108056bdfcee4418ec1b2488e"
-                },
-                "name": "jsn-b1",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/branches/jsn-b1/protection"
             }
         ],
-        "ETag": "W/\"a12cab0a79fa28660aa3a8fb45c45cf393bba6bf742e224dac16da15af6da1c1\""
+        "ETag": "W/\"1e858e07df4d3f4914af0678f2295260ed318c8a85f40bcf410126c4bb3de7be\""
     },
     "duckietown/challenge-aido_LF-baseline-RPL-ros": {
         "Content": [
@@ -903,6 +925,23 @@
             },
             {
                 "commit": {
+                    "sha": "9a2cacf614ecebe3a190883fcc9360fe05116beb",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/9a2cacf614ecebe3a190883fcc9360fe05116beb"
+                },
+                "name": "dependabot/pip/torch-1.13.1",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/branches/dependabot/pip/torch-1.13.1/protection"
+            },
+            {
+                "commit": {
                     "sha": "034711c2422bf422a2265607965186e84d426394",
                     "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/commits/034711c2422bf422a2265607965186e84d426394"
                 },
@@ -936,7 +975,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-baseline-RPL-ros/branches/merge_to_duckietown/protection"
             }
         ],
-        "ETag": "W/\"51511b4615b1e6c8ca76962d4bb470b2cc7d9727eaab3a60edfcec2365474c3a\""
+        "ETag": "W/\"6d31a36572affe863462c3b1958d46016e97268c562651995de5cf467aa380d9\""
     },
     "duckietown/challenge-aido_LF-baseline-dagger-pytorch": {
         "Content": [
@@ -2044,10 +2083,10 @@
             },
             {
                 "commit": {
-                    "sha": "6d193876e16ebb706ee7002e5f2baa4e9e401982",
-                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/6d193876e16ebb706ee7002e5f2baa4e9e401982"
+                    "sha": "2e2d2618508ddfa40f993e9bc89a2394c82984c8",
+                    "url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/commits/2e2d2618508ddfa40f993e9bc89a2394c82984c8"
                 },
-                "name": "dependabot/pip/tensorflow-2.10.1",
+                "name": "dependabot/pip/tensorflow-2.11.1",
                 "protected": false,
                 "protection": {
                     "enabled": false,
@@ -2057,7 +2096,7 @@
                         "enforcement_level": "off"
                     }
                 },
-                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/branches/dependabot/pip/tensorflow-2.10.1/protection"
+                "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/branches/dependabot/pip/tensorflow-2.11.1/protection"
             },
             {
                 "commit": {
@@ -2077,7 +2116,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/challenge-aido_LF-template-tensorflow/branches/v3/protection"
             }
         ],
-        "ETag": "W/\"f4eb4957472b5707da06e0771fc3682d8950a1f6dcd0ecc391293fe11d5f2fd6\""
+        "ETag": "W/\"4d39f0149a5cdb4ede5840e0d32e95a578e922af091c5c288c0ecc895be4ca6d\""
     },
     "duckietown/dt-aido-autolab-evaluator": {
         "Content": [
@@ -2776,8 +2815,8 @@
             },
             {
                 "commit": {
-                    "sha": "bb91b347b1292494d6824ec1b2ece865ea80f21e",
-                    "url": "https://api.github.com/repos/duckietown/dt-car-interface/commits/bb91b347b1292494d6824ec1b2ece865ea80f21e"
+                    "sha": "9c5a7eb86dc848a3f258e62dab749b7a9124c0b2",
+                    "url": "https://api.github.com/repos/duckietown/dt-car-interface/commits/9c5a7eb86dc848a3f258e62dab749b7a9124c0b2"
                 },
                 "name": "daffy-project",
                 "protected": false,
@@ -2827,8 +2866,8 @@
             },
             {
                 "commit": {
-                    "sha": "3ac6047389292c9b1ab12ccd5b00a4e379fd6b65",
-                    "url": "https://api.github.com/repos/duckietown/dt-car-interface/commits/3ac6047389292c9b1ab12ccd5b00a4e379fd6b65"
+                    "sha": "1265ab2fe012b3fc319a7ff8ec6ad6297b0d95f6",
+                    "url": "https://api.github.com/repos/duckietown/dt-car-interface/commits/1265ab2fe012b3fc319a7ff8ec6ad6297b0d95f6"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -2860,7 +2899,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-car-interface/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"af7a67c2369ff21a8f3460121159a7c7ad2be05c00cdfa3c31556b675e3bd3bd\""
+        "ETag": "W/\"ece2790b71da3c06cba6fac87d0d341746bf46dc5d3a61c1c56d797830cacf93\""
     },
     "duckietown/dt-code-api": {
         "Content": [
@@ -3007,8 +3046,8 @@
             },
             {
                 "commit": {
-                    "sha": "f8795102a916e742a8834422cd0cd3bad638ed7b",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/f8795102a916e742a8834422cd0cd3bad638ed7b"
+                    "sha": "33b80d119ebef5dbcbe8c94b62810778cdad7d8b",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/33b80d119ebef5dbcbe8c94b62810778cdad7d8b"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -3091,7 +3130,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-commons/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"6fb43adb880c9ad4149cd6af12615e94a7cae718b2da33d85e054e9c3b97dde9\""
+        "ETag": "W/\"a247b7714c4de091dd846083543111099d78a2422a4340e0034e94753f03b75e\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -3162,6 +3201,23 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/dt-core/branches/daffy-fsm-lights/protection"
+            },
+            {
+                "commit": {
+                    "sha": "4266695a0f3477ee261dfd912c73f71e605e8c6a",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/4266695a0f3477ee261dfd912c73f71e605e8c6a"
+                },
+                "name": "daffy-indefinite-navigation",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-core/branches/daffy-indefinite-navigation/protection"
             },
             {
                 "commit": {
@@ -3250,25 +3306,8 @@
             },
             {
                 "commit": {
-                    "sha": "669a55e8c7055967932093ab24c854ed2f613189",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/669a55e8c7055967932093ab24c854ed2f613189"
-                },
-                "name": "daffy-robot-params",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-core/branches/daffy-robot-params/protection"
-            },
-            {
-                "commit": {
-                    "sha": "6d8e99a5849737f86cab72b04fd2b449528226be",
-                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/6d8e99a5849737f86cab72b04fd2b449528226be"
+                    "sha": "be0c56fa82e0714a7fc1015a11916347bb1d0fc3",
+                    "url": "https://api.github.com/repos/duckietown/dt-core/commits/be0c56fa82e0714a7fc1015a11916347bb1d0fc3"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -3419,7 +3458,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-core/branches/rectification-clusters/protection"
             }
         ],
-        "ETag": "W/\"4a3b8b24d978488778dcac3d227438c13e61763684e0135397aca1dda8265c4b\""
+        "ETag": "W/\"4c331b9f86846f0be981d80c5966bc51362db889e0cb143b2fbf021ff3abe81d\""
     },
     "duckietown/dt-device-dashboard": {
         "Content": [
@@ -3442,8 +3481,8 @@
             },
             {
                 "commit": {
-                    "sha": "4eb795ad296564ed119446db3ee3f30fffdd5d56",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/4eb795ad296564ed119446db3ee3f30fffdd5d56"
+                    "sha": "22f9aa7241766a4ce94ef3a8e32861c6f5240626",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/22f9aa7241766a4ce94ef3a8e32861c6f5240626"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -3459,8 +3498,8 @@
             },
             {
                 "commit": {
-                    "sha": "da65e927aa74cb3b6221f9f165f449ffa03bbc1f",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/da65e927aa74cb3b6221f9f165f449ffa03bbc1f"
+                    "sha": "22f9aa7241766a4ce94ef3a8e32861c6f5240626",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/22f9aa7241766a4ce94ef3a8e32861c6f5240626"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -3509,7 +3548,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-dashboard/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"3e5e3bd7e0726b426d45150bef9794f7129b70547c66aae60ed83499c6109a97\""
+        "ETag": "W/\"de26b28b33e6fad90b3a9b972d1b816c3e4004d26a813a63ca82f6f8e29df708\""
     },
     "duckietown/dt-device-health": {
         "Content": [
@@ -3597,9 +3636,26 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-health/branches/ente-staging/protection"
+            },
+            {
+                "commit": {
+                    "sha": "887f4747a53f9b35d782c0f36f509f8f3943e6a6",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/887f4747a53f9b35d782c0f36f509f8f3943e6a6"
+                },
+                "name": "feat-jsn-hwtst",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-device-health/branches/feat-jsn-hwtst/protection"
             }
         ],
-        "ETag": "W/\"558431def63fe3b485b50a41d9039bef03e7e8ea22179d707df3f52a663ff52a\""
+        "ETag": "W/\"55de70fbba2d782babbac59d76c8a20ab7c44f7448727ae8139e521489180ca8\""
     },
     "duckietown/dt-device-online": {
         "Content": [
@@ -4033,8 +4089,8 @@
             },
             {
                 "commit": {
-                    "sha": "7e943b636382339b9ea1486d2f07ec57cbaa8938",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/7e943b636382339b9ea1486d2f07ec57cbaa8938"
+                    "sha": "fe833d2946ba7ef71cb90758c892c8c952408822",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/fe833d2946ba7ef71cb90758c892c8c952408822"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -4152,8 +4208,8 @@
             },
             {
                 "commit": {
-                    "sha": "e29eb3c9d35d7f8b0d3ffbdd4041f99f3451f837",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/e29eb3c9d35d7f8b0d3ffbdd4041f99f3451f837"
+                    "sha": "fe833d2946ba7ef71cb90758c892c8c952408822",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/fe833d2946ba7ef71cb90758c892c8c952408822"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -4254,8 +4310,8 @@
             },
             {
                 "commit": {
-                    "sha": "d4615d7a154b678a3b2c363b1f0a800c3a6562ed",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/d4615d7a154b678a3b2c363b1f0a800c3a6562ed"
+                    "sha": "309f069b016982f84488c099295d1b3994062f1b",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/309f069b016982f84488c099295d1b3994062f1b"
                 },
                 "name": "feat-jsn-hwtst",
                 "protected": false,
@@ -4355,7 +4411,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/shutdown_behaviors/protection"
             }
         ],
-        "ETag": "W/\"4310fed004420e2636a47f892b7cfa6bf2d821ead6e479d6b371b8b0e6a65b13\""
+        "ETag": "W/\"48b0cf6dbe40b0d4086c227be040358660cfc86a896854bbc46153fa97692454\""
     },
     "duckietown/dt-files-api": {
         "Content": [
@@ -4993,6 +5049,74 @@
             },
             {
                 "commit": {
+                    "sha": "ed76a1bfbb4240b96934f1fc8f46e3ad83266e88",
+                    "url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/commits/ed76a1bfbb4240b96934f1fc8f46e3ad83266e88"
+                },
+                "name": "dependabot/npm_and_yarn/decode-uri-component-0.2.2",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/decode-uri-component-0.2.2/protection"
+            },
+            {
+                "commit": {
+                    "sha": "18d7baaf27bda6bbc42aba385a3a61d59bf972f6",
+                    "url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/commits/18d7baaf27bda6bbc42aba385a3a61d59bf972f6"
+                },
+                "name": "dependabot/npm_and_yarn/json5-1.0.2",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/json5-1.0.2/protection"
+            },
+            {
+                "commit": {
+                    "sha": "6a91779d4f3f0d818cb7f89e4da1a5e413cddecd",
+                    "url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/commits/6a91779d4f3f0d818cb7f89e4da1a5e413cddecd"
+                },
+                "name": "dependabot/npm_and_yarn/loader-utils-and-react-scripts-2.0.4",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/loader-utils-and-react-scripts-2.0.4/protection"
+            },
+            {
+                "commit": {
+                    "sha": "6d2216ac38b648654d0c19d4a726f1532caf6953",
+                    "url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/commits/6d2216ac38b648654d0c19d4a726f1532caf6953"
+                },
+                "name": "dependabot/npm_and_yarn/minimist-1.2.8",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/minimist-1.2.8/protection"
+            },
+            {
+                "commit": {
                     "sha": "34d7c06889bf1e11fed27b448dd0085e34156df9",
                     "url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/commits/34d7c06889bf1e11fed27b448dd0085e34156df9"
                 },
@@ -5007,6 +5131,40 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/node-sass-7.0.0/protection"
+            },
+            {
+                "commit": {
+                    "sha": "103641a5bfcc31efcce98fdb1aad14423dd50c67",
+                    "url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/commits/103641a5bfcc31efcce98fdb1aad14423dd50c67"
+                },
+                "name": "dependabot/npm_and_yarn/qs-6.5.3",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/qs-6.5.3/protection"
+            },
+            {
+                "commit": {
+                    "sha": "8cea735df6b591cd3897d672baa2ce550fd7dc65",
+                    "url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/commits/8cea735df6b591cd3897d672baa2ce550fd7dc65"
+                },
+                "name": "dependabot/npm_and_yarn/ua-parser-js-0.7.34",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/dependabot/npm_and_yarn/ua-parser-js-0.7.34/protection"
             },
             {
                 "commit": {
@@ -5043,14 +5201,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-hardware-benchmark-frontend/branches/to_dt_project/protection"
             }
         ],
-        "ETag": "W/\"46b4ce85c511520ca9059a8c949f9ca43f6a5a46af9a69587e760c2171590542\""
+        "ETag": "W/\"ef82e8d98087bdddb2995ac48487451a794547ad277f6d74223ceeff7e9ed07b\""
     },
     "duckietown/dt-jupyter-book": {
         "Content": [
             {
                 "commit": {
-                    "sha": "135c198f267db4b6294a53467ff26ee5af7f9130",
-                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/135c198f267db4b6294a53467ff26ee5af7f9130"
+                    "sha": "4e2e79600a8b119a8593f24dc3572df924e748be",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/4e2e79600a8b119a8593f24dc3572df924e748be"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -5066,8 +5224,8 @@
             },
             {
                 "commit": {
-                    "sha": "135c198f267db4b6294a53467ff26ee5af7f9130",
-                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/135c198f267db4b6294a53467ff26ee5af7f9130"
+                    "sha": "1e6f6ee1cbebcbbd8c68f44010d10cc2dd64c54a",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/1e6f6ee1cbebcbbd8c68f44010d10cc2dd64c54a"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -5083,10 +5241,10 @@
             },
             {
                 "commit": {
-                    "sha": "c7e165983309e2bfd80196725dfa56574d3fe6cd",
-                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/c7e165983309e2bfd80196725dfa56574d3fe6cd"
+                    "sha": "99c6dc9f801c267459ccef17e764efcfd68e4591",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/99c6dc9f801c267459ccef17e764efcfd68e4591"
                 },
-                "name": "dtvideo-directive",
+                "name": "daffy-user-customization",
                 "protected": false,
                 "protection": {
                     "enabled": false,
@@ -5096,7 +5254,7 @@
                         "enforcement_level": "off"
                     }
                 },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/dtvideo-directive/protection"
+                "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/daffy-user-customization/protection"
             },
             {
                 "commit": {
@@ -5116,7 +5274,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"63714ab60038a5f52ea60042ae120c36df39f7c3137c1df124a93b6171487aa2\""
+        "ETag": "W/\"4d46b39e407fa6bab510a8c05b733147bd1a718a1eee6385457b678276dc2028\""
     },
     "duckietown/dt-machine-learning-base-environment": {
         "Content": [
@@ -5404,25 +5562,8 @@
             },
             {
                 "commit": {
-                    "sha": "2524f632cd6712cf23c8525b5fc65b3d136d1e83",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/2524f632cd6712cf23c8525b5fc65b3d136d1e83"
-                },
-                "name": "daffy-robot-params",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-ros-commons/branches/daffy-robot-params/protection"
-            },
-            {
-                "commit": {
-                    "sha": "6de0c23e44a3e164d5e8282a5005410437167acf",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/6de0c23e44a3e164d5e8282a5005410437167acf"
+                    "sha": "b9abe3d665cd09c28f82f7a174dc45b36bea1ba3",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/b9abe3d665cd09c28f82f7a174dc45b36bea1ba3"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -5590,7 +5731,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-ros-commons/branches/sth/protection"
             }
         ],
-        "ETag": "W/\"19d0218406260830d48e5cfc8d2432b0c0baf41471521482322de36ff7e87819\""
+        "ETag": "W/\"1cae549d5bda591e609f70e79af6869b03f73ece681d26f28959d36616bdf929\""
     },
     "duckietown/dt-rosbridge-websocket": {
         "Content": [
@@ -5883,8 +6024,8 @@
             },
             {
                 "commit": {
-                    "sha": "53bbecd7468616c428dc181c5625f9e28b619a11",
-                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/53bbecd7468616c428dc181c5625f9e28b619a11"
+                    "sha": "18b27f96a31d07c69cf3731eb27a22177366723c",
+                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/18b27f96a31d07c69cf3731eb27a22177366723c"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -5900,8 +6041,8 @@
             },
             {
                 "commit": {
-                    "sha": "df6238fd2b9e5d512f1b739f4519a79716ed6ea5",
-                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/df6238fd2b9e5d512f1b739f4519a79716ed6ea5"
+                    "sha": "7ce63cda1ad2170baba68929a4eb393904926dc3",
+                    "url": "https://api.github.com/repos/duckietown/dt-vscode/commits/7ce63cda1ad2170baba68929a4eb393904926dc3"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -6052,7 +6193,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-vscode/branches/vscode-extension/protection"
             }
         ],
-        "ETag": "W/\"4b47c15d6651da62d4525efb5c099aa5610af17c1579edc9707c3daaaced8e13\""
+        "ETag": "W/\"2dbd8e09ac9154f600840971672e09a89086265279f287659f4eaac50a98b071\""
     },
     "duckietown/dt-wifi-access-point": {
         "Content": [

@@ -58,64 +58,64 @@
     <builders>
         <hudson.tasks.Shell>
             <command>
-                # fail if the parent job just failed
-                if [ "${{ PARENT_JOB_FAILED }}" = "true" ]; then
-                echo "====== Parent Job Failed, propagating failure ======"
-                exit 1
-                fi
+# fail if the parent job just failed
+if [ "${{PARENT_JOB_FAILED}}" = "true" ]; then
+    echo "====== Parent Job Failed, propagating failure ======"
+    exit 1
+fi
 
-                # store location of the workspace
-                export ROOT_WS="$(pwd)"
+# store location of the workspace
+export ROOT_WS="$(pwd)"
 
-                # configure git to use SSH key
-                export GIT_SSH_COMMAND='ssh -i "${{ GIT_SSH_KEY_FILEPATH }}" -o IdentitiesOnly=yes'
+# configure git to use SSH key
+export GIT_SSH_COMMAND='ssh -i "${{GIT_SSH_KEY_FILEPATH}}" -o IdentitiesOnly=yes'
 
-                # fetch commands
-                git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-commands ./commands
-                export DTSHELL_COMMANDS="$(pwd)/commands"
+# fetch commands
+git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-commands ./commands
+export DTSHELL_COMMANDS="$(pwd)/commands"
 
-                # fetch code
-                git clone -b {REPO_DISTRO} {GIT_URL} ./ws
-                git -C ./ws fetch --tags
+# fetch code
+git clone -b {REPO_DISTRO} {GIT_URL} ./ws
+git -C ./ws fetch --tags
 
-                # install/update duckietown-shell
-                export PIP_INDEX_URL="{PIP_INDEX_URL}"
-                export DTSERVER="{DTSERVER}"
-                export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
-                export DOCKER_USERNAME="{DOCKER_USERNAME}"
+# install/update duckietown-shell
+export PIP_INDEX_URL="{PIP_INDEX_URL}"
+export DTSERVER="{DTSERVER}"
+export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
+export DOCKER_USERNAME="{DOCKER_USERNAME}"
 
-                # switch to CI commands
-                dts --set-version {DUCKIETOWN_CI_DT_SHELL_VERSION} exit
+# switch to CI commands
+dts --set-version {DUCKIETOWN_CI_DT_SHELL_VERSION} exit
 
-                # enter the workspace
-                cd ./ws/{LOCATION}
+# enter the workspace
+cd ./ws/{LOCATION}
 
-                if test -f "requirements.txt"; then
-                dt-pip-resolve -i requirements.txt -o requirements.resolved
-                fi
+if test -f "requirements.txt"; then
+    dt-pip-resolve -i requirements.txt -o requirements.resolved
+fi
 
-                if test -f "dependencies-py.txt"; then
-                dt-pip-resolve -i dependencies-py.txt -o dependencies-py.resolved
-                fi
+if test -f "dependencies-py.txt"; then
+    dt-pip-resolve -i dependencies-py.txt -o dependencies-py.resolved
+fi
 
-                if test -f "dependencies-py3.dt.txt"; then
-                dt-pip-resolve -i ./dependencies-py3.dt.txt -o ./dependencies-py3.dt.resolved
-                fi
+if test -f "dependencies-py3.dt.txt"; then
+    dt-pip-resolve -i ./dependencies-py3.dt.txt -o ./dependencies-py3.dt.resolved
+fi
 
-                # pull, build(cloud), push, clean
-                dts --debug \
-                devel {DTS_DEVEL_BUILD_BACKEND} \
-                --arch {REPO_ARCH} \
-                --tag {TAG} \
-                --base-tag {BASE_TAG} \
-                --ci{DTS_ARGS}
+# pull, build(cloud), push, clean
+dts --debug \
+    devel {DTS_DEVEL_BUILD_BACKEND} \
+        --arch {REPO_ARCH} \
+        --tag {TAG} \
+        --base-tag {BASE_TAG} \
+        --ci{DTS_ARGS}
 
-                # leave the workspace
-                cd "${{ ROOT_WS }}"
+# leave the workspace
+cd "${{ROOT_WS}}"
 
-                # clean workspace
-                rm -rf ./commands
-                rm -rf ./ws
+# clean workspace
+rm -rf ./commands
+rm -rf ./ws
             </command>
             <configuredLocalRules/>
         </hudson.tasks.Shell>

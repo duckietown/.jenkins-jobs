@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 import argparse
-import copy
 import json
 import logging
 import os
 import sys
 from collections import defaultdict
-from typing import Optional, List, Dict
+from typing import Optional
 
 import requests
 
@@ -15,6 +14,8 @@ logger = logging.getLogger("jobs-generator")
 logger.setLevel(logging.INFO)
 
 BOOKBUILD_TEMPLATE_JOB = "__bookbuild_template__"
+STAGESYNC_TEMPLATE_JOB = "__stagesync_template__"
+DISTROSYNC_TEMPLATE_JOB = "__distrosync_template__"
 DEFAULT_TIMEOUT_MINUTES = 30
 BUILD_FROM_SCRIPT_TOKEN = "d249580a-b182-41fb-8f3d-ec5d24530e71"
 
@@ -65,6 +66,18 @@ def main():
     )
     with open(bookbuild_template_config_file, "rt") as fin:
         bookbuild_template_config = fin.read()
+    # - Stage Sync job template
+    stagesync_template_config_file = os.path.join(
+        parsed.jobsdir, STAGESYNC_TEMPLATE_JOB, "config.xml.template"
+    )
+    with open(stagesync_template_config_file, "rt") as fin:
+        stagesync_template_config = fin.read()
+    # - Distro Sync job template
+    distrosync_template_config_file = os.path.join(
+        parsed.jobsdir, DISTROSYNC_TEMPLATE_JOB, "config.xml.template"
+    )
+    with open(distrosync_template_config_file, "rt") as fin:
+        distrosync_template_config = fin.read()
     # check which configurations are valid
     stats = {"cache": {"hits": 0, "misses": 0}, "num_jobs": 0, "num_books": len(books)}
     logger.info("Found {:d} books.".format(len(books)))
@@ -183,6 +196,109 @@ def main():
             fout.write(config)
         stats["num_jobs"] += 1
 
+    # ---
+    # create stage-sync jobs
+    for book in books:
+        # book info
+        book_name = book["name"]
+        book_origin = book["origin"]
+        REPO_URL = "https://github.com/{:s}".format(book_origin)
+        GIT_URL = "git@github.com:{:s}".format(book_origin)
+        # one job per pair (distro, distro-staging)
+        for book_branch in repo_branches[book_name]:
+            # stage-sync can only happen on X-staging branches
+            if not book_branch.endswith("-staging"):
+                continue
+            # we only add this job if this branch is one of those we care about
+            if book_branch not in distro_list:
+                continue
+            book_branch_prod = book_branch[:-len("-staging")]
+            if book_branch_prod not in repo_branches[book_name]:
+                logger.warning(f"Found branch '{book_branch}' but not '{book_branch_prod}' "
+                               f"in booksitory '{book_name}'. This is weird. "
+                               f"Available branches are: {str(repo_branches[book_name])}")
+
+            jname = stagesync_job_name(
+                from_branch=book_branch_prod,
+                to_branch=book_branch,
+                repo_name=book_name
+            )
+
+            # find base jobs
+            if "base" in book:
+                book_base = book["base"] if isinstance(book["base"], list) else [book["base"]]
+                BASE_JOB = ", ".join([
+                    stagesync_job_name(book_branch_prod, book_branch, b) for b in book_base
+                ])
+            else:
+                BASE_JOB = ""
+
+            # create job by updating the template fields
+            job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
+            params = {
+                "REPO_OWNER": "duckietown",
+                "REPO_NAME": book_name,
+                "REPO_URL": REPO_URL,
+                "GIT_URL": GIT_URL,
+                "FROM_BRANCH": book_branch_prod,
+                "TO_BRANCH": book_branch,
+                "BASE_JOB": BASE_JOB,
+                "TIMEOUT_MINUTES": 1
+            }
+            config = stagesync_template_config.format(**params)
+            # write job to disk
+            os.makedirs(os.path.dirname(job_config_path))
+            with open(job_config_path, "wt") as fout:
+                fout.write(config)
+            stats["num_jobs"] += 1
+
+    # ---
+    # create distro-sync jobs
+    for book in books:
+        # book info
+        book_name = book["name"]
+        book_origin = book["origin"]
+        REPO_URL = "https://github.com/{:s}".format(book_origin)
+        GIT_URL = "git@github.com:{:s}".format(book_origin)
+        # one job per pair ( distro1[-staging] , distro2[-staging] )
+        for distro1, distro2 in zip(distro_list, distro_list[1:]):
+            # we only add this job if this book has both branches
+            if distro1 not in repo_branches[book_name] or distro2 not in repo_branches[book_name]:
+                continue
+            # job name
+            jname = distrosync_job_name(
+                from_branch=distro2,
+                to_branch=distro1,
+                repo_name=book_name
+            )
+            # find base jobs
+            if "base" in book:
+                book_base = book["base"] if isinstance(book["base"], list) else [book["base"]]
+                BASE_JOB = ", ".join([
+                    distrosync_job_name(distro2, distro1, b) for b in book_base
+                ])
+            else:
+                BASE_JOB = ""
+
+            # create job by updating the template fields
+            job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
+            params = {
+                "REPO_OWNER": "duckietown",
+                "REPO_NAME": book_name,
+                "REPO_URL": REPO_URL,
+                "GIT_URL": GIT_URL,
+                "FROM_BRANCH": distro2,
+                "TO_BRANCH": distro1,
+                "BASE_JOB": BASE_JOB,
+                "TIMEOUT_MINUTES": 1
+            }
+            config = distrosync_template_config.format(**params)
+            # write job to disk
+            os.makedirs(os.path.dirname(job_config_path))
+            with open(job_config_path, "wt") as fout:
+                fout.write(config)
+            stats["num_jobs"] += 1
+
     # print out stats
     logger.info(
         "Statistics: Total books: {:d}; Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}".format(
@@ -194,6 +310,14 @@ def main():
 
 def bookbuild_job_name(distro, repo_name):
     return "Book Build - {:s} - {:s}".format(distro, repo_name)
+
+
+def stagesync_job_name(from_branch, to_branch, repo_name):
+    return "Stage Sync - Book - {:s} >= {:s} - {:s}".format(from_branch, to_branch, repo_name)
+
+
+def distrosync_job_name(from_branch, to_branch, repo_name):
+    return "Distro Sync - Book - {:s} >= {:s} - {:s}".format(from_branch, to_branch, repo_name)
 
 
 if __name__ == "__main__":

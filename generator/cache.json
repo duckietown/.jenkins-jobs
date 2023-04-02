@@ -3486,25 +3486,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "d9e9befda2bc632c83c32c7aa61431577ad0d0e6",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/d9e9befda2bc632c83c32c7aa61431577ad0d0e6"
-                },
-                "name": "DTSW-3010-Implement-multi-connector-component-discovery",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-device-health/branches/DTSW-3010-Implement-multi-connector-component-discovery/protection"
-            },
-            {
-                "commit": {
-                    "sha": "a47b9edd13653b28742728176aeb5afdffa75be7",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/a47b9edd13653b28742728176aeb5afdffa75be7"
+                    "sha": "b261db9ea1ac96e74d4a6442d3c6c84df094ac5f",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/b261db9ea1ac96e74d4a6442d3c6c84df094ac5f"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -3537,8 +3520,8 @@
             },
             {
                 "commit": {
-                    "sha": "a62b75e4a40efad4c6a6cff8ffae343514bd1c87",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/a62b75e4a40efad4c6a6cff8ffae343514bd1c87"
+                    "sha": "d9e9befda2bc632c83c32c7aa61431577ad0d0e6",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-health/commits/d9e9befda2bc632c83c32c7aa61431577ad0d0e6"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -3604,7 +3587,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-device-health/branches/feat-jsn-hwtst/protection"
             }
         ],
-        "ETag": "W/\"b0a76ed6ec47d7da39996664654c50df1579b59d8c54fa4fe7af24612e9679e9\""
+        "ETag": "W/\"1732873bcc1273ebb56637f35483fc3c7cef394aaeca2effb0cb6274f2d2f793\""
     },
     "duckietown/dt-device-online": {
         "Content": [
@@ -4021,23 +4004,6 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "07f42148e7d99706a98f3fd2d315222e1b3b7539",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/07f42148e7d99706a98f3fd2d315222e1b3b7539"
-                },
-                "name": "DTSW-3006-Implement-multi-connector-driver-for-the-time-of-flight-front-center",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/DTSW-3006-Implement-multi-connector-driver-for-the-time-of-flight-front-center/protection"
-            },
-            {
-                "commit": {
                     "sha": "9eb984c54911aec9e3809bdb51e177a7fe085787",
                     "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/9eb984c54911aec9e3809bdb51e177a7fe085787"
                 },
@@ -4377,7 +4343,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/shutdown_behaviors/protection"
             }
         ],
-        "ETag": "W/\"7b34705d10392aa5af1936c9dce00a5057cc59a197fb7cd4366d352a833a041a\""
+        "ETag": "W/\"4dec7feea5e064f032c805477b19d416922726e8edad8e76a87a8039af7d7381\""
     },
     "duckietown/dt-files-api": {
         "Content": [
@@ -5227,6 +5193,23 @@
                     "sha": "8e5628ad4ec43f48c0dbdeae16e5076de1fbfda2",
                     "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/8e5628ad4ec43f48c0dbdeae16e5076de1fbfda2"
                 },
+                "name": "ente",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/ente/protection"
+            },
+            {
+                "commit": {
+                    "sha": "8e5628ad4ec43f48c0dbdeae16e5076de1fbfda2",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/8e5628ad4ec43f48c0dbdeae16e5076de1fbfda2"
+                },
                 "name": "ente-staging",
                 "protected": false,
                 "protection": {
@@ -5240,7 +5223,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"2014ddec0f49328b7ef238995f4e979249c86599d419cfd56b723f69be30793f\""
+        "ETag": "W/\"e651b5ac0338621430625f4f2cbb7978279fd28196dc19a1d907f4503f52f012\""
     },
     "duckietown/dt-machine-learning-base-environment": {
         "Content": [

@@ -25,6 +25,8 @@ _generate_webcheck:
 _generate_bookbuild:
 	# bookbuild jobs
 	rm -rf ${ROOT_DIR}/jobs/Book\ Build*
+	rm -rf ${ROOT_DIR}/jobs/Stage\ Sync\ -\ Book\ -*
+	rm -rf ${ROOT_DIR}/jobs/Distro\ Sync\ -\ Book\ -*
 	python3 ${ROOT_DIR}/generator/create_bookbuild_jobs.py \
 		--jobsdir ${ROOT_DIR}/jobs/ \
 		--books ${ROOT_DIR}/books.json \

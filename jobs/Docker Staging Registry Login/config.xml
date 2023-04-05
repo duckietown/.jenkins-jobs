@@ -1,0 +1,35 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Logins against the staging docker registry</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@2.4.0">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>docker login --username duckietowndaemon --password ${DOCKER_PASSWORD} registry-stage2.duckietown.org</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@523.vd859a_4b_122e6">
+      <bindings>
+        <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+          <credentialsId>STAGING_DOCKER_PASSWORD</credentialsId>
+          <variable>DOCKER_PASSWORD</variable>
+        </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+      </bindings>
+    </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>
+  </buildWrappers>
+</project>

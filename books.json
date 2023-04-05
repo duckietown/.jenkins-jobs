@@ -24,6 +24,10 @@
         "origin": "duckietown/book-devmanual-shell"
     },
     {
+        "name": "book-devmanual-software",
+        "origin": "duckietown/book-devmanual-software"
+    },
+    {
         "name": "book-devmanual-lx",
         "origin": "duckietown/book-devmanual-lx"
     },

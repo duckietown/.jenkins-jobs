@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Check whether the website 'docs.duckietown.org' is online.</description>
+  <description>Check whether the website 'docs-old.duckietown.org' is online.</description>
   <keepDependencies>false</keepDependencies>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -12,7 +12,7 @@
     <hudson.tasks.Shell>
       <command>
 # (try to) reach website
-curl --silent --show-error --fail --user-agent "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0" https://docs.duckietown.org
+curl --silent --show-error --fail --user-agent "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0" https://docs-old.duckietown.org
       </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

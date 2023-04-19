@@ -283,7 +283,7 @@ def main():
             # create job by updating the template fields
             job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
             params = {
-                "REPO_OWNER": "duckietown",
+                "REPO_ORIGIN": book_origin,
                 "REPO_NAME": book_name,
                 "REPO_URL": REPO_URL,
                 "GIT_URL": GIT_URL,

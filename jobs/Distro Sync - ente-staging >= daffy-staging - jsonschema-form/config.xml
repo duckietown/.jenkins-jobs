@@ -45,7 +45,7 @@
     <hudson.tasks.Shell>
       <command>
 # compare branches
-exit $(curl -H "Authorization: Bearer ${GITHUB_TOKEN}" https://api.github.com/repos/duckietown/jsonschema-form/compare/ente-staging...daffy-staging | jq .ahead_by)
+exit $(curl -H "Authorization: Bearer ${GITHUB_TOKEN}" https://api.github.com/repos/duckietown/utility-dashboards/compare/ente-staging...daffy-staging | jq .ahead_by)
       </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

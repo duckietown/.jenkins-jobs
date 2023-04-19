@@ -45,7 +45,7 @@
     <hudson.tasks.Shell>
       <command>
 # compare branches
-exit $(curl -H "Authorization: Bearer ${{GITHUB_TOKEN}}" https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/compare/{FROM_BRANCH}...{TO_BRANCH} | jq .ahead_by)
+exit $(curl -H "Authorization: Bearer ${{GITHUB_TOKEN}}" https://api.github.com/repos/{REPO_ORIGIN}/compare/{FROM_BRANCH}...{TO_BRANCH} | jq .ahead_by)
       </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

@@ -1,14 +1,14 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
     <actions/>
-    <description>Autobuild for repository dt-commons</description>
+    <description>Autobuild for repository dt-duckiematrix</description>
     <keepDependencies>false</keepDependencies>
     <properties>
         <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@2.4.0">
             <doNotScan>false</doNotScan>
         </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
         <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.5">
-            <projectUrl>https://github.com/duckietown/dt-commons</projectUrl>
+            <projectUrl>https://github.com/duckietown/dt-duckiematrix</projectUrl>
             <displayName></displayName>
         </com.coravy.hudson.plugins.github.GithubProjectProperty>
     </properties>
@@ -16,20 +16,20 @@
         <configVersion>2</configVersion>
         <userRemoteConfigs>
             <hudson.plugins.git.UserRemoteConfig>
-                <url>git@github.com:duckietown/dt-commons</url>
+                <url>git@github.com:duckietown/dt-duckiematrix</url>
                 <credentialsId>GITHUB_SSH_KEY</credentialsId>
             </hudson.plugins.git.UserRemoteConfig>
         </userRemoteConfigs>
         <branches>
             <hudson.plugins.git.BranchSpec>
-                <name>daffy</name>
+                <name>ente</name>
             </hudson.plugins.git.BranchSpec>
         </branches>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
         <submoduleCfg class="empty-list"/>
         <extensions>
             <hudson.plugins.git.extensions.impl.LocalBranch>
-                <localBranch>daffy</localBranch>
+                <localBranch>ente</localBranch>
             </hudson.plugins.git.extensions.impl.LocalBranch>
             <hudson.plugins.git.extensions.impl.GitLFSPull/>
         </extensions>
@@ -42,7 +42,7 @@
     <triggers>
         <jenkins.triggers.ReverseBuildTrigger>
             <spec></spec>
-            <upstreamProjects>Docker Autobuild - daffy - dt-base-environment - arm32v7</upstreamProjects>
+            <upstreamProjects>Docker Autobuild - ente - dt-commons - arm64v8</upstreamProjects>
             <threshold>
                 <name>SUCCESS</name>
                 <ordinal>0</ordinal>
@@ -71,11 +71,11 @@ export ROOT_WS="$(pwd)"
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
 # fetch commands
-git clone -b daffy https://github.com/duckietown/duckietown-shell-commands ./commands
+git clone -b ente https://github.com/duckietown/duckietown-shell-commands ./commands
 export DTSHELL_COMMANDS="$(pwd)/commands"
 
 # fetch code
-git clone -b daffy git@github.com:duckietown/dt-commons ./ws
+git clone -b ente git@github.com:duckietown/dt-duckiematrix ./ws
 git -C ./ws fetch --tags
 
 # install/update duckietown-shell
@@ -85,7 +85,7 @@ export DOCKER_REGISTRY="docker.io"
 export DOCKER_USERNAME="afdaniele"
 
 # switch to CI commands
-dts --set-version daffy exit
+dts --set-version ente exit
 
 # enter the workspace
 cd ./ws/
@@ -104,10 +104,10 @@ fi
 
 # pull, build(cloud), push, clean
 dts --debug \
-    devel buildx \
-        --arch arm32v7 \
-        --tag daffy \
-        --base-tag daffy \
+    devel build \
+        --arch arm64v8 \
+        --tag ente \
+        --base-tag ente \
         --ci
 
 # leave the workspace
@@ -148,7 +148,7 @@ rm -rf ./ws
                             </configs>
                         </hudson.plugins.parameterizedtrigger.BooleanParameters>
                     </configs>
-                    <projects>Docker Autobuild - daffy - dt-ros-commons - arm32v7, Docker Autobuild - daffy - dt-device-dashboard - arm32v7, Docker Autobuild - daffy - dt-device-online - arm32v7, Docker Autobuild - daffy - dt-device-health - arm32v7, Docker Autobuild - daffy - dt-device-proxy - arm32v7, Docker Autobuild - daffy - dt-system-monitor - arm32v7, Docker Autobuild - daffy - dt-files-api - arm32v7, Docker Autobuild - daffy - dt-code-api - arm32v7, Docker Autobuild - daffy - dt-vscode - arm32v7, Docker Autobuild - daffy - dt-wifi-access-point - arm32v7, Docker Autobuild - daffy - dt-firmware-upgrade - arm32v7, Docker Autobuild - daffy - dt-duckiematrix - arm32v7, Docker Autobuild - daffy - aido-base-python3 - arm32v7, Docker Autobuild - daffy - dt-autolab-proxy - arm32v7, Docker Autobuild - daffy - dt-aido-autolab-evaluator - arm32v7, Docker Autobuild - daffy - gym-duckietown - arm32v7, Docker Autobuild - daffy - dt-statistics-server - arm32v7, Docker Autobuild - daffy - dt-jupyter-book - arm32v7, Docker Autobuild - daffy - jsonschema-form - arm32v7</projects>
+                    <projects></projects>
                     <condition>FAILED</condition>
                     <triggerWithNoParameters>false</triggerWithNoParameters>
                     <triggerFromChildProjects>false</triggerFromChildProjects>

@@ -131,6 +131,12 @@
         "labels": ["dtproject"]
     },
     {
+        "name": "dt-duckiematrix",
+        "origin": "duckietown/dt-duckiematrix",
+        "base": "dt-commons",
+        "labels": ["dtproject"]
+    },
+    {
         "name": "challenge-aido_LF-template-ros",
         "origin": "duckietown/challenge-aido_LF-template-ros",
         "base": "dt-ros-commons",

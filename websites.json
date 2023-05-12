@@ -22,12 +22,12 @@
     {
         "name": "dashboard.duckietown.org",
         "url": "https://dashboard.duckietown.org",
-        "labels":["MUST-BECOME-DOT-COM", "production"]
+        "labels":["TO-BE-DISCONTINUED", "production"]
     },
     {
         "name": "docs-old.duckietown.org",
         "url": "https://docs-old.duckietown.org",
-        "labels":["MUST-BECOME-DOT-COM", "production"]
+        "labels":["TO-BE-DISCONTINUED", "production"]
     },
     {
         "name": "docs.duckietown.com",
@@ -38,6 +38,21 @@
         "name": "staging-docs.duckietown.com",
         "url": "https://staging-docs.duckietown.com",
         "labels":["staging"]
+    },
+    {
+        "name": "stats.duckietown.com",
+        "url": "https://stats.duckietown.com/v2/health",
+        "labels":["production"]
+    },
+    {
+        "name": "auth.duckietown.com",
+        "url": "https://auth.duckietown.com/v1/health",
+        "labels":["production"]
+    },
+    {
+        "name": "data.duckietown.com",
+        "url": "https://data.duckietown.com/v1/health",
+        "labels":["production"]
     },
     
     

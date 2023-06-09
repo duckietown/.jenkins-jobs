@@ -12,7 +12,8 @@ _generate_repojobs:
 		--jobsdir ${ROOT_DIR}/jobs/ \
 		--repos ${ROOT_DIR}/repositories.json \
 		--arch ${ARCH} \
-		--distro ${DISTRO}
+		--distro ${DISTRO} \
+		--debug
 
 _generate_webcheck:
 	# webcheck jobs

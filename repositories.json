@@ -325,5 +325,16 @@
         "blacklist": ["arm32v7"],
         "location": "jsonschema-form",
         "labels": ["dtproject"]
+    },
+    
+    {
+        "name": "duckietown-shell",
+        "origin": "duckietown/duckietown-shell",
+        "labels": ["-autobuild"]
+    },
+    {
+        "name": "duckietown-shell-commands",
+        "origin": "duckietown/duckietown-shell-commands",
+        "labels": ["-autobuild"]
     }
 ]

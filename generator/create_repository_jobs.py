@@ -61,8 +61,17 @@ def main():
         required=True,
         help="Comma-separated list of target distros for the job to build",
     )
+    parser.add_argument(
+        "--debug",
+        default=False,
+        action="store_true",
+        help="Run in debug mode",
+    )
     parsed, _ = parser.parse_known_args()
     # ---
+    # logging setup
+    if parsed.debug:
+        logger.setLevel(logging.DEBUG)
     parsed.jobsdir = os.path.abspath(parsed.jobsdir)
     # check if the destination directory exists
     if not os.path.exists(parsed.jobsdir):
@@ -137,9 +146,6 @@ def main():
     # ---
     for repo in repos:
         logger.info("Analyzing [{:s}]".format(repo["name"]))
-        # must have a dtproject label
-        if "dtproject" not in repo["labels"]:
-            continue
         # repo info
         repo_name = repo["name"]
         repo_origin = repo["origin"]
@@ -148,7 +154,7 @@ def main():
         GIT_URL = "git@github.com:{:s}".format(repo_origin)
         cached_repo: Optional[dict] = cache[repo_origin]
         repo_build_timeout = repo.get("timeout_min", DEFAULT_TIMEOUT_MINUTES)
-        branches_url = "https://api.github.com/repos/{origin}/branches".format(**repo)
+        branches_url = "https://api.github.com/repos/{origin}/branches?per_page=100".format(**repo)
         # call API
         logger.info("> Fetching list of branches")
         if cached_repo:
@@ -169,6 +175,7 @@ def main():
         elif response.status_code == 200:
             logger.info("< Fetched from GitHub.")
             stats["cache"]["misses"] += 1
+            # update cache
             # noinspection PyTypeChecker
             cache[repo_origin] = {
                 "ETag": response.headers["ETag"],
@@ -187,10 +194,10 @@ def main():
         else:
             logger.error(f"< Unexpected response {response.status_code}")
             sys.exit(4)
-        # update cache
         # get json response
         # noinspection PyUnresolvedReferences
         repo_branches[repo_name] = [b["name"] for b in cache[repo_origin]["Content"]]
+        logger.debug(f"Branches found: {repo_branches[repo_name]}")
         # filter distros
         repo_distros = [b for b in repo_branches[repo_name] if b in distro_list]
         logger.info("> Found distros: {:s}".format(str(repo_distros)))
@@ -282,7 +289,8 @@ def main():
 
                 jobs_to_write[(repo_distro, repo_name, repo_arch)] = {
                     "config_path": job_config_path,
-                    "config": config
+                    "config": config,
+                    "labels": repo["labels"]
                 }
 
     # populate blacklists
@@ -301,10 +309,13 @@ def main():
                                 f"{(repo_base, repo_arch)} is blacklisted.")
                     found += 1
 
-    # write jobs to file
+    # create autobuild jobs
     for (_, repo_name, repo_arch), job in jobs_to_write.items():
         # don't write if blacklisted
         if (repo_name, repo_arch) in BLACKLIST:
+            continue
+        # must not exclude 'autobuild'
+        if "-autobuild" in job["labels"]:
             continue
         job_config_path = job["config_path"]
         config = job["config"]
@@ -317,8 +328,8 @@ def main():
     # ---
     # create auto-merging jobs
     for repo in repos:
-        # must have a dtproject label
-        if "dtproject" not in repo["labels"]:
+        # must not exclude 'automerge'
+        if "-automerge" in repo["labels"]:
             continue
         # repo info
         repo_name = repo["name"]
@@ -364,8 +375,8 @@ def main():
     # ---
     # create stage-sync jobs
     for repo in repos:
-        # must have a dtproject label
-        if "dtproject" not in repo["labels"]:
+        # must not exclude 'stagesync'
+        if "-stagesync" in repo["labels"]:
             continue
         # repo info
         repo_name = repo["name"]
@@ -423,8 +434,8 @@ def main():
     # ---
     # create distro-sync jobs
     for repo in repos:
-        # must have a dtproject label
-        if "dtproject" not in repo["labels"]:
+        # must not exclude 'distrosync'
+        if "-distrosync" in repo["labels"]:
             continue
         # repo info
         repo_name = repo["name"]

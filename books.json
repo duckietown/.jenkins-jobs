@@ -34,5 +34,9 @@
     {
         "name": "book-course-intro-to-drones",
         "origin": "duckietown/book-course-intro-to-drones"
+    },
+    {
+        "name": "book-devmanual-duckiematrix",
+        "origin": "duckietown/book-devmanual-duckiematrix"
     }
 ]

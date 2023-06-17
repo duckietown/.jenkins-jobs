@@ -1,4 +1,5 @@
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+BRANCH_NAME=$(shell git rev-parse --abbrev-ref HEAD)
 
 ARCH:="arm32v7,arm64v8,amd64"
 
@@ -40,3 +41,5 @@ generate-production: _generate_repojobs _generate_webcheck _generate_bookbuild
 generate-staging: DISTRO=daffy-staging,ente-staging
 generate-staging: LABELS=staging
 generate-staging: _generate_repojobs _generate_webcheck _generate_bookbuild
+
+generate: generate-${BRANCH_NAME}

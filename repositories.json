@@ -336,5 +336,11 @@
         "name": "duckietown-shell-commands",
         "origin": "duckietown/duckietown-shell-commands",
         "labels": ["-autobuild"]
+    },
+    
+    {
+        "name": "dt-virtual-device",
+        "origin": "duckietown/dt-virtual-device",
+        "labels": ["dtproject"]
     }
 ]

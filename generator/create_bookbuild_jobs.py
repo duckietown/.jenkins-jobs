@@ -14,6 +14,7 @@ logger = logging.getLogger("jobs-generator")
 logger.setLevel(logging.INFO)
 
 BOOKBUILD_TEMPLATE_JOB = "__bookbuild_template__"
+AUTOMERGE_TEMPLATE_JOB = "__automerge_template__"
 STAGESYNC_TEMPLATE_JOB = "__stagesync_template__"
 DISTROSYNC_TEMPLATE_JOB = "__distrosync_template__"
 DEFAULT_TIMEOUT_MINUTES = 30
@@ -66,6 +67,12 @@ def main():
     )
     with open(bookbuild_template_config_file, "rt") as fin:
         bookbuild_template_config = fin.read()
+    # - Git Autmerge job template
+    automerge_template_config_file = os.path.join(
+        parsed.jobsdir, AUTOMERGE_TEMPLATE_JOB, "config.xml.template"
+    )
+    with open(automerge_template_config_file, "rt") as fin:
+        automerge_template_config = fin.read()
     # - Stage Sync job template
     stagesync_template_config_file = os.path.join(
         parsed.jobsdir, STAGESYNC_TEMPLATE_JOB, "config.xml.template"
@@ -197,6 +204,53 @@ def main():
         stats["num_jobs"] += 1
 
     # ---
+    # create auto-merging jobs
+    for book in books:
+        # must not exclude 'automerge'
+        if "-automerge" in book.get("labels", []):
+            continue
+        # book info
+        book_name = book["name"]
+        book_origin = book["origin"]
+        REPO_URL = "https://github.com/{:s}".format(book_origin)
+        GIT_URL = "git@github.com:{:s}".format(book_origin)
+        # one job per pair (distro, distro-staging)
+        for book_branch in repo_branches[book_name]:
+            # auto-merge can only happen on X-staging branches
+            if not book_branch.endswith("-staging"):
+                continue
+            # we only add this job if this branch is one of those we care about
+            if book_branch not in distro_list:
+                continue
+            book_branch_prod = book_branch[:-len("-staging")]
+            if book_branch_prod not in repo_branches[book_name]:
+                logger.warning(f"Found branch '{book_branch}' but not '{book_branch_prod}' "
+                               f"in booksitory '{book_name}'. This is weird. "
+                               f"Available branches are: {str(repo_branches[book_name])}")
+
+            jname = automerge_job_name(
+                from_branch=book_branch_prod,
+                into_branch=book_branch,
+                repo_name=book_name
+            )
+            # create job by updating the template fields
+            job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
+            params = {
+                "REPO_NAME": book_name,
+                "REPO_URL": REPO_URL,
+                "FROM_BRANCH": book_branch_prod,
+                "INTO_BRANCH": book_branch,
+                "GIT_URL": GIT_URL,
+                "TIMEOUT_MINUTES": 10
+            }
+            config = automerge_template_config.format(**params)
+            # write job to disk
+            os.makedirs(os.path.dirname(job_config_path))
+            with open(job_config_path, "wt") as fout:
+                fout.write(config)
+            stats["num_jobs"] += 1
+
+    # ---
     # create stage-sync jobs
     for book in books:
         # book info
@@ -310,6 +364,10 @@ def main():
 
 def bookbuild_job_name(distro, repo_name):
     return "Book Build - {:s} - {:s}".format(distro, repo_name)
+
+
+def automerge_job_name(from_branch, into_branch, repo_name):
+    return "Git Automerge - Book - {:s} -> {:s} - {:s}".format(from_branch, into_branch, repo_name)
 
 
 def stagesync_job_name(from_branch, to_branch, repo_name):

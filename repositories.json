@@ -66,7 +66,7 @@
     {
         "name": "dt-device-dashboard",
         "origin": "duckietown/dt-device-dashboard",
-        "base": "dt-commons",
+        "base": "dt-compose-commons",
         "labels": ["dtproject"]
     },
     {

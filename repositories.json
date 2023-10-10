@@ -17,6 +17,12 @@
         "labels": ["dtproject"]
     },
     {
+        "name": "dt-compose-commons",
+        "origin": "duckietown/dt-compose-commons",
+        "base": "dt-commons",
+        "labels": ["dtproject"]
+    },
+    {
         "name": "dt-rosbridge-websocket",
         "origin": "duckietown/dt-rosbridge-websocket",
         "base": "dt-ros-commons",

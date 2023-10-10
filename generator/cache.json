@@ -1795,14 +1795,14 @@
             },
             {
                 "commit": {
-                    "sha": "ffcf63d11f9d883d3ab50e786e3703f47d724ce6",
-                    "url": "https://api.github.com/repos/duckietown/dt-compose-commons/commits/ffcf63d11f9d883d3ab50e786e3703f47d724ce6"
+                    "sha": "b549b4570f51b16668a5104f8e876bf6e8dc5cf2",
+                    "url": "https://api.github.com/repos/duckietown/dt-compose-commons/commits/b549b4570f51b16668a5104f8e876bf6e8dc5cf2"
                 },
                 "name": "ente-staging",
                 "protected": false
             }
         ],
-        "ETag": "W/\"fbef711ebc3eac79e5362bb11dd3be4fa7d96d8e4a1e48fe7342c88ccee098e7\""
+        "ETag": "W/\"228c82d7f936bdf9fe03b166ada1bb108137d8d80417cafbe619994d09057893\""
     },
     "duckietown/dt-core": {
         "Content": [
@@ -1997,14 +1997,14 @@
             },
             {
                 "commit": {
-                    "sha": "805c1a83bcd780e42af4fdd644790fa8cfccc25a",
-                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/805c1a83bcd780e42af4fdd644790fa8cfccc25a"
+                    "sha": "e88193b19c3494218b38d1eff0e1785250cc3e3f",
+                    "url": "https://api.github.com/repos/duckietown/dt-device-dashboard/commits/e88193b19c3494218b38d1eff0e1785250cc3e3f"
                 },
                 "name": "ente-staging",
                 "protected": false
             }
         ],
-        "ETag": "W/\"fe40be504c993d5315dd99a807dcb6bc55f5d0826b351d8d5aab6861187a0340\""
+        "ETag": "W/\"81cd133115e51fff3342dabed1159261d8a67e3f3e3d10e52be4668217e2f168\""
     },
     "duckietown/dt-device-health": {
         "Content": [
@@ -3914,14 +3914,14 @@
             },
             {
                 "commit": {
-                    "sha": "a09cbd2b996b0044d6f2fc9d58d2a385bd1e9b15",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/a09cbd2b996b0044d6f2fc9d58d2a385bd1e9b15"
+                    "sha": "a8fa94e790c3175ec5d720875ea7bda0fb77e06f",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/a8fa94e790c3175ec5d720875ea7bda0fb77e06f"
                 },
                 "name": "v6",
                 "protected": false
             }
         ],
-        "ETag": "W/\"c678fc319d71224944d548c5b765ade08ea8bf933370969d58da94aa76b2a6c6\""
+        "ETag": "W/\"4762d864cffa2f091f6ce10fa694abff98203e200d55fe71453869cfeaad0dbb\""
     },
     "duckietown/gym-duckietown": {
         "Content": [

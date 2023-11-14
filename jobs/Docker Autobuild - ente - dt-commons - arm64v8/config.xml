@@ -70,22 +70,17 @@ export ROOT_WS="$(pwd)"
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
-# fetch commands
-git clone -b ente https://github.com/duckietown/duckietown-shell-commands ./commands
-export DTSHELL_COMMANDS="$(pwd)/commands"
-
 # fetch code
 git clone -b ente git@github.com:duckietown/dt-commons ./ws
 git -C ./ws fetch --tags
 
-# install/update duckietown-shell
+# configure environment
 export PIP_INDEX_URL="https://pypi.org/simple"
 export DTSERVER="https://challenges.duckietown.org/v4"
 export DOCKER_REGISTRY="docker.io"
 export DOCKER_USERNAME="afdaniele"
-
-# switch to CI commands
-dts --set-version ente exit
+export DUCKIETOWN_CI_IS_STAGING="0"
+export DUCKIETOWN_CI_IS_PRODUCTION="1"
 
 # enter the workspace
 cd ./ws/
@@ -103,7 +98,7 @@ if test -f "dependencies-py3.dt.txt"; then
 fi
 
 # pull, build(cloud), push, clean
-dts --debug \
+dts --profile=ente --debug \
     devel build \
         --arch arm64v8 \
         --tag ente \
@@ -148,7 +143,7 @@ rm -rf ./ws
                             </configs>
                         </hudson.plugins.parameterizedtrigger.BooleanParameters>
                     </configs>
-                    <projects>Docker Autobuild - ente - dt-ros-commons - arm64v8, Docker Autobuild - ente - dt-device-dashboard - arm64v8, Docker Autobuild - ente - dt-device-online - arm64v8, Docker Autobuild - ente - dt-device-health - arm64v8, Docker Autobuild - ente - dt-device-proxy - arm64v8, Docker Autobuild - ente - dt-system-monitor - arm64v8, Docker Autobuild - ente - dt-files-api - arm64v8, Docker Autobuild - ente - dt-code-api - arm64v8, Docker Autobuild - ente - dt-vscode - arm64v8, Docker Autobuild - ente - dt-wifi-access-point - arm64v8, Docker Autobuild - ente - dt-firmware-upgrade - arm64v8, Docker Autobuild - ente - dt-duckiematrix - arm64v8, Docker Autobuild - ente - aido-base-python3 - arm64v8, Docker Autobuild - ente - dt-autolab-proxy - arm64v8, Docker Autobuild - ente - dt-aido-autolab-evaluator - arm64v8, Docker Autobuild - ente - gym-duckietown - arm64v8, Docker Autobuild - ente - dt-statistics-server - arm64v8, Docker Autobuild - ente - dt-jupyter-book - arm64v8, Docker Autobuild - ente - jsonschema-form - arm64v8</projects>
+                    <projects>Docker Autobuild - ente - dt-ros-commons - arm64v8, Docker Autobuild - ente - dt-compose-commons - arm64v8, Docker Autobuild - ente - dt-device-online - arm64v8, Docker Autobuild - ente - dt-device-health - arm64v8, Docker Autobuild - ente - dt-device-proxy - arm64v8, Docker Autobuild - ente - dt-system-monitor - arm64v8, Docker Autobuild - ente - dt-files-api - arm64v8, Docker Autobuild - ente - dt-code-api - arm64v8, Docker Autobuild - ente - dt-vscode - arm64v8, Docker Autobuild - ente - dt-wifi-access-point - arm64v8, Docker Autobuild - ente - dt-firmware-upgrade - arm64v8, Docker Autobuild - ente - dt-duckiematrix - arm64v8, Docker Autobuild - ente - aido-base-python3 - arm64v8, Docker Autobuild - ente - dt-autolab-proxy - arm64v8, Docker Autobuild - ente - dt-aido-autolab-evaluator - arm64v8, Docker Autobuild - ente - gym-duckietown - arm64v8, Docker Autobuild - ente - dt-statistics-server - arm64v8, Docker Autobuild - ente - dt-jupyter-book - arm64v8, Docker Autobuild - ente - jsonschema-form - arm64v8</projects>
                     <condition>FAILED</condition>
                     <triggerWithNoParameters>false</triggerWithNoParameters>
                     <triggerFromChildProjects>false</triggerFromChildProjects>

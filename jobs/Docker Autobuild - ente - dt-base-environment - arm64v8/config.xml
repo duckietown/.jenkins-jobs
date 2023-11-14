@@ -70,22 +70,17 @@ export ROOT_WS="$(pwd)"
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
-# fetch commands
-git clone -b ente https://github.com/duckietown/duckietown-shell-commands ./commands
-export DTSHELL_COMMANDS="$(pwd)/commands"
-
 # fetch code
 git clone -b ente git@github.com:duckietown/dt-base-environment ./ws
 git -C ./ws fetch --tags
 
-# install/update duckietown-shell
+# configure environment
 export PIP_INDEX_URL="https://pypi.org/simple"
 export DTSERVER="https://challenges.duckietown.org/v4"
 export DOCKER_REGISTRY="docker.io"
 export DOCKER_USERNAME="afdaniele"
-
-# switch to CI commands
-dts --set-version ente exit
+export DUCKIETOWN_CI_IS_STAGING="0"
+export DUCKIETOWN_CI_IS_PRODUCTION="1"
 
 # enter the workspace
 cd ./ws/
@@ -103,7 +98,7 @@ if test -f "dependencies-py3.dt.txt"; then
 fi
 
 # pull, build(cloud), push, clean
-dts --debug \
+dts --profile=ente --debug \
     devel build \
         --arch arm64v8 \
         --tag ente \

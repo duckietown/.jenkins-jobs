@@ -70,22 +70,17 @@ export ROOT_WS="$(pwd)"
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${GIT_SSH_KEY_FILEPATH}" -o IdentitiesOnly=yes'
 
-# fetch commands
-git clone -b daffy https://github.com/duckietown/duckietown-shell-commands ./commands
-export DTSHELL_COMMANDS="$(pwd)/commands"
-
 # fetch code
 git clone -b daffy git@github.com:duckietown/dt-commons ./ws
 git -C ./ws fetch --tags
 
-# install/update duckietown-shell
+# configure environment
 export PIP_INDEX_URL="https://pypi.org/simple"
 export DTSERVER="https://challenges.duckietown.org/v4"
 export DOCKER_REGISTRY="docker.io"
 export DOCKER_USERNAME="afdaniele"
-
-# switch to CI commands
-dts --set-version daffy exit
+export DUCKIETOWN_CI_IS_STAGING="0"
+export DUCKIETOWN_CI_IS_PRODUCTION="1"
 
 # enter the workspace
 cd ./ws/
@@ -103,7 +98,7 @@ if test -f "dependencies-py3.dt.txt"; then
 fi
 
 # pull, build(cloud), push, clean
-dts --debug \
+dts --profile=daffy --debug \
     devel buildx \
         --arch arm32v7 \
         --tag daffy \
@@ -148,7 +143,7 @@ rm -rf ./ws
                             </configs>
                         </hudson.plugins.parameterizedtrigger.BooleanParameters>
                     </configs>
-                    <projects>Docker Autobuild - daffy - dt-ros-commons - arm32v7, Docker Autobuild - daffy - dt-device-dashboard - arm32v7, Docker Autobuild - daffy - dt-device-online - arm32v7, Docker Autobuild - daffy - dt-device-health - arm32v7, Docker Autobuild - daffy - dt-device-proxy - arm32v7, Docker Autobuild - daffy - dt-system-monitor - arm32v7, Docker Autobuild - daffy - dt-files-api - arm32v7, Docker Autobuild - daffy - dt-code-api - arm32v7, Docker Autobuild - daffy - dt-vscode - arm32v7, Docker Autobuild - daffy - dt-wifi-access-point - arm32v7, Docker Autobuild - daffy - dt-firmware-upgrade - arm32v7, Docker Autobuild - daffy - dt-duckiematrix - arm32v7, Docker Autobuild - daffy - aido-base-python3 - arm32v7, Docker Autobuild - daffy - dt-autolab-proxy - arm32v7, Docker Autobuild - daffy - dt-aido-autolab-evaluator - arm32v7, Docker Autobuild - daffy - gym-duckietown - arm32v7, Docker Autobuild - daffy - dt-statistics-server - arm32v7, Docker Autobuild - daffy - dt-jupyter-book - arm32v7, Docker Autobuild - daffy - jsonschema-form - arm32v7</projects>
+                    <projects>Docker Autobuild - daffy - dt-ros-commons - arm32v7, Docker Autobuild - daffy - dt-compose-commons - arm32v7, Docker Autobuild - daffy - dt-device-online - arm32v7, Docker Autobuild - daffy - dt-device-health - arm32v7, Docker Autobuild - daffy - dt-device-proxy - arm32v7, Docker Autobuild - daffy - dt-system-monitor - arm32v7, Docker Autobuild - daffy - dt-files-api - arm32v7, Docker Autobuild - daffy - dt-code-api - arm32v7, Docker Autobuild - daffy - dt-vscode - arm32v7, Docker Autobuild - daffy - dt-wifi-access-point - arm32v7, Docker Autobuild - daffy - dt-firmware-upgrade - arm32v7, Docker Autobuild - daffy - dt-duckiematrix - arm32v7, Docker Autobuild - daffy - aido-base-python3 - arm32v7, Docker Autobuild - daffy - dt-autolab-proxy - arm32v7, Docker Autobuild - daffy - dt-aido-autolab-evaluator - arm32v7, Docker Autobuild - daffy - gym-duckietown - arm32v7, Docker Autobuild - daffy - dt-statistics-server - arm32v7, Docker Autobuild - daffy - dt-jupyter-book - arm32v7, Docker Autobuild - daffy - jsonschema-form - arm32v7</projects>
                     <condition>FAILED</condition>
                     <triggerWithNoParameters>false</triggerWithNoParameters>
                     <triggerFromChildProjects>false</triggerFromChildProjects>

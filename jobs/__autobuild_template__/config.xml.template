@@ -70,24 +70,17 @@ export ROOT_WS="$(pwd)"
 # configure git to use SSH key
 export GIT_SSH_COMMAND='ssh -i "${{GIT_SSH_KEY_FILEPATH}}" -o IdentitiesOnly=yes'
 
-# fetch commands
-git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-commands ./commands
-export DTSHELL_COMMANDS="$(pwd)/commands"
-
 # fetch code
 git clone -b {REPO_DISTRO} {GIT_URL} ./ws
 git -C ./ws fetch --tags
 
-# install/update duckietown-shell
+# configure environment
 export PIP_INDEX_URL="{PIP_INDEX_URL}"
 export DTSERVER="{DTSERVER}"
 export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
 export DOCKER_USERNAME="{DOCKER_USERNAME}"
 export DUCKIETOWN_CI_IS_STAGING="{DUCKIETOWN_CI_IS_STAGING}"
 export DUCKIETOWN_CI_IS_PRODUCTION="{DUCKIETOWN_CI_IS_PRODUCTION}"
-
-# switch to CI commands
-dts --set-version {DUCKIETOWN_CI_DT_SHELL_VERSION} exit
 
 # enter the workspace
 cd ./ws/{LOCATION}
@@ -105,7 +98,7 @@ if test -f "dependencies-py3.dt.txt"; then
 fi
 
 # pull, build(cloud), push, clean
-dts --debug \
+dts --profile={DUCKIETOWN_CI_DTSHELL_PROFILE} --debug \
     devel {DTS_DEVEL_BUILD_BACKEND} \
         --arch {REPO_ARCH} \
         --tag {TAG} \

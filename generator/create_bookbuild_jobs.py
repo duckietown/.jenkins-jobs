@@ -182,7 +182,6 @@ def main():
                 "DOCKER_REGISTRY": DOCKER_REGISTRY,
                 "BOOK_LIBRARY_DNS": BOOK_LIBRARY_DNS,
                 "BASE_JOB": "",
-                "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
                 "TIMEOUT_MINUTES": repo_build_timeout,
                 "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
             }

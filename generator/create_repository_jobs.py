@@ -276,7 +276,7 @@ def main():
                     "DOCKER_USERNAME": DOCKER_USERNAME,
                     "DOCKER_PASSWORD_KEY": DOCKER_PASSWORD_KEY,
                     "GIT_URL": GIT_URL,
-                    "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
+                    "DUCKIETOWN_CI_DTSHELL_PROFILE": repo_distro,
                     "BASE_JOB": BASE_JOB,
                     "CHILDREN_JOBS": CHILDREN_JOBS,
                     "LOCATION": repo.get("location", ""),

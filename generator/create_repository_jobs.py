@@ -276,14 +276,16 @@ def main():
                     "DOCKER_USERNAME": DOCKER_USERNAME,
                     "DOCKER_PASSWORD_KEY": DOCKER_PASSWORD_KEY,
                     "GIT_URL": GIT_URL,
-                    "DUCKIETOWN_CI_DT_SHELL_VERSION": repo_distro,
+                    "DUCKIETOWN_CI_DTSHELL_PROFILE": repo_distro,
                     "BASE_JOB": BASE_JOB,
                     "CHILDREN_JOBS": CHILDREN_JOBS,
                     "LOCATION": repo.get("location", ""),
                     "DTS_ARGS": DTS_ARGS,
                     "TIMEOUT_MINUTES": repo_build_timeout,
                     "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
-                    "DTS_DEVEL_BUILD_BACKEND": DTS_DEVEL_BUILD_BACKEND.get(repo_distro, "build")
+                    "DTS_DEVEL_BUILD_BACKEND": DTS_DEVEL_BUILD_BACKEND.get(repo_distro, "build"),
+                    "DUCKIETOWN_CI_IS_STAGING": str(int(is_staging)),
+                    "DUCKIETOWN_CI_IS_PRODUCTION": str(int(not is_staging)),
                 }
                 config = autobuild_template_config.format(**params)
 

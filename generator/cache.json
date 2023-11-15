@@ -7560,8 +7560,8 @@
             },
             {
                 "commit": {
-                    "sha": "9fa3cfb4b49d33aa5c9499657f43d3b046bcbbdb",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/9fa3cfb4b49d33aa5c9499657f43d3b046bcbbdb"
+                    "sha": "739b4b84e50391e62d333878fd6dffb2d102e26b",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/739b4b84e50391e62d333878fd6dffb2d102e26b"
                 },
                 "name": "ente",
                 "protected": false,
@@ -7611,8 +7611,8 @@
             },
             {
                 "commit": {
-                    "sha": "9fa3cfb4b49d33aa5c9499657f43d3b046bcbbdb",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/9fa3cfb4b49d33aa5c9499657f43d3b046bcbbdb"
+                    "sha": "739b4b84e50391e62d333878fd6dffb2d102e26b",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/739b4b84e50391e62d333878fd6dffb2d102e26b"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -7746,7 +7746,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/branches/v6/protection"
             }
         ],
-        "ETag": "W/\"e3f11b54c564de836b86a6d3722e9fd76548e20b0d2f3f0e6cabf706f3f7ece3\""
+        "ETag": "W/\"5bd345db5d7305e3dfceed844a8507faae160104bf9a1bc5636e5750ed70c033\""
     },
     "duckietown/gym-duckietown": {
         "Content": [

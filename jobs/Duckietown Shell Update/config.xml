@@ -26,7 +26,10 @@
     <concurrentBuild>false</concurrentBuild>
     <builders>
         <hudson.tasks.Shell>
-            <command>python3 -m pip install -U duckietown-shell</command>
+            <command>
+python3 -m pip uninstall -y duckietown-shell
+python3 -m pip install --force-reinstall git+https://github.com/duckietown/duckietown-shell@v6
+            </command>
             <configuredLocalRules/>
         </hudson.tasks.Shell>
     </builders>

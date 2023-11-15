@@ -81,6 +81,7 @@ export DOCKER_REGISTRY="docker.io"
 export DOCKER_USERNAME="afdaniele"
 export DUCKIETOWN_CI_IS_STAGING="0"
 export DUCKIETOWN_CI_IS_PRODUCTION="1"
+export DTSHELL_DISABLE_STATS=1
 
 # enter the workspace
 cd ./ws/jsonschema-form

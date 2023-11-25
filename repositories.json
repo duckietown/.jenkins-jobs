@@ -8,13 +8,13 @@
         "name": "dt-commons",
         "origin": "duckietown/dt-commons",
         "base": "dt-base-environment",
-        "labels": ["dtproject"]
+        "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
     },
     {
         "name": "dt-ros-commons",
         "origin": "duckietown/dt-ros-commons",
         "base": "dt-commons",
-        "labels": ["dtproject"]
+        "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
     },
     {
         "name": "dt-compose-commons",
@@ -51,7 +51,7 @@
         "origin": "duckietown/dt-core",
         "base": "dt-ros-commons",
         "timeout_min": 360,
-        "labels": ["dtproject"]
+        "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
     },
     {
         "name": "dt-gui-tools",

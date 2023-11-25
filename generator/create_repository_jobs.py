@@ -6,7 +6,7 @@ import logging
 import os
 import sys
 from collections import defaultdict
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Set, Tuple
 
 import requests
 
@@ -18,6 +18,7 @@ AUTOBUILD_TEMPLATE_JOB = "__autobuild_template__"
 AUTOMERGE_TEMPLATE_JOB = "__automerge_template__"
 STAGESYNC_TEMPLATE_JOB = "__stagesync_template__"
 DISTROSYNC_TEMPLATE_JOB = "__distrosync_template__"
+BOOKBUILD_TEMPLATE_JOB = "__bookbuild_template__"
 DTS_ARGS_INDENT = " \\\n" + " " * 8
 DEFAULT_TIMEOUT_MINUTES = 120
 DISTRO_ARCH_BLACKLIST = [
@@ -114,6 +115,12 @@ def main():
     distrosync_template_config_file = os.path.join(
         parsed.jobsdir, DISTROSYNC_TEMPLATE_JOB, "config.xml.template"
     )
+    # - Book Build job template
+    bookbuild_template_config_file = os.path.join(
+        parsed.jobsdir, BOOKBUILD_TEMPLATE_JOB, "config.xml.template"
+    )
+    with open(bookbuild_template_config_file, "rt") as fin:
+        bookbuild_template_config = fin.read()
     with open(distrosync_template_config_file, "rt") as fin:
         distrosync_template_config = fin.read()
     # check which configurations are valid
@@ -286,13 +293,15 @@ def main():
                     "DTS_DEVEL_BUILD_BACKEND": DTS_DEVEL_BUILD_BACKEND.get(repo_distro, "build"),
                     "DUCKIETOWN_CI_IS_STAGING": str(int(is_staging)),
                     "DUCKIETOWN_CI_IS_PRODUCTION": str(int(not is_staging)),
+                    "IS_STAGING": is_staging
                 }
                 config = autobuild_template_config.format(**params)
 
                 jobs_to_write[(repo_distro, repo_name, repo_arch)] = {
                     "config_path": job_config_path,
                     "config": config,
-                    "labels": repo["labels"]
+                    "labels": repo["labels"],
+                    "params": params
                 }
 
     # populate blacklists
@@ -483,6 +492,56 @@ def main():
                 fout.write(config)
             stats["num_jobs"] += 1
 
+    # create book-build jobs
+    books_processed: Set[Tuple[str, str]] = set()
+    for (repo_distro, repo_name, repo_arch), job in jobs_to_write.items():
+        # these are opt-in only
+        if "+bookbuild" not in job["labels"]:
+            continue
+        # must not exclude 'bookbuild:<distro>'
+        if f"-bookbuild:{repo_distro}" in job["labels"]:
+            continue
+        # one per arch
+        if (repo_name, repo_distro) in books_processed:
+            continue
+
+        # job name
+        jname = bookbuild_job_name(repo_distro, repo_name)
+
+        # job parameters
+        jparams = job["params"]
+
+        # staging?
+        is_staging: bool = jparams["IS_STAGING"]
+        if is_staging:
+            DOCKER_REGISTRY = "registry-stage2.duckietown.org"
+            BOOK_LIBRARY_DNS = "staging-docs.duckietown.com"
+        else:
+            DOCKER_REGISTRY = "docker.io"
+            BOOK_LIBRARY_DNS = "docs.duckietown.com"
+
+        # create job by updating the template fields
+        job_config_path = os.path.join(parsed.jobsdir, jname, "config.xml")
+        params = {
+            "REPO_NAME": repo_name,
+            "REPO_URL": jparams["REPO_URL"],
+            "REPO_DISTRO": repo_distro,
+            "GIT_URL": jparams["GIT_URL"],
+            "DOCKER_REGISTRY": DOCKER_REGISTRY,
+            "BOOK_LIBRARY_DNS": BOOK_LIBRARY_DNS,
+            "BASE_JOB": "",
+            "TIMEOUT_MINUTES": DEFAULT_TIMEOUT_MINUTES,
+            "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
+        }
+        config = bookbuild_template_config.format(**params)
+
+        # write job to disk
+        os.makedirs(os.path.dirname(job_config_path))
+        with open(job_config_path, "wt") as fout:
+            fout.write(config)
+        stats["num_jobs"] += 1
+        books_processed.add((repo_name, repo_distro))
+
     # print out stats
     logger.info(
         "Statistics: Total repos: {:d}; Total jobs: {:d}; Cache[Hits]: {:d}; Cache[Misses]: {:d}".format(
@@ -506,6 +565,10 @@ def stagesync_job_name(from_branch, to_branch, repo_name):
 
 def distrosync_job_name(from_branch, to_branch, repo_name):
     return "Distro Sync - {:s} >= {:s} - {:s}".format(from_branch, to_branch, repo_name)
+
+
+def bookbuild_job_name(distro, repo_name):
+    return "CodeBook Build - {:s} - {:s}".format(distro, repo_name)
 
 
 if __name__ == "__main__":

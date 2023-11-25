@@ -9,6 +9,7 @@ _generate_repojobs:
 	rm -rf ${ROOT_DIR}/jobs/Git\ Automerge*
 	rm -rf ${ROOT_DIR}/jobs/Stage\ Sync*
 	rm -rf ${ROOT_DIR}/jobs/Distro\ Sync*
+	rm -rf ${ROOT_DIR}/jobs/CodeBook\ Build*
 	python3 ${ROOT_DIR}/generator/create_repository_jobs.py \
 		--jobsdir ${ROOT_DIR}/jobs/ \
 		--repos ${ROOT_DIR}/repositories.json \

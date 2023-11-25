@@ -55,16 +55,12 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-# fetch commands
-git clone -b {REPO_DISTRO} https://github.com/duckietown/duckietown-shell-commands ./_commands
-export DTSHELL_COMMANDS="$(pwd)/_commands"
-
 # configure environment
 export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
-dts --set-version {REPO_DISTRO} exit
+export DTSHELL_DISABLE_STATS=1
 
 # build book and publish
-dts --debug docs build --ci --publish {BOOK_LIBRARY_DNS}
+dts --profile={REPO_DISTRO} --debug docs build --ci --publish {BOOK_LIBRARY_DNS}
 
 # clean workspace
 rm -rf ./_commands

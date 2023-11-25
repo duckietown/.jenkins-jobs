@@ -55,16 +55,12 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-# fetch commands
-git clone -b ente https://github.com/duckietown/duckietown-shell-commands ./_commands
-export DTSHELL_COMMANDS="$(pwd)/_commands"
-
 # configure environment
 export DOCKER_REGISTRY="docker.io"
-dts --set-version ente exit
+export DTSHELL_DISABLE_STATS=1
 
 # build book and publish
-dts --debug docs build --ci --publish docs.duckietown.com
+dts --profile=ente --debug docs build --ci --publish docs.duckietown.com
 
 # clean workspace
 rm -rf ./_commands

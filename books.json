@@ -38,9 +38,5 @@
     {
         "name": "book-devmanual-duckiematrix",
         "origin": "duckietown/book-devmanual-duckiematrix"
-    },
-    {
-        "name": "dt-commons",
-        "origin": "duckietown/dt-commons"
     }
 ]

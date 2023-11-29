@@ -167,9 +167,11 @@ def main():
             if is_staging:
                 DOCKER_REGISTRY = "registry-stage2.duckietown.org"
                 BOOK_LIBRARY_DNS = "staging-docs.duckietown.com"
+                ADOBE_PDF_VIEWER_CLIENT_ID = "c358f3a3ecf64f8c9b5ac2b69b22ad13"
             else:
                 DOCKER_REGISTRY = "docker.io"
                 BOOK_LIBRARY_DNS = "docs.duckietown.com"
+                ADOBE_PDF_VIEWER_CLIENT_ID = "a7b0852ceb5c45979880659c0d5fb294"
             # job name
             jname = bookbuild_job_name(repo_distro, repo_name)
             # create job by updating the template fields
@@ -184,6 +186,7 @@ def main():
                 "BASE_JOB": "",
                 "TIMEOUT_MINUTES": repo_build_timeout,
                 "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
+                "ADOBE_PDF_VIEWER_CLIENT_ID": ADOBE_PDF_VIEWER_CLIENT_ID
             }
             config = bookbuild_template_config.format(**params)
 

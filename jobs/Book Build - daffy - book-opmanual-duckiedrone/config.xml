@@ -57,6 +57,7 @@
       <command>
 # configure environment
 export DOCKER_REGISTRY="docker.io"
+export ADOBE_PDF_VIEWER_CLIENT_ID="a7b0852ceb5c45979880659c0d5fb294"
 export DTSHELL_DISABLE_STATS=1
 
 # build book and publish

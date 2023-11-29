@@ -222,8 +222,8 @@
             },
             {
                 "commit": {
-                    "sha": "ccce54c0e3edf3b05e6023e1fdb5665b94b62bcd",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/ccce54c0e3edf3b05e6023e1fdb5665b94b62bcd"
+                    "sha": "baa551b7dfa40cd3fc21a9562bc266b3f353a383",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/baa551b7dfa40cd3fc21a9562bc266b3f353a383"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -239,8 +239,8 @@
             },
             {
                 "commit": {
-                    "sha": "ccce54c0e3edf3b05e6023e1fdb5665b94b62bcd",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/ccce54c0e3edf3b05e6023e1fdb5665b94b62bcd"
+                    "sha": "baa551b7dfa40cd3fc21a9562bc266b3f353a383",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/baa551b7dfa40cd3fc21a9562bc266b3f353a383"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -256,8 +256,8 @@
             },
             {
                 "commit": {
-                    "sha": "5bda2bc53d8886510c59c10b79b10070f23bffe2",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/5bda2bc53d8886510c59c10b79b10070f23bffe2"
+                    "sha": "6036c31aec4a59a44507749df071a0f875d12801",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/6036c31aec4a59a44507749df071a0f875d12801"
                 },
                 "name": "ente",
                 "protected": false,
@@ -273,8 +273,8 @@
             },
             {
                 "commit": {
-                    "sha": "2057e04fb5e0f11c78cce95fec7a97e8180613ae",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/2057e04fb5e0f11c78cce95fec7a97e8180613ae"
+                    "sha": "1c82175da849742f11ec66b1eb1d9de2daf9b3d1",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/1c82175da849742f11ec66b1eb1d9de2daf9b3d1"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -323,7 +323,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-docs/branches/revert-6-DTSW-2688-Remove-deprecated-admonitions-and-add-guidelines/protection"
             }
         ],
-        "ETag": "W/\"75267a119594072047c7ef13c9eafc700c4c87c4e3c089c01119b2c41378c8b6\""
+        "ETag": "W/\"898d984df8f8f7e7dbbbaa171df5dafcd7d56939f2a3f4aeefb27f8bd20ecfdb\""
     },
     "duckietown/book-devmanual-duckiematrix": {
         "Content": [
@@ -4422,6 +4422,23 @@
         "Content": [
             {
                 "commit": {
+                    "sha": "d7aa53e0532d5ed73cd93ecf03d71a2a3bbb2a77",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/d7aa53e0532d5ed73cd93ecf03d71a2a3bbb2a77"
+                },
+                "name": "DTSW-4256-imu-db21j-patch",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/DTSW-4256-imu-db21j-patch/protection"
+            },
+            {
+                "commit": {
                     "sha": "9eb984c54911aec9e3809bdb51e177a7fe085787",
                     "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/9eb984c54911aec9e3809bdb51e177a7fe085787"
                 },
@@ -4575,8 +4592,8 @@
             },
             {
                 "commit": {
-                    "sha": "d38aa53b6e3c20114e9e5c617b5067358c30be10",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/d38aa53b6e3c20114e9e5c617b5067358c30be10"
+                    "sha": "54f24f398854ef1a3a0301a9857e3b9beea8abda",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/54f24f398854ef1a3a0301a9857e3b9beea8abda"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -4659,7 +4676,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"796214120eeea46e2f63b76833c3ddddbfce000307ca81ef4fba2403b99a4fbe\""
+        "ETag": "W/\"05466e179a3449b7acdeb73007767392cecdb4ef1ac5deb632caf2455ce37eff\""
     },
     "duckietown/dt-duckiematrix": {
         "Content": [
@@ -5783,8 +5800,8 @@
             },
             {
                 "commit": {
-                    "sha": "5ba94ef63247beb212c53c7bc1e7790b4869e281",
-                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/5ba94ef63247beb212c53c7bc1e7790b4869e281"
+                    "sha": "4c41f572daeb72035cbcd36f2ea1b1190eee2294",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/4c41f572daeb72035cbcd36f2ea1b1190eee2294"
                 },
                 "name": "ente",
                 "protected": false,
@@ -5800,8 +5817,8 @@
             },
             {
                 "commit": {
-                    "sha": "cdb0e70742138f48635f89bec18ce7e7bc296ec7",
-                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/cdb0e70742138f48635f89bec18ce7e7bc296ec7"
+                    "sha": "aa83542f81f415fdaf0322331b1e9cc2afbb82c6",
+                    "url": "https://api.github.com/repos/duckietown/dt-jupyter-book/commits/aa83542f81f415fdaf0322331b1e9cc2afbb82c6"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -5816,7 +5833,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-jupyter-book/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"52794a23d91c51a6907bdb197e41ba6ff7b3688b4e145edd81d8438bc377b923\""
+        "ETag": "W/\"04cf88181a68c967cfaad2a4c287ebc3f23febfae6c31b87ef658ba196870e91\""
     },
     "duckietown/dt-machine-learning-base-environment": {
         "Content": [
@@ -6172,8 +6189,8 @@
             },
             {
                 "commit": {
-                    "sha": "cd453f887ab453bd3c0aa61032e5bba25e6f67b9",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/cd453f887ab453bd3c0aa61032e5bba25e6f67b9"
+                    "sha": "9c508e5221eabe1c152dfd9418ebcb652d9ad0e9",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/9c508e5221eabe1c152dfd9418ebcb652d9ad0e9"
                 },
                 "name": "ente",
                 "protected": false,
@@ -6189,8 +6206,8 @@
             },
             {
                 "commit": {
-                    "sha": "cd453f887ab453bd3c0aa61032e5bba25e6f67b9",
-                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/cd453f887ab453bd3c0aa61032e5bba25e6f67b9"
+                    "sha": "9c508e5221eabe1c152dfd9418ebcb652d9ad0e9",
+                    "url": "https://api.github.com/repos/duckietown/dt-ros-commons/commits/9c508e5221eabe1c152dfd9418ebcb652d9ad0e9"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -6290,7 +6307,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-ros-commons/branches/sth/protection"
             }
         ],
-        "ETag": "W/\"8d4ba4954364fca1f672dbc13e9836996a438a0773d931afa081c9e6ab21bf05\""
+        "ETag": "W/\"b5eb1f7a345ca59112f86dd7345e13fc4446e02ef9da9e01f176b94101d80b74\""
     },
     "duckietown/dt-rosbridge-websocket": {
         "Content": [
@@ -7594,8 +7611,8 @@
             },
             {
                 "commit": {
-                    "sha": "4a5345907054c7365a287fe7eb94b61d15971f82",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/4a5345907054c7365a287fe7eb94b61d15971f82"
+                    "sha": "731444ae12b64d453e9fcb53fcdb5a15089eb433",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/731444ae12b64d453e9fcb53fcdb5a15089eb433"
                 },
                 "name": "ente",
                 "protected": false,
@@ -7645,8 +7662,8 @@
             },
             {
                 "commit": {
-                    "sha": "0dbd220e92525c58a897dfd7b40ff987dc7b0029",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/0dbd220e92525c58a897dfd7b40ff987dc7b0029"
+                    "sha": "38d991aead8ae2bc1b2a9fa78beb29a7532d27de",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/38d991aead8ae2bc1b2a9fa78beb29a7532d27de"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -7780,7 +7797,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/branches/v6/protection"
             }
         ],
-        "ETag": "W/\"6e08c377e4366993c7749e7a7b1f18f0a4a837e93a5f5c82349a7a03a20bfdd0\""
+        "ETag": "W/\"06c02b09d9742b0816163eb524a77cefd74c9910b74661c6898d1a5d85db5a9d\""
     },
     "duckietown/gym-duckietown": {
         "Content": [

@@ -31,7 +31,12 @@
     {
         "name": "dt-duckiebot-interface",
         "origin": "duckietown/dt-duckiebot-interface",
-        "base": "dt-ros-commons",
+        "base": {
+            "daffy": "dt-ros-commons",
+            "daffy-staging": "dt-ros-commons",
+            "ente": "dt-commons",
+            "ente-staging": "dt-commons"
+        },
         "labels": ["dtproject"]
     },
     {

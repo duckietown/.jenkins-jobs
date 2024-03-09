@@ -36,6 +36,8 @@ DTS_DEVEL_BUILD_BACKEND = {
     "daffy-staging": "buildx",
 }
 
+Distro = Repo = Arch = str
+
 
 def main():
     # configure arguments
@@ -135,16 +137,33 @@ def main():
         logger.error(msg)
         sys.exit(6)
     headers["Authorization"] = f"token {github_token}"
+
+    def bases(_repo: dict, _distro: Distro) -> List[str]:
+        if "base" not in _repo:
+            return []
+        _bases = []
+        if isinstance(_repo["base"], list):
+            _bases = _repo["base"]
+        elif isinstance(_repo["base"], str):
+            _bases = [_repo["base"]]
+        elif isinstance(_repo["base"], dict):
+            if _distro in _repo["base"]:
+                _bases = _repo["base"][_distro] \
+                    if isinstance(_repo["base"][_distro], list) else [_repo["base"][_distro]]
+        else:
+            raise ValueError(f"Invalid base configuration for {_repo['name']}")
+        # ---
+        return _bases
+
     # make parent -> children map
-    children: Dict[str, List[str]] = defaultdict(list)
+    children: Dict[Repo, Dict[Distro, List[str]]] = defaultdict(lambda: defaultdict(list))
     for repo in repos:
-        if "base" not in repo:
-            continue
-        repo_bases = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
-        for repo_base in repo_bases:
-            this_job = repo["name"]
-            base_job = repo_base.strip()
-            children[base_job].append(this_job)
+        for distro in distro_list:
+            repo_bases = bases(repo, distro)
+            for repo_base in repo_bases:
+                this_job = repo["name"]
+                base_job = repo_base.strip()
+                children[base_job][distro].append(this_job)
 
     # store things to write
     jobs_to_write = {}
@@ -255,7 +274,7 @@ def main():
 
             for repo_arch in repo_arch_list:
                 if "base" in repo:
-                    repo_base = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
+                    repo_base = bases(repo, repo_distro)
                     BASE_JOB = ", ".join([
                         autobuild_job_name(repo_distro, b.strip(), repo_arch) for b in repo_base
                     ])
@@ -264,7 +283,7 @@ def main():
 
                 # get children jobs
                 CHILDREN_JOBS = ", ".join([
-                    autobuild_job_name(repo_distro, c, repo_arch) for c in children[repo_name]
+                    autobuild_job_name(repo_distro, c, repo_arch) for c in children[repo_name][repo_distro]
                 ])
 
                 jname = autobuild_job_name(repo_distro, repo_name, repo_arch)
@@ -416,7 +435,7 @@ def main():
 
             # find base jobs
             if "base" in repo:
-                repo_base = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
+                repo_base = bases(repo, repo_branch_prod)
                 BASE_JOB = ", ".join([
                     stagesync_job_name(repo_branch_prod, repo_branch, b) for b in repo_base
                 ])
@@ -465,8 +484,8 @@ def main():
                 repo_name=repo_name
             )
             # find base jobs
-            if "base" in repo:
-                repo_base = repo["base"] if isinstance(repo["base"], list) else [repo["base"]]
+            if "base" in repo and not isinstance(repo["base"], dict):
+                repo_base = bases(repo, distro1)  # NOTE: here distro1 and distro2 are interchangeable
                 BASE_JOB = ", ".join([
                     distrosync_job_name(distro2, distro1, b) for b in repo_base
                 ])

@@ -21,6 +21,13 @@
         },
         "labels": ["dtproject"]
     },
+
+    {
+        "name": "dt-legacy-py38-environment",
+        "origin": "duckietown/dt-legacy-py38-environment",
+        "base": "dt-commons",
+        "labels": ["dtproject"]
+    },
     {
         "name": "dt-ros-commons",
         "origin": "duckietown/dt-ros-commons",

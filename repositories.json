@@ -31,7 +31,12 @@
     {
         "name": "dt-ros-commons",
         "origin": "duckietown/dt-ros-commons",
-        "base": "dt-commons",
+        "base": {
+            "daffy": "dt-commons",
+            "daffy-staging": "dt-commons",
+            "ente": "dt-legacy-py38-environment",
+            "ente-staging": "dt-legacy-py38-environment"
+        },
         "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
     },
     {

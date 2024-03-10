@@ -42,7 +42,7 @@
     <triggers>
         <jenkins.triggers.ReverseBuildTrigger>
             <spec></spec>
-            <upstreamProjects>Docker Autobuild - ente - dt-commons - amd64</upstreamProjects>
+            <upstreamProjects>Docker Autobuild - ente - dt-legacy-py38-environment - amd64</upstreamProjects>
             <threshold>
                 <name>SUCCESS</name>
                 <ordinal>0</ordinal>

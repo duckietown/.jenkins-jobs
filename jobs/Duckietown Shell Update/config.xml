@@ -12,17 +12,6 @@
                 <artifactNumToKeep>100</artifactNumToKeep>
             </strategy>
         </jenkins.model.BuildDiscarderProperty>
-        <com.chikli.hudson.plugin.naginator.NaginatorOptOutProperty plugin="naginator@1.18.2">
-            <optOut>false</optOut>
-        </com.chikli.hudson.plugin.naginator.NaginatorOptOutProperty>
-        <org.jenkinsci.plugins.periodicreincarnation.JobLocalConfiguration plugin="periodic-reincarnation@1.13">
-            <isLocallyConfigured>false</isLocallyConfigured>
-            <isLocallyDeactivated>false</isLocallyDeactivated>
-        </org.jenkinsci.plugins.periodicreincarnation.JobLocalConfiguration>
-        <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.34">
-            <autoRebuild>false</autoRebuild>
-            <rebuildDisabled>false</rebuildDisabled>
-        </com.sonyericsson.rebuild.RebuildSettings>
         <hudson.model.ParametersDefinitionProperty>
             <parameterDefinitions>
                 <hudson.model.StringParameterDefinition>

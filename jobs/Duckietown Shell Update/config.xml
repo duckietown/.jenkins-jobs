@@ -12,21 +12,31 @@
                 <artifactNumToKeep>100</artifactNumToKeep>
             </strategy>
         </jenkins.model.BuildDiscarderProperty>
+        <hudson.model.ParametersDefinitionProperty>
+            <parameterDefinitions>
+                <hudson.model.StringParameterDefinition>
+                    <name>MINIMUM_VERSION</name>
+                    <trim>true</trim>
+                </hudson.model.StringParameterDefinition>
+                <hudson.model.StringParameterDefinition>
+                    <name>MAXIMUM_VERSION</name>
+                    <defaultValue>7</defaultValue>
+                    <trim>true</trim>
+                </hudson.model.StringParameterDefinition>
+            </parameterDefinitions>
+        </hudson.model.ParametersDefinitionProperty>
     </properties>
     <scm class="hudson.scm.NullSCM"/>
     <canRoam>true</canRoam>
     <disabled>false</disabled>
     <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
     <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-    <triggers>
-        <hudson.triggers.TimerTrigger>
-            <spec>H * * * *</spec>
-        </hudson.triggers.TimerTrigger>
-    </triggers>
+    <triggers/>
     <concurrentBuild>false</concurrentBuild>
     <builders>
         <hudson.tasks.Shell>
-            <command>python3 -m pip install -U duckietown-shell</command>
+            <command>python3 -m pip install --upgrade &quot;duckietown-shell&gt;=${MINIMUM_VERSION},&lt;${MAXIMUM_VERSION}&quot;
+            </command>
             <configuredLocalRules/>
         </hudson.tasks.Shell>
     </builders>

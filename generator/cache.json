@@ -702,6 +702,79 @@
         ],
         "ETag": "W/\"5f1021933ef014f23aecb755e41b5746e41d7355f4b0cca09812607931f6f651\""
     },
+    "duckietown/book-instructor-manual": {
+        "Content": [
+            {
+                "commit": {
+                    "sha": "829550439e69934658b13777aed3056582fb46ac",
+                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/829550439e69934658b13777aed3056582fb46ac"
+                },
+                "name": "daffy",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-instructor-manual/branches/daffy/protection"
+            },
+            {
+                "commit": {
+                    "sha": "10c8c00af35a81b426750fa373bac34687792217",
+                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/10c8c00af35a81b426750fa373bac34687792217"
+                },
+                "name": "daffy-staging",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-instructor-manual/branches/daffy-staging/protection"
+            },
+            {
+                "commit": {
+                    "sha": "792dd66b28d76aa6483cce4791f2edb478320aad",
+                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/792dd66b28d76aa6483cce4791f2edb478320aad"
+                },
+                "name": "daffy-staging-AC-feb20-review",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-instructor-manual/branches/daffy-staging-AC-feb20-review/protection"
+            },
+            {
+                "commit": {
+                    "sha": "565ae80d59e8292635af15daad4d120d2205188f",
+                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/565ae80d59e8292635af15daad4d120d2205188f"
+                },
+                "name": "main",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-instructor-manual/branches/main/protection"
+            }
+        ],
+        "ETag": "W/\"356f4932e0980182775f8bb32817ffead3b64e4472f72b3acc62d02c96831b8b\""
+    },
     "duckietown/book-opmanual-autolab": {
         "Content": [
             {

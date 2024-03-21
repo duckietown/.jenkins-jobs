@@ -55,16 +55,13 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-# fetch commands
-git clone -b ente-staging https://github.com/duckietown/duckietown-shell-commands ./_commands
-export DTSHELL_COMMANDS="$(pwd)/_commands"
-
 # configure environment
 export DOCKER_REGISTRY="registry-stage2.duckietown.org"
-dts --set-version ente-staging exit
+export ADOBE_PDF_VIEWER_CLIENT_ID="c358f3a3ecf64f8c9b5ac2b69b22ad13"
+export DTSHELL_DISABLE_STATS=1
 
 # build book and publish
-dts --debug docs build --ci --publish staging-docs.duckietown.com
+dts --profile=ente-staging --debug docs build --ci --publish staging-docs.duckietown.com
 
 # clean workspace
 rm -rf ./_commands

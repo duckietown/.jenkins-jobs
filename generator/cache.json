@@ -706,8 +706,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "829550439e69934658b13777aed3056582fb46ac",
-                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/829550439e69934658b13777aed3056582fb46ac"
+                    "sha": "18a0ebeff773f3482025e75baaf0ea9971f89eeb",
+                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/18a0ebeff773f3482025e75baaf0ea9971f89eeb"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -723,8 +723,8 @@
             },
             {
                 "commit": {
-                    "sha": "10c8c00af35a81b426750fa373bac34687792217",
-                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/10c8c00af35a81b426750fa373bac34687792217"
+                    "sha": "ef79f68b01e46b8de6e6d99c4295956fc01ebfc8",
+                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/ef79f68b01e46b8de6e6d99c4295956fc01ebfc8"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -773,7 +773,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-instructor-manual/branches/main/protection"
             }
         ],
-        "ETag": "W/\"356f4932e0980182775f8bb32817ffead3b64e4472f72b3acc62d02c96831b8b\""
+        "ETag": "W/\"8706117dfc735b8d8e0fa317c3d2b150d5413f839ad442c24495e8bce653dc36\""
     },
     "duckietown/book-opmanual-autolab": {
         "Content": [
@@ -954,6 +954,23 @@
             },
             {
                 "commit": {
+                    "sha": "7b05a181b6ae41557bd079ab11e9dfd3d1400686",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/7b05a181b6ae41557bd079ab11e9dfd3d1400686"
+                },
+                "name": "DTSW-5062-Rewrite-docs-about-new-extrinsics-calibration",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/DTSW-5062-Rewrite-docs-about-new-extrinsics-calibration/protection"
+            },
+            {
+                "commit": {
                     "sha": "91fe6f8ebc8c9bcc7360fc87932f705e84816983",
                     "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/91fe6f8ebc8c9bcc7360fc87932f705e84816983"
                 },
@@ -971,8 +988,8 @@
             },
             {
                 "commit": {
-                    "sha": "91fe6f8ebc8c9bcc7360fc87932f705e84816983",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/91fe6f8ebc8c9bcc7360fc87932f705e84816983"
+                    "sha": "7844f6e1c2f8979342f79923235bed19069799e0",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/7844f6e1c2f8979342f79923235bed19069799e0"
                 },
                 "name": "daffy-staging",
                 "protected": false,
@@ -1208,7 +1225,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/troubleshooting-updates/protection"
             }
         ],
-        "ETag": "W/\"2c38c1325dda8726ebb60a660e6b10ac5284759a350179c4838eaee1160c6ca6\""
+        "ETag": "W/\"4723157555d49209566fdc031fb68f76eeaab17e54c922d6dd7a819cbc90273f\""
     },
     "duckietown/book-opmanual-duckiedrone": {
         "Content": [
@@ -1231,8 +1248,8 @@
             },
             {
                 "commit": {
-                    "sha": "f88a8ad8458a6272b80a0ce4a646df09941fd5e9",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/f88a8ad8458a6272b80a0ce4a646df09941fd5e9"
+                    "sha": "2aea636b8f6f1bba40f1d189112f8a9008d9adc8",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/commits/2aea636b8f6f1bba40f1d189112f8a9008d9adc8"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -1315,7 +1332,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiedrone/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"e94059daf71dd674ae64ed2a0b2c19366c2545cdfd7c3b8d4e8d4c864f89b931\""
+        "ETag": "W/\"112be59f4c9b42f4bfcd334f7f0d40ceea904c87944b580061784946d7e913db\""
     },
     "duckietown/book-opmanual-duckietown": {
         "Content": [
@@ -3600,8 +3617,8 @@
             },
             {
                 "commit": {
-                    "sha": "71c68edb6a57e1b214ee8ee377cc117a7dd71211",
-                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/71c68edb6a57e1b214ee8ee377cc117a7dd71211"
+                    "sha": "4c9de64a37d59128be05cc34f85b9d5a8f9ffb9f",
+                    "url": "https://api.github.com/repos/duckietown/dt-commons/commits/4c9de64a37d59128be05cc34f85b9d5a8f9ffb9f"
                 },
                 "name": "ente",
                 "protected": false,
@@ -3650,7 +3667,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-commons/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"2fa868f649d81c6819093bf4460b8949459a8654ac3b00195d0f93fd4a583615\""
+        "ETag": "W/\"11057c9781dc06c69aaaeb3b4c3cd25fc2be8399552e9b1b312759f66a533735\""
     },
     "duckietown/dt-compose-commons": {
         "Content": [
@@ -4580,6 +4597,23 @@
             },
             {
                 "commit": {
+                    "sha": "878398e33c8e2cb0daeaeb562fc5267f1e3a08e3",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/878398e33c8e2cb0daeaeb562fc5267f1e3a08e3"
+                },
+                "name": "DTSW-5358-Convert-FC-driver-node-from-ROS-to-DTPS",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/DTSW-5358-Convert-FC-driver-node-from-ROS-to-DTPS/protection"
+            },
+            {
+                "commit": {
                     "sha": "9eb984c54911aec9e3809bdb51e177a7fe085787",
                     "url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/commits/9eb984c54911aec9e3809bdb51e177a7fe085787"
                 },
@@ -4817,7 +4851,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-interface/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"021eb31703ffd0803cfdca66d1d3dd95bed0eb3dab291b28a1d5d2adeda860f3\""
+        "ETag": "W/\"32cadc8c2b854f12b11c9b1d21e1bc34cc5f82175db543886c4781c81bd22877\""
     },
     "duckietown/dt-duckiematrix": {
         "Content": [
@@ -5144,8 +5178,8 @@
         "Content": [
             {
                 "commit": {
-                    "sha": "da98c0ab60d906e0b09cbbc9d94c9268890464e8",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/da98c0ab60d906e0b09cbbc9d94c9268890464e8"
+                    "sha": "aa2c1053c5518173c03c36e69d64dc4cd1059d0e",
+                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/aa2c1053c5518173c03c36e69d64dc4cd1059d0e"
                 },
                 "name": "DTSW-5312-Validate-format-of-extrinsic-calibration-for-backported-daffy",
                 "protected": false,
@@ -5568,7 +5602,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-gui-tools/branches/py3-fix/protection"
             }
         ],
-        "ETag": "W/\"2168cae559b57060220eda7433ff0f280c9f6ae8445697a8aab6aff7e0f25126\""
+        "ETag": "W/\"e2b3f47d935ac3190a3f0d48cc4eb31ff1a9f6ebe85daf1306f58962409361ce\""
     },
     "duckietown/dt-hardware-benchmark-backend": {
         "Content": [
@@ -7490,8 +7524,8 @@
             },
             {
                 "commit": {
-                    "sha": "2cfdec4f79e8d5bdbec253f502ac71cfad05624a",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/2cfdec4f79e8d5bdbec253f502ac71cfad05624a"
+                    "sha": "6bccccce1d39d4ab4c4cb7c0d413399cec9cd5f8",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/6bccccce1d39d4ab4c4cb7c0d413399cec9cd5f8"
                 },
                 "name": "DTSW-5312-Investigate-format-discrepancy-of-extrinsic-calibration-for-backported-daffy",
                 "protected": false,
@@ -7558,8 +7592,8 @@
             },
             {
                 "commit": {
-                    "sha": "ad180958664045440c128b367283e23719e39401",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/ad180958664045440c128b367283e23719e39401"
+                    "sha": "6ac470f366f86864cdd61a442d04664ca43b8ccf",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/6ac470f366f86864cdd61a442d04664ca43b8ccf"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -8152,7 +8186,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/branches/v6/protection"
             }
         ],
-        "ETag": "W/\"bd1223c00b615c5ed0049f9684a480f28a8e7c8bafb0b500764d7e9ee4fa6fd3\""
+        "ETag": "W/\"0de581617fda355cc9624bce371a4958f23814d65b35d11bc1ff6dd01e5b5d10\""
     },
     "duckietown/gym-duckietown": {
         "Content": [

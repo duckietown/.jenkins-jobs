@@ -50,7 +50,7 @@ merge-from-staging:
 	if [ -z "$(git status -s)" ]; then \
     	git fetch --all; \
     	git merge --no-commit --no-ff origin/staging || true; \
-    	git checkout -- jobs/; \
+    	git restore --source=HEAD --staged --worktree -- jobs/; \
 	else \
 	    echo "Please commit your changes first"; \
 		exit 1; \

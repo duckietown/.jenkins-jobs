@@ -45,3 +45,13 @@ generate-staging: LABELS=staging
 generate-staging: _generate_repojobs _generate_webcheck _generate_bookbuild
 
 generate: generate-${BRANCH_NAME}
+
+merge-from-staging:
+	if [ -z "$(git status -s)" ]; then \
+    	git fetch --all; \
+    	git merge --no-commit --no-ff origin/staging; \
+    	git checkout -- jobs/; \
+	else \
+	    echo "Please commit your changes first"; \
+		exit 1; \
+	fi

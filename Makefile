@@ -46,6 +46,16 @@ generate-staging: _generate_repojobs _generate_webcheck _generate_bookbuild
 
 generate: generate-${BRANCH_NAME}
 
+merge-from-staging:
+	if [ -z "$(git status -s)" ]; then \
+    	git fetch --all; \
+    	git merge --no-commit --no-ff origin/staging || true; \
+    	git restore --source=HEAD --staged --worktree -- jobs/; \
+	else \
+	    echo "Please commit your changes first"; \
+		exit 1; \
+	fi
+
 merge-from-production:
 	if [ -z "$(git status -s)" ]; then \
     	git fetch --all; \

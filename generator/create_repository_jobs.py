@@ -248,13 +248,12 @@ def main():
             is_staging = "-staging" in repo_distro
 
             TAG = repo_distro.split("-")[0]
+            PIP_INDEX_URL = "https://pypi.org/simple"
             if is_staging:
-                PIP_INDEX_URL = "https://staging.duckietown.org/root/devel/"
                 DTSERVER = "https://challenges-stage.duckietown.org"
                 DOCKER_REGISTRY = "registry-stage2.duckietown.org"
                 DOCKER_PASSWORD_KEY = "STAGING_DOCKER_PASSWORD"
             else:
-                PIP_INDEX_URL = "https://pypi.org/simple"
                 DTSERVER = "https://challenges.duckietown.org/v4"
                 DOCKER_REGISTRY = "docker.io"
                 DOCKER_PASSWORD_KEY = "PRODUCTION_DOCKER_PASSWORD"

@@ -55,3 +55,13 @@ merge-from-staging:
 	    echo "Please commit your changes first"; \
 		exit 1; \
 	fi
+
+merge-from-production:
+	if [ -z "$(git status -s)" ]; then \
+    	git fetch --all; \
+    	git merge --no-commit --no-ff origin/production; \
+    	git checkout -- jobs/; \
+	else \
+	    echo "Please commit your changes first"; \
+		exit 1; \
+	fi

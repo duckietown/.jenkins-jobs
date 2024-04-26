@@ -59,8 +59,8 @@ merge-from-staging:
 merge-from-production:
 	if [ -z "$(git status -s)" ]; then \
     	git fetch --all; \
-    	git merge --no-commit --no-ff origin/production; \
-    	git checkout -- jobs/; \
+    	git merge --no-commit --no-ff origin/production || true; \
+    	git restore --source=HEAD --staged --worktree -- jobs/; \
 	else \
 	    echo "Please commit your changes first"; \
 		exit 1; \

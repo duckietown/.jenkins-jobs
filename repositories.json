@@ -54,7 +54,7 @@
     {
         "name": "dt-compose-commons",
         "origin": "duckietown/dt-compose-commons",
-        "base": "dt-commons",
+        "base": "dt-legacy-py38-environment",
         "labels": ["dtproject"]
     },
     {

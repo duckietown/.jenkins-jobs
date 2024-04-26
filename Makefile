@@ -47,7 +47,6 @@ generate-staging: _generate_repojobs _generate_webcheck _generate_bookbuild
 generate: generate-${BRANCH_NAME}
 
 merge-from-production:
-	# Merge from production
 	if [ -z "$(git status -s)" ]; then \
     	git fetch --all; \
     	git merge --no-commit --no-ff origin/production; \

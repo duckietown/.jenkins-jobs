@@ -52,6 +52,12 @@
         "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
     },
     {
+        "name": "dt-ros2-interface",
+        "origin": "duckietown/dt-ros2-interface",
+        "base": "dt-ros2-commons",
+        "labels": ["dtproject"]
+    },
+    {
         "name": "dt-compose-commons",
         "origin": "duckietown/dt-compose-commons",
         "base": "dt-legacy-py38-environment",

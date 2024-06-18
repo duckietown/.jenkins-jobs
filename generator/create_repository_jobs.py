@@ -6,7 +6,7 @@ import logging
 import os
 import sys
 from collections import defaultdict
-from typing import Optional, List, Dict, Set, Tuple
+from typing import Optional, List, Dict, Set, Tuple, Union
 
 import requests
 
@@ -244,6 +244,9 @@ def main():
                 BLACKLIST.append((repo_name, a))
             # dts arguments
             dts_args = copy.deepcopy(repo["dts_args"]) if "dts_args" in repo else {}
+            # is disabled
+            disabled: Union[bool, List[str]] = repo.get("disabled", False)
+            is_disabled = disabled if isinstance(disabled, bool) else repo_distro in disabled
             # staging?
             is_staging = "-staging" in repo_distro
 
@@ -296,6 +299,7 @@ def main():
                     "BASE_TAG": TAG,
                     "REPO_DISTRO": repo_distro,
                     "PIP_INDEX_URL": PIP_INDEX_URL,
+                    "IS_DISABLED": str(is_disabled).lower(),
                     "DTSERVER": DTSERVER,
                     "DOCKER_REGISTRY": DOCKER_REGISTRY,
                     "DOCKER_USERNAME": DOCKER_USERNAME,

@@ -4490,6 +4490,23 @@
         "Content": [
             {
                 "commit": {
+                    "sha": "d7ee2085f28c4b91701bf9567a7e64b2bc8146aa",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/d7ee2085f28c4b91701bf9567a7e64b2bc8146aa"
+                },
+                "name": "abandoned-ente",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/branches/abandoned-ente/protection"
+            },
+            {
+                "commit": {
                     "sha": "fa6037ea5e0c88186b4b05e213c1ef60564a9138",
                     "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/fa6037ea5e0c88186b4b05e213c1ef60564a9138"
                 },
@@ -4538,60 +4555,9 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/branches/daffy-staging/protection"
-            },
-            {
-                "commit": {
-                    "sha": "6c46067e73eb105cd8b910754e881b5841fde3c0",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/6c46067e73eb105cd8b910754e881b5841fde3c0"
-                },
-                "name": "ente",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/branches/ente/protection"
-            },
-            {
-                "commit": {
-                    "sha": "6c46067e73eb105cd8b910754e881b5841fde3c0",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/6c46067e73eb105cd8b910754e881b5841fde3c0"
-                },
-                "name": "ente-staging",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/branches/ente-staging/protection"
-            },
-            {
-                "commit": {
-                    "sha": "d6bedf0be11ae3e7eb696943f87ee9de1e3ae764",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/commits/d6bedf0be11ae3e7eb696943f87ee9de1e3ae764"
-                },
-                "name": "old-ente",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiebot-fifos-bridge/branches/old-ente/protection"
             }
         ],
-        "ETag": "W/\"6d01296887c1f3c8cd247ff6bc792046ad21bd00ada97cc5230aaba164d54a0b\""
+        "ETag": "W/\"313ad369e284bcc526675df555888f86d69280a126b08de18e7e21470d28defb\""
     },
     "duckietown/dt-duckiebot-interface": {
         "Content": [

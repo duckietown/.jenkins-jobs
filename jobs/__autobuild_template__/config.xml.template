@@ -32,7 +32,7 @@
         </extensions>
     </scm>
     <canRoam>true</canRoam>
-    <disabled>false</disabled>
+    <disabled>{IS_DISABLED}</disabled>
     <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
     <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
     <authToken>{BUILD_FROM_SCRIPT_TOKEN}</authToken>

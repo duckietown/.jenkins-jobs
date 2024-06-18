@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Distro sync for repository duckietown-shell</description>
+  <description>Book build for repository dt-ros2-commons</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.5">
-      <projectUrl>https://github.com/duckietown/duckietown-shell</projectUrl>
+      <projectUrl>https://github.com/duckietown/dt-ros2-commons</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -13,7 +13,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git@github.com:duckietown/duckietown-shell</url>
+        <url>git@github.com:duckietown/dt-ros2-commons</url>
         <credentialsId>GITHUB_SSH_KEY</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -21,21 +21,32 @@
       <hudson.plugins.git.BranchSpec>
         <name>ente</name>
       </hudson.plugins.git.BranchSpec>
-      <hudson.plugins.git.BranchSpec>
-        <name>daffy</name>
-      </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="empty-list"/>
     <extensions>
+      <hudson.plugins.git.extensions.impl.LocalBranch>
+        <localBranch>ente</localBranch>
+      </hudson.plugins.git.extensions.impl.LocalBranch>
       <hudson.plugins.git.extensions.impl.GitLFSPull/>
     </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <authToken>d249580a-b182-41fb-8f3d-ec5d24530e71</authToken>
   <triggers>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects></upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
     <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.34.5">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
@@ -44,8 +55,16 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-# compare branches
-exit $(curl -H "Authorization: Bearer ${GITHUB_TOKEN}" https://api.github.com/repos/duckietown/duckietown-shell/compare/ente...daffy | jq .ahead_by)
+# configure environment
+export DOCKER_REGISTRY="docker.io"
+export ADOBE_PDF_VIEWER_CLIENT_ID="a7b0852ceb5c45979880659c0d5fb294"
+export DTSHELL_DISABLE_STATS=1
+
+# build book and publish
+dts --profile=ente --debug docs build --ci --publish docs.duckietown.com
+
+# clean workspace
+rm -rf ./_commands
       </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
@@ -76,8 +95,8 @@ exit $(curl -H "Authorization: Bearer ${GITHUB_TOKEN}" https://api.github.com/re
     <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@523.vd859a_4b_122e6">
       <bindings>
         <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
-          <credentialsId>GITHUB_PERSONAL_TOKEN</credentialsId>
-          <variable>GITHUB_TOKEN</variable>
+          <credentialsId>DUCKIETOWN_CI_DT_TOKEN</credentialsId>
+          <variable>DUCKIETOWN_CI_DT_TOKEN</variable>
         </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
       </bindings>
     </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>
@@ -86,7 +105,7 @@ exit $(curl -H "Authorization: Bearer ${GITHUB_TOKEN}" https://api.github.com/re
         <timeoutPercentage>200</timeoutPercentage>
         <numberOfBuilds>3</numberOfBuilds>
         <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
-        <timeoutMinutesElasticDefault>1</timeoutMinutesElasticDefault>
+        <timeoutMinutesElasticDefault>120</timeoutMinutesElasticDefault>
       </strategy>
       <operationList>
         <hudson.plugins.build__timeout.operations.AbortOperation/>

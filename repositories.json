@@ -172,6 +172,12 @@
         "labels": ["dtproject"]
     },
     {
+        "name": "dt-duckietown-viewer",
+        "origin": "duckietown/dt-duckietown-viewer",
+        "base": "dt-commons",
+        "labels": ["dtproject"]
+    },
+    {
         "name": "dt-duckiematrix",
         "origin": "duckietown/dt-duckiematrix",
         "base": "dt-commons",

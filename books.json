@@ -16,6 +16,10 @@
         "origin": "duckietown/book-opmanual-duckiedrone"
     },
     {
+        "name": "book-opmanual-dd24",
+        "origin": "duckietown/book-opmanual-dd24"
+    },
+    {
         "name": "book-devmanual-docs",
         "origin": "duckietown/book-devmanual-docs"
     },

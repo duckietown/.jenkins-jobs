@@ -42,5 +42,9 @@
     {
         "name": "book-instructor-manual",
         "origin": "duckietown/book-instructor-manual"
+    },
+    {
+        "name": "book-opmanual-dd24",
+        "origin": "duckietown/book-opmanual-dd24"
     }
 ]

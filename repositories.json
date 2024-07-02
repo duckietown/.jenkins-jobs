@@ -11,6 +11,12 @@
         "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
     },
     {
+        "name": "dt-kvstore",
+        "origin": "duckietown/dt-kvstore",
+        "base": "dt-commons",
+        "labels": ["dtproject", "+bookbuild"]
+    },
+    {
         "name": "dt-duckiebot-interface",
         "origin": "duckietown/dt-duckiebot-interface",
         "base": {

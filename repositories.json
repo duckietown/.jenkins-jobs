@@ -382,6 +382,7 @@
         "origin": "duckietown/utility-dashboards",
         "base": "dt-commons",
         "blacklist": ["arm32v7"],
+        "disabled": ["ente", "ente-staging"],
         "location": "jsonschema-form",
         "labels": ["dtproject"]
     },

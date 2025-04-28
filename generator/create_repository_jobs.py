@@ -18,7 +18,7 @@ AUTOBUILD_TEMPLATE_JOB = "__autobuild_template__"
 AUTOMERGE_TEMPLATE_JOB = "__automerge_template__"
 STAGESYNC_TEMPLATE_JOB = "__stagesync_template__"
 DISTROSYNC_TEMPLATE_JOB = "__distrosync_template__"
-BOOKBUILD_TEMPLATE_JOB = "__bookbuild_template__"
+CODEBOOK_TEMPLATE_JOB = "__codebook_template__"
 DTS_ARGS_INDENT = " \\\n" + " " * 8
 DEFAULT_TIMEOUT_MINUTES = 120
 DISTRO_ARCH_BLACKLIST = [
@@ -119,7 +119,7 @@ def main():
     )
     # - Book Build job template
     bookbuild_template_config_file = os.path.join(
-        parsed.jobsdir, BOOKBUILD_TEMPLATE_JOB, "config.xml.template"
+        parsed.jobsdir, CODEBOOK_TEMPLATE_JOB, "config.xml.template"
     )
     with open(bookbuild_template_config_file, "rt") as fin:
         bookbuild_template_config = fin.read()

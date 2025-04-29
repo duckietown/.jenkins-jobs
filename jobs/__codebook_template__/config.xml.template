@@ -69,11 +69,11 @@ export ADOBE_PDF_VIEWER_CLIENT_ID="{ADOBE_PDF_VIEWER_CLIENT_ID}"
 export DTSHELL_DISABLE_STATS=1
 
 
-# build book
+# build book code documentation
 dts --profile={REPO_DISTRO} --debug devel docs build
 
 # publish book
-dts --profile={REPO_DISTRO} docs build --ci --publish {BOOK_LIBRARY_DNS} --no-build
+dts --profile={REPO_DISTRO} docs --publish {BOOK_LIBRARY_DNS}
 
 
 # clean workspace

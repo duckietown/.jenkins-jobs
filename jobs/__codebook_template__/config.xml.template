@@ -73,7 +73,7 @@ export DTSHELL_DISABLE_STATS=1
 dts --profile={REPO_DISTRO} --debug devel docs build
 
 # publish book
-dts --profile={REPO_DISTRO} docs --publish {BOOK_LIBRARY_DNS}
+dts --profile={REPO_DISTRO} docs publish {BOOK_LIBRARY_DNS}
 
 
 # clean workspace

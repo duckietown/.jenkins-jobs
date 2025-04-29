@@ -118,11 +118,11 @@ def main():
         parsed.jobsdir, DISTROSYNC_TEMPLATE_JOB, "config.xml.template"
     )
     # - Book Build job template
-    bookbuild_template_config_file = os.path.join(
+    codebook_template_config_file = os.path.join(
         parsed.jobsdir, CODEBOOK_TEMPLATE_JOB, "config.xml.template"
     )
-    with open(bookbuild_template_config_file, "rt") as fin:
-        bookbuild_template_config = fin.read()
+    with open(codebook_template_config_file, "rt") as fin:
+        codebook_template_config = fin.read()
     with open(distrosync_template_config_file, "rt") as fin:
         distrosync_template_config = fin.read()
     # check which configurations are valid
@@ -518,17 +518,17 @@ def main():
     books_processed: Set[Tuple[str, str]] = set()
     for (repo_distro, repo_name, repo_arch), job in jobs_to_write.items():
         # these are opt-in only
-        if "+bookbuild" not in job["labels"]:
+        if "+codebook" not in job["labels"]:
             continue
-        # must not exclude 'bookbuild:<distro>'
-        if f"-bookbuild:{repo_distro}" in job["labels"]:
+        # must not exclude 'codebook:<distro>'
+        if f"-codebook:{repo_distro}" in job["labels"]:
             continue
         # one per arch
         if (repo_name, repo_distro) in books_processed:
             continue
 
         # job name
-        jname = bookbuild_job_name(repo_distro, repo_name)
+        jname = codebook_job_name(repo_distro, repo_name)
 
         # job parameters
         jparams = job["params"]
@@ -558,7 +558,7 @@ def main():
             "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
             "ADOBE_PDF_VIEWER_CLIENT_ID": ADOBE_PDF_VIEWER_CLIENT_ID
         }
-        config = bookbuild_template_config.format(**params)
+        config = codebook_template_config.format(**params)
 
         # write job to disk
         os.makedirs(os.path.dirname(job_config_path))
@@ -592,7 +592,7 @@ def distrosync_job_name(from_branch, to_branch, repo_name):
     return "Distro Sync - {:s} >= {:s} - {:s}".format(from_branch, to_branch, repo_name)
 
 
-def bookbuild_job_name(distro, repo_name):
+def codebook_job_name(distro, repo_name):
     return "CodeBook Build - {:s} - {:s}".format(distro, repo_name)
 
 

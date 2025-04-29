@@ -8,13 +8,13 @@
         "name": "dt-commons",
         "origin": "duckietown/dt-commons",
         "base": "dt-base-environment",
-        "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
+        "labels": ["dtproject", "+codebook", "-codebook:daffy"]
     },
     {
         "name": "dt-kvstore",
         "origin": "duckietown/dt-kvstore",
         "base": "dt-commons",
-        "labels": ["dtproject", "+bookbuild"]
+        "labels": ["dtproject", "+codebook"]
     },
     {
         "name": "dt-duckiebot-interface",
@@ -43,7 +43,7 @@
             "ente": "dt-legacy-py38-environment",
             "ente-staging": "dt-legacy-py38-environment"
         },
-        "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
+        "labels": ["dtproject", "+codebook", "-codebook:daffy"]
     },
     {
         "name": "dt-ros-interface",
@@ -55,7 +55,7 @@
         "name": "dt-ros2-commons",
         "origin": "duckietown/dt-ros2-commons",
         "base": "dt-commons",
-        "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
+        "labels": ["dtproject", "+codebook", "-codebook:daffy"]
     },
     {
         "name": "dt-ros2-interface",
@@ -92,7 +92,7 @@
         "origin": "duckietown/dt-core",
         "base": "dt-ros-commons",
         "timeout_min": 360,
-        "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
+        "labels": ["dtproject", "+codebook", "-codebook:daffy"]
     },
     {
         "name": "dt-gui-tools",

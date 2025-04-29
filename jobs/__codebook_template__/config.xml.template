@@ -55,14 +55,25 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
+
+# fail if the parent job just failed
+if [ "${{PARENT_JOB_FAILED}}" = "true" ]; then
+    echo "====== Parent Job Failed, propagating failure ======"
+    exit 1
+fi
+
+
 # configure environment
 export DOCKER_REGISTRY="{DOCKER_REGISTRY}"
+export DOCKER_USERNAME="{DOCKER_USERNAME}"
+export DUCKIETOWN_CI_IS_STAGING="{DUCKIETOWN_CI_IS_STAGING}"
+export DUCKIETOWN_CI_IS_PRODUCTION="{DUCKIETOWN_CI_IS_PRODUCTION}"
 export ADOBE_PDF_VIEWER_CLIENT_ID="{ADOBE_PDF_VIEWER_CLIENT_ID}"
 export DTSHELL_DISABLE_STATS=1
 
 
 # build book
-dts --profile={REPO_DISTRO} --debug devel build --docs --ci
+dts --profile={REPO_DISTRO} --debug devel docs build
 
 # publish book
 dts --profile={REPO_DISTRO} docs publish {BOOK_LIBRARY_DNS}

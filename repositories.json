@@ -402,5 +402,11 @@
         "name": "dt-virtual-device",
         "origin": "duckietown/dt-virtual-device",
         "labels": ["dtproject"]
+    },
+
+    {
+        "name": "ci-jenkins",
+        "origin": "duckietown/ci-jenkins",
+        "labels": ["dtproject"]
     }
 ]

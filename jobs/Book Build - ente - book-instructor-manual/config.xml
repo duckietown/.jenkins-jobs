@@ -1,11 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Book build for repository dt-core</description>
+  <description>Book build for repository book-instructor-manual</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.5">
-      <projectUrl>https://github.com/duckietown/dt-core</projectUrl>
+      <projectUrl>https://github.com/duckietown/book-instructor-manual</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -13,7 +13,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git@github.com:duckietown/dt-core</url>
+        <url>git@github.com:duckietown/book-instructor-manual</url>
         <credentialsId>GITHUB_SSH_KEY</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -55,28 +55,13 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-
-# fail if the parent job just failed
-if [ "${PARENT_JOB_FAILED}" = "true" ]; then
-    echo "====== Parent Job Failed, propagating failure ======"
-    exit 1
-fi
-
-
 # configure environment
 export DOCKER_REGISTRY="docker.io"
 export ADOBE_PDF_VIEWER_CLIENT_ID="a7b0852ceb5c45979880659c0d5fb294"
 export DTSHELL_DISABLE_STATS=1
 
-
-# build book code documentation
-dts --profile=ente --debug devel docs build
-
-
-
-# publish book
-dts --profile=ente --debug docs publish docs.duckietown.com --force --ci
-
+# build book and publish
+dts --profile=ente --debug docs build --ci --publish docs.duckietown.com
 
 # clean workspace
 rm -rf ./_commands
@@ -120,7 +105,7 @@ rm -rf ./_commands
         <timeoutPercentage>200</timeoutPercentage>
         <numberOfBuilds>3</numberOfBuilds>
         <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
-        <timeoutMinutesElasticDefault>120</timeoutMinutesElasticDefault>
+        <timeoutMinutesElasticDefault>30</timeoutMinutesElasticDefault>
       </strategy>
       <operationList>
         <hudson.plugins.build__timeout.operations.AbortOperation/>

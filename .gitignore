@@ -14,4 +14,4 @@
 !jobs/*
 !jobs/*/config.xml
 !jobs/__*template__/config.xml.template
-.DS_Store
+!.github/workflows/*

@@ -1,7 +1,8 @@
 [
     {
         "name": "duckietown-manual",
-        "origin": "duckietown/duckietown-manual"
+        "origin": "duckietown/duckietown-manual",
+        "disabled": ["daffy", "daffy-staging"]
     },
     {
         "name": "book-opmanual-duckiedrone",
@@ -14,5 +15,53 @@
     {
         "name": "book-opmanual-dd24",
         "origin": "duckietown/book-opmanual-dd24"
+    },
+     {
+        "name": "book-devmanual-duckiematrix",
+        "origin": "duckietown/book-devmanual-duckiematrix",
+        "disabled": ["ente", "ente-staging"]
+    },
+    {
+        "name": "book-instructor-manual",
+        "origin": "duckietown/book-instructor-manual",
+        "disabled": ["ente", "ente-staging"]
+    },
+      {
+        "name": "book-devmanual-docs",
+        "origin": "duckietown/book-devmanual-docs",
+        "disabled": ["ente", "ente-staging"]
+    },
+    {
+        "name": "book-devmanual-shell",
+        "origin": "duckietown/book-devmanual-shell",
+        "disabled": ["ente", "ente-staging"]
+    },
+    {
+        "name": "book-devmanual-software",
+        "origin": "duckietown/book-devmanual-software",
+        "disabled": ["ente", "ente-staging"]
+    },
+    {
+        "name": "book-devmanual-lx",
+        "origin": "duckietown/book-devmanual-lx",
+        "disabled": ["ente", "ente-staging"]
+
+    },
+    {
+        "name": "book-opmanual-duckiebot",
+        "origin": "duckietown/book-opmanual-duckiebot",
+        "disabled": ["ente", "ente-staging"]
+
+    },
+    {
+        "name": "book-opmanual-duckietown",
+        "origin": "duckietown/book-opmanual-duckietown",
+        "disabled": ["ente", "ente-staging"]
+    },
+    {
+        "name": "book-opmanual-autolab",
+        "origin": "duckietown/book-opmanual-autolab",
+        "disabled": ["ente", "ente-staging" ]
     }
+
 ]

@@ -256,8 +256,8 @@
             },
             {
                 "commit": {
-                    "sha": "fb5cf6a59eda07a9557705a26dfc0648de0b2cd0",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/fb5cf6a59eda07a9557705a26dfc0648de0b2cd0"
+                    "sha": "b1ec75755dac4711d8f7715a0365c856c3bb2822",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-docs/commits/b1ec75755dac4711d8f7715a0365c856c3bb2822"
                 },
                 "name": "ente",
                 "protected": false,
@@ -340,14 +340,14 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-docs/branches/tanij-patch-1/protection"
             }
         ],
-        "ETag": "W/\"5c431c758a13c788e92cc3a9243cf5c1c250a6570088a3a86f14b82f66fed3e9\""
+        "ETag": "W/\"698f3ff07b0f83f236a5b75ad14b6a96597475a983e1b4cd7f818632cd332a24\""
     },
     "duckietown/book-devmanual-duckiematrix": {
         "Content": [
             {
                 "commit": {
-                    "sha": "275a3af5d1e2f3795ef919c971ae4d1eb8844a2a",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-duckiematrix/commits/275a3af5d1e2f3795ef919c971ae4d1eb8844a2a"
+                    "sha": "185832eb4034423a8e60b5e696dc67582172e91a",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-duckiematrix/commits/185832eb4034423a8e60b5e696dc67582172e91a"
                 },
                 "name": "ente",
                 "protected": false,
@@ -360,6 +360,40 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-duckiematrix/branches/ente/protection"
+            },
+            {
+                "commit": {
+                    "sha": "51d4daae3749e7540eff652b1899009516692206",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-duckiematrix/commits/51d4daae3749e7540eff652b1899009516692206"
+                },
+                "name": "ente-DTSW-6868-Update-book-devmanual-duckiematrix",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-duckiematrix/branches/ente-DTSW-6868-Update-book-devmanual-duckiematrix/protection"
+            },
+            {
+                "commit": {
+                    "sha": "8a1d0353f16bf94e219a8ec1269cf036a530990c",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-duckiematrix/commits/8a1d0353f16bf94e219a8ec1269cf036a530990c"
+                },
+                "name": "ente-old",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-duckiematrix/branches/ente-old/protection"
             },
             {
                 "commit": {
@@ -379,7 +413,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-duckiematrix/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"a5fc0058055cd13ecb01f9df77cd52fd0a8eef320686b398e4328512bd2f284f\""
+        "ETag": "W/\"f386553776cab72ff59c6d50c70f67899df73033229c38275c9cfc7ecb243f42\""
     },
     "duckietown/book-devmanual-lx": {
         "Content": [
@@ -436,8 +470,8 @@
             },
             {
                 "commit": {
-                    "sha": "106b60c51928f11fe5328f6565a7a8444647dae9",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-lx/commits/106b60c51928f11fe5328f6565a7a8444647dae9"
+                    "sha": "563a414ca189cdc1fad9616afcfbe37ea2b41bb4",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-lx/commits/563a414ca189cdc1fad9616afcfbe37ea2b41bb4"
                 },
                 "name": "ente",
                 "protected": false,
@@ -469,7 +503,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-lx/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"d99a1055d8ae82a139e4e81cb845a73a8b8f741b7f66f88e0e1a7c29b3ba1099\""
+        "ETag": "W/\"1749397987c33e50a0df13185c7c687b7b964868928a1cbc375d91e31cb2d9ae\""
     },
     "duckietown/book-devmanual-shell": {
         "Content": [
@@ -526,8 +560,8 @@
             },
             {
                 "commit": {
-                    "sha": "46f3c58dfd97d3dd28dcad14a550a4799f85b310",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-shell/commits/46f3c58dfd97d3dd28dcad14a550a4799f85b310"
+                    "sha": "ff222a270fe6b6461c87210ddbfef7201e7f16ec",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-shell/commits/ff222a270fe6b6461c87210ddbfef7201e7f16ec"
                 },
                 "name": "ente",
                 "protected": false,
@@ -559,7 +593,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-shell/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"fbba360558a3b9b794c36d8f1439735b202ec1fe67eddbba9afb22fb0ea92c53\""
+        "ETag": "W/\"7ccfbeef917716e31692287fec423ab2c4302eae7e0645faea637450e1e87329\""
     },
     "duckietown/book-devmanual-software": {
         "Content": [
@@ -633,8 +667,8 @@
             },
             {
                 "commit": {
-                    "sha": "341f2c5511e909dbe93280335e537b87507098f9",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-software/commits/341f2c5511e909dbe93280335e537b87507098f9"
+                    "sha": "8fc55e04f4524e4c1c9c5dd8b7ef0284b040791f",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-software/commits/8fc55e04f4524e4c1c9c5dd8b7ef0284b040791f"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -684,8 +718,8 @@
             },
             {
                 "commit": {
-                    "sha": "b22dd2aacd5cdd3523b25c880b98c0c90dc109c7",
-                    "url": "https://api.github.com/repos/duckietown/book-devmanual-software/commits/b22dd2aacd5cdd3523b25c880b98c0c90dc109c7"
+                    "sha": "9fc0be031d262d03e0c7df14d709b2f6124079b0",
+                    "url": "https://api.github.com/repos/duckietown/book-devmanual-software/commits/9fc0be031d262d03e0c7df14d709b2f6124079b0"
                 },
                 "name": "ente",
                 "protected": false,
@@ -717,7 +751,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-devmanual-software/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"17f0cb9d96523eae6dc24a2285f6a3923d3b8fa61dad36445073fc76f1f47913\""
+        "ETag": "W/\"1398a11005c7a091fa1ea405b75845547d24cd0512bc06cd23d79ab554b141d9\""
     },
     "duckietown/book-instructor-manual": {
         "Content": [
@@ -774,8 +808,8 @@
             },
             {
                 "commit": {
-                    "sha": "ac3b585cd727751b3ff4e6246dc40538c21ca0ca",
-                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/ac3b585cd727751b3ff4e6246dc40538c21ca0ca"
+                    "sha": "f315730ae10c05d5c54d49543b4a815049fa2971",
+                    "url": "https://api.github.com/repos/duckietown/book-instructor-manual/commits/f315730ae10c05d5c54d49543b4a815049fa2971"
                 },
                 "name": "ente",
                 "protected": false,
@@ -824,7 +858,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-instructor-manual/branches/tanij-patch-1/protection"
             }
         ],
-        "ETag": "W/\"5b98eb428a25041be3d6299f84941b2bbed9eaea03a2496269473aec8a07eb5a\""
+        "ETag": "W/\"7d3a78f6dd336b2d8a53eb969fba23aa69041cf72c22e12c85959e3e0c360a20\""
     },
     "duckietown/book-opmanual-autolab": {
         "Content": [
@@ -881,8 +915,8 @@
             },
             {
                 "commit": {
-                    "sha": "58c644206d75acbe18d84d51837a1a6f1c9f1255",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-autolab/commits/58c644206d75acbe18d84d51837a1a6f1c9f1255"
+                    "sha": "123e090b5a8b47034da917a32cf44d0768329af2",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-autolab/commits/123e090b5a8b47034da917a32cf44d0768329af2"
                 },
                 "name": "ente",
                 "protected": false,
@@ -931,7 +965,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-autolab/branches/porting-old-manual-3896-3904-3905/protection"
             }
         ],
-        "ETag": "W/\"eaeef3a104817fbe43d822f28c1f05c65e7798a350a4d7a09df703edfae3a2a0\""
+        "ETag": "W/\"e04a073c61d8c6e5e0abf1b969993193b0bc880da4f83992da995401b456070b\""
     },
     "duckietown/book-opmanual-dd24": {
         "Content": [
@@ -1197,6 +1231,23 @@
             },
             {
                 "commit": {
+                    "sha": "53fb35172b735962237463315e5ee122602508a9",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/53fb35172b735962237463315e5ee122602508a9"
+                },
+                "name": "DTSW-7096-review-parent-pr",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/DTSW-7096-review-parent-pr/protection"
+            },
+            {
+                "commit": {
                     "sha": "d4674a8be4c1fc366fca8415fd0831b56d700f34",
                     "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/d4674a8be4c1fc366fca8415fd0831b56d700f34"
                 },
@@ -1214,8 +1265,8 @@
             },
             {
                 "commit": {
-                    "sha": "9c34b0d368b2bf1148d8b0fff508553b29ae3ee1",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/9c34b0d368b2bf1148d8b0fff508553b29ae3ee1"
+                    "sha": "4fd37c335e3022f6297f7821c272b0d4968a28ce",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/4fd37c335e3022f6297f7821c272b0d4968a28ce"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -1299,8 +1350,8 @@
             },
             {
                 "commit": {
-                    "sha": "a9ddfc173e113d9b3b9337d37f48b707ace406ae",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/a9ddfc173e113d9b3b9337d37f48b707ace406ae"
+                    "sha": "e7c6bbf0cad139f73ab3709c7876457a28eac4f2",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/e7c6bbf0cad139f73ab3709c7876457a28eac4f2"
                 },
                 "name": "ente",
                 "protected": false,
@@ -1316,8 +1367,59 @@
             },
             {
                 "commit": {
-                    "sha": "0e7e3b72cdc6064fbe616bff7cc60ee5aaf61b4f",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/0e7e3b72cdc6064fbe616bff7cc60ee5aaf61b4f"
+                    "sha": "c5cafc93a07dac87f394e2d79ddbbe2bea572051",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/c5cafc93a07dac87f394e2d79ddbbe2bea572051"
+                },
+                "name": "ente-DTSW-6712",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/ente-DTSW-6712/protection"
+            },
+            {
+                "commit": {
+                    "sha": "a1845ad0901b4631558dfdbb000ecc2239ba6db7",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/a1845ad0901b4631558dfdbb000ecc2239ba6db7"
+                },
+                "name": "ente-DTSW-6848-Update-book-opmanual-duckiebot",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/ente-DTSW-6848-Update-book-opmanual-duckiebot/protection"
+            },
+            {
+                "commit": {
+                    "sha": "317df3e65c183d7468778c2bc5d7a491123123d2",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/317df3e65c183d7468778c2bc5d7a491123123d2"
+                },
+                "name": "ente-old",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/ente-old/protection"
+            },
+            {
+                "commit": {
+                    "sha": "32031eb288ed304b8ab4c9c6f4c416e5edcb6aea",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/32031eb288ed304b8ab4c9c6f4c416e5edcb6aea"
                 },
                 "name": "ente-staging",
                 "protected": false,
@@ -1330,6 +1432,23 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/ente-staging/protection"
+            },
+            {
+                "commit": {
+                    "sha": "c2b5e089b5080cdcf0bbeba2d55b7651307f5ed8",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/commits/c2b5e089b5080cdcf0bbeba2d55b7651307f5ed8"
+                },
+                "name": "ente-temporary",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/ente-temporary/protection"
             },
             {
                 "commit": {
@@ -1485,7 +1604,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckiebot/branches/troubleshooting-updates/protection"
             }
         ],
-        "ETag": "W/\"61720ad81de7e5d9030064cb233ebf984fe3ef27cba977fab43b8c36e3f0f955\""
+        "ETag": "W/\"dee24e192f17f3f0d65a9754ca7b38ff123e58282273a79a3f50ed64ba24d3ab\""
     },
     "duckietown/book-opmanual-duckiedrone": {
         "Content": [
@@ -1615,8 +1734,8 @@
             },
             {
                 "commit": {
-                    "sha": "d28b244c96d21199bfb1153d4be5cd3f00978aa2",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/d28b244c96d21199bfb1153d4be5cd3f00978aa2"
+                    "sha": "cc232c7443915e77331c45aee32aa8c0daa6c6f5",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/cc232c7443915e77331c45aee32aa8c0daa6c6f5"
                 },
                 "name": "daffy",
                 "protected": false,
@@ -1649,8 +1768,8 @@
             },
             {
                 "commit": {
-                    "sha": "746617a98633da6822fce40877c9300831ef1f8b",
-                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/746617a98633da6822fce40877c9300831ef1f8b"
+                    "sha": "301ce7d8117ab5c862e0bf7d72c25f64a3a930dd",
+                    "url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/commits/301ce7d8117ab5c862e0bf7d72c25f64a3a930dd"
                 },
                 "name": "ente",
                 "protected": false,
@@ -1682,7 +1801,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/book-opmanual-duckietown/branches/ente-staging/protection"
             }
         ],
-        "ETag": "W/\"bad9a0aacfac227fd06e16616778b950dcc3e441646300611a87547455640688\""
+        "ETag": "W/\"3d97cb1cddc42dcd021f4e82b66de6a89323c6488e96a06032089ca9a6502780\""
     },
     "duckietown/challenge-aido_LF-baseline-RPL-ros": {
         "Content": [
@@ -6023,8 +6142,8 @@
             },
             {
                 "commit": {
-                    "sha": "b9f27b3d89c0fd2990abb21a128027daf77f3417",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiematrix/commits/b9f27b3d89c0fd2990abb21a128027daf77f3417"
+                    "sha": "820855a44411bf7e70242a713561a301857fc2dd",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiematrix/commits/820855a44411bf7e70242a713561a301857fc2dd"
                 },
                 "name": "temporary",
                 "protected": false,
@@ -6056,7 +6175,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiematrix/branches/v4/protection"
             }
         ],
-        "ETag": "W/\"443b030a7cfcdaf116cec9bb9254916db6f68cf7fcd74ff20265199b04720f1d\""
+        "ETag": "W/\"43c37b7fbf568ade8f4b2835937df6a0cc8b689d4a206ec14cc91aef65d33313\""
     },
     "duckietown/dt-duckietown-viewer": {
         "Content": [
@@ -6740,8 +6859,8 @@
             },
             {
                 "commit": {
-                    "sha": "e7a24009621b0784020d7c86e40832050bad1852",
-                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/e7a24009621b0784020d7c86e40832050bad1852"
+                    "sha": "0fef865f732c2d0fdbc8061108b229a463333d91",
+                    "url": "https://api.github.com/repos/duckietown/dt-gui-tools/commits/0fef865f732c2d0fdbc8061108b229a463333d91"
                 },
                 "name": "ente",
                 "protected": false,
@@ -6790,7 +6909,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-gui-tools/branches/py3-fix/protection"
             }
         ],
-        "ETag": "W/\"86e2df466e0731385276ce3ce8eb3d1552dc79cee62a8da776965e991b78bc75\""
+        "ETag": "W/\"7c2f92e7830b9458de814dd72c289c244700aacb70d0a3a31ea4af2c042a1db4\""
     },
     "duckietown/dt-hardware-benchmark-backend": {
         "Content": [
@@ -8824,8 +8943,25 @@
             },
             {
                 "commit": {
-                    "sha": "28aab2d0b5abf4c6cad80ea141241d70d928015b",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-manual/commits/28aab2d0b5abf4c6cad80ea141241d70d928015b"
+                    "sha": "c682260cad3e9e23bb3dcc84ba8796c66a5cc3ee",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-manual/commits/c682260cad3e9e23bb3dcc84ba8796c66a5cc3ee"
+                },
+                "name": "copilot/fix-b0a9a974-f8a7-436d-8844-a6daac7b0bcf",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/duckietown-manual/branches/copilot/fix-b0a9a974-f8a7-436d-8844-a6daac7b0bcf/protection"
+            },
+            {
+                "commit": {
+                    "sha": "6be63095bc651de344349e089282a08a66e69a51",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-manual/commits/6be63095bc651de344349e089282a08a66e69a51"
                 },
                 "name": "ente",
                 "protected": false,
@@ -8855,9 +8991,60 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/duckietown-manual/branches/ente-DTSW-6979/protection"
+            },
+            {
+                "commit": {
+                    "sha": "dc56273e23c1d348e74ad0019a30eeca11ceaa52",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-manual/commits/dc56273e23c1d348e74ad0019a30eeca11ceaa52"
+                },
+                "name": "fix-proofreading-github-installation",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/duckietown-manual/branches/fix-proofreading-github-installation/protection"
+            },
+            {
+                "commit": {
+                    "sha": "53a4c2124ad7394960be3fbf80e0e2485f69424c",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-manual/commits/53a4c2124ad7394960be3fbf80e0e2485f69424c"
+                },
+                "name": "pro-tip-attaching-vs-code-to-a-development-container-DTSW-6200",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/duckietown-manual/branches/pro-tip-attaching-vs-code-to-a-development-container-DTSW-6200/protection"
+            },
+            {
+                "commit": {
+                    "sha": "e7434e24b3319a7acda533a3c48ea2ec7f5585fd",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-manual/commits/e7434e24b3319a7acda533a3c48ea2ec7f5585fd"
+                },
+                "name": "refactor-improve-wording",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/duckietown-manual/branches/refactor-improve-wording/protection"
             }
         ],
-        "ETag": "W/\"4e293cf3d93694aa0ff32e16325938198c3d0c624e3663f33c3df0b6e717deb9\""
+        "ETag": "W/\"474aad2401521123b695931fb5af00658dc3360f59c20bc4d7e0664d366c0490\""
     },
     "duckietown/duckietown-shell": {
         "Content": [
@@ -8931,8 +9118,8 @@
             },
             {
                 "commit": {
-                    "sha": "1fcb5f03d372a894da099f7bb06514599e43778e",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell/commits/1fcb5f03d372a894da099f7bb06514599e43778e"
+                    "sha": "844980f648f55418ee19393af459548bfdac58e1",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell/commits/844980f648f55418ee19393af459548bfdac58e1"
                 },
                 "name": "main",
                 "protected": false,
@@ -9015,7 +9202,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/duckietown-shell/branches/v4/protection"
             }
         ],
-        "ETag": "W/\"c240081c4cb2f2c3519731efdbd8419bd352ddfcd391bf3d3dba25151bca0e3c\""
+        "ETag": "W/\"a3f6498fd638ca6fef22ad0c8d912cae0d0e07ac2e253a4e4146c36ce33dbc56\""
     },
     "duckietown/duckietown-shell-commands": {
         "Content": [

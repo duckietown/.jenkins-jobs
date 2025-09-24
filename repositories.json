@@ -64,6 +64,13 @@
         "labels": ["dtproject"]
     },
     {
+        "name": "dt-ros2-core",
+        "origin": "duckietown/dt-ros2-core",
+        "base": "dt-ros2-commons",
+        "disabled":["daffy", "daffy-staging"],
+        "labels": ["dtproject", "+bookbuild", "-bookbuild:daffy"]
+    },
+    {
         "name": "dt-compose-commons",
         "origin": "duckietown/dt-compose-commons",
         "base": "dt-legacy-py38-environment",

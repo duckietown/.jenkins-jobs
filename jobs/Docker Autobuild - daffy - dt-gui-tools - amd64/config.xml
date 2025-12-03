@@ -102,6 +102,7 @@ dts --profile=daffy --debug \
         --tag daffy \
         --base-tag daffy \
         --ci \
+        --no-cache \
         --ci-force-builder-arch=amd64
 
 # leave the workspace

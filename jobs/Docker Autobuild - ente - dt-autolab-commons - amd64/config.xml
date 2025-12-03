@@ -102,6 +102,7 @@ dts --profile=ente --debug \
         --tag ente \
         --base-tag ente \
         --ci \
+        --no-cache \
         --ncpus=3
 
 # leave the workspace

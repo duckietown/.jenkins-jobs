@@ -101,7 +101,8 @@ dts --profile=ente --debug \
         --arch amd64 \
         --tag ente \
         --base-tag ente \
-        --ci
+        --ci \
+        --no-cache
 
 # leave the workspace
 cd "${ROOT_WS}"

@@ -101,7 +101,8 @@ dts --profile=daffy --debug \
         --arch amd64 \
         --tag daffy \
         --base-tag daffy \
-        --ci
+        --ci \
+        --no-cache
 
 # leave the workspace
 cd "${ROOT_WS}"

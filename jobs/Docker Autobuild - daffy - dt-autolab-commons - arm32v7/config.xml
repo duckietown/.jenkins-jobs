@@ -102,6 +102,7 @@ dts --profile=daffy --debug \
         --tag daffy \
         --base-tag daffy \
         --ci \
+        --no-cache \
         --ncpus=3
 
 # leave the workspace

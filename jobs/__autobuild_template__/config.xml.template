@@ -101,7 +101,8 @@ dts --profile={DUCKIETOWN_CI_DTSHELL_PROFILE} --debug \
         --arch {REPO_ARCH} \
         --tag {TAG} \
         --base-tag {BASE_TAG} \
-        --ci{DTS_ARGS}
+        --ci \
+        --no-cache{DTS_ARGS}
 
 # leave the workspace
 cd "${{ROOT_WS}}"

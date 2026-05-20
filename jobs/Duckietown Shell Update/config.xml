@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<project>
+<flow-definition plugin="workflow-job@1400.v7fd111b_ec82f">
     <actions/>
-    <description>Update the Duckietown Shell every hour</description>
+    <description>Watch PyPI for new Duckietown Shell releases, install them on the Jenkins controller, and rebuild the workspace images when the installed version changes.</description>
     <keepDependencies>false</keepDependencies>
     <properties>
         <jenkins.model.BuildDiscarderProperty>
@@ -16,6 +16,7 @@
             <parameterDefinitions>
                 <hudson.model.StringParameterDefinition>
                     <name>MINIMUM_VERSION</name>
+                    <defaultValue>4</defaultValue>
                     <trim>true</trim>
                 </hudson.model.StringParameterDefinition>
                 <hudson.model.StringParameterDefinition>
@@ -26,20 +27,31 @@
             </parameterDefinitions>
         </hudson.model.ParametersDefinitionProperty>
     </properties>
-    <scm class="hudson.scm.NullSCM"/>
-    <canRoam>true</canRoam>
+    <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@3883.vb_3ff2a_e3eea_f">
+        <scm class="hudson.plugins.git.GitSCM" plugin="git@4.13.0">
+            <configVersion>2</configVersion>
+            <userRemoteConfigs>
+                <hudson.plugins.git.UserRemoteConfig>
+                    <url>git@github.com:duckietown/.jenkins-jobs.git</url>
+                    <credentialsId>GITHUB_SSH_KEY</credentialsId>
+                </hudson.plugins.git.UserRemoteConfig>
+            </userRemoteConfigs>
+            <branches>
+                <hudson.plugins.git.BranchSpec>
+                    <name>*/production</name>
+                </hudson.plugins.git.BranchSpec>
+            </branches>
+            <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+            <submoduleCfg class="empty-list"/>
+            <extensions/>
+        </scm>
+        <scriptPath>jobs/Duckietown Shell Update/Jenkinsfile</scriptPath>
+        <lightweight>true</lightweight>
+    </definition>
+    <triggers>
+        <hudson.triggers.TimerTrigger>
+            <spec>H * * * *</spec>
+        </hudson.triggers.TimerTrigger>
+    </triggers>
     <disabled>false</disabled>
-    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-    <triggers/>
-    <concurrentBuild>false</concurrentBuild>
-    <builders>
-        <hudson.tasks.Shell>
-            <command>python3 -m pip install --upgrade &quot;duckietown-shell&gt;=${MINIMUM_VERSION},&lt;${MAXIMUM_VERSION}&quot;
-            </command>
-            <configuredLocalRules/>
-        </hudson.tasks.Shell>
-    </builders>
-    <publishers/>
-    <buildWrappers/>
-</project>
+</flow-definition>

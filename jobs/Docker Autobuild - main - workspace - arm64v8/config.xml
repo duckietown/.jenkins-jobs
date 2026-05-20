@@ -1,0 +1,135 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+    <actions/>
+    <description>Build and push duckietown/workspace:latest-arm64v8 from duckietown/workspace@main.</description>
+    <keepDependencies>false</keepDependencies>
+    <properties>
+        <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.34.5">
+            <projectUrl>https://github.com/duckietown/workspace</projectUrl>
+            <displayName></displayName>
+        </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    </properties>
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.13.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+                <url>git@github.com:duckietown/workspace.git</url>
+                <credentialsId>GITHUB_SSH_KEY</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+            <hudson.plugins.git.BranchSpec>
+                <name>main</name>
+            </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+            <hudson.plugins.git.extensions.impl.LocalBranch>
+                <localBranch>main</localBranch>
+            </hudson.plugins.git.extensions.impl.LocalBranch>
+            <hudson.plugins.git.extensions.impl.GitLFSPull/>
+        </extensions>
+    </scm>
+    <canRoam>true</canRoam>
+    <disabled>false</disabled>
+    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+    <triggers>
+        <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.34.5">
+            <spec></spec>
+        </com.cloudbees.jenkins.GitHubPushTrigger>
+    </triggers>
+    <concurrentBuild>false</concurrentBuild>
+    <builders>
+        <hudson.tasks.Shell>
+            <command>set -e
+
+select_builder() {
+    for candidate in 172.27.0.43:2376 172.27.0.250:2376; do
+        if docker --host "tcp://${candidate}" info &gt;/dev/null 2&gt;&amp;1; then
+            echo "${candidate}"
+            return 0
+        fi
+    done
+    return 1
+}
+
+BUILDER="$(select_builder)"
+if [ -z "${BUILDER}" ]; then
+    echo "No reachable arm64v8 builder found."
+    exit 1
+fi
+
+DOCKER_HOST="tcp://${BUILDER}"
+
+docker --host "${DOCKER_HOST}" login --username afdaniele --password "${DOCKER_PASSWORD}" docker.io
+
+docker --host "${DOCKER_HOST}" build \
+    --pull \
+    --tag duckietown/workspace:latest-arm64v8 \
+    ./.devcontainer
+
+docker --host "${DOCKER_HOST}" push duckietown/workspace:latest-arm64v8
+            </command>
+            <configuredLocalRules/>
+        </hudson.tasks.Shell>
+        <com.cloudbees.jenkins.GitHubSetCommitStatusBuilder plugin="github@1.34.5">
+            <statusMessage>
+                <content></content>
+            </statusMessage>
+            <contextSource class="org.jenkinsci.plugins.github.status.sources.DefaultCommitContextSource"/>
+        </com.cloudbees.jenkins.GitHubSetCommitStatusBuilder>
+    </builders>
+    <publishers>
+        <org.jenkinsci.plugins.github.status.GitHubCommitStatusSetter plugin="github@1.34.5">
+            <commitShaSource class="org.jenkinsci.plugins.github.status.sources.BuildDataRevisionShaSource"/>
+            <reposSource class="org.jenkinsci.plugins.github.status.sources.AnyDefinedRepositorySource"/>
+            <contextSource class="org.jenkinsci.plugins.github.status.sources.DefaultCommitContextSource"/>
+            <statusResultSource class="org.jenkinsci.plugins.github.status.sources.DefaultStatusResultSource"/>
+            <statusBackrefSource class="org.jenkinsci.plugins.github.status.sources.BuildRefBackrefSource"/>
+            <errorHandlers/>
+        </org.jenkinsci.plugins.github.status.GitHubCommitStatusSetter>
+        <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.43">
+            <patterns class="empty-list"/>
+            <deleteDirs>false</deleteDirs>
+            <skipWhenFailed>false</skipWhenFailed>
+            <cleanWhenSuccess>true</cleanWhenSuccess>
+            <cleanWhenUnstable>true</cleanWhenUnstable>
+            <cleanWhenFailure>true</cleanWhenFailure>
+            <cleanWhenNotBuilt>true</cleanWhenNotBuilt>
+            <cleanWhenAborted>true</cleanWhenAborted>
+            <notFailBuild>false</notFailBuild>
+            <cleanupMatrixParent>false</cleanupMatrixParent>
+            <externalDelete></externalDelete>
+            <disableDeferredWipeout>false</disableDeferredWipeout>
+        </hudson.plugins.ws__cleanup.WsCleanup>
+    </publishers>
+    <buildWrappers>
+        <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.43">
+            <deleteDirs>false</deleteDirs>
+            <cleanupParameter></cleanupParameter>
+            <externalDelete></externalDelete>
+            <disableDeferredWipeout>false</disableDeferredWipeout>
+        </hudson.plugins.ws__cleanup.PreBuildCleanup>
+        <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@523.vd859a_4b_122e6">
+            <bindings>
+                <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+                    <credentialsId>PRODUCTION_DOCKER_PASSWORD</credentialsId>
+                    <variable>DOCKER_PASSWORD</variable>
+                </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+            </bindings>
+        </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>
+        <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.24">
+            <strategy class="hudson.plugins.build_timeout.impl.ElasticTimeOutStrategy">
+                <timeoutPercentage>200</timeoutPercentage>
+                <numberOfBuilds>3</numberOfBuilds>
+                <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
+                <timeoutMinutesElasticDefault>180</timeoutMinutesElasticDefault>
+            </strategy>
+            <operationList>
+                <hudson.plugins.build__timeout.operations.AbortOperation/>
+            </operationList>
+        </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+    </buildWrappers>
+</project>

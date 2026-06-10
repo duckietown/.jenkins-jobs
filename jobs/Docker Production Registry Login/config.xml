@@ -13,7 +13,7 @@
     <concurrentBuild>false</concurrentBuild>
     <builders>
         <hudson.tasks.Shell>
-            <command>docker login --username afdaniele --password ${DOCKER_PASSWORD} docker.io</command>
+            <command>docker login --username liampaull --password ${DOCKER_PASSWORD} docker.io</command>
             <configuredLocalRules/>
         </hudson.tasks.Shell>
     </builders>

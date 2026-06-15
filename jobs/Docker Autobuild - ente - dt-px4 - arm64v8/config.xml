@@ -83,6 +83,21 @@ docker --host "${DOCKER_HOST}" push duckietown/dt-px4:ente-arm64v8
         </com.cloudbees.jenkins.GitHubSetCommitStatusBuilder>
     </builders>
     <publishers>
+      <jenkins.plugins.slack.SlackNotifier plugin="slack@722.vd07f1ea_7ff40">
+        <startNotification>false</startNotification>
+        <notifySuccess>false</notifySuccess>
+        <notifyAborted>false</notifyAborted>
+        <notifyNotBuilt>false</notifyNotBuilt>
+        <notifyUnstable>false</notifyUnstable>
+        <notifyRegression>false</notifyRegression>
+        <notifyEveryFailure>false</notifyEveryFailure>
+        <notifyBackToNormal>true</notifyBackToNormal>
+        <notifyFailure>true</notifyFailure>
+        <notifyRepeatedFailure>false</notifyRepeatedFailure>
+        <includeTestSummary>false</includeTestSummary>
+        <includeFailedTests>false</includeFailedTests>
+        <commitInfoChoice>NONE</commitInfoChoice>
+      </jenkins.plugins.slack.SlackNotifier>
         <org.jenkinsci.plugins.github.status.GitHubCommitStatusSetter plugin="github@1.34.5">
             <commitShaSource class="org.jenkinsci.plugins.github.status.sources.BuildDataRevisionShaSource"/>
             <reposSource class="org.jenkinsci.plugins.github.status.sources.AnyDefinedRepositorySource"/>

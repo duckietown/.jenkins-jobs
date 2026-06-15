@@ -1,45 +1,65 @@
 node {
+    def previousResult = currentBuild.rawBuild.getPreviousCompletedBuild()?.getResult()?.toString()
     def minimumVersion = params.MINIMUM_VERSION?.trim()
     def maximumVersion = params.MAXIMUM_VERSION?.trim()
 
-    if (!minimumVersion || !maximumVersion) {
-        error 'MINIMUM_VERSION and MAXIMUM_VERSION are required'
-    }
-
-    stage('Checkout') {
-        checkout scm
-    }
-
-    def releaseChecker = "${pwd()}/jobs/Duckietown Shell Update/check_duckietown_shell_release.py"
-    def versionState = ''
-    stage('Check PyPI') {
-        withEnv(["MINIMUM_VERSION=${minimumVersion}", "MAXIMUM_VERSION=${maximumVersion}"]) {
-            versionState = sh(
-                script: "python3 '${releaseChecker}'",
-                returnStdout: true
-            ).trim()
+    try {
+        if (!minimumVersion || !maximumVersion) {
+            error 'MINIMUM_VERSION and MAXIMUM_VERSION are required'
         }
-    }
 
-    def parts = versionState.split('\\|', -1)
-    def currentVersion = parts[0]
-    def latestVersion = parts[1]
-    def needsUpdate = parts[2] == 'true'
+        stage('Checkout') {
+            checkout scm
+        }
 
-    currentBuild.description = currentVersion ? "duckietown-shell ${currentVersion} -> ${latestVersion}" : "duckietown-shell ${latestVersion}"
+        def releaseChecker = "${pwd()}/jobs/Duckietown Shell Update/check_duckietown_shell_release.py"
+        def versionState = ''
+        stage('Check PyPI') {
+            withEnv(["MINIMUM_VERSION=${minimumVersion}", "MAXIMUM_VERSION=${maximumVersion}"]) {
+                versionState = sh(
+                    script: "python3 '${releaseChecker}'",
+                    returnStdout: true
+                ).trim()
+            }
+        }
 
-    if (!needsUpdate) {
-        echo "duckietown-shell is already at ${latestVersion}; no workspace images queued."
-        currentBuild.result = 'NOT_BUILT'
-        return
-    }
+        def parts = versionState.split('\\|', -1)
+        def currentVersion = parts[0]
+        def latestVersion = parts[1]
+        def needsUpdate = parts[2] == 'true'
 
-    stage('Install duckietown-shell') {
-        sh "python3 -m pip install --upgrade 'duckietown-shell==${latestVersion}'"
-    }
+        currentBuild.description = currentVersion ? "duckietown-shell ${currentVersion} -> ${latestVersion}" : "duckietown-shell ${latestVersion}"
 
-    stage('Queue workspace image builds') {
-        build job: 'Docker Autobuild - main - workspace - amd64', wait: false, propagate: false
-        build job: 'Docker Autobuild - main - workspace - arm64v8', wait: false, propagate: false
+        if (!needsUpdate) {
+            echo "duckietown-shell is already at ${latestVersion}; no workspace images queued."
+            currentBuild.result = 'NOT_BUILT'
+            return
+        }
+
+        stage('Install duckietown-shell') {
+            sh "python3 -m pip install --upgrade 'duckietown-shell==${latestVersion}'"
+        }
+
+        stage('Queue workspace image builds') {
+            build job: 'Docker Autobuild - main - workspace - amd64', wait: false, propagate: false
+            build job: 'Docker Autobuild - main - workspace - arm64v8', wait: false, propagate: false
+        }
+    } catch (org.jenkinsci.plugins.workflow.steps.FlowInterruptedException err) {
+        currentBuild.result = err.result.toString()
+        throw err
+    } catch (err) {
+        currentBuild.result = 'FAILURE'
+        throw err
+    } finally {
+        def result = currentBuild.result ?: currentBuild.currentResult ?: 'SUCCESS'
+        def buildUrl = env.BUILD_URL ?: ''
+
+        if (result == 'FAILURE' && previousResult != 'FAILURE') {
+            slackSend color: 'danger', message: "${currentBuild.fullDisplayName} failed. ${buildUrl}"
+        }
+
+        if (result == 'SUCCESS' && previousResult == 'FAILURE') {
+            slackSend color: 'good', message: "${currentBuild.fullDisplayName} is back to normal. ${buildUrl}"
+        }
     }
 }

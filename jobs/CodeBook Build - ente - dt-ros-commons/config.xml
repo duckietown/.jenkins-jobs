@@ -85,6 +85,21 @@ rm -rf ./_commands
     </hudson.tasks.Shell>
   </builders>
   <publishers>
+    <jenkins.plugins.slack.SlackNotifier plugin="slack@722.vd07f1ea_7ff40">
+      <startNotification>false</startNotification>
+      <notifySuccess>false</notifySuccess>
+      <notifyAborted>false</notifyAborted>
+      <notifyNotBuilt>false</notifyNotBuilt>
+      <notifyUnstable>false</notifyUnstable>
+      <notifyRegression>false</notifyRegression>
+      <notifyEveryFailure>false</notifyEveryFailure>
+      <notifyBackToNormal>true</notifyBackToNormal>
+      <notifyFailure>true</notifyFailure>
+      <notifyRepeatedFailure>false</notifyRepeatedFailure>
+      <includeTestSummary>false</includeTestSummary>
+      <includeFailedTests>false</includeFailedTests>
+      <commitInfoChoice>NONE</commitInfoChoice>
+    </jenkins.plugins.slack.SlackNotifier>
     <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.43">
       <patterns class="empty-list"/>
       <deleteDirs>false</deleteDirs>

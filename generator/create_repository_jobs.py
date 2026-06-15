@@ -274,6 +274,8 @@ def main():
             else:
                 DTS_ARGS = ""
 
+            dts_devel_build_backend = DTS_DEVEL_BUILD_BACKEND.get(repo_distro, "build")
+
             for repo_arch in repo_arch_list:
                 if "base" in repo:
                     repo_base = bases(repo, repo_distro)
@@ -312,7 +314,7 @@ def main():
                     "DTS_ARGS": DTS_ARGS,
                     "TIMEOUT_MINUTES": repo_build_timeout,
                     "BUILD_FROM_SCRIPT_TOKEN": BUILD_FROM_SCRIPT_TOKEN,
-                    "DTS_DEVEL_BUILD_BACKEND": DTS_DEVEL_BUILD_BACKEND.get(repo_distro, "build"),
+                    "DTS_DEVEL_BUILD_BACKEND": dts_devel_build_backend,
                     "DUCKIETOWN_CI_IS_STAGING": str(int(is_staging)),
                     "DUCKIETOWN_CI_IS_PRODUCTION": str(int(not is_staging)),
                     "IS_STAGING": is_staging

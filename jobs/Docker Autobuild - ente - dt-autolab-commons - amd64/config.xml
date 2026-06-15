@@ -95,6 +95,60 @@ if test -f "dependencies-py3.dt.txt"; then
     dt-pip-resolve -i ./dependencies-py3.dt.txt -o ./dependencies-py3.dt.resolved
 fi
 
+if test -f "./launchers/ci-smoke-test.sh"; then
+    echo "Found CI smoke test launcher; running smoke test."
+    select_builder() {
+        case "amd64" in
+            amd64)
+                for candidate in 172.27.0.101:2376; do
+                    if docker --host "tcp://${candidate}" info >/dev/null 2&gt;&amp;1; then
+                        echo "${candidate}"
+                        return 0
+                    fi
+                done
+                ;;
+            arm32v7|arm64v8)
+                for candidate in 172.27.0.43:2376 172.27.0.250:2376; do
+                    if docker --host "tcp://${candidate}" info >/dev/null 2&gt;&amp;1; then
+                        echo "${candidate}"
+                        return 0
+                    fi
+                done
+                ;;
+        esac
+        return 1
+    }
+
+    BUILD_MACHINE="$(select_builder)"
+    if [ -z "${BUILD_MACHINE}" ]; then
+        echo "No reachable amd64 builder found."
+        exit 1
+    fi
+
+dts --profile=ente --debug \
+    devel build \
+        --arch amd64 \
+        --tag ente \
+        --base-tag ente \
+        --machine "${BUILD_MACHINE}" \
+        --pull \
+        --pull-for-cache \
+        --force-cache \
+        --stamp \
+        --no-cache \
+        --ncpus=3
+
+dts --profile=ente --debug \
+    devel run \
+        --arch amd64 \
+        --machine "${BUILD_MACHINE}" \
+        --tag ente \
+        --no-mount \
+        --launcher ci-smoke-test
+else
+    echo "No CI smoke test launcher found; skipping smoke test."
+fi
+
 # pull, build(cloud), push, clean
 dts --profile=ente --debug \
     devel build \

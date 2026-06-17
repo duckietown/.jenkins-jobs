@@ -108,7 +108,7 @@ if test -f "./launchers/ci-smoke-test.sh"; then
                 done
                 ;;
             arm32v7|arm64v8)
-                for candidate in 172.27.0.43:2376 172.27.0.250:2376; do
+                for candidate in 172.27.0.126:2376 172.27.0.43:2376 172.27.0.250:2376; do
                     if docker --host "tcp://${candidate}" info >/dev/null 2&gt;&amp;1; then
                         echo "${candidate}"
                         return 0

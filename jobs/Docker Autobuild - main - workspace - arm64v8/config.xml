@@ -46,7 +46,7 @@
             <command>set -e
 
 select_builder() {
-    for candidate in 172.27.0.43:2376 172.27.0.250:2376; do
+    for candidate in 172.27.0.126:2376 172.27.0.43:2376 172.27.0.250:2376; do
         if docker --host "tcp://${candidate}" info &gt;/dev/null 2&gt;&amp;1; then
             echo "${candidate}"
             return 0

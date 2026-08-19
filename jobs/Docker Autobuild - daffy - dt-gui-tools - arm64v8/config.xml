@@ -135,8 +135,7 @@ dts --profile=daffy --debug \
         --pull-for-cache \
         --force-cache \
         --stamp \
-        --no-cache \
-        --ci-force-builder-arch=amd64
+        --no-cache
 
 dts --profile=daffy --debug \
     devel run \
@@ -156,8 +155,7 @@ dts --profile=daffy --debug \
         --tag daffy \
         --base-tag daffy \
         --ci \
-        --no-cache \
-        --ci-force-builder-arch=amd64
+        --no-cache
 
 # leave the workspace
 cd "${ROOT_WS}"

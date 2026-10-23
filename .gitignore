@@ -9,6 +9,8 @@
 !books.json
 !generator
 !generator/*
+!tests/
+!tests/test_*.py
 !Makefile
 !jobs
 !jobs/*

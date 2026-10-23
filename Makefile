@@ -46,6 +46,13 @@ generate-staging: _generate_repojobs _generate_webcheck _generate_bookbuild
 
 generate: generate-${BRANCH_NAME}
 
+.PHONY: generate-protected-releases
+generate-protected-releases:
+	python3 ${ROOT_DIR}/generator/create_image_release_jobs.py \
+		--jobsdir ${ROOT_DIR}/jobs \
+		--repos ${ROOT_DIR}/repositories.json \
+		--tools-ref "${SHELL_TOOLS_SHA}"
+
 merge-from-staging:
 	if [ -z "$(git status -s)" ]; then \
     	git fetch --all; \

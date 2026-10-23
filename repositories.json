@@ -184,12 +184,14 @@
     {
         "name": "dt-duckietown-viewer",
         "origin": "duckietown/dt-duckietown-viewer",
+        "release_component": "viewer",
         "base": "dt-commons",
         "labels": ["dtproject"]
     },
     {
         "name": "dt-duckiematrix",
         "origin": "duckietown/dt-duckiematrix",
+        "release_component": "engine",
         "base": "dt-commons",
         "labels": ["dtproject"]
     },

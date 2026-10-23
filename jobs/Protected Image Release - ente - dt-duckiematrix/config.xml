@@ -1,0 +1,166 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job">
+    <description>Maintainer-approved Ente image release for dt-duckiematrix. Configure the approved Shell tools SHA using make generate-protected-releases. No automatic triggers or signing keys on builders.</description>
+    <keepDependencies>false</keepDependencies>
+    <properties>
+        <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
+        <hudson.model.ParametersDefinitionProperty>
+            <parameterDefinitions>
+                <hudson.model.StringParameterDefinition>
+                    <name>SOURCE_SHA</name>
+                    <description>Reviewed full lowercase application commit SHA</description>
+                    <defaultValue></defaultValue>
+                    <trim>true</trim>
+                </hudson.model.StringParameterDefinition>
+                <hudson.model.StringParameterDefinition>
+                    <name>VERSION</name>
+                    <description>Unused Ente image/catalog version, x.y.z</description>
+                    <defaultValue></defaultValue>
+                    <trim>true</trim>
+                </hudson.model.StringParameterDefinition>
+            </parameterDefinitions>
+        </hudson.model.ParametersDefinitionProperty>
+        <jenkins.model.BuildDiscarderProperty>
+            <strategy class="hudson.tasks.LogRotator">
+                <daysToKeep>-1</daysToKeep>
+                <numToKeep>20</numToKeep>
+                <artifactDaysToKeep>-1</artifactDaysToKeep>
+                <artifactNumToKeep>20</artifactNumToKeep>
+            </strategy>
+        </jenkins.model.BuildDiscarderProperty>
+    </properties>
+    <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps">
+        <script><![CDATA[
+def toolsRef = ''
+if (!(toolsRef ==~ /[0-9a-f]{40}/)) {
+    error('Regenerate this job with the approved full Shell tools SHA before enabling it.')
+}
+if (!(params.SOURCE_SHA ==~ /[0-9a-f]{40}/) || !(params.VERSION ==~ /[0-9]+\.[0-9]+\.[0-9]+/)) {
+    error('A reviewed full application SHA and unused x.y.z version are required.')
+}
+def checkoutCommit = { repository, ref ->
+    checkout([
+        $class: 'GitSCM',
+        branches: [[name: ref]],
+        userRemoteConfigs: [[url: "git@github.com:duckietown/${repository}.git", credentialsId: 'GITHUB_SSH_KEY']],
+        extensions: [[$class: 'GitLFSPull']]
+    ])
+}
+def workspace = "protected-release-${env.BUILD_NUMBER}"
+def releaseEnvironment = [
+    'COMPONENT=engine',
+    "SOURCE_SHA=${params.SOURCE_SHA}",
+    "VERSION=${params.VERSION}",
+    "TOOLS_REF=${toolsRef}",
+    'DTSHELL_DISABLE_STATS=1',
+    'PYTHONDONTWRITEBYTECODE=1'
+]
+timeout(time: 240, unit: 'MINUTES') {
+    withEnv(releaseEnvironment) {
+        stage('Build on native Jenkins builders without signing keys') {
+            node('docker-release') {
+                dir(workspace) {
+                    try {
+                        dir('source') { checkoutCommit('dt-duckiematrix', params.SOURCE_SHA) }
+                        sh '''
+                            set -eu
+                            for arch in amd64 arm64v8; do
+                                dt-ci-image-release build --component "$COMPONENT" \
+                                    --source-sha "$SOURCE_SHA" --version "$VERSION" \
+                                    --source source --arch "$arch" --build-number "$BUILD_NUMBER" \
+                                    --output "unsigned/$arch"
+                            done
+                        '''
+                        stash name: 'unsigned-runtime', includes: 'unsigned/**', useDefaultExcludes: false
+                    } finally {
+                        deleteDir()
+                    }
+                }
+            }
+        }
+        stage('Maintainer approval') {
+            input message: "Approve dt-duckiematrix ${params.SOURCE_SHA}, version ${params.VERSION}, Shell tools ${toolsRef} for Ente signing and publication?",
+                ok: 'Approve release', submitter: 'duckietown-release-managers'
+        }
+        stage('Seal runtime inventories on the offline signer') {
+            node('artifact-signing') {
+                dir(workspace) {
+                    try {
+                        unstash 'unsigned-runtime'
+                        dir('tools') { checkoutCommit('duckietown-shell', toolsRef) }
+                        withCredentials([file(credentialsId: 'DTM_ENGINE_RELEASE_SIGNING_KEY', variable: 'ARTIFACT_KEY')]) {
+                            sh '''
+                                set -eu
+                                dt-ci-image-release seal --component "$COMPONENT" \
+                                    --source-sha "$SOURCE_SHA" --version "$VERSION" \
+                                    --unsigned unsigned --tools tools --tools-ref "$TOOLS_REF" \
+                                    --key "$ARTIFACT_KEY" --output sealed
+                            '''
+                        }
+                        stash name: 'sealed-inventories', includes: 'sealed/**', useDefaultExcludes: false
+                    } finally {
+                        deleteDir()
+                    }
+                }
+            }
+        }
+        stage('Verify sealed images and publish immutable identities') {
+            node('docker-release') {
+                dir(workspace) {
+                    try {
+                        unstash 'unsigned-runtime'
+                        unstash 'sealed-inventories'
+                        sh '''
+                            set -eu
+                            dt-ci-image-release finalize --component "$COMPONENT" \
+                                --source-sha "$SOURCE_SHA" --version "$VERSION" \
+                                --unsigned unsigned --sealed sealed --output final
+                        '''
+                        withEnv(['DOCKER_USERNAME=afdaniele']) {
+                            withCredentials([string(credentialsId: 'PRODUCTION_DOCKER_PASSWORD', variable: 'DOCKER_PASSWORD')]) {
+                                sh '''
+                                    set -eu
+                                    dt-ci-image-release publish --component "$COMPONENT" \
+                                        --source-sha "$SOURCE_SHA" --version "$VERSION" \
+                                        --unsigned unsigned --sealed sealed --final final --output records
+                                '''
+                            }
+                        }
+                        stash name: 'published-records', includes: 'records/**', useDefaultExcludes: false
+                    } finally {
+                        deleteDir()
+                    }
+                }
+            }
+        }
+        stage('Sign the two-architecture catalog on the offline signer') {
+            node('artifact-signing') {
+                dir(workspace) {
+                    try {
+                        unstash 'published-records'
+                        unstash 'sealed-inventories'
+                        dir('tools') { checkoutCommit('duckietown-shell', toolsRef) }
+                        withCredentials([file(credentialsId: 'DTM_ENGINE_RELEASE_SIGNING_KEY', variable: 'ARTIFACT_KEY')]) {
+                            sh '''
+                                set -eu
+                                dt-ci-image-release catalog --component "$COMPONENT" \
+                                    --source-sha "$SOURCE_SHA" --version "$VERSION" \
+                                    --records records --sealed sealed --tools tools --tools-ref "$TOOLS_REF" \
+                                    --key "$ARTIFACT_KEY" --output release
+                            '''
+                        }
+                        archiveArtifacts artifacts: 'release/engines.json,release/release.json', fingerprint: true
+                    } finally {
+                        deleteDir()
+                    }
+                }
+            }
+        }
+    }
+}
+        ]]></script>
+        <sandbox>true</sandbox>
+    </definition>
+    <triggers/>
+    <disabled>true</disabled>
+</flow-definition>

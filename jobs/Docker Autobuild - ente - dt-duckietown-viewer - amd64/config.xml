@@ -137,13 +137,23 @@ if test -f "./launchers/ci-smoke-test.sh"; then
             --stamp \
             --no-cache
 
-    dts --profile=ente --debug \
-        devel run \
-            --arch amd64 \
-            --machine "${BUILD_MACHINE}" \
-            --tag ente \
-            --no-mount \
-            --launcher ci-smoke-test
+    case "dt-duckietown-viewer" in
+        dt-duckiematrix|dt-duckietown-viewer)
+            docker --host "tcp://${BUILD_MACHINE}" run --rm \
+                --entrypoint /bin/bash \
+                "docker.io/duckietown/dt-duckietown-viewer:ente-amd64" \
+                -c 'source /environment.sh; exec dt-launcher-ci-smoke-test'
+            ;;
+        *)
+            dts --profile=ente --debug \
+                devel run \
+                    --arch amd64 \
+                    --machine "${BUILD_MACHINE}" \
+                    --tag ente \
+                    --no-mount \
+                    --launcher ci-smoke-test
+            ;;
+    esac
 else
     echo "No CI smoke test launcher found; skipping smoke test."
 fi

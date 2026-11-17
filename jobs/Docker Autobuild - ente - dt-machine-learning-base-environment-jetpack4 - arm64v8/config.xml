@@ -138,7 +138,8 @@ if test -f "./launchers/ci-smoke-test.sh"; then
             --stamp \
             --no-cache \
         --build-arg JETPACK 4 \
-        --tag=ente-jetpack4
+        --tag=ente-jetpack4 \
+        --ci-no-branch-tag
 
     dts --profile=ente --debug \
         devel run \
@@ -160,7 +161,8 @@ dts --profile=ente --debug \
         --ci \
         --no-cache \
         --build-arg JETPACK 4 \
-        --tag=ente-jetpack4
+        --tag=ente-jetpack4 \
+        --ci-no-branch-tag
 
 # leave the workspace
 cd "${ROOT_WS}"

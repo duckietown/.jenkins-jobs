@@ -183,7 +183,8 @@
         "disabled": ["daffy", "daffy-staging"],
         "dts_args": {
             "--build-arg JETPACK 4": true,
-            "--tag": "ente-jetpack4"
+            "--tag": "ente-jetpack4",
+            "--ci-no-branch-tag": true
         },
         "labels": ["dtproject", "-automerge", "-stagesync", "-distrosync"]
     },
@@ -201,7 +202,8 @@
         "disabled": ["daffy", "daffy-staging"],
         "dts_args": {
             "--build-arg JETPACK 4": true,
-            "--tag": "ente-jetpack4"
+            "--tag": "ente-jetpack4",
+            "--ci-no-branch-tag": true
         },
         "labels": ["dtproject", "-automerge", "-stagesync", "-distrosync"]
     },

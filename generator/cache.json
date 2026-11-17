@@ -6737,8 +6737,8 @@
             },
             {
                 "commit": {
-                    "sha": "7baf3064ffcf84415f3d8f551a704814b7401592",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckiematrix/commits/7baf3064ffcf84415f3d8f551a704814b7401592"
+                    "sha": "25b837a9b7a26fdd7f4190f48d13b7059b656a95",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiematrix/commits/25b837a9b7a26fdd7f4190f48d13b7059b656a95"
                 },
                 "name": "DTSW-7149-Fix-Gym-mode-test",
                 "protected": false,
@@ -6972,6 +6972,23 @@
                     }
                 },
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiematrix/branches/DTSW-8545-Handle-None-case-for-layer-content-in-YAML-loading/protection"
+            },
+            {
+                "commit": {
+                    "sha": "4148156af3b98704e06ac67507f2128d11845f22",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckiematrix/commits/4148156af3b98704e06ac67507f2128d11845f22"
+                },
+                "name": "DTSW-8578-Restrict-publication-completion-wake-ups-to-Gym-mode",
+                "protected": false,
+                "protection": {
+                    "enabled": false,
+                    "required_status_checks": {
+                        "checks": [],
+                        "contexts": [],
+                        "enforcement_level": "off"
+                    }
+                },
+                "protection_url": "https://api.github.com/repos/duckietown/dt-duckiematrix/branches/DTSW-8578-Restrict-publication-completion-wake-ups-to-Gym-mode/protection"
             },
             {
                 "commit": {
@@ -7450,7 +7467,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckiematrix/branches/webgl/protection"
             }
         ],
-        "ETag": "W/\"3ecaf1ee48d6c4d8188439987fee0b0d2144773ed56de5b5ff42ce0333cb753e\""
+        "ETag": "W/\"c536040f66226c515f1dc0e7220bf80f8f29dd94a8e70953098191bb53805541\""
     },
     "duckietown/dt-duckietown-viewer": {
         "Content": [
@@ -7524,25 +7541,8 @@
             },
             {
                 "commit": {
-                    "sha": "577044934567cdfe7b89d70d665a9e9ea44e5371",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckietown-viewer/commits/577044934567cdfe7b89d70d665a9e9ea44e5371"
-                },
-                "name": "DTSW-8474-viewer-dtps-resilience",
-                "protected": false,
-                "protection": {
-                    "enabled": false,
-                    "required_status_checks": {
-                        "checks": [],
-                        "contexts": [],
-                        "enforcement_level": "off"
-                    }
-                },
-                "protection_url": "https://api.github.com/repos/duckietown/dt-duckietown-viewer/branches/DTSW-8474-viewer-dtps-resilience/protection"
-            },
-            {
-                "commit": {
-                    "sha": "690a95de403ae5958c91bb7c0b3a7dd318bb9ff5",
-                    "url": "https://api.github.com/repos/duckietown/dt-duckietown-viewer/commits/690a95de403ae5958c91bb7c0b3a7dd318bb9ff5"
+                    "sha": "2faa6b3dfdb260df7fa4975b0902fac6891a6a51",
+                    "url": "https://api.github.com/repos/duckietown/dt-duckietown-viewer/commits/2faa6b3dfdb260df7fa4975b0902fac6891a6a51"
                 },
                 "name": "ente",
                 "protected": false,
@@ -7727,7 +7727,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-duckietown-viewer/branches/temporary/protection"
             }
         ],
-        "ETag": "W/\"914d9ea2799229c1ecbe34c31b3ea6a5b7b71ea03c9d6929b9adb9585a28046d\""
+        "ETag": "W/\"68ab2f1a0faf5afd1efd2c1bd80da509380d4f4cc2665eb1c8bc7828d4295d7d\""
     },
     "duckietown/dt-files-api": {
         "Content": [
@@ -12970,8 +12970,8 @@
             },
             {
                 "commit": {
-                    "sha": "c47a99be6bf4e5d35fb4f5d7bf9692e96ea86546",
-                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/c47a99be6bf4e5d35fb4f5d7bf9692e96ea86546"
+                    "sha": "13abe61df4084bec4f21d93ca86004440fc94359",
+                    "url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/commits/13abe61df4084bec4f21d93ca86004440fc94359"
                 },
                 "name": "DTSW-7100-jetpack-variants",
                 "protected": false,
@@ -14601,7 +14601,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/duckietown-shell-commands/branches/daffy-devel-apr10/protection"
             }
         ],
-        "ETag": "W/\"173b8a6872d3a0fca395ac090c655643f7e34e5130fb73cde1f1ad0ecbe30e1d\""
+        "ETag": "W/\"5a69b6646039dc473821ea4a6b194225e5dda3d6c2bd09481c698811302e3933\""
     },
     "duckietown/gym-duckietown": {
         "Content": [

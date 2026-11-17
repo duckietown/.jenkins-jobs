@@ -226,6 +226,9 @@ def main():
         logger.debug(f"Branches found: {repo_branches[repo_name]}")
         # filter distros
         repo_distros = [b for b in repo_branches[repo_name] if b in distro_list]
+        # a repository can opt out of a distro entirely: no jobs are generated for it,
+        # unlike "disabled", which still generates the jobs and switches them off
+        repo_distros = [d for d in repo_distros if d not in repo.get("distro_blacklist", [])]
         logger.info("> Found distros: {:s}".format(str(repo_distros)))
 
         # create one job per distro

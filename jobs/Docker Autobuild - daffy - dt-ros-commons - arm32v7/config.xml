@@ -97,6 +97,7 @@ fi
 
 if test -f "./launchers/ci-smoke-test.sh"; then
     echo "Found CI smoke test launcher; running smoke test."
+
     select_builder() {
         case "arm32v7" in
             amd64)
@@ -125,25 +126,25 @@ if test -f "./launchers/ci-smoke-test.sh"; then
         exit 1
     fi
 
-dts --profile=daffy --debug \
-    devel buildx \
-        --arch arm32v7 \
-        --tag daffy \
-        --base-tag daffy \
-        --machine "${BUILD_MACHINE}" \
-        --pull \
-        --pull-for-cache \
-        --force-cache \
-        --stamp \
-        --no-cache
+    dts --profile=daffy --debug \
+        devel buildx \
+            --arch arm32v7 \
+            --tag daffy \
+            --base-tag daffy \
+            --machine "${BUILD_MACHINE}" \
+            --pull \
+            --pull-for-cache \
+            --force-cache \
+            --stamp \
+            --no-cache
 
-dts --profile=daffy --debug \
-    devel run \
-        --arch arm32v7 \
-        --machine "${BUILD_MACHINE}" \
-        --tag daffy \
-        --no-mount \
-        --launcher ci-smoke-test
+    dts --profile=daffy --debug \
+        devel run \
+            --arch arm32v7 \
+            --machine "${BUILD_MACHINE}" \
+            --tag daffy \
+            --no-mount \
+            --launcher ci-smoke-test
 else
     echo "No CI smoke test launcher found; skipping smoke test."
 fi
@@ -174,21 +175,6 @@ rm -rf ./ws
         </com.cloudbees.jenkins.GitHubSetCommitStatusBuilder>
     </builders>
     <publishers>
-      <jenkins.plugins.slack.SlackNotifier plugin="slack@722.vd07f1ea_7ff40">
-        <startNotification>false</startNotification>
-        <notifySuccess>false</notifySuccess>
-        <notifyAborted>false</notifyAborted>
-        <notifyNotBuilt>false</notifyNotBuilt>
-        <notifyUnstable>false</notifyUnstable>
-        <notifyRegression>false</notifyRegression>
-        <notifyEveryFailure>false</notifyEveryFailure>
-        <notifyBackToNormal>true</notifyBackToNormal>
-        <notifyFailure>true</notifyFailure>
-        <notifyRepeatedFailure>false</notifyRepeatedFailure>
-        <includeTestSummary>false</includeTestSummary>
-        <includeFailedTests>false</includeFailedTests>
-        <commitInfoChoice>NONE</commitInfoChoice>
-      </jenkins.plugins.slack.SlackNotifier>
         <org.jenkinsci.plugins.github.status.GitHubCommitStatusSetter plugin="github@1.34.5">
             <commitShaSource class="org.jenkinsci.plugins.github.status.sources.BuildDataRevisionShaSource"/>
             <reposSource class="org.jenkinsci.plugins.github.status.sources.AnyDefinedRepositorySource"/>
@@ -210,13 +196,28 @@ rm -rf ./ws
                             </configs>
                         </hudson.plugins.parameterizedtrigger.BooleanParameters>
                     </configs>
-                    <projects>Docker Autobuild - daffy - dt-duckiebot-interface - arm32v7, Docker Autobuild - daffy - dt-ros-interface - arm32v7, Docker Autobuild - daffy - dt-rosbridge-websocket - arm32v7, Docker Autobuild - daffy - dt-car-interface - arm32v7, Docker Autobuild - daffy - dt-drone-interface - arm32v7, Docker Autobuild - daffy - dt-core - arm32v7, Docker Autobuild - daffy - dt-machine-learning-base-environment - arm32v7, Docker Autobuild - daffy - challenge-aido_LF-template-ros - arm32v7, Docker Autobuild - daffy - dt-hardware-benchmark-backend - arm32v7, Docker Autobuild - daffy - dt-hardware-benchmark-frontend - arm32v7, Docker Autobuild - daffy - dt-duckiebot-fifos-bridge - arm32v7, Docker Autobuild - daffy - dt-autolab-commons - arm32v7</projects>
+                    <projects>Docker Autobuild - daffy - dt-duckiebot-interface - arm32v7, Docker Autobuild - daffy - dt-ros-interface - arm32v7, Docker Autobuild - daffy - dt-rosbridge-websocket - arm32v7, Docker Autobuild - daffy - dt-car-interface - arm32v7, Docker Autobuild - daffy - dt-drone-interface - arm32v7, Docker Autobuild - daffy - dt-core - arm32v7, Docker Autobuild - daffy - challenge-aido_LF-template-ros - arm32v7, Docker Autobuild - daffy - dt-hardware-benchmark-backend - arm32v7, Docker Autobuild - daffy - dt-hardware-benchmark-frontend - arm32v7, Docker Autobuild - daffy - dt-duckiebot-fifos-bridge - arm32v7, Docker Autobuild - daffy - dt-autolab-commons - arm32v7</projects>
                     <condition>FAILED</condition>
                     <triggerWithNoParameters>false</triggerWithNoParameters>
                     <triggerFromChildProjects>false</triggerFromChildProjects>
                 </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
             </configs>
         </hudson.plugins.parameterizedtrigger.BuildTrigger>
+        <jenkins.plugins.slack.SlackNotifier plugin="slack@722.vd07f1ea_7ff40">
+            <startNotification>false</startNotification>
+            <notifySuccess>false</notifySuccess>
+            <notifyAborted>false</notifyAborted>
+            <notifyNotBuilt>false</notifyNotBuilt>
+            <notifyUnstable>false</notifyUnstable>
+            <notifyRegression>false</notifyRegression>
+            <notifyEveryFailure>false</notifyEveryFailure>
+            <notifyBackToNormal>true</notifyBackToNormal>
+            <notifyFailure>true</notifyFailure>
+            <notifyRepeatedFailure>false</notifyRepeatedFailure>
+            <includeTestSummary>false</includeTestSummary>
+            <includeFailedTests>false</includeFailedTests>
+            <commitInfoChoice>NONE</commitInfoChoice>
+        </jenkins.plugins.slack.SlackNotifier>
         <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.43">
             <patterns class="empty-list"/>
             <deleteDirs>false</deleteDirs>

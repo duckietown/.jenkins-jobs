@@ -26,3 +26,12 @@ Jenkins will automatically pull the new changes, but you will need to tell him t
 
 Jobs should never be modified through Jenkins GUI. Changes should be applied to the template in the 
 `templates/` of this repository and then use the generator tool to update all jobs.
+
+## Hand-maintained jobs
+
+A few jobs are not generated from `repositories.json` — the Workspace image build, for instance, runs a plain
+`docker build` and has no `dtproject` behind it. The generator deletes and rewrites every job whose name starts
+with one of its own prefixes (`Docker Autobuild`, `Git Automerge`, `Stage Sync`, `Distro Sync`, `CodeBook Build`,
+`Book Build`, `Webcheck`), so a hand-written job must not use any of them, or it disappears the next time someone
+regenerates. Name it something else; `Image Build - ...` is what the Workspace builds use.
+

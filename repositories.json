@@ -223,6 +223,7 @@
         "name": "challenge-aido_LF-template-ros",
         "origin": "duckietown/challenge-aido_LF-template-ros",
         "base": "dt-ros-commons",
+        "distro_blacklist": ["ente", "ente-staging"],
         "labels": ["dtproject"]
     },
     {
@@ -236,6 +237,7 @@
         "origin": "duckietown/challenge-aido_LF-template-pytorch",
         "base": "dt-machine-learning-base-environment",
         "blacklist": ["arm32v7"],
+        "distro_blacklist": ["ente", "ente-staging"],
         "labels": ["dtproject"]
     },
     {
@@ -243,6 +245,7 @@
         "origin": "duckietown/challenge-aido_LF-template-tensorflow",
         "base": "dt-machine-learning-base-environment",
         "blacklist": ["arm32v7"],
+        "distro_blacklist": ["ente", "ente-staging"],
         "labels": ["dtproject"]
     },
     {
@@ -256,6 +259,7 @@
         "name": "challenge-aido_LF-baseline-duckietown",
         "origin": "duckietown/challenge-aido_LF-baseline-duckietown",
         "base": ["dt-car-interface", "dt-core", "challenge-aido_LF-template-ros"],
+        "distro_blacklist": ["ente", "ente-staging"],
         "labels": ["dtproject"]
     },
     {

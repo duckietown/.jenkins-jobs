@@ -9138,8 +9138,8 @@
             },
             {
                 "commit": {
-                    "sha": "bfa17efba0e7abf1aac76deeed685da548edd7c3",
-                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/bfa17efba0e7abf1aac76deeed685da548edd7c3"
+                    "sha": "595187193491dddb593a8a7b746603831efe9c1e",
+                    "url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/commits/595187193491dddb593a8a7b746603831efe9c1e"
                 },
                 "name": "ente",
                 "protected": false,
@@ -9188,7 +9188,7 @@
                 "protection_url": "https://api.github.com/repos/duckietown/dt-machine-learning-base-pytorch/branches/temporary/protection"
             }
         ],
-        "ETag": "W/\"d147872f153766e933c8b65dccec7d9173d3afcb23bd249920c8ca1d4d937601\""
+        "ETag": "W/\"2eba71acabb3437fbb06a1acacdba9c8918d2b961ee8088c5340652f05794d95\""
     },
     "duckietown/dt-ros-commons": {
         "Content": [

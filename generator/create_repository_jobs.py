@@ -376,6 +376,9 @@ def main():
         GIT_URL = "git@github.com:{:s}".format(repo_origin)
         # one job per pair (distro, distro-staging)
         for repo_branch in repo_branches[repo_name]:
+            # a distro this repository has opted out of has no jobs at all, syncing included
+            if repo_branch in repo.get("distro_blacklist", []):
+                continue
             # auto-merge can only happen on X-staging branches
             if not repo_branch.endswith("-staging"):
                 continue
@@ -423,6 +426,9 @@ def main():
         GIT_URL = "git@github.com:{:s}".format(repo_origin)
         # one job per pair (distro, distro-staging)
         for repo_branch in repo_branches[repo_name]:
+            # a distro this repository has opted out of has no jobs at all, syncing included
+            if repo_branch in repo.get("distro_blacklist", []):
+                continue
             # stage-sync can only happen on X-staging branches
             if not repo_branch.endswith("-staging"):
                 continue
@@ -484,6 +490,9 @@ def main():
         for distro1, distro2 in zip(distro_list, distro_list[1:]):
             # we only add this job if this repo has both branches
             if distro1 not in repo_branches[repo_name] or distro2 not in repo_branches[repo_name]:
+                continue
+            # ... and has not opted out of either distro
+            if {distro1, distro2} & set(repo.get("distro_blacklist", [])):
                 continue
             # job name
             jname = distrosync_job_name(
